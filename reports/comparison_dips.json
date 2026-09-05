@@ -1,0 +1,212 @@
+{
+  "script": "dips",
+  "frames": [
+    {
+      "frame": "frame_1",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "backbuffer_vs_displayed_pixels": 0,
+      "sprite_records_equal": true,
+      "video_ram_differing_addresses": [],
+      "pixel_difference_bounds": null,
+      "ram_differing_addresses": [],
+      "dut_rgb_sha256": "2cbbeef1249170a43854962fa5b19fba628470c70beb9ce23e15a0f05cb891f2",
+      "reference_rgb_sha256": "2cbbeef1249170a43854962fa5b19fba628470c70beb9ce23e15a0f05cb891f2"
+    },
+    {
+      "frame": "frame_30",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "backbuffer_vs_displayed_pixels": 0,
+      "sprite_records_equal": true,
+      "video_ram_differing_addresses": [],
+      "pixel_difference_bounds": null,
+      "ram_differing_addresses": [
+        53038,
+        53052,
+        53053,
+        53162,
+        53163
+      ],
+      "dut_rgb_sha256": "51542521305adfeb1cafde070772f8a538c2c276aac1738aa31b88ad2549f3af",
+      "reference_rgb_sha256": "51542521305adfeb1cafde070772f8a538c2c276aac1738aa31b88ad2549f3af"
+    },
+    {
+      "frame": "frame_60",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "backbuffer_vs_displayed_pixels": 0,
+      "sprite_records_equal": true,
+      "video_ram_differing_addresses": [],
+      "pixel_difference_bounds": null,
+      "ram_differing_addresses": [
+        53038,
+        53052,
+        53053,
+        53162,
+        53163
+      ],
+      "dut_rgb_sha256": "e39f59c7692c4b4a55d2f03d3a6ccf8d55aa002480b123990629014ccd3a64c6",
+      "reference_rgb_sha256": "e39f59c7692c4b4a55d2f03d3a6ccf8d55aa002480b123990629014ccd3a64c6"
+    },
+    {
+      "frame": "frame_120",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "backbuffer_vs_displayed_pixels": 0,
+      "sprite_records_equal": true,
+      "video_ram_differing_addresses": [],
+      "pixel_difference_bounds": null,
+      "ram_differing_addresses": [
+        53038,
+        53052,
+        53053,
+        53162,
+        53163
+      ],
+      "dut_rgb_sha256": "fb0f956aef69f7020877ca4cfdc71edcb7f63ae8908bd1450eaf0a1307256f8e",
+      "reference_rgb_sha256": "fb0f956aef69f7020877ca4cfdc71edcb7f63ae8908bd1450eaf0a1307256f8e"
+    },
+    {
+      "frame": "frame_180",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "backbuffer_vs_displayed_pixels": 0,
+      "sprite_records_equal": true,
+      "video_ram_differing_addresses": [],
+      "pixel_difference_bounds": null,
+      "ram_differing_addresses": [
+        53038,
+        53052,
+        53053,
+        53162,
+        53163
+      ],
+      "dut_rgb_sha256": "4fa8efd0abef12888c90824dfd066c99df356268735728d1109f9a6a6486efff",
+      "reference_rgb_sha256": "4fa8efd0abef12888c90824dfd066c99df356268735728d1109f9a6a6486efff"
+    },
+    {
+      "frame": "frame_240",
+      "rgb_differing_pixels": 102,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "backbuffer_vs_displayed_pixels": 42,
+      "sprite_records_equal": true,
+      "video_ram_differing_addresses": [
+        57473,
+        57505,
+        57537,
+        57569,
+        57697,
+        57729,
+        57761,
+        57857,
+        57953,
+        58049
+      ],
+      "pixel_difference_bounds": [
+        242,
+        72,
+        247,
+        220
+      ],
+      "ram_differing_addresses": [
+        52974,
+        52975,
+        53162,
+        53163,
+        57473,
+        57505,
+        57537,
+        57569,
+        57697,
+        57729,
+        57761,
+        57857,
+        57953,
+        58049
+      ],
+      "dut_rgb_sha256": "1c9d938719d9438b270182016b5ce5c8ba0a4fe4956b901a8e474113bf71835c",
+      "reference_rgb_sha256": "e3e76191704a0c940060f0f816dfae67cbcf9f24087dafd712bbe591a873bd46"
+    },
+    {
+      "frame": "frame_300",
+      "rgb_differing_pixels": 32,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "backbuffer_vs_displayed_pixels": 500,
+      "sprite_records_equal": true,
+      "video_ram_differing_addresses": [
+        57537,
+        57761,
+        57921,
+        58017
+      ],
+      "pixel_difference_bounds": [
+        242,
+        81,
+        247,
+        151
+      ],
+      "ram_differing_addresses": [
+        52338,
+        52974,
+        52975,
+        53162,
+        53163,
+        57537,
+        57761,
+        57921,
+        58017
+      ],
+      "dut_rgb_sha256": "e530c4ffd29b87d1088e8239eeedd8f4ad17018a1756dbc9b5d65bb8293280b5",
+      "reference_rgb_sha256": "c6f52370d3d9b31ed791812d755de45c5f9f676405a44564aed9adcde9baaf7f"
+    }
+  ],
+  "functional_io": {
+    "dut_count": 868,
+    "reference_count": 868,
+    "matched_common_prefix": 868,
+    "first_divergence": null
+  },
+  "notes": [
+    "Displayed native PNG is the reference: MAME screen:pixels() reads m_curbitmap, while snapshot uses m_curtexture; those differ after the frame buffer swap.",
+    "No-op port 05 is included in all_io_writes; historical functional_io retains its narrower scope.",
+    "Live scanline rendering and MAME instantaneous frame rendering are distinct timing models. All pixel differences remain visible."
+  ],
+  "all_io_writes": {
+    "status": "PASS",
+    "dut_count": 1154,
+    "reference_count": 1154
+  },
+  "io_reads": {
+    "status": "PASS",
+    "dut_count": 883,
+    "reference_count": 883
+  },
+  "sound_commands": {
+    "0": {
+      "status": "PASS",
+      "dut_count": 71,
+      "reference_count": 71,
+      "first_divergence": null
+    },
+    "1": {
+      "status": "PASS",
+      "dut_count": 51,
+      "reference_count": 51,
+      "first_divergence": null
+    },
+    "2": {
+      "status": "PASS",
+      "dut_count": 168,
+      "reference_count": 168,
+      "first_divergence": null
+    },
+    "3": {
+      "status": "PASS",
+      "dut_count": 0,
+      "reference_count": 0,
+      "first_divergence": null
+    }
+  },
+  "status": "FAIL"
+}

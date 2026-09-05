@@ -1,0 +1,2 @@
+PASS clocks, downloads, malformed sessions, bus qualification, fourway/keyboard
+tests/tb_units.sv:47: $finish called at 5574000 (1ps)

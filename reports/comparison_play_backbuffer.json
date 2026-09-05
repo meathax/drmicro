@@ -1,0 +1,144 @@
+{
+  "script": "play",
+  "frames": [
+    {
+      "frame": "frame_1",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "ram_differing_addresses": [],
+      "dut_rgb_sha256": "2cbbeef1249170a43854962fa5b19fba628470c70beb9ce23e15a0f05cb891f2",
+      "reference_rgb_sha256": "2cbbeef1249170a43854962fa5b19fba628470c70beb9ce23e15a0f05cb891f2"
+    },
+    {
+      "frame": "frame_30",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "ram_differing_addresses": [
+        53038,
+        53052,
+        53053,
+        53162,
+        53163
+      ],
+      "dut_rgb_sha256": "ce1e5c07e3aa9b149be9fb82b93ebcc79e6419b0491655a204ee77a0b98e19e2",
+      "reference_rgb_sha256": "ce1e5c07e3aa9b149be9fb82b93ebcc79e6419b0491655a204ee77a0b98e19e2"
+    },
+    {
+      "frame": "frame_60",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "ram_differing_addresses": [
+        53038,
+        53052,
+        53053,
+        53162,
+        53163
+      ],
+      "dut_rgb_sha256": "408c86529ab9b9d50c88365387784cda57500423b5906d8acc9934ea96710405",
+      "reference_rgb_sha256": "408c86529ab9b9d50c88365387784cda57500423b5906d8acc9934ea96710405"
+    },
+    {
+      "frame": "frame_120",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "ram_differing_addresses": [
+        53038,
+        53052,
+        53053,
+        53162,
+        53163
+      ],
+      "dut_rgb_sha256": "2593c8452c33776d01bc422af0d1294bda3beb5a184ba88ec79dd3c0866660bc",
+      "reference_rgb_sha256": "2593c8452c33776d01bc422af0d1294bda3beb5a184ba88ec79dd3c0866660bc"
+    },
+    {
+      "frame": "frame_180",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "ram_differing_addresses": [
+        53038,
+        53052,
+        53053,
+        53162,
+        53163
+      ],
+      "dut_rgb_sha256": "9908b232125822157b560d78e3fd246c12d747e1385aff4e4a7e0d7c5b9939fb",
+      "reference_rgb_sha256": "9908b232125822157b560d78e3fd246c12d747e1385aff4e4a7e0d7c5b9939fb"
+    },
+    {
+      "frame": "frame_240",
+      "rgb_differing_pixels": 98,
+      "offline_mame_snapshot_differing_pixels": 30,
+      "ram_differing_addresses": [
+        53162,
+        53163,
+        53166,
+        57441,
+        57505,
+        57601,
+        57665,
+        57825,
+        57889,
+        57921,
+        57953,
+        57985,
+        58017,
+        58049
+      ],
+      "dut_rgb_sha256": "24c4242882a9f5b882d92334114db0fc37dbeb5140a98ee9977ae66652da62e2",
+      "reference_rgb_sha256": "7037188105ec59460f368bd7205e7f554435e070ccf16a88c716f920119a7529"
+    },
+    {
+      "frame": "frame_300",
+      "rgb_differing_pixels": 527,
+      "offline_mame_snapshot_differing_pixels": 499,
+      "ram_differing_addresses": [
+        52338,
+        53162,
+        53163,
+        57665,
+        57985
+      ],
+      "dut_rgb_sha256": "36513c7f3f31439c1c294d96bc40b038213ae439f23c1809533b9b785faf2bdb",
+      "reference_rgb_sha256": "cab1e725b11a7a7cadacb802cba390877e0f8f9061e2e470843968537cc6473f"
+    }
+  ],
+  "functional_io": {
+    "dut_count": 868,
+    "reference_count": 868,
+    "matched_common_prefix": 868,
+    "first_divergence": null
+  },
+  "notes": [
+    "Frame numbers are capture-relative; provisional raster/NMI phase differs from MAME.",
+    "No-op port 05 excluded from functional IO only; full original traces retained.",
+    "Live DUT video and end-of-frame RAM snapshots can differ during animation. No baseline hashes are changed to hide differences."
+  ],
+  "sound_commands": {
+    "0": {
+      "status": "PASS",
+      "dut_count": 71,
+      "reference_count": 71,
+      "first_divergence": null
+    },
+    "1": {
+      "status": "PASS",
+      "dut_count": 51,
+      "reference_count": 51,
+      "first_divergence": null
+    },
+    "2": {
+      "status": "PASS",
+      "dut_count": 168,
+      "reference_count": 168,
+      "first_divergence": null
+    },
+    "3": {
+      "status": "PASS",
+      "dut_count": 0,
+      "reference_count": 0,
+      "first_divergence": null
+    }
+  },
+  "status": "FAIL"
+}

@@ -1,0 +1,39 @@
+{
+  "shared_defines": {
+    "status": "PASS",
+    "defines": [
+      "TV80_REFRESH"
+    ]
+  },
+  "explicit_source_lists": {
+    "status": "PASS",
+    "files": 29,
+    "modules": 40,
+    "screen_rotate_definition": "sys/arcade_video.v"
+  },
+  "future_project_paths": {
+    "status": "PASS",
+    "missing": [],
+    "optional_upstream_misc": [
+      "sys\\pll_audio.cmp",
+      "sys\\pll_hdmi.cmp",
+      "sys\\pll.cmp",
+      "sys\\pll_audio.cmp",
+      "sys\\pll_hdmi.cmp",
+      "rtl\\pll.cmp"
+    ],
+    "manifests_checked": 18,
+    "quartus": "Separate explicit stage; see reports/quartus_map/fit/sta.json"
+  },
+  "mra_structure": {
+    "status": "PASS",
+    "parts": 16,
+    "dip_options": 12
+  },
+  "mra_payload": {
+    "status": "PASS",
+    "length": 107040,
+    "md5": "98091b060e1ccb7b09b036b0dc8a049e",
+    "sha256": "b5e05f708775a2150ea7f2e1071f4369a2ebfc8977d7da421a94a9053e26180a"
+  }
+}

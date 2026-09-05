@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "checks": {
+    "gameplay_dips": {
+      "status": "PASS",
+      "evidence": "DUT and reference: 3/5 lives, one remaining credit with 1C/2C, game flip at frame 300; visible captures inspected."
+    },
+    "two_player_death_restart": {
+      "status": "PASS",
+      "evidence": "Both runs select two players, issue sample 0x21, and change player state between frames 240 and 2460; visible death/restart captures inspected. This does not assert frame-exact trajectory equivalence."
+    },
+    "cocktail_turn_flip": {
+      "status": "PASS",
+      "evidence": "Both runs unflipped at 240 and flipped at 2460 after player turn changes."
+    },
+    "service_mode": {
+      "status": "PASS",
+      "evidence": "Visible service screen; strict native RGB and all I/O compare exactly through 120 frames."
+    },
+    "full_boot_after_reset": {
+      "status": "PASS",
+      "evidence": "Reset at frame 240; frame 360 returns to the same title as frame 120. All displayed captures, reads and known board effects agree. Raw control bits 2/3 differ from MAME soft reset and remain reported."
+    }
+  },
+  "limits": "Outcome coverage is separate from strict gameplay pixel and cross-port timing equivalence. See script comparison reports."
+}

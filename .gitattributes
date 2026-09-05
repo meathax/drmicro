@@ -1,0 +1,2 @@
+# Preserve exact audited dependency and patch bytes across checkout platforms.
+* -text

@@ -1,0 +1,1 @@
+PASS actual emu/hps_io: malformed/full ROM download, DIP isolation, both gamepads, PS2 make/break, aspect/status and reset; CPU fetches=873

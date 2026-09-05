@@ -1,0 +1,11 @@
+--- a/sys/arcade_video.v
++++ b/sys/arcade_video.v
+@@ -121,6 +121,8 @@
+ 	.ce_pix(CE),
+ 	.CE_PIXEL(CE_PIXEL),
+ 
++	.HDMI_FREEZE(1'b0),
++	.freeze_sync(),
+ 	.scandoubler(scandoubler),
+ 	.hq2x(fx==1),
+ 	.gamma_bus(gamma_bus),

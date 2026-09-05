@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "scope": "Synthesis, fit and constrained timing; not full external I/O closure or hardware verification.",
+  "fit": {
+    "device": "5CSEBA6U23I7",
+    "alms_used": 10095,
+    "alms_available": 41910,
+    "registers": 14950,
+    "memory_bits": 1507777,
+    "ram_blocks_used": 202,
+    "ram_blocks_available": 553,
+    "dsp_blocks_used": 34,
+    "dsp_blocks_available": 112
+  },
+  "corners": 4,
+  "minimum_slack_ns": {
+    "setup": 0.085,
+    "hold": 0.086,
+    "recovery": 4.048,
+    "removal": 0.37
+  },
+  "minimum_pulse_width_slack_ns": 1.122,
+  "unconstrained": {
+    "clocks": 0,
+    "input_ports": 5,
+    "output_ports": 50,
+    "source": "quartus_unconstrained.rpt",
+    "status": "NOT_RUN for complete external I/O timing validation"
+  },
+  "warnings": {
+    "graphics_indices": "Constant leading zeros intentionally limit selected graphics-plane bits to a subset of the 24-bit row; no out-of-range access. Independent raw-pen/RGB fixture passes.",
+    "ram_bypass": "Quartus adds logic to preserve inferred same-clock read-during-write semantics; platform dual-clock RAM collision behaviour remains a documented boundary.",
+    "unused_pll": "The Template game PLL is unused by the direct 50 MHz core; its scoped assignments and clock filter do not match an instance.",
+    "audio_pll": "Inherited audio PLL reset/lock warnings remain for on-device evaluation.",
+    "pin_assignments": "Review incomplete/ignored I/O assignments and external timing budgets before board-level sign-off."
+  }
+}

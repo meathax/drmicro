@@ -1,0 +1,108 @@
+{
+  "script": "service",
+  "frames": [
+    {
+      "frame": "frame_1",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "backbuffer_vs_displayed_pixels": 0,
+      "sprite_records_equal": true,
+      "video_ram_differing_addresses": [],
+      "pixel_difference_bounds": null,
+      "ram_differing_addresses": [],
+      "dut_rgb_sha256": "2cbbeef1249170a43854962fa5b19fba628470c70beb9ce23e15a0f05cb891f2",
+      "reference_rgb_sha256": "2cbbeef1249170a43854962fa5b19fba628470c70beb9ce23e15a0f05cb891f2"
+    },
+    {
+      "frame": "frame_30",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "backbuffer_vs_displayed_pixels": 0,
+      "sprite_records_equal": true,
+      "video_ram_differing_addresses": [],
+      "pixel_difference_bounds": null,
+      "ram_differing_addresses": [],
+      "dut_rgb_sha256": "2cbbeef1249170a43854962fa5b19fba628470c70beb9ce23e15a0f05cb891f2",
+      "reference_rgb_sha256": "2cbbeef1249170a43854962fa5b19fba628470c70beb9ce23e15a0f05cb891f2"
+    },
+    {
+      "frame": "frame_60",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "backbuffer_vs_displayed_pixels": 0,
+      "sprite_records_equal": true,
+      "video_ram_differing_addresses": [],
+      "pixel_difference_bounds": null,
+      "ram_differing_addresses": [
+        53050,
+        53051,
+        53116,
+        53117
+      ],
+      "dut_rgb_sha256": "6587fb743da53d070fb64ca0c4f662a81af3f9f7d992426db3394513742fa82d",
+      "reference_rgb_sha256": "6587fb743da53d070fb64ca0c4f662a81af3f9f7d992426db3394513742fa82d"
+    },
+    {
+      "frame": "frame_120",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "backbuffer_vs_displayed_pixels": 1790,
+      "sprite_records_equal": true,
+      "video_ram_differing_addresses": [],
+      "pixel_difference_bounds": null,
+      "ram_differing_addresses": [
+        53166
+      ],
+      "dut_rgb_sha256": "880d644c68d1318f570dc85465bc5e7c70272a816eb65a540805d713c7cac0c7",
+      "reference_rgb_sha256": "880d644c68d1318f570dc85465bc5e7c70272a816eb65a540805d713c7cac0c7"
+    }
+  ],
+  "functional_io": {
+    "dut_count": 171,
+    "reference_count": 171,
+    "matched_common_prefix": 171,
+    "first_divergence": null
+  },
+  "notes": [
+    "Displayed native PNG is the reference: MAME screen:pixels() reads m_curbitmap, while snapshot uses m_curtexture; those differ after the frame buffer swap.",
+    "No-op port 05 is included in all_io_writes; historical functional_io retains its narrower scope.",
+    "Live scanline rendering and MAME instantaneous frame rendering are distinct timing models. All pixel differences remain visible."
+  ],
+  "all_io_writes": {
+    "status": "PASS",
+    "dut_count": 234,
+    "reference_count": 234
+  },
+  "io_reads": {
+    "status": "PASS",
+    "dut_count": 190,
+    "reference_count": 190
+  },
+  "sound_commands": {
+    "0": {
+      "status": "PASS",
+      "dut_count": 14,
+      "reference_count": 14,
+      "first_divergence": null
+    },
+    "1": {
+      "status": "PASS",
+      "dut_count": 14,
+      "reference_count": 14,
+      "first_divergence": null
+    },
+    "2": {
+      "status": "PASS",
+      "dut_count": 14,
+      "reference_count": 14,
+      "first_divergence": null
+    },
+    "3": {
+      "status": "PASS",
+      "dut_count": 0,
+      "reference_count": 0,
+      "first_divergence": null
+    }
+  },
+  "status": "PASS"
+}

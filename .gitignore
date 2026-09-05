@@ -1,0 +1,17 @@
+drmicro.zip
+roms/
+game/
+games/
+build/
+.tools/
+__pycache__/
+*.pyc
+*.rbf
+*.sof
+reports/captures/
+db/
+incremental_db/
+output_files/
+build_id.v
+jtag.cdf
+*.qws

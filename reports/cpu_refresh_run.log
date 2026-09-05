@@ -1,0 +1,2 @@
+PASS LD R,A; LD A,R value/flags, seven-bit wrap, prefix increments and HALT refresh
+tests/tb_cpu_refresh.sv:24: $finish called at 50040000 (1ps)

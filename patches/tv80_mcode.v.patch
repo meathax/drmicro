@@ -1,0 +1,30 @@
+--- a/rtl/vendor/tv80/tv80_mcode.v
++++ b/rtl/derived/tv80_mcode.v
+@@ -1019,7 +1019,7 @@
+ 
+                         MCycle[1] :
+                           begin
+-                            TStates = 3'b100;
++                            TStates = (Mode == 0) ? 3'b011 : 3'b100;
+                             Write = 1'b1;
+                             IncDec_16 = 4'b1111;
+                             Set_Addr_To = aSP;
+@@ -1028,7 +1028,7 @@
+ 
+                         MCycle[2] :
+                           begin
+-                            TStates = 3'b100;
++                            TStates = (Mode == 0) ? 3'b011 : 3'b100;
+                             Write = 1'b1;
+                           end
+ 
+@@ -1480,7 +1480,8 @@
+                   case (1'b1) // MCycle
+                     MCycle[0] :
+                       begin
+-                        TStates = 3'b101;
++                        // Zilog UM0080: unconditional Z80 RET is 4+3+3, not 5+3+3.
++                        TStates = (Mode == 0) ? 3'b100 : 3'b101;
+                         Set_Addr_To = aSP;
+                       end
+ 

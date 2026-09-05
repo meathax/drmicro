@@ -1,0 +1,25 @@
+# Reproduction and evidence conventions
+
+Run commands from README using the Python driver. Simulation commands do not invoke Quartus; the user subsequently authorized explicit quartus_map/fit/sta stages. The Windows session used the project-local OSS CAD Suite 2026-09-05 (Verilator 5.051 development revision v5.050-312-gb1c06fdb0; Icarus 14 development), w64devkit GCC 16.2.0, Python 3.12.14 and official MAME 0.289. Exact download URLs/hashes are in reports/tool_provenance.json. MAME executable source commit f34f02505e32c1993c6a782b6814232cbfc74e36 differs from the primary pinned MAME reference commit 5fdbebde74ce2cb4db89ae615860c51a1bbf1f38; listxml validates identical game ROM metadata. Captures identify both revisions explicitly.
+
+Levels are distinct:
+
+* Unit: four-state Icarus tests clock enables, loader sessions, bus qualification, all CPU address reads, memory collisions, keyboard and gamepad policy, TV80 diagnostic/NMI execution. No game ROMs required.
+* Independent fixtures: synthetic random asymmetric graphics and VRAM, including overlapping and wrapped sprites, compare 57,344 raw pens and weighted RGB values per flip orientation. PSG compares 32,768 events against a separately written state machine. ADPCM compares 256 nibble updates with an independent integer decoder and tests sample control/restarts/markers/wrap. Fixtures do not share HDL address functions.
+* Game integration: Verilator executes the same full core/donors via real download pins. C++ only drives pins and observes the DUT. All game RAM/ROM, CPU, graphics and audio are HDL. Read-only hierarchy access exports RAM for checking; isolated unit fixtures may initialize checker memories.
+* Reference: official MAME, Lua address-space taps and screen snapshots. MAME instruction scheduling is not a physical bus trace. Native RGB is compared before presentation; all differences and first functional-command divergence are reported. The zero-based runner frame schedule and MAME callback schedule are recorded, not assumed to imply pin-level simultaneity.
+* Platform: actual emu and HPS/video/rotation logic elaborates in Verilator; no game stubs. A two-state rotation executable checks coordinate-labelled pixels using an always-ready DDR write sink. Full sys_top, VHDL scaler, Intel primitives and hardware controllers are outside this boundary.
+
+The maintained profile uses NMI_LINE=240 and starts the raster at line 240, with the capture frame boundary at that same active-to-blank edge. The original NMI240 experiment started at line zero and asserted its first interrupt 16 lines earlier than the subsequent NMI0 profile. Those historical results remain labelled separately. Moving both reset origin and interrupt to 240 preserves CPU/interrupt phase while placing blanking after the interrupt. This remains provisional PCB timing.
+
+MAME 0.289 screen:pixels() reads m_curbitmap (the back buffer after the update swaps buffers), whereas screen:snapshot() uses m_curtexture (the displayed frame). The comparison now uses native 256x224 PNG snapshots and independently renders contemporaneous MAME RAM to check this reference. Raw .pixels are retained as diagnostics. Evidence: pinned release src/emu/screen.cpp, pixel accessor and update_quads buffer swap, and snapshot implementation. This correction does not waive any remaining DUT/displayed-frame pixel differences.
+
+CPU regressions explicitly cover 10-T unconditional RET, 11-T NMI entry, HALT wake and RETN, refresh increment/wrap and LD A,R flags. TV80_REFRESH is enabled in both simulation and FPGA source lists. The original donor files remain unchanged; selected derived files and patches are hash audited.
+
+Platform tests execute actual HPS download/input/status/reset protocol, native video, gamma, scandoubler and HQ2x. They do not replace game logic. Structural warnings require exact-message, source-hash-bound waivers with reasons in sim/platform_waivers.json; new board/implicit/undriven warnings fail the gate.
+
+The DUT raw captured RGB (and audio.raw) are canonical observations; the reference uses displayed native PNG as explained above. Portrait PNGs are a simple counter-clockwise 90° presentation and nearest-neighbour enlargement. WAV conversion deinterleaves the four native sources plus mix at 48 kHz. No analogue filter or speaker response is claimed.
+
+Reports distinguish PASS, FAIL, NOT_RUN and BLOCKED. A passing smoke run requires completion, correct active-pixel counts, no renderer deadline miss, CPU progress and (after startup) nonzero I/O/NMI activity. It is not by itself proof of correct gameplay. Visible milestones require capture inspection and reference correlation. test_report.json records the latest command result, source digest and actual elapsed time; test_history.jsonl preserves subsequent invocations and their arguments; separate capture result.json files preserve longer-run detail.
+
+Whole-suite status is collected in reports/verification_summary.json. It deliberately remains FAIL when strict gameplay differs, even if the default 120-frame test_all command passes. Milestone/cold-boot reports establish their narrower outcome checks.

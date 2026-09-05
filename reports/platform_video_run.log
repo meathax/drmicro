@@ -1,0 +1,4 @@
+PASS real arcade_video mode=0 pixels=229376 lines=896 (native, HQ2x, scandoubler, gamma respectively)
+PASS real arcade_video mode=1 pixels=917504 lines=1792 (native, HQ2x, scandoubler, gamma respectively)
+PASS real arcade_video mode=2 pixels=458752 lines=1792 (native, HQ2x, scandoubler, gamma respectively)
+PASS real arcade_video mode=3 pixels=229376 lines=896 (native, HQ2x, scandoubler, gamma respectively)

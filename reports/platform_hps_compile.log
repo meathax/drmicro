@@ -1,0 +1,215 @@
+In file included from build/platform_hps/Vplatform_hps_top.h:12,
+                 from sim/platform_hps.cpp:2:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top.cpp:4:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top___024root__0.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top___024root__0__Slow.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top___024root__Slow.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__Dpi.h:11,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__Dpi.cpp:14:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__Syms__Slow.cpp:4:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top_drmicro_core__0.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top_drmicro_core__0__Slow.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top_drmicro_core__Slow.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top_emu__0.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top_emu__0__Slow.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top_emu__Slow.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top_platform_hps_top__0.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top_platform_hps_top__0__Slow.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top_platform_hps_top__Slow.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top_tv80_core__M0__0.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top_tv80_core__M0__0__Slow.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top_tv80_core__M0__Slow.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top_tv80s__0.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top_tv80s__0__Slow.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+In file included from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include/verilated_dpi.h:34,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top__pch.h:21,
+                 from C:\Users\meath\OneDrive\Documents\dr\build\platform_hps\Vplatform_hps_top_tv80s__Slow.cpp:5:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\verilated.cpp:78:10: warning: 'STDOUT_FILENO' redefined
+   78 | # define STDOUT_FILENO _fileno(stdout)
+      |          ^~~~~~~~~~~~~
+In file included from C:/Users/meath/OneDrive/Documents/dr/.tools/w64devkit/include/locale.h:12,
+                 from C:/Users/meath/OneDrive/Documents/dr/.tools/w64devkit/lib/gcc/x86_64-w64-mingw32/16.2.0/include/c++/clocale:47,
+                 from C:/Users/meath/OneDrive/Documents/dr/.tools/w64devkit/lib/gcc/x86_64-w64-mingw32/16.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h:41,
+                 from C:/Users/meath/OneDrive/Documents/dr/.tools/w64devkit/lib/gcc/x86_64-w64-mingw32/16.2.0/include/c++/bits/localefwd.h:42,
+                 from C:/Users/meath/OneDrive/Documents/dr/.tools/w64devkit/lib/gcc/x86_64-w64-mingw32/16.2.0/include/c++/string:48,
+                 from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\verilatedos.h:666,
+                 from C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\verilated.cpp:51:
+C:/Users/meath/OneDrive/Documents/dr/.tools/w64devkit/include/stdio.h:75:9: note: this is the location of the previous definition
+   75 | #define STDOUT_FILENO   1
+      |         ^~~~~~~~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\verilated.cpp:79:10: warning: 'STDERR_FILENO' redefined
+   79 | # define STDERR_FILENO _fileno(stderr)
+      |          ^~~~~~~~~~~~~
+C:/Users/meath/OneDrive/Documents/dr/.tools/w64devkit/include/stdio.h:76:9: note: this is the location of the previous definition
+   76 | #define STDERR_FILENO   2
+      |         ^~~~~~~~~~~~~

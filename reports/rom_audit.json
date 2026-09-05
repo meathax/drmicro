@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "parts": [
+    {
+      "name": "dm-00.13b",
+      "length": 8192,
+      "crc32": "270f2145",
+      "sha1": "1557428387e2c0f711c676a13a763c8d48aa497b"
+    },
+    {
+      "name": "dm-01.14b",
+      "length": 8192,
+      "crc32": "bba30c80",
+      "sha1": "a084429fad58fa6348936084652235d5f55e3b89"
+    },
+    {
+      "name": "dm-02.15b",
+      "length": 8192,
+      "crc32": "d9e4ca6b",
+      "sha1": "9fb6d1d6b45628891deae389cf1d142332b110ba"
+    },
+    {
+      "name": "dm-03.13d",
+      "length": 8192,
+      "crc32": "b7bcb45b",
+      "sha1": "61035afc642bac2e1c56c36c188bed4e1949523f"
+    },
+    {
+      "name": "dm-04.14d",
+      "length": 8192,
+      "crc32": "071db054",
+      "sha1": "75929b7692bebf2246fa84581b6d1eedb02c9aba"
+    },
+    {
+      "name": "dm-05.15d",
+      "length": 8192,
+      "crc32": "f41b8d8a",
+      "sha1": "802830f3f0362ec3df257f31dc22390e8ae4207c"
+    },
+    {
+      "name": "dm-23.5l",
+      "length": 8192,
+      "crc32": "279a76b8",
+      "sha1": "635650621bdce5873bb5faf64f8352149314e784"
+    },
+    {
+      "name": "dm-24.5n",
+      "length": 8192,
+      "crc32": "ee8ed1ec",
+      "sha1": "7afc05c73186af9fe3d3f3ce13412c8ee560b146"
+    },
+    {
+      "name": "dm-20.4a",
+      "length": 8192,
+      "crc32": "6f5dbf22",
+      "sha1": "41ef084336e2ebb1016b28505dcb43483e37a0de"
+    },
+    {
+      "name": "dm-21.4c",
+      "length": 8192,
+      "crc32": "8b17ff47",
+      "sha1": "5bcc14489ea1d4f1fe8e51c24a72a8e787ab8159"
+    },
+    {
+      "name": "dm-22.4d",
+      "length": 8192,
+      "crc32": "84daf771",
+      "sha1": "d187debcca59ceab6cd696be246370120ee575c6"
+    },
+    {
+      "name": "dm-40.12m",
+      "length": 8192,
+      "crc32": "3d080af9",
+      "sha1": "f9527fae69fe3ca0762024ac4a44b1f02fbee66a"
+    },
+    {
+      "name": "dm-41.13m",
+      "length": 8192,
+      "crc32": "ddd7bda2",
+      "sha1": "bbe9276cb47fa3e82081d592522640e04b4a9223"
+    },
+    {
+      "name": "dm-62.9h",
+      "length": 32,
+      "crc32": "e3e36eaf",
+      "sha1": "5954400190e587a20cad60f5829f4bddc85ea526"
+    },
+    {
+      "name": "dm-61.4m",
+      "length": 256,
+      "crc32": "0dd8e365",
+      "sha1": "cbd43a2d4af053860932af32ca5e13bef728e38a"
+    },
+    {
+      "name": "dm-60.6e",
+      "length": 256,
+      "crc32": "540a3953",
+      "sha1": "bc65388a1019dadf8c71705e234763f5c735e282"
+    }
+  ],
+  "payload_sha256": "b5e05f708775a2150ea7f2e1071f4369a2ebfc8977d7da421a94a9053e26180a"
+}

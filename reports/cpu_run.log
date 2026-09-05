@@ -1,0 +1,2 @@
+PASS real TV80 CE, opcodes/data, sync reads, RMW, IO once, HALT/NMI/RETN
+tests/tb_cpu.sv:30: $finish called at 120440000 (1ps)

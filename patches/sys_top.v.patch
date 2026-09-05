@@ -1,0 +1,24 @@
+--- a/sys/sys_top.v
++++ b/sys/sys_top.v
+@@ -1263,8 +1263,8 @@
+ `ifndef MISTER_DEBUG_NOHDMI
+ 	cyclonev_clkselect hdmi_clk_sw
+ 	( 
+-		.clkselect({1'b1, ~vga_fb & direct_video}),
+-		.inclk({clk_vid, hdmi_clk_out, 2'b00}),
++		.clkselect({~(~vga_fb & direct_video), ~vga_fb & direct_video}),
++		.inclk({1'b0, hdmi_clk_out, clk_vid, 1'b0}),
+ 		.outclk(hdmi_tx_clk)
+ 	);
+ `else
+@@ -1343,8 +1343,8 @@
+ 	`ifndef MISTER_DEBUG_NOHDMI
+ 		cyclonev_clkselect vga_clk_sw
+ 		( 
+-			.clkselect({1'b1, ~vga_fb & ~vga_scaler}),
+-			.inclk({clk_vid, hdmi_clk_out, 2'b00}),
++			.clkselect({~(~vga_fb & ~vga_scaler), ~vga_fb & ~vga_scaler}),
++			.inclk({1'b0, hdmi_clk_out, clk_vid, 1'b0}),
+ 			.outclk(vga_tx_clk)
+ 		);
+ 	`else

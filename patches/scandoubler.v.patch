@@ -1,0 +1,10 @@
+--- a/sys/scandoubler.v
++++ b/sys/scandoubler.v
+@@ -102,6 +102,7 @@
+ 
+ Hq2x #(.LENGTH(LENGTH), .HALF_DEPTH(HALF_DEPTH)) Hq2x
+ (
++	.mono(1'b0),
+ 	.clk(clk_vid),
+ 
+ 	.ce_in(ce_x4i),

@@ -1,0 +1,172 @@
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+    Info: Version 17.0.2 Build 602 07/19/2017 SJ Lite Edition
+    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel MegaCore Function License Agreement, or other 
+    Info: applicable license agreement, including, without limitation, 
+    Info: that your use is for the sole purpose of programming logic 
+    Info: devices manufactured by Intel and sold by Intel or its 
+    Info: authorized distributors.  Please refer to the applicable 
+    Info: agreement for further details.
+    Info: Processing started: Sun Sep 06 00:04:07 2026
+Info: Command: quartus_fit --read_settings_files=on --write_settings_files=off Arcade-DrMicro -c Arcade-DrMicro
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = Arcade-DrMicro
+Info: Revision = Arcade-DrMicro
+Warning (20013): Ignored 13 assignments for entity "pll" -- entity does not exist in design
+Warning (20013): Ignored 317 assignments for entity "pll_0002" -- entity does not exist in design
+Info (16303): High Performance Effort optimization mode selected -- timing performance will be prioritized at the potential cost of increased compilation time
+Info (20032): Parallel compilation is enabled and will use up to 2 processors
+Info (119006): Selected device 5CSEBA6U23I7 for design "Arcade-DrMicro"
+Info (21077): Low junction temperature is -40 degrees C
+Info (21077): High junction temperature is 100 degrees C
+Warning: RST port on the PLL is not properly connected on instance pll_audio:pll_audio|pll_audio_0002:pll_audio_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
+    Info: Must be connected
+Warning (21300): LOCKED port on the PLL is not properly connected on instance "pll_audio:pll_audio|pll_audio_0002:pll_audio_inst|altera_pll:altera_pll_i|general[0].gpll". The LOCKED port on the PLL should be connected when the FBOUTCLK port is connected. Although it is unnecessary to connect the LOCKED signal, any logic driven off of an output clock of the PLL will not know when the PLL is locked and ready.
+Info (171004): Fitter is performing a Standard Fit compilation using maximum Fitter effort to optimize design performance
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
+Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
+Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
+Info (184020): Starting Fitter periphery placement operations
+Info (11178): Promoted 8 clocks (7 global, 1 regional)
+    Info (11162): aspi_sck~CLKENA0 with 129 fanout uses regional clock CLKCTRL_R80
+        Info (11177): Node drives Regional Clock Region 2 from (45, 0) to (89, 36)
+    Info (11162): sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|h2f_rst_n[0]~CLKENA0 with 47 fanout uses global clock CLKCTRL_G10
+    Info (11162): sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|h2f_user0_clk[0]~CLKENA0 with 937 fanout uses global clock CLKCTRL_G9
+    Info (11162): hdmi_tx_clk~CLKENA0 with 84 fanout uses global clock CLKCTRL_G6
+    Info (11162): pll_hdmi:pll_hdmi|pll_hdmi_0002:pll_hdmi_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|divclk[0]~CLKENA0 with 4968 fanout uses global clock CLKCTRL_G4
+    Info (11162): vga_tx_clk~CLKENA0 with 3 fanout uses global clock CLKCTRL_G5
+    Info (11162): pll_audio:pll_audio|pll_audio_0002:pll_audio_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 with 1667 fanout uses global clock CLKCTRL_G2
+    Info (11162): FPGA_CLK2_50~inputCLKENA0 with 8285 fanout uses global clock CLKCTRL_G7
+Info (11191): Automatically promoted 1 clock (1 global)
+    Info (11162): FPGA_CLK1_50~inputCLKENA0 with 705 fanout uses global clock CLKCTRL_G0
+Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
+Info (332164): Evaluating HDL-embedded SDC commands
+    Info (332165): Entity altera_std_synchronizer
+        Info (332166): set_false_path -to [get_keepers {*altera_std_synchronizer:*|din_s1}]
+Info (332104): Reading SDC File: 'sys/sys_top.sdc'
+Info (332110): Deriving PLL clocks
+    Info (332110): create_generated_clock -source {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|vco0ph[0]} -divide_by 3 -duty_cycle 50.00 -name {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk} {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk}
+    Info (332110): create_generated_clock -source {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|fpll|refclkin} -divide_by 512 -multiply_by 4563 -duty_cycle 50.00 -name {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]} {pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]}
+    Info (332110): create_generated_clock -source {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|refclkin} -divide_by 512 -multiply_by 4279 -duty_cycle 50.00 -name {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]} {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]}
+    Info (332110): create_generated_clock -source {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|vco0ph[0]} -divide_by 17 -duty_cycle 50.00 -name {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk} {pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Warning (332174): Ignored filter at sys_top.sdc(14): *|pll|pll_inst|altera_pll_i|*[*].*|divclk could not be matched with a clock File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.sdc Line: 14
+Warning (332054): Assignment set_clock_groups is accepted but has some problems at sys_top.sdc(13): Argument -group with value [get_clocks { *|pll|pll_inst|altera_pll_i|*[*].*|divclk}] contains zero elements File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.sdc Line: 13
+    Info (332050): set_clock_groups -exclusive \
+   -group [get_clocks { *|pll|pll_inst|altera_pll_i|*[*].*|divclk}] \
+   -group [get_clocks { pll_hdmi|pll_hdmi_inst|altera_pll_i|*[0].*|divclk}] \
+   -group [get_clocks { pll_audio|pll_audio_inst|altera_pll_i|*[0].*|divclk}] \
+   -group [get_clocks { spi_sck}] \
+   -group [get_clocks { hdmi_sck}] \
+   -group [get_clocks { *|h2f_user0_clk}] \
+   -group [get_clocks { FPGA_CLK1_50 }] \
+   -group [get_clocks { FPGA_CLK2_50 }] \
+   -group [get_clocks { FPGA_CLK3_50 }] File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.sdc Line: 13
+Info (332104): Reading SDC File: 'Arcade-DrMicro.sdc'
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
+    Info (332098): Cell: pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
+    Info (332098): Cell: pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
+    Info (332098): Cell: pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter  from: vco0ph[0]  to: divclk
+    Info (332098): Cell: pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|REFCLK_SELECT  from: clkin[0]  to: clkout
+    Info (332098): Cell: pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|fpll  from: refclkin  to: fbclk
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|cmd_port_clk_0  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_762
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|cmd_port_clk_1  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_827
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|cmd_port_clk_2  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_920
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|rd_clk_0  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_7
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|rd_clk_1  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_6
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|rd_clk_2  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_5
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|rd_clk_3  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_4
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_0  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_3
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_1  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_2
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_2  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_1
+    Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_3  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_0
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
+Info (332111): Found 10 clocks
+    Info (332111):   Period   Clock Name
+    Info (332111): ======== ============
+    Info (332111):   20.000 FPGA_CLK1_50
+    Info (332111):   20.000 FPGA_CLK2_50
+    Info (332111):   20.000 FPGA_CLK3_50
+    Info (332111):  100.000     hdmi_sck
+    Info (332111):    2.393 pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]
+    Info (332111):   40.682 pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk
+    Info (332111):    6.732 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk
+    Info (332111):    2.244 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]
+    Info (332111):   10.000      spi_sck
+    Info (332111):   10.000 sysmem|fpga_interfaces|clocks_resets|h2f_user0_clk
+Info (176233): Starting register packing
+Warning (176250): Ignoring invalid fast I/O register assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
+Info (176235): Finished register packing
+    Extra Info (176218): Packed 51 registers into blocks of type Block RAM
+    Extra Info (176218): Packed 817 registers into blocks of type DSP block
+    Extra Info (176218): Packed 27 registers into blocks of type I/O output buffer
+    Extra Info (176220): Created 162 register duplicates
+Info (128000): Starting physical synthesis optimizations for speed
+Info (128002): Starting physical synthesis algorithm register retiming
+Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
+Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
+Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
+Info (128002): Starting physical synthesis algorithm register retiming
+Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
+Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
+Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
+Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:31
+Info (176233): Starting register packing
+Info (176235): Finished register packing
+    Extra Info (176218): Packed 228 registers into blocks of type DSP block
+    Extra Info (176220): Created 156 register duplicates
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:54
+Info (170189): Fitter placement preparation operations beginning
+Info (14951): The Fitter is using Advanced Physical Optimization.
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:43
+Info (170191): Fitter placement operations beginning
+Info (170137): Fitter placement was successful
+Info (170192): Fitter placement operations ending: elapsed time is 00:01:32
+Info (170193): Fitter routing operations beginning
+Info (170195): Router estimated average interconnect usage is 9% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 22% of the available device resources in the region that extends from location X11_Y46 to location X21_Y57
+Info (170194): Fitter routing operations ending: elapsed time is 00:01:32
+Info (11888): Total time spent on timing analysis during the Fitter is 60.59 seconds.
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:59
+Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
+Warning (169064): Following 20 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
+    Info (169065): Pin SDRAM_DQ[0] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[1] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[2] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[3] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[4] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[5] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[6] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[7] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[8] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[9] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[10] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[11] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[12] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[13] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[14] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 48
+    Info (169065): Pin SDRAM_DQ[15] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 48
+    Info (169065): Pin USER_IO[0] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 125
+    Info (169065): Pin USER_IO[1] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 125
+    Info (169065): Pin USER_IO[3] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 125
+    Info (169065): Pin USER_IO[6] has a permanently disabled output enable File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 125
+Info (144001): Generated suppressed messages file C:/Users/meath/OneDrive/Documents/dr/build/quartus/Arcade-DrMicro.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 7068 megabytes
+    Info: Processing ended: Sun Sep 06 00:11:23 2026
+    Info: Elapsed time: 00:07:16
+    Info: Total CPU time (on all processors): 00:11:23

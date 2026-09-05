@@ -1,0 +1,970 @@
+{
+  "mame": {
+    "url": "https://github.com/mamedev/mame",
+    "commit": "5fdbebde74ce2cb4db89ae615860c51a1bbf1f38",
+    "destination": "reference/mame",
+    "files": {
+      "reference/mame/src/mame/sanritsu/drmicro.cpp": "1085d775eca67c59c13c4f8992a0cd88f700686ee9dd1f1d80882ac99f9cc913",
+      "reference/mame/src/devices/sound/sn76496.cpp": "eb4db2fa887fecc07aa1c8f890446966cbd5ca74040d02b21f9dabb3dcaee6d5",
+      "reference/mame/src/devices/sound/sn76496.h": "4d00be703e2fc6f7bd5b2c54ab546b621412e1799e1c9830ec218ea234af4043",
+      "reference/mame/src/devices/sound/msm5205.cpp": "cc02d64860ce173807fec71fd32f9c4807937d02cff2f5dca27f7df6109a7492",
+      "reference/mame/src/devices/sound/msm5205.h": "fa088b0dddacec4a737e112cbdf5370e525e9c30c3e864139526d64e3b7fc147",
+      "reference/mame/COPYING": "9814ccb157fdb0a8f0fa049f858b6ac761320e90eb28f54e2972468d6d6ac0ca",
+      "reference/mame/docs/legal/BSD-3-Clause": "a27554938d3dd6569931e5e18b93214a57f47bc1bb8b75fc32fdd18abe042a07",
+      "reference/mame/src/emu/drawgfx.cpp": "ed4255dfa02ab09bb7fb43020ec2c3743a5d9ea1311a8a2cb62efe4af794fbd1"
+    },
+    "license": "BSD-3-Clause for the selected driver/sound files; COPYING describes the larger project",
+    "used_modules": [],
+    "configuration": "Behavioural oracle only; never linked into DUT",
+    "license_headers": {
+      "reference/mame/src/mame/sanritsu/drmicro.cpp": [
+        "// license:BSD-3-Clause",
+        "// copyright-holders: Uki"
+      ],
+      "reference/mame/src/devices/sound/sn76496.cpp": [
+        "// license:BSD-3-Clause",
+        "// copyright-holders:Nicola Salmoria"
+      ],
+      "reference/mame/src/devices/sound/sn76496.h": [
+        "// license:BSD-3-Clause",
+        "// copyright-holders:Nicola Salmoria"
+      ],
+      "reference/mame/src/devices/sound/msm5205.cpp": [
+        "// license:BSD-3-Clause",
+        "// copyright-holders:Aaron Giles"
+      ],
+      "reference/mame/src/devices/sound/msm5205.h": [
+        "// license:BSD-3-Clause",
+        "// copyright-holders:Aaron Giles"
+      ],
+      "reference/mame/src/emu/drawgfx.cpp": [
+        "// license:BSD-3-Clause",
+        "// copyright-holders:Nicola Salmoria, Aaron Giles"
+      ]
+    }
+  },
+  "template": {
+    "url": "https://github.com/MiSTer-devel/Template_MiSTer",
+    "commit": "3ea1134cf05d62c2b1db30362277a823d739ced2",
+    "destination": "reference/template",
+    "files": {
+      "reference/template/.gitignore": "ab42bb9c91735e2e113edd1e60299e44922ed643632177e8b7f803f5d8d1d63e",
+      "reference/template/LICENSE": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "reference/template/Readme.md": "752e7054e90c5a95e67659ceca8ce9c10d51664dbe47806df41466a89da24008",
+      "reference/template/Template.qpf": "269ed543025396374dc3d81e3bc080833d262a2bf8c4843b3211a0377402839a",
+      "reference/template/Template.qsf": "e692e72925eb96c78d4a38a4682250bd8c316ac540f376a87e89ae22e32fafb0",
+      "reference/template/Template.sdc": "89cb176f5eeb8c2adf59d758e56a605bd711631a4bccb92e77c77f995b62e71f",
+      "reference/template/Template.srf": "37f42477f66524e24d5f97f115e7eb4d878be9dbd577496fe32ecd5e2d157d63",
+      "reference/template/Template.sv": "0821973ffdb14f235aff4ef1b717ef1add690b3527ae630fc885fd92b65fee8b",
+      "reference/template/Template_Q13.qpf": "830b0161f7c0374ad4d4a485cc96b08ac99506c6de4e64ea3164d4373b39ca53",
+      "reference/template/Template_Q13.qsf": "a236ce4fb39415abaed9fe85631bd5fa5bd067e2a5edf24a0d39d13d15dd30a4",
+      "reference/template/Template_Q13.srf": "a7939efab1147f801a3d766846e1abaa3677d86608cfac900a4d89092edbac26",
+      "reference/template/clean.bat": "e12b66c8340c1fe99d7ffeb76d0aa839d4e18d9031425fedef3e7bb682258aa3",
+      "reference/template/files.qip": "6a4046d985c2373bd7b86a91c3285c6932b6d367285d80632d8d878ce7f7646e",
+      "reference/template/rtl/cos.sv": "38f233d5b413f739a182a57d85306b4cc3b5d9b5eef993ff6c1ecae8f1eb2bb5",
+      "reference/template/rtl/lfsr.v": "291fdc8c9ab4006e92f129aafe484d37187845d94bfb0220446d0286c5108c27",
+      "reference/template/rtl/mycore.v": "cd597f8bdb3d6fade1cbab24f327df33e6e73f125816bcf5bbb2bf73bd32bd55",
+      "reference/template/rtl/pll.qip": "60c0c7b517dc7ecb736f6df65dd360c1b8493f04fc72c4518f073a29fc04a19f",
+      "reference/template/rtl/pll.v": "8e1a58e1539aba4c9c8e9bb66dca68e9beb298beca7402943aceeba932d6bfc0",
+      "reference/template/rtl/pll/pll_0002.qip": "98c91540a36e672f25f071bfaae965b8c9f60c679db4fbe226578c8c78c5052a",
+      "reference/template/rtl/pll/pll_0002.v": "8ac785958023eadf517605bc669189d5583af48de2d63dabbddbeca1acda9ffa",
+      "reference/template/rtl/pll/pll_0002_q13.qip": "58d1281c86501f8926b2b156edeada9bc7c27c4156f456eb3568a5ba40baea0f",
+      "reference/template/sys/alsa.sv": "74943b658cd3f4adc5b74c72f225fb42b95122a1c5e453df860a4c6a9bf72fc9",
+      "reference/template/sys/arcade_video.v": "ce64cdd7f900ded7b9cd9aa728dab7383b7561cdc75dfe82ab23fe27a3d217d3",
+      "reference/template/sys/ascal.vhd": "b460748da9c97fdb0efa5949ba55437eb7778112b3d683c39649427ea1a893af",
+      "reference/template/sys/audio_out.sv": "11aab123cce330e894d3ce9cf18e71460edbee43d3580a76d3bd1d516b3df40c",
+      "reference/template/sys/build_id.tcl": "148dc6a8124d36ac2898a45d085960cc05178a76d7297fde8877925fc0a74e88",
+      "reference/template/sys/ddr_svc.sv": "8dfa874b9a93b4dbbe3b2fcf4f9035a895262cc090d398f4099941a626f41c08",
+      "reference/template/sys/emu_ports.vh": "0b8f96815236ea4fcfec6fa3592b58f4c53f12094f31a26fd509709b503225e0",
+      "reference/template/sys/f2sdram_safe_terminator.sv": "400bcbcfc0b4aae324fe813866a5443d577bf4de9b4ab1454cb068733d170261",
+      "reference/template/sys/gamma_corr.sv": "2754944c6fe05d921374d1fecc26621782520b3bc6fbf600ca561e9f37c7af88",
+      "reference/template/sys/hps_io.sv": "f4a085fc23bdcefb57c600866a39a448c749cd3c93910f7005316e8df9019bec",
+      "reference/template/sys/hq2x.sv": "2146b69cf63c26a4b41407e9ac1b4462db4d7e3ea6d8a99f31ba12712d68f975",
+      "reference/template/sys/i2c.v": "09bd7ebd5d84fb57f6a9d569e5214f3154c49e55826c15bd78884f3c781fec5b",
+      "reference/template/sys/i2s.v": "927d2aea6797fb837f383e5e8a3259609e132ed24883127240ab21601f467efa",
+      "reference/template/sys/iir_filter.v": "570a8095c15af84a60015b5eab105cee6e2d7edde77e20f0ce40c075ab2db8b7",
+      "reference/template/sys/ltc2308.sv": "825fa1197c8e9f31c19c2fef1b01693133fb7df3cfb2dd831f2848a98fc6899c",
+      "reference/template/sys/math.sv": "d384fa9fcf73100cb28a2affc5db1e4aacc87620287971c3882507fc3af056cc",
+      "reference/template/sys/mcp23009.sv": "f168485e0b64c0545060f25b858c9f1c12b57024ce441754bb6a0cb0e9072e3f",
+      "reference/template/sys/mt32pi.sv": "4ad39571d16a4b25347030d75ffdf601803ddec71e2e3fcabe962103cc45a1a2",
+      "reference/template/sys/osd.v": "3d544d9ed6e3e39b49ec814dff884176e7f6a052e4a5693a9c5f0e6005e9d83e",
+      "reference/template/sys/pll.13.qip": "f25f58e7c0290583f33ee0fdd729a4470cc69312686f0f1ecb95c61115d61cec",
+      "reference/template/sys/pll_audio.13.qip": "60edce734c54e4b9f9d56f078bc797841e52c6817f4d27e0cfe77db5d77b2596",
+      "reference/template/sys/pll_audio.qip": "278496eefe70d18f6b3ccf624c3a4595ccca74a9a6740eb4520200f1e929a236",
+      "reference/template/sys/pll_audio.v": "1662fff7650cd443db81db7f0707f5583d223372b3e3c41af2d41ea4f3ac38f3",
+      "reference/template/sys/pll_audio/pll_audio_0002.qip": "4cedd5394006286e0be61acdcbb6455f35cdf5c1488f4eb4a76b60e20eb43fb8",
+      "reference/template/sys/pll_audio/pll_audio_0002.v": "2b24d2a561d81cc8b20f725884ee9c243e619058e42ebcdcf6f491d33008696c",
+      "reference/template/sys/pll_cfg.qip": "7c1573f321012132479272242434d02058b1bcfe8d89843130ef11173a901eae",
+      "reference/template/sys/pll_cfg/altera_pll_reconfig_core.v": "9058d2c68e9cb0b1b6b3ab5487daad8aeaf04461e162aba317857dd133329189",
+      "reference/template/sys/pll_cfg/altera_pll_reconfig_top.v": "34c11c19e6bf3797d2db2e41314ce802f5a01041265ce943b54e7f20eb2027c9",
+      "reference/template/sys/pll_cfg/pll_cfg.v": "e07ae93193537830b3bc9029465e763a6bfe354c25b7e7747eeeb4094b08ad10",
+      "reference/template/sys/pll_cfg/pll_cfg_hdmi.v": "d3874dda124af03656054fa1ae1ee70f1a4d3cea6d4670795a5168325bb6760a",
+      "reference/template/sys/pll_hdmi.13.qip": "625df824716313233400454bc1142615fb3a234a494225691c8a554753b1731b",
+      "reference/template/sys/pll_hdmi.qip": "5571604010bf98858a0797a2286d2389e105d32a97b42508865b02ba4237dd0d",
+      "reference/template/sys/pll_hdmi.v": "499561547c1045a46f1137558e2bab83d8e026e5d32669b5c5779a264b7ed676",
+      "reference/template/sys/pll_hdmi/pll_hdmi_0002.qip": "de648286a832ee72839dd6abb444231a4238d32b2c26f29426399d2221d7bf5b",
+      "reference/template/sys/pll_hdmi/pll_hdmi_0002.v": "27c77f35c89e97994477801f83edf3c7e9c5b9e57df49864434d300c40e9f1f7",
+      "reference/template/sys/pll_hdmi_adj.vhd": "ae18c82eef2f6b9c7783c68ac272d03f570eb1bdaddce14a1908c351da51a71b",
+      "reference/template/sys/pll_q13.qip": "c2b9c95a49d9b1100b0640bbdeea1acff845b0a8cbc11a7259c0913d2c61cfa8",
+      "reference/template/sys/pll_q17.qip": "7139faf33ae28066e805f290b15401eddb092d4b7d31b529a3ce1f0213fbc90a",
+      "reference/template/sys/scandoubler.v": "d36181c5fde9df0a504c547e23f60bcf201420052ada2682f081b00fd9485e6b",
+      "reference/template/sys/scanlines.v": "1fc7ac5359fd224a3fc06388f7671e07bf57cf6a39f35803a265661c56c564d4",
+      "reference/template/sys/sd_card.sv": "25114f9a0e9ab4dd702633ae927fc825dc79a4d9f7746c1bb75dbd10d61eb6d6",
+      "reference/template/sys/shadowmask.sv": "88429d137b4ce9f6538a052f03d874604f46decf6d69b3fc824cc795efcf3193",
+      "reference/template/sys/sigma_delta_dac.v": "352d31dd185bce14d9d1e8a4999fbb5f2b5b2e42b048bdc9f4b828119cc5127a",
+      "reference/template/sys/spdif.v": "a617bba332c4611caf81ba585b8f6828c7899aec5f81664a870f10419cb9b451",
+      "reference/template/sys/sys.qip": "246a7032e993b5e0591d22122921fd919e55dc49441fe6b2ee2b80e98fd40f84",
+      "reference/template/sys/sys.tcl": "e9ab2b7c89b4347854810387550a65458aa3ec9de1bd26ad74328d73376f6a88",
+      "reference/template/sys/sys_analog.tcl": "e4cbfd22985fa046b546c0cfc626fccf773d9098b7c6a595f8bea66d67d25203",
+      "reference/template/sys/sys_dual_sdram.tcl": "4f41376069b2070079d8ba4ae4a722c8ecfe3ca4b99798d0bdd8cda986b5ad5b",
+      "reference/template/sys/sys_top.sdc": "0a5fa4015b82ad7ce38e56d1ae4aadea6209af59c5dd9eff56a11139cf16ce86",
+      "reference/template/sys/sys_top.v": "9bc5562bcc9d923aa3bff1a9c976c52492edb9ef981f428b7a4101c919a711b8",
+      "reference/template/sys/sysmem.sv": "9f8cf78563cc31beb7dfc6d7048c51ba536ff4f1f9f640b4ff9f8d574456c94e",
+      "reference/template/sys/vga_out.sv": "02a533c3dfd547afddea2946019ecc79bbe9c27bb6128c0999fa5fc9e78f8108",
+      "reference/template/sys/video_cleaner.sv": "44b986d9bf8412e56bf8e4eae3dc87e04b4c378e58ec6119de5a8aed320e3572",
+      "reference/template/sys/video_freak.sv": "6a9b8565f66894a8f2ec10c916593e980d260f29f1886bfe70bf6f3b0cf6edc0",
+      "reference/template/sys/video_freezer.sv": "0f3f4710b072b7e90b0b6bfe7607dec18dbd6bed78d1994f32d6fa72a6b7aef3",
+      "reference/template/sys/video_mixer.sv": "31ed2c917bd6680b4d60328e71a4f28015bd5fcec21e15b290eacec88971167d",
+      "reference/template/sys/yc_out.sv": "b31f179f06c89ba1505cc044fdd9aa5609fac0986418f26c840991c34023fc19"
+    },
+    "license": "GPL-2.0-or-later per file headers; retain vendor IP notices individually",
+    "used_modules": [
+      "hps_io",
+      "video_calc",
+      "arcade_video",
+      "screen_rotate",
+      "video_mixer",
+      "scandoubler",
+      "Hq2x",
+      "gamma_corr",
+      "sync_fix"
+    ],
+    "configuration": "MISTER_FB=1; WIDE=0; PS2DIV=0; physical sys_top/PLL/DDR not simulated",
+    "materialized_files": {
+      "sys/alsa.sv": "74943b658cd3f4adc5b74c72f225fb42b95122a1c5e453df860a4c6a9bf72fc9",
+      "sys/arcade_video.v": "4d4a39fe614fe756b6f5f5b8f024cf4fed1a26b6df016f961fc095224f35888b",
+      "sys/ascal.vhd": "b460748da9c97fdb0efa5949ba55437eb7778112b3d683c39649427ea1a893af",
+      "sys/audio_out.sv": "11aab123cce330e894d3ce9cf18e71460edbee43d3580a76d3bd1d516b3df40c",
+      "sys/build_id.tcl": "148dc6a8124d36ac2898a45d085960cc05178a76d7297fde8877925fc0a74e88",
+      "sys/ddr_svc.sv": "8dfa874b9a93b4dbbe3b2fcf4f9035a895262cc090d398f4099941a626f41c08",
+      "sys/emu_ports.vh": "0b8f96815236ea4fcfec6fa3592b58f4c53f12094f31a26fd509709b503225e0",
+      "sys/f2sdram_safe_terminator.sv": "400bcbcfc0b4aae324fe813866a5443d577bf4de9b4ab1454cb068733d170261",
+      "sys/gamma_corr.sv": "2754944c6fe05d921374d1fecc26621782520b3bc6fbf600ca561e9f37c7af88",
+      "sys/hps_io.sv": "41d428f7ce90a3a2f180f76e43e6824b762189fe15f250f49abb71dd19372bf5",
+      "sys/hq2x.sv": "d8ec1eb7855b6f0b25751fb18eddd622d62b25eae098b9b6aa5ba6fa116eb012",
+      "sys/i2c.v": "09bd7ebd5d84fb57f6a9d569e5214f3154c49e55826c15bd78884f3c781fec5b",
+      "sys/i2s.v": "927d2aea6797fb837f383e5e8a3259609e132ed24883127240ab21601f467efa",
+      "sys/iir_filter.v": "570a8095c15af84a60015b5eab105cee6e2d7edde77e20f0ce40c075ab2db8b7",
+      "sys/ltc2308.sv": "825fa1197c8e9f31c19c2fef1b01693133fb7df3cfb2dd831f2848a98fc6899c",
+      "sys/math.sv": "d384fa9fcf73100cb28a2affc5db1e4aacc87620287971c3882507fc3af056cc",
+      "sys/mcp23009.sv": "f168485e0b64c0545060f25b858c9f1c12b57024ce441754bb6a0cb0e9072e3f",
+      "sys/mt32pi.sv": "4ad39571d16a4b25347030d75ffdf601803ddec71e2e3fcabe962103cc45a1a2",
+      "sys/osd.v": "3d544d9ed6e3e39b49ec814dff884176e7f6a052e4a5693a9c5f0e6005e9d83e",
+      "sys/pll.13.qip": "f25f58e7c0290583f33ee0fdd729a4470cc69312686f0f1ecb95c61115d61cec",
+      "sys/pll_audio.13.qip": "60edce734c54e4b9f9d56f078bc797841e52c6817f4d27e0cfe77db5d77b2596",
+      "sys/pll_audio.qip": "278496eefe70d18f6b3ccf624c3a4595ccca74a9a6740eb4520200f1e929a236",
+      "sys/pll_audio.v": "1662fff7650cd443db81db7f0707f5583d223372b3e3c41af2d41ea4f3ac38f3",
+      "sys/pll_cfg.qip": "7c1573f321012132479272242434d02058b1bcfe8d89843130ef11173a901eae",
+      "sys/pll_hdmi.13.qip": "625df824716313233400454bc1142615fb3a234a494225691c8a554753b1731b",
+      "sys/pll_hdmi.qip": "5571604010bf98858a0797a2286d2389e105d32a97b42508865b02ba4237dd0d",
+      "sys/pll_hdmi.v": "499561547c1045a46f1137558e2bab83d8e026e5d32669b5c5779a264b7ed676",
+      "sys/pll_hdmi_adj.vhd": "ae18c82eef2f6b9c7783c68ac272d03f570eb1bdaddce14a1908c351da51a71b",
+      "sys/pll_q13.qip": "c2b9c95a49d9b1100b0640bbdeea1acff845b0a8cbc11a7259c0913d2c61cfa8",
+      "sys/pll_q17.qip": "7139faf33ae28066e805f290b15401eddb092d4b7d31b529a3ce1f0213fbc90a",
+      "sys/scandoubler.v": "72d4ab96d48b45fa971548f3223c41922d65488e3a5bee9dd9ad029c1566e60a",
+      "sys/scanlines.v": "1fc7ac5359fd224a3fc06388f7671e07bf57cf6a39f35803a265661c56c564d4",
+      "sys/sd_card.sv": "25114f9a0e9ab4dd702633ae927fc825dc79a4d9f7746c1bb75dbd10d61eb6d6",
+      "sys/shadowmask.sv": "88429d137b4ce9f6538a052f03d874604f46decf6d69b3fc824cc795efcf3193",
+      "sys/sigma_delta_dac.v": "352d31dd185bce14d9d1e8a4999fbb5f2b5b2e42b048bdc9f4b828119cc5127a",
+      "sys/spdif.v": "a617bba332c4611caf81ba585b8f6828c7899aec5f81664a870f10419cb9b451",
+      "sys/sys.qip": "246a7032e993b5e0591d22122921fd919e55dc49441fe6b2ee2b80e98fd40f84",
+      "sys/sys.tcl": "e9ab2b7c89b4347854810387550a65458aa3ec9de1bd26ad74328d73376f6a88",
+      "sys/sysmem.sv": "9f8cf78563cc31beb7dfc6d7048c51ba536ff4f1f9f640b4ff9f8d574456c94e",
+      "sys/sys_analog.tcl": "e4cbfd22985fa046b546c0cfc626fccf773d9098b7c6a595f8bea66d67d25203",
+      "sys/sys_dual_sdram.tcl": "4f41376069b2070079d8ba4ae4a722c8ecfe3ca4b99798d0bdd8cda986b5ad5b",
+      "sys/sys_top.sdc": "0a5fa4015b82ad7ce38e56d1ae4aadea6209af59c5dd9eff56a11139cf16ce86",
+      "sys/sys_top.v": "5362901c811bb8e28f6dbb8b542b8117414254723e741b1213882d921fa60e1f",
+      "sys/vga_out.sv": "02a533c3dfd547afddea2946019ecc79bbe9c27bb6128c0999fa5fc9e78f8108",
+      "sys/video_cleaner.sv": "44b986d9bf8412e56bf8e4eae3dc87e04b4c378e58ec6119de5a8aed320e3572",
+      "sys/video_freak.sv": "6a9b8565f66894a8f2ec10c916593e980d260f29f1886bfe70bf6f3b0cf6edc0",
+      "sys/video_freezer.sv": "0f3f4710b072b7e90b0b6bfe7607dec18dbd6bed78d1994f32d6fa72a6b7aef3",
+      "sys/video_mixer.sv": "f6216a5bf42ef0b9dbb82fe5cf1338fd05e7895fbc9fc3823c865aeb012c9cdb",
+      "sys/yc_out.sv": "b31f179f06c89ba1505cc044fdd9aa5609fac0986418f26c840991c34023fc19",
+      "sys/pll_audio/pll_audio_0002.qip": "4cedd5394006286e0be61acdcbb6455f35cdf5c1488f4eb4a76b60e20eb43fb8",
+      "sys/pll_audio/pll_audio_0002.v": "2b24d2a561d81cc8b20f725884ee9c243e619058e42ebcdcf6f491d33008696c",
+      "sys/pll_cfg/altera_pll_reconfig_core.v": "9058d2c68e9cb0b1b6b3ab5487daad8aeaf04461e162aba317857dd133329189",
+      "sys/pll_cfg/altera_pll_reconfig_top.v": "34c11c19e6bf3797d2db2e41314ce802f5a01041265ce943b54e7f20eb2027c9",
+      "sys/pll_cfg/pll_cfg.v": "e07ae93193537830b3bc9029465e763a6bfe354c25b7e7747eeeb4094b08ad10",
+      "sys/pll_cfg/pll_cfg_hdmi.v": "d3874dda124af03656054fa1ae1ee70f1a4d3cea6d4670795a5168325bb6760a",
+      "sys/pll_hdmi/pll_hdmi_0002.qip": "de648286a832ee72839dd6abb444231a4238d32b2c26f29426399d2221d7bf5b",
+      "sys/pll_hdmi/pll_hdmi_0002.v": "27c77f35c89e97994477801f83edf3c7e9c5b9e57df49864434d300c40e9f1f7",
+      "rtl/pll/pll_0002.qip": "98c91540a36e672f25f071bfaae965b8c9f60c679db4fbe226578c8c78c5052a",
+      "rtl/pll/pll_0002.v": "8ac785958023eadf517605bc669189d5583af48de2d63dabbddbeca1acda9ffa",
+      "rtl/pll/pll_0002_q13.qip": "58d1281c86501f8926b2b156edeada9bc7c27c4156f456eb3568a5ba40baea0f",
+      "rtl/pll.v": "8e1a58e1539aba4c9c8e9bb66dca68e9beb298beca7402943aceeba932d6bfc0",
+      "rtl/pll.qip": "60c0c7b517dc7ecb736f6df65dd360c1b8493f04fc72c4518f073a29fc04a19f"
+    },
+    "patches": {
+      "patches/hps_io.sv.patch": "105e9e18f5f6fd87f3f40bc11089e2372a7984093d9a0a8f6d6a63eede0e900b",
+      "patches/hq2x.sv.patch": "504f1ff64ba3df5e3bd06195464c7ee93e0551cc423fa49621a6c7236dcea903",
+      "patches/video_mixer.sv.patch": "f72fcaff5b187dad9ad2265f5606b632cf2ea508c1a594dcdd000191811107b5",
+      "patches/arcade_video.v.patch": "1bcec07a79e8a94443f9b4897ff23874a5179e245c9b10cd86284eda8ba8b861",
+      "patches/scandoubler.v.patch": "32a3e3a779e43252e97de9092de9438e33b56caf2a836ea60bd6c5b7f1236059",
+      "patches/sys_top.v.patch": "6c27053c669368e0a79472a1a96a2bd1b7d5b342f94fb09358316eae6a9a0d90"
+    },
+    "license_headers": {
+      "reference/template/Template.sv": [
+        "//  under the terms of the GNU General Public License as published by the Free",
+        "//  Software Foundation; either version 2 of the License, or (at your option)",
+        "//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for",
+        "//  You should have received a copy of the GNU General Public License along"
+      ],
+      "reference/template/rtl/cos.sv": [],
+      "reference/template/rtl/lfsr.v": [],
+      "reference/template/rtl/mycore.v": [],
+      "reference/template/rtl/pll.v": [
+        "//\tCopyright (C) 1991-2020 Altera Corporation",
+        "//\tany other silicon devices, unless such use is explicitly licensed under",
+        "//\tthe intellectual property, including patents, copyrights, trademarks,",
+        "//\ttheir respective licensors.  No other licenses, including any licenses"
+      ],
+      "reference/template/rtl/pll/pll_0002.v": [],
+      "reference/template/sys/alsa.sv": [
+        "//  under the terms of the GNU General Public License as published by the Free",
+        "//  Software Foundation; either version 2 of the License, or (at your option)",
+        "//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for",
+        "//  You should have received a copy of the GNU General Public License along"
+      ],
+      "reference/template/sys/arcade_video.v": [
+        "//  Copyright (C) 2017-2020 Sorgelig",
+        "//  under the terms of the GNU General Public License as published by the Free",
+        "//  Software Foundation; either version 2 of the License, or (at your option)",
+        "//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for",
+        "//  You should have received a copy of the GNU General Public License along"
+      ],
+      "reference/template/sys/ascal.vhd": [],
+      "reference/template/sys/audio_out.sv": [
+        "//  under the terms of the GNU General Public License as published by the Free",
+        "//  Software Foundation; either version 2 of the License, or (at your option)",
+        "//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for",
+        "//  You should have received a copy of the GNU General Public License along"
+      ],
+      "reference/template/sys/ddr_svc.sv": [
+        "// Copyright (c) 2020 Alexey Melnikov",
+        "// it under the terms of the GNU General Public License as published",
+        "// by the Free Software Foundation, either version 3 of the License, or",
+        "// GNU General Public License for more details.",
+        "// You should have received a copy of the GNU General Public License ",
+        "// along with this program.  If not, see <http://www.gnu.org/licenses/>."
+      ],
+      "reference/template/sys/emu_ports.vh": [],
+      "reference/template/sys/f2sdram_safe_terminator.sv": [
+        "// Copyright (c) 2021 bellwood420"
+      ],
+      "reference/template/sys/gamma_corr.sv": [],
+      "reference/template/sys/hps_io.sv": [
+        "// Copyright (c) 2014 Till Harbaum <till@harbaum.org>",
+        "// Copyright (c) 2017-2026 Alexey Melnikov",
+        "// it under the terms of the GNU General Public License as published",
+        "// by the Free Software Foundation, either version 3 of the License, or",
+        "// GNU General Public License for more details.",
+        "// You should have received a copy of the GNU General Public License",
+        "// along with this program.  If not, see <http://www.gnu.org/licenses/>."
+      ],
+      "reference/template/sys/hq2x.sv": [
+        "// Copyright (c) 2012-2013 Ludvig Strigeus",
+        "// Copyright (c) 2017,2018 Sorgelig",
+        "// This program is GPL Licensed. See COPYING for the full license."
+      ],
+      "reference/template/sys/i2c.v": [],
+      "reference/template/sys/i2s.v": [],
+      "reference/template/sys/iir_filter.v": [
+        "//  Copyright (C) 2020 Sorgelig",
+        "//  under the terms of the GNU General Public License as published by the Free",
+        "//  Software Foundation; either version 2 of the License, or (at your option)",
+        "//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for",
+        "//  You should have received a copy of the GNU General Public License along"
+      ],
+      "reference/template/sys/ltc2308.sv": [
+        "//  Copyright (C) 2019 Sorgelig",
+        "//  under the terms of the GNU General Public License as published by the Free",
+        "//  Software Foundation; either version 2 of the License, or (at your option)",
+        "//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for",
+        "//  You should have received a copy of the GNU General Public License along"
+      ],
+      "reference/template/sys/math.sv": [],
+      "reference/template/sys/mcp23009.sv": [],
+      "reference/template/sys/mt32pi.sv": [],
+      "reference/template/sys/osd.v": [],
+      "reference/template/sys/pll_audio.v": [
+        "//\tCopyright (C) 1991-2020 Altera Corporation",
+        "//\tany other silicon devices, unless such use is explicitly licensed under",
+        "//\tthe intellectual property, including patents, copyrights, trademarks,",
+        "//\ttheir respective licensors.  No other licenses, including any licenses"
+      ],
+      "reference/template/sys/pll_audio/pll_audio_0002.v": [],
+      "reference/template/sys/pll_cfg/altera_pll_reconfig_core.v": [
+        "// to the terms and conditions of the Intel Program License Subscription ",
+        "// Agreement, Intel MegaCore Function License Agreement, or other applicable ",
+        "// license agreement, including, without limitation, that your use is for the "
+      ],
+      "reference/template/sys/pll_cfg/altera_pll_reconfig_top.v": [
+        "// to the terms and conditions of the Intel Program License Subscription ",
+        "// Agreement, Intel MegaCore Function License Agreement, or other applicable ",
+        "// license agreement, including, without limitation, that your use is for the "
+      ],
+      "reference/template/sys/pll_cfg/pll_cfg.v": [],
+      "reference/template/sys/pll_cfg/pll_cfg_hdmi.v": [
+        "// to the terms and conditions of the Intel Program License Subscription ",
+        "// Agreement, Intel MegaCore Function License Agreement, or other applicable ",
+        "// license agreement, including, without limitation, that your use is for the "
+      ],
+      "reference/template/sys/pll_hdmi.v": [
+        "//\tCopyright (C) 1991-2018 Altera Corporation",
+        "//\tany other silicon devices, unless such use is explicitly licensed under",
+        "//\tthe intellectual property, including patents, copyrights, trademarks,",
+        "//\ttheir respective licensors.  No other licenses, including any licenses"
+      ],
+      "reference/template/sys/pll_hdmi/pll_hdmi_0002.v": [],
+      "reference/template/sys/pll_hdmi_adj.vhd": [],
+      "reference/template/sys/scandoubler.v": [
+        "// Copyright (c) 2015 Till Harbaum <till@harbaum.org> ",
+        "// Copyright (c) 2017-2021 Alexey Melnikov",
+        "// it under the terms of the GNU General Public License as published ",
+        "// by the Free Software Foundation, either version 3 of the License, or ",
+        "// GNU General Public License for more details.",
+        "// You should have received a copy of the GNU General Public License ",
+        "// along with this program.  If not, see <http://www.gnu.org/licenses/>. "
+      ],
+      "reference/template/sys/scanlines.v": [],
+      "reference/template/sys/sd_card.sv": [
+        "// Copyright (c) 2014 Till Harbaum <till@harbaum.org>",
+        "// Copyright (c) 2015-2018 Sorgelig",
+        "// it under the terms of the Lesser GNU General Public License as published",
+        "// by the Free Software Foundation, either version 3 of the License, or",
+        "// GNU General Public License for more details.",
+        "// You should have received a copy of the GNU General Public License",
+        "// along with this program.  If not, see <http://www.gnu.org/licenses/>."
+      ],
+      "reference/template/sys/shadowmask.sv": [],
+      "reference/template/sys/sigma_delta_dac.v": [],
+      "reference/template/sys/spdif.v": [
+        "//                          Copyright 2012",
+        "//                         License: GPL",
+        "// If you would like a version with a more permissive license for",
+        "// modify it under the terms of the GNU General Public License as ",
+        "// the License, or (at your option) any later version.",
+        "// GNU General Public License for more details.",
+        "// License along with this file; if not, write to the Free Software"
+      ],
+      "reference/template/sys/sys_top.v": [
+        "//  under the terms of the GNU General Public License as published by the Free",
+        "//  Software Foundation; either version 2 of the License, or (at your option)",
+        "//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for",
+        "//  You should have received a copy of the GNU General Public License along"
+      ],
+      "reference/template/sys/sysmem.sv": [],
+      "reference/template/sys/vga_out.sv": [],
+      "reference/template/sys/video_cleaner.sv": [
+        "// Copyright (c) 2018 Sorgelig",
+        "// This program is GPL Licensed. See COPYING for the full license."
+      ],
+      "reference/template/sys/video_freak.sv": [
+        "// Copyright (c) 2020 Grabulosaure, (c) 2021 Alexey Melnikov",
+        "// Copyright (c) 2021 Alexey Melnikov",
+        "// This program is GPL Licensed. See COPYING for the full license."
+      ],
+      "reference/template/sys/video_freezer.sv": [
+        "//  under the terms of the GNU General Public License as published by the Free",
+        "//  Software Foundation; either version 2 of the License, or (at your option)",
+        "//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for",
+        "//  You should have received a copy of the GNU General Public License along"
+      ],
+      "reference/template/sys/video_mixer.sv": [
+        "// Copyright (c) 2017,2021 Alexey Melnikov",
+        "// This program is GPL Licensed. See COPYING for the full license."
+      ],
+      "reference/template/sys/yc_out.sv": [
+        "//  Copyright (C) 2022 Mike Simone",
+        "//  under the terms of the GNU General Public License as published by the Free",
+        "//  Software Foundation; either version 2 of the License, or (at your option)",
+        "//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for",
+        "//  You should have received a copy of the GNU General Public License along"
+      ]
+    }
+  },
+  "tv80": {
+    "url": "https://github.com/MiSTer-devel/Arcade-BankPanic_MiSTer",
+    "commit": "e262cf9e1e31163eb4e2dd634d91534e846ed43e",
+    "destination": "reference/bankpanic",
+    "files": {
+      "reference/bankpanic/.gitignore": "b93c50229882ec40ce956f092260a5fcdc121729c6af31610f1775b4c8a53f42",
+      "reference/bankpanic/Arcade-BankPanic.qpf": "334494915547cb92b132c8fbcef0352b8a5331c2eee1b83833e8bbf8c6712220",
+      "reference/bankpanic/Arcade-BankPanic.qsf": "becec9a44663db2db69849a3266b8769d95f360187704558aaccd54fd113020f",
+      "reference/bankpanic/Arcade-BankPanic.sdc": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reference/bankpanic/Arcade-BankPanic.srf": "37f42477f66524e24d5f97f115e7eb4d878be9dbd577496fe32ecd5e2d157d63",
+      "reference/bankpanic/Arcade-BankPanic.sv": "e277cccb90d42731c64d9d8d2612447fdc9018238ce00397872b33eb29542c4b",
+      "reference/bankpanic/LICENSE": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "reference/bankpanic/Readme.md": "092c3a236a1c909055e68f25b9082f49c617125a7c77a7a1a15698d99c3e3ce6",
+      "reference/bankpanic/clean.bat": "e12b66c8340c1fe99d7ffeb76d0aa839d4e18d9031425fedef3e7bb682258aa3",
+      "reference/bankpanic/doc/schematic.png": "8c49beb112cb25a73e47f23e2c411fcd423fe5fa868c5a4e94803c78a0f11af8",
+      "reference/bankpanic/files.qip": "74afba6d099a2e52252ebf2cfe181b90824e9f8524270c43fbb1de8e1c8cddb2",
+      "reference/bankpanic/releases/Arcade-BankPanic_20221007.rbf": "47421cd97cb1f7d4330ec68c56bc60d2cc2e06d488055f5c13a398e58a80421b",
+      "reference/bankpanic/releases/Arcade-BankPanic_20230310.rbf": "9f75f267bc188c025cfe8a5cd0e6c06fe06e25591eef7387b7070b6b8df32c38",
+      "reference/bankpanic/releases/Arcade-BankPanic_20240525.rbf": "ef3f7e81f0a1494cca11943224365a2843b826cc84d7d1d680f313650171cf8a",
+      "reference/bankpanic/releases/BankPanic.mra": "46265419d11014afdae6200c67d90a07c3b56235fa9e09338897a7f5ba850f59",
+      "reference/bankpanic/releases/Combat Hawk.mra": "d409117d65b1491a7b26aa8ba28277396c6de1c12c5edb67e1d5acd8cc19ba6a",
+      "reference/bankpanic/rtl/clk_en.v": "1cf5fdfd68216c8aa8eb160406671f662b0918117bfc1ef85a10b8a3edeb755f",
+      "reference/bankpanic/rtl/core.v": "59947763b65e73a0080d5472f82b745ff8e0ffb8f317e10bd28006c98f3ae63e",
+      "reference/bankpanic/rtl/dpram.v": "1fc9a5df9504e8a7770b59588f649a381dea8458042f267f8a81e14bedcb2336",
+      "reference/bankpanic/rtl/pll.qip": "9abf21eb5b32e91553583636cb1f7fee68befab8b03916a9e46d120464cbbb88",
+      "reference/bankpanic/rtl/pll.v": "79dcff6695ebbd561bcc96e6517a186be59ee786fcf441a508d03e11767bc444",
+      "reference/bankpanic/rtl/pll/pll_0002.qip": "98c91540a36e672f25f071bfaae965b8c9f60c679db4fbe226578c8c78c5052a",
+      "reference/bankpanic/rtl/pll/pll_0002.v": "5991de9c7c2d8447546350d6b5cae6dbead80dbdb94018b2de304f9ce8fc61c0",
+      "reference/bankpanic/rtl/pll/pll_0002_q13.qip": "58d1281c86501f8926b2b156edeada9bc7c27c4156f456eb3568a5ba40baea0f",
+      "reference/bankpanic/rtl/sn76489_audio.vhd": "ef38ac6bbbaf7af1b01c414cf9bf970d207a73b8d1867be62a6f4566ba085431",
+      "reference/bankpanic/rtl/tv80/TV80.qip": "4eae8d75b86c1790bdd966b20f1da6d39567648887e519c13d050b35deef4b44",
+      "reference/bankpanic/rtl/tv80/tv80_alu.v": "d20d6132bbf88a69b1b2677030a592e1a89006e1cee1015a2b9bdcf8fe856509",
+      "reference/bankpanic/rtl/tv80/tv80_core.v": "598c60b96f8c09b04e2cabc86689b3034c189e957ea95f5bd188a81b07e03e63",
+      "reference/bankpanic/rtl/tv80/tv80_mcode.v": "bb12942e320c50743e43433e5c98f8f4328c0ec6efd649031bd767dbd0ea612a",
+      "reference/bankpanic/rtl/tv80/tv80_reg.v": "10a3dbddcc59bb82fe66e161758bc9f070e62698c24b2dd63da48543f6a3a210",
+      "reference/bankpanic/rtl/tv80/tv80n.v": "b0a84d302e771089d8e49ae47c837981871255d6460457f98ac6756e0f339064",
+      "reference/bankpanic/rtl/tv80/tv80s.v": "2565d0802afc461f330049b747aa854f9562ea8817ea1a70e110f00d69d712f7",
+      "reference/bankpanic/rtl/x74138.v": "03e2e02f95ee55c639211913bf1342ed083cbf836cb3405a1cabd98835f6488c",
+      "reference/bankpanic/rtl/x74139.v": "176cd142a3c07289c2996b3dee13ab104190c1f70f81ee071dd80f3689f8a42d",
+      "reference/bankpanic/rtl/x74161.v": "40eb9343a8b7d2218826e6d03c4a1a3f4f0dad18dbde4806d82764667b6360a9",
+      "reference/bankpanic/sys/alsa.sv": "74943b658cd3f4adc5b74c72f225fb42b95122a1c5e453df860a4c6a9bf72fc9",
+      "reference/bankpanic/sys/arcade_video.v": "ce64cdd7f900ded7b9cd9aa728dab7383b7561cdc75dfe82ab23fe27a3d217d3",
+      "reference/bankpanic/sys/ascal.vhd": "3f74c7b52d749cf523b11cbd06a9269f831ad86967ee983b4a0d1f5792b645f6",
+      "reference/bankpanic/sys/audio_out.v": "565dd9badb00052dbd324e70f7ab66e8c6ecd0c5c2791aebffe477a2c0669363",
+      "reference/bankpanic/sys/build_id.tcl": "148dc6a8124d36ac2898a45d085960cc05178a76d7297fde8877925fc0a74e88",
+      "reference/bankpanic/sys/ddr_svc.sv": "8dfa874b9a93b4dbbe3b2fcf4f9035a895262cc090d398f4099941a626f41c08",
+      "reference/bankpanic/sys/f2sdram_safe_terminator.sv": "400bcbcfc0b4aae324fe813866a5443d577bf4de9b4ab1454cb068733d170261",
+      "reference/bankpanic/sys/gamma_corr.sv": "2754944c6fe05d921374d1fecc26621782520b3bc6fbf600ca561e9f37c7af88",
+      "reference/bankpanic/sys/hps_io.sv": "1182da0710483a1030687c12e6601025a5293ab90f2eb15cdf5fdea38ea4c275",
+      "reference/bankpanic/sys/hq2x.sv": "2146b69cf63c26a4b41407e9ac1b4462db4d7e3ea6d8a99f31ba12712d68f975",
+      "reference/bankpanic/sys/i2c.v": "09bd7ebd5d84fb57f6a9d569e5214f3154c49e55826c15bd78884f3c781fec5b",
+      "reference/bankpanic/sys/i2s.v": "927d2aea6797fb837f383e5e8a3259609e132ed24883127240ab21601f467efa",
+      "reference/bankpanic/sys/iir_filter.v": "570a8095c15af84a60015b5eab105cee6e2d7edde77e20f0ce40c075ab2db8b7",
+      "reference/bankpanic/sys/ltc2308.sv": "825fa1197c8e9f31c19c2fef1b01693133fb7df3cfb2dd831f2848a98fc6899c",
+      "reference/bankpanic/sys/math.sv": "d384fa9fcf73100cb28a2affc5db1e4aacc87620287971c3882507fc3af056cc",
+      "reference/bankpanic/sys/mcp23009.sv": "f168485e0b64c0545060f25b858c9f1c12b57024ce441754bb6a0cb0e9072e3f",
+      "reference/bankpanic/sys/mt32pi.sv": "4ad39571d16a4b25347030d75ffdf601803ddec71e2e3fcabe962103cc45a1a2",
+      "reference/bankpanic/sys/osd.v": "68ec08401a6ddaf68c95a2e976b9085b77f0002d5b64ffed7454055dbcc48062",
+      "reference/bankpanic/sys/pll.13.qip": "f25f58e7c0290583f33ee0fdd729a4470cc69312686f0f1ecb95c61115d61cec",
+      "reference/bankpanic/sys/pll_audio.13.qip": "60edce734c54e4b9f9d56f078bc797841e52c6817f4d27e0cfe77db5d77b2596",
+      "reference/bankpanic/sys/pll_audio.qip": "278496eefe70d18f6b3ccf624c3a4595ccca74a9a6740eb4520200f1e929a236",
+      "reference/bankpanic/sys/pll_audio.v": "1662fff7650cd443db81db7f0707f5583d223372b3e3c41af2d41ea4f3ac38f3",
+      "reference/bankpanic/sys/pll_audio/pll_audio_0002.qip": "4cedd5394006286e0be61acdcbb6455f35cdf5c1488f4eb4a76b60e20eb43fb8",
+      "reference/bankpanic/sys/pll_audio/pll_audio_0002.v": "2b24d2a561d81cc8b20f725884ee9c243e619058e42ebcdcf6f491d33008696c",
+      "reference/bankpanic/sys/pll_cfg.qip": "7c1573f321012132479272242434d02058b1bcfe8d89843130ef11173a901eae",
+      "reference/bankpanic/sys/pll_cfg/altera_pll_reconfig_core.v": "9058d2c68e9cb0b1b6b3ab5487daad8aeaf04461e162aba317857dd133329189",
+      "reference/bankpanic/sys/pll_cfg/altera_pll_reconfig_top.v": "34c11c19e6bf3797d2db2e41314ce802f5a01041265ce943b54e7f20eb2027c9",
+      "reference/bankpanic/sys/pll_cfg/pll_cfg.v": "89750669762947128e105736d82384587f1cf8ac2f9965090e483c20f7624d59",
+      "reference/bankpanic/sys/pll_cfg/pll_cfg_hdmi.v": "d3874dda124af03656054fa1ae1ee70f1a4d3cea6d4670795a5168325bb6760a",
+      "reference/bankpanic/sys/pll_hdmi.13.qip": "625df824716313233400454bc1142615fb3a234a494225691c8a554753b1731b",
+      "reference/bankpanic/sys/pll_hdmi.qip": "5571604010bf98858a0797a2286d2389e105d32a97b42508865b02ba4237dd0d",
+      "reference/bankpanic/sys/pll_hdmi.v": "499561547c1045a46f1137558e2bab83d8e026e5d32669b5c5779a264b7ed676",
+      "reference/bankpanic/sys/pll_hdmi/pll_hdmi_0002.qip": "de648286a832ee72839dd6abb444231a4238d32b2c26f29426399d2221d7bf5b",
+      "reference/bankpanic/sys/pll_hdmi/pll_hdmi_0002.v": "27c77f35c89e97994477801f83edf3c7e9c5b9e57df49864434d300c40e9f1f7",
+      "reference/bankpanic/sys/pll_hdmi_adj.vhd": "ae18c82eef2f6b9c7783c68ac272d03f570eb1bdaddce14a1908c351da51a71b",
+      "reference/bankpanic/sys/pll_q13.qip": "c2b9c95a49d9b1100b0640bbdeea1acff845b0a8cbc11a7259c0913d2c61cfa8",
+      "reference/bankpanic/sys/pll_q17.qip": "7139faf33ae28066e805f290b15401eddb092d4b7d31b529a3ce1f0213fbc90a",
+      "reference/bankpanic/sys/scandoubler.v": "d36181c5fde9df0a504c547e23f60bcf201420052ada2682f081b00fd9485e6b",
+      "reference/bankpanic/sys/scanlines.v": "1fc7ac5359fd224a3fc06388f7671e07bf57cf6a39f35803a265661c56c564d4",
+      "reference/bankpanic/sys/sd_card.sv": "25114f9a0e9ab4dd702633ae927fc825dc79a4d9f7746c1bb75dbd10d61eb6d6",
+      "reference/bankpanic/sys/shadowmask.sv": "88429d137b4ce9f6538a052f03d874604f46decf6d69b3fc824cc795efcf3193",
+      "reference/bankpanic/sys/sigma_delta_dac.v": "352d31dd185bce14d9d1e8a4999fbb5f2b5b2e42b048bdc9f4b828119cc5127a",
+      "reference/bankpanic/sys/spdif.v": "a617bba332c4611caf81ba585b8f6828c7899aec5f81664a870f10419cb9b451",
+      "reference/bankpanic/sys/sys.qip": "3854d7f172097e01a40037e0a82dfd1a4178391ea0964767492979216279f31d",
+      "reference/bankpanic/sys/sys.tcl": "e9ab2b7c89b4347854810387550a65458aa3ec9de1bd26ad74328d73376f6a88",
+      "reference/bankpanic/sys/sys_analog.tcl": "e4cbfd22985fa046b546c0cfc626fccf773d9098b7c6a595f8bea66d67d25203",
+      "reference/bankpanic/sys/sys_dual_sdram.tcl": "4f41376069b2070079d8ba4ae4a722c8ecfe3ca4b99798d0bdd8cda986b5ad5b",
+      "reference/bankpanic/sys/sys_top.sdc": "0a5fa4015b82ad7ce38e56d1ae4aadea6209af59c5dd9eff56a11139cf16ce86",
+      "reference/bankpanic/sys/sys_top.v": "1bc7cc0ad6f8d03b9933f576cb8e2537f68aa335e79871bbc2380b8d0c9b0938",
+      "reference/bankpanic/sys/sysmem.sv": "9f8cf78563cc31beb7dfc6d7048c51ba536ff4f1f9f640b4ff9f8d574456c94e",
+      "reference/bankpanic/sys/vga_out.sv": "02a533c3dfd547afddea2946019ecc79bbe9c27bb6128c0999fa5fc9e78f8108",
+      "reference/bankpanic/sys/video_cleaner.sv": "44b986d9bf8412e56bf8e4eae3dc87e04b4c378e58ec6119de5a8aed320e3572",
+      "reference/bankpanic/sys/video_freak.sv": "6a9b8565f66894a8f2ec10c916593e980d260f29f1886bfe70bf6f3b0cf6edc0",
+      "reference/bankpanic/sys/video_freezer.sv": "0f3f4710b072b7e90b0b6bfe7607dec18dbd6bed78d1994f32d6fa72a6b7aef3",
+      "reference/bankpanic/sys/video_mixer.sv": "31ed2c917bd6680b4d60328e71a4f28015bd5fcec21e15b290eacec88971167d",
+      "reference/bankpanic/sys/yc_out.sv": "c52d7bfcc8dbc5a0cda2b3117172cbba790fb97b7de61722ddac205f6ec8bc20"
+    },
+    "license": "MIT-style permission notice, Guy Hutchison 2004; derived from T80 by Daniel Wallner",
+    "used_modules": [
+      "tv80s",
+      "tv80_core",
+      "tv80_alu",
+      "tv80_reg",
+      "tv80_mcode"
+    ],
+    "configuration": "Mode=0,T2Write=0,IOWait=1,TV80_REFRESH=1; Mode 0 RET/NMI timing and LD A,R flags corrected in attributed derived sources; wait/int/busrq inactive high",
+    "materialized_files": {
+      "rtl/vendor/tv80/TV80.qip": "4eae8d75b86c1790bdd966b20f1da6d39567648887e519c13d050b35deef4b44",
+      "rtl/vendor/tv80/tv80n.v": "b0a84d302e771089d8e49ae47c837981871255d6460457f98ac6756e0f339064",
+      "rtl/vendor/tv80/tv80s.v": "2565d0802afc461f330049b747aa854f9562ea8817ea1a70e110f00d69d712f7",
+      "rtl/vendor/tv80/tv80_alu.v": "d20d6132bbf88a69b1b2677030a592e1a89006e1cee1015a2b9bdcf8fe856509",
+      "rtl/vendor/tv80/tv80_core.v": "598c60b96f8c09b04e2cabc86689b3034c189e957ea95f5bd188a81b07e03e63",
+      "rtl/vendor/tv80/tv80_mcode.v": "bb12942e320c50743e43433e5c98f8f4328c0ec6efd649031bd767dbd0ea612a",
+      "rtl/vendor/tv80/tv80_reg.v": "10a3dbddcc59bb82fe66e161758bc9f070e62698c24b2dd63da48543f6a3a210",
+      "rtl/derived/tv80_mcode.v": "c438c47187b18ccf565a1444251d41c14750f0cec92adeae36ade0cc4712c124",
+      "rtl/derived/tv80_core.v": "90d5531da72002c8d54fb6d3efb8814adffc33fe7428e9f9b7800663d46a09a5"
+    },
+    "license_headers": {
+      "reference/bankpanic/Arcade-BankPanic.sv": [
+        "//  under the terms of the GNU General Public License as published by the Free",
+        "//  Software Foundation; either version 2 of the License, or (at your option)",
+        "//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for",
+        "//  You should have received a copy of the GNU General Public License along"
+      ],
+      "reference/bankpanic/rtl/clk_en.v": [],
+      "reference/bankpanic/rtl/core.v": [],
+      "reference/bankpanic/rtl/dpram.v": [
+        "//Copyright (C) 2017  Intel Corporation. All rights reserved.",
+        "//to the terms and conditions of the Intel Program License",
+        "//Subscription Agreement, the Intel Quartus Prime License Agreement,",
+        "//the Intel MegaCore Function License Agreement, or other",
+        "//applicable license agreement, including, without limitation,"
+      ],
+      "reference/bankpanic/rtl/pll.v": [
+        "//\tCopyright (C) 1991-2022 Altera Corporation",
+        "//\tany other silicon devices, unless such use is explicitly licensed under",
+        "//\tthe intellectual property, including patents, copyrights, trademarks,",
+        "//\ttheir respective licensors.  No other licenses, including any licenses"
+      ],
+      "reference/bankpanic/rtl/pll/pll_0002.v": [],
+      "reference/bankpanic/rtl/sn76489_audio.vhd": [
+        "-- Released under the 3-Clause BSD License:",
+        "-- Copyright 2020 Matthew Hagerty (matthew <at> dnotq <dot> io)",
+        "-- 1. Redistributions of source code must retain the above copyright notice,",
+        "-- 2. Redistributions in binary form must reproduce the above copyright",
+        "-- 3. Neither the name of the copyright holder nor the names of its",
+        "-- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"",
+        "-- ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE"
+      ],
+      "reference/bankpanic/rtl/tv80/tv80_alu.v": [
+        "// Copyright (c) 2004 Guy Hutchison (ghutchis@opencores.org)",
+        "// Permission is hereby granted, free of charge, to any person obtaining a ",
+        "// the rights to use, copy, modify, merge, publish, distribute, sublicense, ",
+        "// The above copyright notice and this permission notice shall be included ",
+        "// IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY "
+      ],
+      "reference/bankpanic/rtl/tv80/tv80_core.v": [
+        "// Copyright (c) 2004 Guy Hutchison (ghutchis@opencores.org)",
+        "// Permission is hereby granted, free of charge, to any person obtaining a",
+        "// the rights to use, copy, modify, merge, publish, distribute, sublicense,",
+        "// The above copyright notice and this permission notice shall be included",
+        "// IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY"
+      ],
+      "reference/bankpanic/rtl/tv80/tv80_mcode.v": [
+        "// Copyright (c) 2004,2007 Guy Hutchison (ghutchis@opencores.org)",
+        "// Permission is hereby granted, free of charge, to any person obtaining a",
+        "// the rights to use, copy, modify, merge, publish, distribute, sublicense,",
+        "// The above copyright notice and this permission notice shall be included",
+        "// IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY"
+      ],
+      "reference/bankpanic/rtl/tv80/tv80_reg.v": [
+        "// Copyright (c) 2004 Guy Hutchison (ghutchis@opencores.org)",
+        "// Permission is hereby granted, free of charge, to any person obtaining a ",
+        "// the rights to use, copy, modify, merge, publish, distribute, sublicense, ",
+        "// The above copyright notice and this permission notice shall be included ",
+        "// IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY "
+      ],
+      "reference/bankpanic/rtl/tv80/tv80n.v": [
+        "// Copyright (c) 2004 Guy Hutchison (ghutchis@opencores.org)",
+        "// Permission is hereby granted, free of charge, to any person obtaining a",
+        "// the rights to use, copy, modify, merge, publish, distribute, sublicense,",
+        "// The above copyright notice and this permission notice shall be included",
+        "// IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY"
+      ],
+      "reference/bankpanic/rtl/tv80/tv80s.v": [
+        "// Copyright (c) 2004 Guy Hutchison (ghutchis@opencores.org)",
+        "// Permission is hereby granted, free of charge, to any person obtaining a",
+        "// the rights to use, copy, modify, merge, publish, distribute, sublicense,",
+        "// The above copyright notice and this permission notice shall be included",
+        "// IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY"
+      ],
+      "reference/bankpanic/rtl/x74138.v": [],
+      "reference/bankpanic/rtl/x74139.v": [],
+      "reference/bankpanic/rtl/x74161.v": [],
+      "reference/bankpanic/sys/alsa.sv": [
+        "//  under the terms of the GNU General Public License as published by the Free",
+        "//  Software Foundation; either version 2 of the License, or (at your option)",
+        "//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for",
+        "//  You should have received a copy of the GNU General Public License along"
+      ],
+      "reference/bankpanic/sys/arcade_video.v": [
+        "//  Copyright (C) 2017-2020 Sorgelig",
+        "//  under the terms of the GNU General Public License as published by the Free",
+        "//  Software Foundation; either version 2 of the License, or (at your option)",
+        "//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for",
+        "//  You should have received a copy of the GNU General Public License along"
+      ],
+      "reference/bankpanic/sys/ascal.vhd": [],
+      "reference/bankpanic/sys/audio_out.v": [],
+      "reference/bankpanic/sys/ddr_svc.sv": [
+        "// Copyright (c) 2020 Alexey Melnikov",
+        "// it under the terms of the GNU General Public License as published",
+        "// by the Free Software Foundation, either version 3 of the License, or",
+        "// GNU General Public License for more details.",
+        "// You should have received a copy of the GNU General Public License ",
+        "// along with this program.  If not, see <http://www.gnu.org/licenses/>."
+      ],
+      "reference/bankpanic/sys/f2sdram_safe_terminator.sv": [
+        "// Copyright (c) 2021 bellwood420"
+      ],
+      "reference/bankpanic/sys/gamma_corr.sv": [],
+      "reference/bankpanic/sys/hps_io.sv": [
+        "// Copyright (c) 2014 Till Harbaum <till@harbaum.org>",
+        "// Copyright (c) 2017-2020 Alexey Melnikov",
+        "// it under the terms of the GNU General Public License as published",
+        "// by the Free Software Foundation, either version 3 of the License, or",
+        "// GNU General Public License for more details.",
+        "// You should have received a copy of the GNU General Public License",
+        "// along with this program.  If not, see <http://www.gnu.org/licenses/>."
+      ],
+      "reference/bankpanic/sys/hq2x.sv": [
+        "// Copyright (c) 2012-2013 Ludvig Strigeus",
+        "// Copyright (c) 2017,2018 Sorgelig",
+        "// This program is GPL Licensed. See COPYING for the full license."
+      ],
+      "reference/bankpanic/sys/i2c.v": [],
+      "reference/bankpanic/sys/i2s.v": [],
+      "reference/bankpanic/sys/iir_filter.v": [
+        "//  Copyright (C) 2020 Sorgelig",
+        "//  under the terms of the GNU General Public License as published by the Free",
+        "//  Software Foundation; either version 2 of the License, or (at your option)",
+        "//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for",
+        "//  You should have received a copy of the GNU General Public License along"
+      ],
+      "reference/bankpanic/sys/ltc2308.sv": [
+        "//  Copyright (C) 2019 Sorgelig",
+        "//  under the terms of the GNU General Public License as published by the Free",
+        "//  Software Foundation; either version 2 of the License, or (at your option)",
+        "//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for",
+        "//  You should have received a copy of the GNU General Public License along"
+      ],
+      "reference/bankpanic/sys/math.sv": [],
+      "reference/bankpanic/sys/mcp23009.sv": [],
+      "reference/bankpanic/sys/mt32pi.sv": [],
+      "reference/bankpanic/sys/osd.v": [],
+      "reference/bankpanic/sys/pll_audio.v": [
+        "//\tCopyright (C) 1991-2020 Altera Corporation",
+        "//\tany other silicon devices, unless such use is explicitly licensed under",
+        "//\tthe intellectual property, including patents, copyrights, trademarks,",
+        "//\ttheir respective licensors.  No other licenses, including any licenses"
+      ],
+      "reference/bankpanic/sys/pll_audio/pll_audio_0002.v": [],
+      "reference/bankpanic/sys/pll_cfg/altera_pll_reconfig_core.v": [
+        "// to the terms and conditions of the Intel Program License Subscription ",
+        "// Agreement, Intel MegaCore Function License Agreement, or other applicable ",
+        "// license agreement, including, without limitation, that your use is for the "
+      ],
+      "reference/bankpanic/sys/pll_cfg/altera_pll_reconfig_top.v": [
+        "// to the terms and conditions of the Intel Program License Subscription ",
+        "// Agreement, Intel MegaCore Function License Agreement, or other applicable ",
+        "// license agreement, including, without limitation, that your use is for the "
+      ],
+      "reference/bankpanic/sys/pll_cfg/pll_cfg.v": [],
+      "reference/bankpanic/sys/pll_cfg/pll_cfg_hdmi.v": [
+        "// to the terms and conditions of the Intel Program License Subscription ",
+        "// Agreement, Intel MegaCore Function License Agreement, or other applicable ",
+        "// license agreement, including, without limitation, that your use is for the "
+      ],
+      "reference/bankpanic/sys/pll_hdmi.v": [
+        "//\tCopyright (C) 1991-2018 Altera Corporation",
+        "//\tany other silicon devices, unless such use is explicitly licensed under",
+        "//\tthe intellectual property, including patents, copyrights, trademarks,",
+        "//\ttheir respective licensors.  No other licenses, including any licenses"
+      ],
+      "reference/bankpanic/sys/pll_hdmi/pll_hdmi_0002.v": [],
+      "reference/bankpanic/sys/pll_hdmi_adj.vhd": [],
+      "reference/bankpanic/sys/scandoubler.v": [
+        "// Copyright (c) 2015 Till Harbaum <till@harbaum.org> ",
+        "// Copyright (c) 2017-2021 Alexey Melnikov",
+        "// it under the terms of the GNU General Public License as published ",
+        "// by the Free Software Foundation, either version 3 of the License, or ",
+        "// GNU General Public License for more details.",
+        "// You should have received a copy of the GNU General Public License ",
+        "// along with this program.  If not, see <http://www.gnu.org/licenses/>. "
+      ],
+      "reference/bankpanic/sys/scanlines.v": [],
+      "reference/bankpanic/sys/sd_card.sv": [
+        "// Copyright (c) 2014 Till Harbaum <till@harbaum.org>",
+        "// Copyright (c) 2015-2018 Sorgelig",
+        "// it under the terms of the Lesser GNU General Public License as published",
+        "// by the Free Software Foundation, either version 3 of the License, or",
+        "// GNU General Public License for more details.",
+        "// You should have received a copy of the GNU General Public License",
+        "// along with this program.  If not, see <http://www.gnu.org/licenses/>."
+      ],
+      "reference/bankpanic/sys/shadowmask.sv": [],
+      "reference/bankpanic/sys/sigma_delta_dac.v": [],
+      "reference/bankpanic/sys/spdif.v": [
+        "//                          Copyright 2012",
+        "//                         License: GPL",
+        "// If you would like a version with a more permissive license for",
+        "// modify it under the terms of the GNU General Public License as ",
+        "// the License, or (at your option) any later version.",
+        "// GNU General Public License for more details.",
+        "// License along with this file; if not, write to the Free Software"
+      ],
+      "reference/bankpanic/sys/sys_top.v": [
+        "//  under the terms of the GNU General Public License as published by the Free",
+        "//  Software Foundation; either version 2 of the License, or (at your option)",
+        "//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for",
+        "//  You should have received a copy of the GNU General Public License along"
+      ],
+      "reference/bankpanic/sys/sysmem.sv": [],
+      "reference/bankpanic/sys/vga_out.sv": [],
+      "reference/bankpanic/sys/video_cleaner.sv": [
+        "// Copyright (c) 2018 Sorgelig",
+        "// This program is GPL Licensed. See COPYING for the full license."
+      ],
+      "reference/bankpanic/sys/video_freak.sv": [
+        "// Copyright (c) 2020 Grabulosaure, (c) 2021 Alexey Melnikov",
+        "// Copyright (c) 2021 Alexey Melnikov",
+        "// This program is GPL Licensed. See COPYING for the full license."
+      ],
+      "reference/bankpanic/sys/video_freezer.sv": [
+        "//  under the terms of the GNU General Public License as published by the Free",
+        "//  Software Foundation; either version 2 of the License, or (at your option)",
+        "//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for",
+        "//  You should have received a copy of the GNU General Public License along"
+      ],
+      "reference/bankpanic/sys/video_mixer.sv": [
+        "// Copyright (c) 2017,2021 Alexey Melnikov",
+        "// This program is GPL Licensed. See COPYING for the full license."
+      ],
+      "reference/bankpanic/sys/yc_out.sv": [
+        "//  Copyright (C) 2022 Mike Simone",
+        "//  under the terms of the GNU General Public License as published by the Free",
+        "//  Software Foundation; either version 2 of the License, or (at your option)",
+        "//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for",
+        "//  You should have received a copy of the GNU General Public License along"
+      ]
+    },
+    "patches": {
+      "patches/tv80_mcode.v.patch": "daa2fae5e5a7b6a669a4f0dc16e552a1bab4a780de849aa12fca17be0d6a4865",
+      "patches/tv80_core.v.patch": "7e7c4af9c70792f7ae0eabd782c636a40778fed47bce024e12f4fe16bb622b6d"
+    }
+  },
+  "jt89": {
+    "url": "https://github.com/jotego/jt89",
+    "commit": "b688c5767f4b5910c43f4c2b3909142156a8f584",
+    "destination": "rtl/vendor/jt89",
+    "files": {
+      "rtl/vendor/jt89/.github/FUNDING.yml": "82a742f0e6bbeef4ed5fd6af9b7163e5a1bf4edbc4e0bb993565ae9391a4f69a",
+      "rtl/vendor/jt89/.gitignore": "913ce67952fd6d0e9db0880fce9309be80e0331d660209200c1e3df87a05f4b9",
+      "rtl/vendor/jt89/LICENSE": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
+      "rtl/vendor/jt89/README.md": "c3287cf531fb449240a4d6f5059bf3ea74c901359884d30e13a33217afe733f0",
+      "rtl/vendor/jt89/doc/SN76489 - Development - SMS Power!.pdf": "0d8169ff3ee27b17065552d66602ee5befa9706fc254fc08ebfd9a8f821baa15",
+      "rtl/vendor/jt89/doc/filter_notes.ods": "515d4807c59f1104df517623b70ee3de621d962fb9d771926e417bcb22aabcdd",
+      "rtl/vendor/jt89/doc/notes.ods": "02172ab31e9bf2a8546b8624e019fc0be3721cc23d5ffb80834ef1d6c828fb3f",
+      "rtl/vendor/jt89/doc/texas_instruments_sn76489an.pdf": "4e0e11a4b9843c9cb9a2e6de7a2c4e696eba96ba1b425e3f1d402c25ec7ea801",
+      "rtl/vendor/jt89/hdl/jt89.v": "998e1bab42ba2912a5d4ea906bd66ef90c813996c72f44883f677ce6ca49e975",
+      "rtl/vendor/jt89/hdl/jt89.vhd": "35d663b1646d325e612d3071b03da45b1833b302a7fde92df2f15e0a162ee044",
+      "rtl/vendor/jt89/hdl/jt89_mixer.v": "183e8f0e62dc144b7ab641bcc1574c55eb137ad079a6be929fdcc06ee6603bad",
+      "rtl/vendor/jt89/hdl/jt89_noise.v": "a91b398aefc5c0df6d0b67724b96fd5e7bc7c4150f39117d0bf105987ccdc206",
+      "rtl/vendor/jt89/hdl/jt89_sms.v": "1d37dbd949010e3eaaee50df136bcecf400798e915d14f151a0c33dfe950166d",
+      "rtl/vendor/jt89/hdl/jt89_sms.vhd": "ad79964137596f7995766204d00e7363657b1be035f97ac207554dfc2268df6e",
+      "rtl/vendor/jt89/hdl/jt89_tone.v": "9130222c9f9a77e69f00fe39944659faa9fb5e1107c31db1458ac9ec6fdbd96a",
+      "rtl/vendor/jt89/hdl/jt89_vol.v": "8cd408247294b4e0d58898e4185f96ca4367dc15273504831cbb1c447aabb0ca",
+      "rtl/vendor/jt89/hdl/mixer/jt12_comb.v": "9fe2041147fbc379a9a0dc189e284ff660bdb67c4d146de41fb559fde88848b8",
+      "rtl/vendor/jt89/hdl/mixer/jt12_dac2.v": "ab3af5cee321abc32e5bc383dfe7f6b2d2b80b68aa213ac2a90947b8b2cf84c5",
+      "rtl/vendor/jt89/hdl/mixer/jt12_interpol.v": "cf735da30db48cb22f1753dcdb344a35fc60a011597da9e514ec1dc69998882a",
+      "rtl/vendor/jt89/syn/quartus/jt89.qip": "1a010ce7461496b86dbe274e202a249926977dfc60ac664878ac6dc49b659757",
+      "rtl/vendor/jt89/syn/quartus/jt89_sms.qip": "6cbb7b2b788c5f8f95299c37e4cf7f7de017565240972e536213763577e44a5f",
+      "rtl/vendor/jt89/syn/quartus/jt89_verilog.qip": "30e9af67721f298da79e17ffb95fe0db7b495afe2c62b961edd7a979a8d91c01",
+      "rtl/vendor/jt89/ver/jt89_tb/gather.f": "8676b3931eaf80babcd9707d0c3b130af3568fa5bb655e5faefed4205aead790",
+      "rtl/vendor/jt89/ver/jt89_tb/go": "ce235d7b01ab0468c2bd41701fe3374ed3dd84a8778b4d832e5f6df0a9becc0e",
+      "rtl/vendor/jt89/ver/jt89_tb/inputs.cc": "f6977212b107bc205dbf7ba6655a164eb2cdc08abb61431c56ab3b8188ba308a",
+      "rtl/vendor/jt89/ver/jt89_tb/jt89_tb.v": "20f783c2a542ee69068c2468a1763839c247a3ecd708c76849497a07df56a85a",
+      "rtl/vendor/jt89/ver/verilator/go": "b4485933ef11b554e93accfc4e51d3ed2c7436d1d116041b70f871819f1d3c9d",
+      "rtl/vendor/jt89/ver/verilator/test.cpp": "a5650a0f3881b35e0d80a773c7d7116f461f9c4a8e615f1ce364333dd133036c",
+      "rtl/vendor/jt89/ver/verilator/test.gtkw": "4dc28aac6d5df3bf8955c161faa1cda1c62e1b060dc0df292b5522bca12e249b",
+      "rtl/vendor/jt89/ver/verilator/tests/1.jtt": "03af36a857988cacc032d578f8149b3ae23535560e829d44e6ddcfe4c8b0e994",
+      "rtl/vendor/jt89/ver/verilator/tests/dr.jtt": "9139ccac88ca255e06efa8ce99e7c160421fb18945d1a9894ae99f295d2593db",
+      "rtl/vendor/jt89/ver/verilator/tests/no-ch2.jtt": "a34e8f3faad3e10a5ecd7902f67573006412c5c3a004f1fe355c5bc6c0b56875",
+      "rtl/vendor/jt89/ver/verilator/tests/vol.jtt": "36410bb519817eff13133d7f06b9a503fcebd5eac0f61abd6f6f9dddfbd39a9d",
+      "rtl/vendor/jt89/ver/verilator/tests/vol2-ch1.jtt": "95622cdaabfcfe90db677568b43dd6c780b80a451c27559b37b4b10b62ec128b",
+      "rtl/vendor/jt89/ver/verilator/tests/vol2-ch2.jtt": "cabd7b113a86b8c9ed8bbcdd16561ef1258c20a0ca0a2b0e09eb99d6217630fb",
+      "rtl/vendor/jt89/ver/verilator/tests/vol2-ch3.jtt": "cc360ef3a13ee7555a0cb3190655493965c0c49fb49f46a81992dc3610d2dd23",
+      "rtl/vendor/jt89/ver/verilator/tests/vol2.jtt": "756742d357284d09f00ba6e8236dae73e9839afecc54f31fda98e8ad2bcc2334"
+    },
+    "license": "GPL-3.0-or-later, Jose Tejada Gomez; individual upstream notices retained",
+    "used_modules": [
+      "sn76496_jt89 (attributed adaptation)"
+    ],
+    "configuration": "INTERPOL16=0 inspected; variant-dependent donor oscillator/mixer replaced per MAME SN76496",
+    "materialized_files": {
+      "rtl/sn76496_jt89.sv": "e19429a0560ab9cf68a1859b3b81c0a31554639cafc0245507a90f12221b0b9f"
+    },
+    "license_headers": {
+      "rtl/vendor/jt89/hdl/jt89.v": [
+        "    it under the terms of the GNU General Public License as published by",
+        "    the Free Software Foundation, either version 3 of the License, or",
+        "    GNU General Public License for more details.",
+        "    You should have received a copy of the GNU General Public License",
+        "    along with JT89.  If not, see <http://www.gnu.org/licenses/>.",
+        "    Author: Jose Tejada Gomez. Twitter: @topapate"
+      ],
+      "rtl/vendor/jt89/hdl/jt89.vhd": [],
+      "rtl/vendor/jt89/hdl/jt89_mixer.v": [
+        "    it under the terms of the GNU General Public License as published by",
+        "    the Free Software Foundation, either version 3 of the License, or",
+        "    GNU General Public License for more details.",
+        "    You should have received a copy of the GNU General Public License",
+        "    along with JT89.  If not, see <http://www.gnu.org/licenses/>.",
+        "    Author: Jose Tejada Gomez. Twitter: @topapate"
+      ],
+      "rtl/vendor/jt89/hdl/jt89_noise.v": [
+        "    it under the terms of the GNU General Public License as published by",
+        "    the Free Software Foundation, either version 3 of the License, or",
+        "    GNU General Public License for more details.",
+        "    You should have received a copy of the GNU General Public License",
+        "    along with JT89.  If not, see <http://www.gnu.org/licenses/>.",
+        "    Author: Jose Tejada Gomez. Twitter: @topapate"
+      ],
+      "rtl/vendor/jt89/hdl/jt89_sms.v": [
+        "    it under the terms of the GNU General Public License as published by",
+        "    the Free Software Foundation, either version 3 of the License, or",
+        "    GNU General Public License for more details.",
+        "    You should have received a copy of the GNU General Public License",
+        "    along with JT89.  If not, see <http://www.gnu.org/licenses/>.",
+        "    Author: Jose Tejada Gomez. Twitter: @topapate"
+      ],
+      "rtl/vendor/jt89/hdl/jt89_sms.vhd": [],
+      "rtl/vendor/jt89/hdl/jt89_tone.v": [
+        "    it under the terms of the GNU General Public License as published by",
+        "    the Free Software Foundation, either version 3 of the License, or",
+        "    GNU General Public License for more details.",
+        "    You should have received a copy of the GNU General Public License",
+        "    along with JT89.  If not, see <http://www.gnu.org/licenses/>.",
+        "    Author: Jose Tejada Gomez. Twitter: @topapate"
+      ],
+      "rtl/vendor/jt89/hdl/jt89_vol.v": [
+        "    it under the terms of the GNU General Public License as published by",
+        "    the Free Software Foundation, either version 3 of the License, or",
+        "    GNU General Public License for more details.",
+        "    You should have received a copy of the GNU General Public License",
+        "    along with JT89.  If not, see <http://www.gnu.org/licenses/>.",
+        "    Author: Jose Tejada Gomez. Twitter: @topapate"
+      ],
+      "rtl/vendor/jt89/hdl/mixer/jt12_comb.v": [
+        "    it under the terms of the GNU General Public License as published by",
+        "    the Free Software Foundation, either version 3 of the License, or",
+        "    GNU General Public License for more details.",
+        "    You should have received a copy of the GNU General Public License",
+        "    along with JT12.  If not, see <http://www.gnu.org/licenses/>.",
+        "    Author: Jose Tejada Gomez. Twitter: @topapate"
+      ],
+      "rtl/vendor/jt89/hdl/mixer/jt12_dac2.v": [
+        "    it under the terms of the GNU General Public License as published by",
+        "    the Free Software Foundation, either version 3 of the License, or",
+        "    GNU General Public License for more details.",
+        "    You should have received a copy of the GNU General Public License",
+        "    along with JT12.  If not, see <http://www.gnu.org/licenses/>.",
+        "\tAuthor: Jose Tejada Gomez. Twitter: @topapate"
+      ],
+      "rtl/vendor/jt89/hdl/mixer/jt12_interpol.v": [
+        "    it under the terms of the GNU General Public License as published by",
+        "    the Free Software Foundation, either version 3 of the License, or",
+        "    GNU General Public License for more details.",
+        "    You should have received a copy of the GNU General Public License",
+        "    along with JT12.  If not, see <http://www.gnu.org/licenses/>.",
+        "    Author: Jose Tejada Gomez. Twitter: @topapate"
+      ],
+      "rtl/vendor/jt89/ver/jt89_tb/jt89_tb.v": [],
+      "rtl/vendor/jt89/ver/verilator/test.cpp": []
+    }
+  },
+  "jt5205": {
+    "url": "https://github.com/jotego/jt5205",
+    "commit": "cd3cb834764534c205b8e912b1bea26570a36f7d",
+    "destination": "rtl/vendor/jt5205",
+    "files": {
+      "rtl/vendor/jt5205/.github/FUNDING.yml": "82a742f0e6bbeef4ed5fd6af9b7163e5a1bf4edbc4e0bb993565ae9391a4f69a",
+      "rtl/vendor/jt5205/.gitignore": "6504d145ac4dda6aead2b3a65516864c82e1265cc9a799edea032d5dde0b8dee",
+      "rtl/vendor/jt5205/LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "rtl/vendor/jt5205/README.md": "a5c3300169f5d35f634a72dc6136d7cf3f21df82e8e35523dd48a076754686b1",
+      "rtl/vendor/jt5205/cc/Makefile": "b17a973a3d603fdccb7ae3af724c017d7e7c2ac87e6e37d37ec0942c724b8c6c",
+      "rtl/vendor/jt5205/cc/lut.cpp": "90a325caac410b16f4e27f846591a4b22e94762c29a5cb811255d00fa8b6fc31",
+      "rtl/vendor/jt5205/cfg/files.yaml": "6176539a14a67e9a96404f9557dc9e27c151d4b48dbb1115dd8e10465c44cea6",
+      "rtl/vendor/jt5205/doc/MSM5205.pdf": "895c7672f2cfa6037ea735b3526b22759a09f259a076b184032d071aefeee9e8",
+      "rtl/vendor/jt5205/hdl/jt5205.qip": "2a43dea8018bb4c18c3be0929cf5cc199724f159290bebb6c4081d07323633c5",
+      "rtl/vendor/jt5205/hdl/jt5205.v": "23bb2b18296b4ee395eaaca4aa5d005854788a2bbfa80f214185bbb38b64bdc5",
+      "rtl/vendor/jt5205/hdl/jt5205_adpcm.v": "e0c5d6f27aacbe5dcab5db2d93e0d4df80fd9d279f351781c32e8e6aeca84c2f",
+      "rtl/vendor/jt5205/hdl/jt5205_interpol2x.v": "a33cb5259e91fad8b856371476faa7c0c1d2f4c6df36e6773c7e6e5120ab1731",
+      "rtl/vendor/jt5205/hdl/jt5205_timing.v": "7e3f9d30a43bc0cf527a1f7f81a80b6938fa80b7d5e57c24b3189f63b25e4c89",
+      "rtl/vendor/jt5205/ver/adpcm/data.hex": "db3b070861827fa5fa94b9ed821edef49783a9ebb5765279c7f9cd39a1f3ebe6",
+      "rtl/vendor/jt5205/ver/adpcm/go.sh": "86d00db800fa062adfa0de9d16b6bc24ac7bea6311dcc11a1cdffa5efcd29f1e",
+      "rtl/vendor/jt5205/ver/adpcm/test.v": "25c85732a588761f85041932ee9c3554fc136b346b1af77636fc221295e24c1f",
+      "rtl/vendor/jt5205/ver/random/go.sh": "c7d2ef868355ca056d6cbe2a793308577717e1727230bcb55dada7f40c91615d",
+      "rtl/vendor/jt5205/ver/random/test.cc": "6d614fb45878f73955098e9b409919698b9339cab250a4e15bbc3a2c5e4be12f",
+      "rtl/vendor/jt5205/ver/top/Makefile": "24b8633af8b58a35b69255024e4030719365c73b8a0373195e11dc14a21b1dcb",
+      "rtl/vendor/jt5205/ver/top/WaveWritter.cc": "4de7cc33785485134af8fc8d966b1d19d1bd531ed5b9ccf4a5f85342800619dd",
+      "rtl/vendor/jt5205/ver/top/WaveWritter.hpp": "ca576980264442f74af18122f7e0f163bf12eb33c59fd0554ea8f5254dd5870b",
+      "rtl/vendor/jt5205/ver/top/cps2test.cc": "cee388a918ff93969a59a72440b1e153d025301fc892f32f346fbfce86a7f94e",
+      "rtl/vendor/jt5205/ver/top/go.sh": "ba04beea293e0abf40e0eaa09c4c59eaf3172553e3553a7391bb1b44597a9a4b",
+      "rtl/vendor/jt5205/ver/top/okiadpcm.cc": "2432610d7c729e887f471e17da6da3f8d4f540b1908a926cb1fefadf71b58b7a",
+      "rtl/vendor/jt5205/ver/top/okiadpcm.h": "48c7ce126963fd2acb13339e924896d582bd0d739f05dc4eb5eab99a9a2a2048",
+      "rtl/vendor/jt5205/ver/top/raw2wav.cc": "653c49294dc8070c723b7d2a2e0f86234fbe02f0259143306f4a46dc8b494347",
+      "rtl/vendor/jt5205/ver/top/test.v": "918e26235fb27c33d36ed8efa6ee68aa8869130c8ac45d8e65ae2c65e5e9d3bb"
+    },
+    "license": "GPL-3.0-or-later, Jose Tejada Gomez",
+    "used_modules": [
+      "jt5205",
+      "jt5205_timing",
+      "jt5205_adpcm (signed-reset comparison patch)"
+    ],
+    "configuration": "INTERPOL=0,VCLK_CEN=1,sel=1",
+    "materialized_files": {
+      "rtl/derived/jt5205_adpcm.v": "6cf03912ceaf1eb34c00b238d3bc866bb755d2569e00e768393d1db90e5e0c37"
+    },
+    "patches": {
+      "patches/jt5205_adpcm.v.patch": "f7db021a249dee202ff2007a5e11e946ce8cf4a7ff622fb38b2cfc98106b59d5"
+    },
+    "license_headers": {
+      "rtl/vendor/jt5205/cc/lut.cpp": [],
+      "rtl/vendor/jt5205/hdl/jt5205.v": [
+        "    it under the terms of the GNU General Public License as published by",
+        "    the Free Software Foundation, either version 3 of the License, or",
+        "    GNU General Public License for more details.",
+        "    You should have received a copy of the GNU General Public License",
+        "    along with JT5205.  If not, see <http://www.gnu.org/licenses/>.",
+        "    Author: Jose Tejada Gomez. Twitter: @topapate"
+      ],
+      "rtl/vendor/jt5205/hdl/jt5205_adpcm.v": [
+        "    it under the terms of the GNU General Public License as published by",
+        "    the Free Software Foundation, either version 3 of the License, or",
+        "    GNU General Public License for more details.",
+        "    You should have received a copy of the GNU General Public License",
+        "    along with JT5205.  If not, see <http://www.gnu.org/licenses/>.",
+        "    Author: Jose Tejada Gomez. Twitter: @topapate"
+      ],
+      "rtl/vendor/jt5205/hdl/jt5205_interpol2x.v": [
+        "    it under the terms of the GNU General Public License as published by",
+        "    the Free Software Foundation, either version 3 of the License, or",
+        "    GNU General Public License for more details.",
+        "    You should have received a copy of the GNU General Public License",
+        "    along with JT5205.  If not, see <http://www.gnu.org/licenses/>.",
+        "    Author: Jose Tejada Gomez. Twitter: @topapate"
+      ],
+      "rtl/vendor/jt5205/hdl/jt5205_timing.v": [
+        "    it under the terms of the GNU General Public License as published by",
+        "    the Free Software Foundation, either version 3 of the License, or",
+        "    GNU General Public License for more details.",
+        "    You should have received a copy of the GNU General Public License",
+        "    along with JT5205.  If not, see <http://www.gnu.org/licenses/>.",
+        "    Author: Jose Tejada Gomez. Twitter: @topapate"
+      ],
+      "rtl/vendor/jt5205/ver/adpcm/test.v": [],
+      "rtl/vendor/jt5205/ver/top/okiadpcm.h": [
+        "// license:BSD-3-Clause",
+        "// copyright-holders:Andrew Gardner,Aaron Giles"
+      ],
+      "rtl/vendor/jt5205/ver/top/test.v": []
+    }
+  }
+}

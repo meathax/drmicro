@@ -1,0 +1,1779 @@
+%Warning-EOFNEWLINE: rtl/vendor/jt5205/hdl\jt5205.v:94:10: Missing newline at end of file (POSIX 3.206).
+                                                         : ... Suggest add newline.
+   94 | endmodule
+      |          ^
+                     ... For warning description see https://verilator.org/warn/EOFNEWLINE?v=5.051
+                     ... Use "/* verilator lint_off EOFNEWLINE */" and lint_on around source to disable this message.
+%Warning-EOFNEWLINE: rtl/vendor/jt5205/hdl\jt5205_timing.v:72:10: Missing newline at end of file (POSIX 3.206).
+                                                                : ... Suggest add newline.
+   72 | endmodule
+      |          ^
+%Warning-EOFNEWLINE: rtl/derived\jt5205_adpcm.v:120:10: Missing newline at end of file (POSIX 3.206).
+                                                      : ... Suggest add newline.
+  120 | endmodule
+      |          ^
+%Warning-DECLFILENAME: rtl\drmicro_clock_en.sv:2:8: Filename 'drmicro_clock_en' does not match MODULE name: 'drmicro_ce'
+    2 | module drmicro_ce #(parameter integer RATE=3072000, CLOCK=50000000)(
+      |        ^~~~~~~~~~
+                       ... For warning description see https://verilator.org/warn/DECLFILENAME?v=5.051
+                       ... Use "/* verilator lint_off DECLFILENAME */" and lint_on around source to disable this message.
+%Warning-PINCONNECTEMPTY: rtl\drmicro_sound.sv:13:112: Instance pin connected by name with empty reference: 'digital'
+   13 |  sn76496_jt89 sn0(.clk(clk),.reset(reset),.ce(psg_ce),.write(io_write&&port_addr==0),.data(data),.sound(psg0),.digital(),.noise_state());
+      |                                                                                                                ^~~~~~~
+                          ... For warning description see https://verilator.org/warn/PINCONNECTEMPTY?v=5.051
+                          ... Use "/* verilator lint_off PINCONNECTEMPTY */" and lint_on around source to disable this message.
+%Warning-PINCONNECTEMPTY: rtl\drmicro_sound.sv:13:123: Instance pin connected by name with empty reference: 'noise_state'
+   13 |  sn76496_jt89 sn0(.clk(clk),.reset(reset),.ce(psg_ce),.write(io_write&&port_addr==0),.data(data),.sound(psg0),.digital(),.noise_state());
+      |                                                                                                                           ^~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: rtl\drmicro_sound.sv:14:112: Instance pin connected by name with empty reference: 'digital'
+   14 |  sn76496_jt89 sn1(.clk(clk),.reset(reset),.ce(psg_ce),.write(io_write&&port_addr==1),.data(data),.sound(psg1),.digital(),.noise_state());
+      |                                                                                                                ^~~~~~~
+%Warning-PINCONNECTEMPTY: rtl\drmicro_sound.sv:14:123: Instance pin connected by name with empty reference: 'noise_state'
+   14 |  sn76496_jt89 sn1(.clk(clk),.reset(reset),.ce(psg_ce),.write(io_write&&port_addr==1),.data(data),.sound(psg1),.digital(),.noise_state());
+      |                                                                                                                           ^~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: rtl\drmicro_sound.sv:15:112: Instance pin connected by name with empty reference: 'digital'
+   15 |  sn76496_jt89 sn2(.clk(clk),.reset(reset),.ce(psg_ce),.write(io_write&&port_addr==2),.data(data),.sound(psg2),.digital(),.noise_state());
+      |                                                                                                                ^~~~~~~
+%Warning-PINCONNECTEMPTY: rtl\drmicro_sound.sv:15:123: Instance pin connected by name with empty reference: 'noise_state'
+   15 |  sn76496_jt89 sn2(.clk(clk),.reset(reset),.ce(psg_ce),.write(io_write&&port_addr==2),.data(data),.sound(psg2),.digital(),.noise_state());
+      |                                                                                                                           ^~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: rtl\drmicro_sound.sv:19:155: Instance pin connected by name with empty reference: 'irq'
+   19 |  jt5205 #(.INTERPOL(0),.VCLK_CEN(1)) decoder(.rst(reset|pcm_reset),.clk(clk),.cen(adpcm_ce),.sel(2'd1),.din(nibble),.sound(adpcm),.sample(sample_strobe),.irq(),.vclk_o(vclk));
+      |                                                                                                                                                           ^~~
+%Warning-PINCONNECTEMPTY: rtl\drmicro_core.sv:44:274: Instance pin connected by name with empty reference: 'busak_n'
+   44 |  tv80s #(.Mode(0),.T2Write(0),.IOWait(1)) cpu(.clk(clk),.cen(cpu_ce),.reset_n(running),.wait_n(1'b1),.int_n(1'b1),.nmi_n(nmi_n),.busrq_n(1'b1),.di(di),.dout(dout),.A(addr),.mreq_n(mreq_n),.iorq_n(iorq_n),.rd_n(rd_n),.wr_n(wr_n),.rfsh_n(rfsh_n),.m1_n(m1_n),.halt_n(halt_n),.busak_n());
+      |                                                                                                                                                                                                                                                                                  ^~~~~~~
+%Warning-PINCONNECTEMPTY: rtl\drmicro_core.sv:62:247: Instance pin connected by name with empty reference: 'sample_strobe'
+   62 |  drmicro_sound sound(.clk(clk),.reset(!running),.psg_ce(cpu_ce),.adpcm_ce(adpcm_ce),.io_write(io_write&&running),.port_addr(addr[7:0]),.data(dout),.sample_addr(sa),.sample_data(sd),.audio(audio),.psg0(psg0),.psg1(psg1),.psg2(psg2),.adpcm(adpcm),.sample_strobe(),.sample_position());
+      |                                                                                                                                                                                                                                                       ^~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: rtl\drmicro_core.sv:62:264: Instance pin connected by name with empty reference: 'sample_position'
+   62 |  drmicro_sound sound(.clk(clk),.reset(!running),.psg_ce(cpu_ce),.adpcm_ce(adpcm_ce),.io_write(io_write&&running),.port_addr(addr[7:0]),.data(dout),.sample_addr(sa),.sample_data(sd),.audio(audio),.psg0(psg0),.psg1(psg1),.psg2(psg2),.adpcm(adpcm),.sample_strobe(),.sample_position());
+      |                                                                                                                                                                                                                                                                        ^~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: rtl/vendor/tv80\tv80s.v:88:7: Instance pin connected by name with empty reference: 'IntE'
+   88 |      .IntE (),
+      |       ^~~~
+%Warning-PINCONNECTEMPTY: rtl/vendor/tv80\tv80s.v:89:7: Instance pin connected by name with empty reference: 'stop'
+   89 |      .stop (),
+      |       ^~~~
+%Warning-PINCONNECTEMPTY: rtl/vendor/jt5205/hdl\jt5205.v:64:6: Instance pin connected by name with empty reference: 'cenb_lo'
+   64 |     .cenb_lo(           ),
+      |      ^~~~~~~
+%Warning-DECLFILENAME: Arcade-DrMicro.sv:3:8: Filename 'Arcade-DrMicro' does not match MODULE name: 'emu'
+    3 | module emu (
+      |        ^~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:25:4: Instance pin connected by name with empty reference: 'joystick_2'
+   25 |   .joystick_2(),
+      |    ^~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:26:4: Instance pin connected by name with empty reference: 'joystick_3'
+   26 |   .joystick_3(),
+      |    ^~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:27:4: Instance pin connected by name with empty reference: 'joystick_4'
+   27 |   .joystick_4(),
+      |    ^~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:28:4: Instance pin connected by name with empty reference: 'joystick_5'
+   28 |   .joystick_5(),
+      |    ^~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:29:4: Instance pin connected by name with empty reference: 'joystick_l_analog_0'
+   29 |   .joystick_l_analog_0(),
+      |    ^~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:30:4: Instance pin connected by name with empty reference: 'joystick_l_analog_1'
+   30 |   .joystick_l_analog_1(),
+      |    ^~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:31:4: Instance pin connected by name with empty reference: 'joystick_l_analog_2'
+   31 |   .joystick_l_analog_2(),
+      |    ^~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:32:4: Instance pin connected by name with empty reference: 'joystick_l_analog_3'
+   32 |   .joystick_l_analog_3(),
+      |    ^~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:33:4: Instance pin connected by name with empty reference: 'joystick_l_analog_4'
+   33 |   .joystick_l_analog_4(),
+      |    ^~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:34:4: Instance pin connected by name with empty reference: 'joystick_l_analog_5'
+   34 |   .joystick_l_analog_5(),
+      |    ^~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:35:4: Instance pin connected by name with empty reference: 'joystick_r_analog_0'
+   35 |   .joystick_r_analog_0(),
+      |    ^~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:36:4: Instance pin connected by name with empty reference: 'joystick_r_analog_1'
+   36 |   .joystick_r_analog_1(),
+      |    ^~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:37:4: Instance pin connected by name with empty reference: 'joystick_r_analog_2'
+   37 |   .joystick_r_analog_2(),
+      |    ^~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:38:4: Instance pin connected by name with empty reference: 'joystick_r_analog_3'
+   38 |   .joystick_r_analog_3(),
+      |    ^~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:39:4: Instance pin connected by name with empty reference: 'joystick_r_analog_4'
+   39 |   .joystick_r_analog_4(),
+      |    ^~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:40:4: Instance pin connected by name with empty reference: 'joystick_r_analog_5'
+   40 |   .joystick_r_analog_5(),
+      |    ^~~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:41:4: Instance pin connected by name with empty reference: 'paddle_0'
+   41 |   .paddle_0(),
+      |    ^~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:42:4: Instance pin connected by name with empty reference: 'paddle_1'
+   42 |   .paddle_1(),
+      |    ^~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:43:4: Instance pin connected by name with empty reference: 'paddle_2'
+   43 |   .paddle_2(),
+      |    ^~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:44:4: Instance pin connected by name with empty reference: 'paddle_3'
+   44 |   .paddle_3(),
+      |    ^~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:45:4: Instance pin connected by name with empty reference: 'paddle_4'
+   45 |   .paddle_4(),
+      |    ^~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:46:4: Instance pin connected by name with empty reference: 'paddle_5'
+   46 |   .paddle_5(),
+      |    ^~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:47:4: Instance pin connected by name with empty reference: 'spinner_0'
+   47 |   .spinner_0(),
+      |    ^~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:48:4: Instance pin connected by name with empty reference: 'spinner_1'
+   48 |   .spinner_1(),
+      |    ^~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:49:4: Instance pin connected by name with empty reference: 'spinner_2'
+   49 |   .spinner_2(),
+      |    ^~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:50:4: Instance pin connected by name with empty reference: 'spinner_3'
+   50 |   .spinner_3(),
+      |    ^~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:51:4: Instance pin connected by name with empty reference: 'spinner_4'
+   51 |   .spinner_4(),
+      |    ^~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:52:4: Instance pin connected by name with empty reference: 'spinner_5'
+   52 |   .spinner_5(),
+      |    ^~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:53:4: Instance pin connected by name with empty reference: 'ps2_kbd_clk_out'
+   53 |   .ps2_kbd_clk_out(),
+      |    ^~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:54:4: Instance pin connected by name with empty reference: 'ps2_kbd_data_out'
+   54 |   .ps2_kbd_data_out(),
+      |    ^~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:55:4: Instance pin connected by name with empty reference: 'ps2_mouse_clk_out'
+   55 |   .ps2_mouse_clk_out(),
+      |    ^~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:56:4: Instance pin connected by name with empty reference: 'ps2_mouse_data_out'
+   56 |   .ps2_mouse_data_out(),
+      |    ^~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:57:4: Instance pin connected by name with empty reference: 'ps2_mouse'
+   57 |   .ps2_mouse(),
+      |    ^~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:58:4: Instance pin connected by name with empty reference: 'ps2_mouse_ext'
+   58 |   .ps2_mouse_ext(),
+      |    ^~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:59:4: Instance pin connected by name with empty reference: 'img_mounted'
+   59 |   .img_mounted(),
+      |    ^~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:60:4: Instance pin connected by name with empty reference: 'img_readonly'
+   60 |   .img_readonly(),
+      |    ^~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:61:4: Instance pin connected by name with empty reference: 'img_size'
+   61 |   .img_size(),
+      |    ^~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:62:4: Instance pin connected by name with empty reference: 'sd_ack'
+   62 |   .sd_ack(),
+      |    ^~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:63:4: Instance pin connected by name with empty reference: 'sd_buff_addr'
+   63 |   .sd_buff_addr(),
+      |    ^~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:64:4: Instance pin connected by name with empty reference: 'sd_buff_dout'
+   64 |   .sd_buff_dout(),
+      |    ^~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:65:4: Instance pin connected by name with empty reference: 'sd_buff_wr'
+   65 |   .sd_buff_wr(),
+      |    ^~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:66:4: Instance pin connected by name with empty reference: 'ioctl_upload'
+   66 |   .ioctl_upload(),
+      |    ^~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:67:4: Instance pin connected by name with empty reference: 'ioctl_rd'
+   67 |   .ioctl_rd(),
+      |    ^~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:68:4: Instance pin connected by name with empty reference: 'ioctl_file_ext'
+   68 |   .ioctl_file_ext(),
+      |    ^~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:69:4: Instance pin connected by name with empty reference: 'sdram_sz'
+   69 |   .sdram_sz(),
+      |    ^~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:70:4: Instance pin connected by name with empty reference: 'RTC'
+   70 |   .RTC(),
+      |    ^~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:71:4: Instance pin connected by name with empty reference: 'TIMESTAMP'
+   71 |   .TIMESTAMP(),
+      |    ^~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:72:4: Instance pin connected by name with empty reference: 'uart_mode'
+   72 |   .uart_mode(),
+      |    ^~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:73:4: Instance pin connected by name with empty reference: 'uart_speed'
+   73 |   .uart_speed(),
+      |    ^~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:94:4: Instance pin connected by name with empty reference: 'debug_x'
+   94 |   .debug_x(),.debug_y(),.debug_addr(),.debug_data(),.debug_io_write(),.debug_mem_write(),.debug_fetch(),.debug_nmi(),.debug_halt(),.deadline_error(),.psg0(),.psg1(),.psg2(),.adpcm(),.debug_pen());
+      |    ^~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:94:15: Instance pin connected by name with empty reference: 'debug_y'
+   94 |   .debug_x(),.debug_y(),.debug_addr(),.debug_data(),.debug_io_write(),.debug_mem_write(),.debug_fetch(),.debug_nmi(),.debug_halt(),.deadline_error(),.psg0(),.psg1(),.psg2(),.adpcm(),.debug_pen());
+      |               ^~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:94:26: Instance pin connected by name with empty reference: 'debug_addr'
+   94 |   .debug_x(),.debug_y(),.debug_addr(),.debug_data(),.debug_io_write(),.debug_mem_write(),.debug_fetch(),.debug_nmi(),.debug_halt(),.deadline_error(),.psg0(),.psg1(),.psg2(),.adpcm(),.debug_pen());
+      |                          ^~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:94:40: Instance pin connected by name with empty reference: 'debug_data'
+   94 |   .debug_x(),.debug_y(),.debug_addr(),.debug_data(),.debug_io_write(),.debug_mem_write(),.debug_fetch(),.debug_nmi(),.debug_halt(),.deadline_error(),.psg0(),.psg1(),.psg2(),.adpcm(),.debug_pen());
+      |                                        ^~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:94:54: Instance pin connected by name with empty reference: 'debug_io_write'
+   94 |   .debug_x(),.debug_y(),.debug_addr(),.debug_data(),.debug_io_write(),.debug_mem_write(),.debug_fetch(),.debug_nmi(),.debug_halt(),.deadline_error(),.psg0(),.psg1(),.psg2(),.adpcm(),.debug_pen());
+      |                                                      ^~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:94:72: Instance pin connected by name with empty reference: 'debug_mem_write'
+   94 |   .debug_x(),.debug_y(),.debug_addr(),.debug_data(),.debug_io_write(),.debug_mem_write(),.debug_fetch(),.debug_nmi(),.debug_halt(),.deadline_error(),.psg0(),.psg1(),.psg2(),.adpcm(),.debug_pen());
+      |                                                                        ^~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:94:91: Instance pin connected by name with empty reference: 'debug_fetch'
+   94 |   .debug_x(),.debug_y(),.debug_addr(),.debug_data(),.debug_io_write(),.debug_mem_write(),.debug_fetch(),.debug_nmi(),.debug_halt(),.deadline_error(),.psg0(),.psg1(),.psg2(),.adpcm(),.debug_pen());
+      |                                                                                           ^~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:94:106: Instance pin connected by name with empty reference: 'debug_nmi'
+   94 |   .debug_x(),.debug_y(),.debug_addr(),.debug_data(),.debug_io_write(),.debug_mem_write(),.debug_fetch(),.debug_nmi(),.debug_halt(),.deadline_error(),.psg0(),.psg1(),.psg2(),.adpcm(),.debug_pen());
+      |                                                                                                          ^~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:94:119: Instance pin connected by name with empty reference: 'debug_halt'
+   94 |   .debug_x(),.debug_y(),.debug_addr(),.debug_data(),.debug_io_write(),.debug_mem_write(),.debug_fetch(),.debug_nmi(),.debug_halt(),.deadline_error(),.psg0(),.psg1(),.psg2(),.adpcm(),.debug_pen());
+      |                                                                                                                       ^~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:94:133: Instance pin connected by name with empty reference: 'deadline_error'
+   94 |   .debug_x(),.debug_y(),.debug_addr(),.debug_data(),.debug_io_write(),.debug_mem_write(),.debug_fetch(),.debug_nmi(),.debug_halt(),.deadline_error(),.psg0(),.psg1(),.psg2(),.adpcm(),.debug_pen());
+      |                                                                                                                                     ^~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:94:151: Instance pin connected by name with empty reference: 'psg0'
+   94 |   .debug_x(),.debug_y(),.debug_addr(),.debug_data(),.debug_io_write(),.debug_mem_write(),.debug_fetch(),.debug_nmi(),.debug_halt(),.deadline_error(),.psg0(),.psg1(),.psg2(),.adpcm(),.debug_pen());
+      |                                                                                                                                                       ^~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:94:159: Instance pin connected by name with empty reference: 'psg1'
+   94 |   .debug_x(),.debug_y(),.debug_addr(),.debug_data(),.debug_io_write(),.debug_mem_write(),.debug_fetch(),.debug_nmi(),.debug_halt(),.deadline_error(),.psg0(),.psg1(),.psg2(),.adpcm(),.debug_pen());
+      |                                                                                                                                                               ^~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:94:167: Instance pin connected by name with empty reference: 'psg2'
+   94 |   .debug_x(),.debug_y(),.debug_addr(),.debug_data(),.debug_io_write(),.debug_mem_write(),.debug_fetch(),.debug_nmi(),.debug_halt(),.deadline_error(),.psg0(),.psg1(),.psg2(),.adpcm(),.debug_pen());
+      |                                                                                                                                                                       ^~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:94:175: Instance pin connected by name with empty reference: 'adpcm'
+   94 |   .debug_x(),.debug_y(),.debug_addr(),.debug_data(),.debug_io_write(),.debug_mem_write(),.debug_fetch(),.debug_nmi(),.debug_halt(),.deadline_error(),.psg0(),.psg1(),.psg2(),.adpcm(),.debug_pen());
+      |                                                                                                                                                                               ^~~~~
+%Warning-PINCONNECTEMPTY: Arcade-DrMicro.sv:94:184: Instance pin connected by name with empty reference: 'debug_pen'
+   94 |   .debug_x(),.debug_y(),.debug_addr(),.debug_data(),.debug_io_write(),.debug_mem_write(),.debug_fetch(),.debug_nmi(),.debug_halt(),.deadline_error(),.psg0(),.psg1(),.psg2(),.adpcm(),.debug_pen());
+      |                                                                                                                                                                                        ^~~~~~~~~
+%Warning-PINMISSING: sys\hps_io.sv:575:14: Instance has missing pin: 'tx_empty'
+  575 |   ps2_device keyboard
+      |              ^~~~~~~~
+                     sys\hps_io.sv:725:15: ... Location of port declaration
+  725 |  output reg   tx_empty,
+      |               ^~~~~~~~
+                     ... For warning description see https://verilator.org/warn/PINMISSING?v=5.051
+                     ... Use "/* verilator lint_off PINMISSING */" and lint_on around source to disable this message.
+%Warning-PINMISSING: sys\hps_io.sv:594:14: Instance has missing pin: 'tx_empty'
+  594 |   ps2_device mouse
+      |              ^~~~~
+                     sys\hps_io.sv:725:15: ... Location of port declaration
+  725 |  output reg   tx_empty,
+      |               ^~~~~~~~
+%Warning-DECLFILENAME: sys\hps_io.sv:715:8: Filename 'hps_io' does not match MODULE name: 'ps2_device'
+  715 | module ps2_device #(parameter PS2_FIFO_BITS=5)
+      |        ^~~~~~~~~~
+%Warning-PINCONNECTEMPTY: sys\arcade_video.v:125:3: Instance pin connected by name with empty reference: 'freeze_sync'
+  125 |  .freeze_sync(),
+      |   ^~~~~~~~~~~
+%Warning-DECLFILENAME: sys\arcade_video.v:170:8: Filename 'arcade_video' does not match MODULE name: 'screen_rotate'
+  170 | module screen_rotate
+      |        ^~~~~~~~~~~~~
+%Warning-PINMISSING: sys\video_freezer.sv:39:17: Instance has missing pin: 'sync_pt'
+   39 | sync_lock #(33) vs_lock
+      |                 ^~~~~~~
+                     sys\video_freezer.sv:91:10: ... Location of port declaration
+   91 |  output  sync_pt,
+      |          ^~~~~~~
+%Warning-PINMISSING: sys\video_freezer.sv:39:17: Instance has missing pin: 'valid'
+   39 | sync_lock #(33) vs_lock
+      |                 ^~~~~~~
+                     sys\video_freezer.sv:92:10: ... Location of port declaration
+   92 |  output  valid
+      |          ^~~~~
+%Warning-PINMISSING: sys\video_freezer.sv:50:17: Instance has missing pin: 'valid'
+   50 | sync_lock #(21) hs_lock
+      |                 ^~~~~~~
+                     sys\video_freezer.sv:92:10: ... Location of port declaration
+   92 |  output  valid
+      |          ^~~~~
+%Warning-DECLFILENAME: sys\video_freezer.sv:80:8: Filename 'video_freezer' does not match MODULE name: 'sync_lock'
+   80 | module sync_lock #(parameter WIDTH)
+      |        ^~~~~~~~~
+%Warning-DECLFILENAME: sys\hq2x.sv:13:8: Filename 'hq2x' does not match MODULE name: 'Hq2x'
+   13 | module Hq2x #(parameter LENGTH, parameter HALF_DEPTH)
+      |        ^~~~
+%Warning-DECLFILENAME: sys\gamma_corr.sv:62:8: Filename 'gamma_corr' does not match MODULE name: 'gamma_fast'
+   62 | module gamma_fast
+      |        ^~~~~~~~~~
+%Warning-DECLFILENAME: sys\sys_top.v:1882:8: Filename 'sys_top' does not match MODULE name: 'sync_fix'
+ 1882 | module sync_fix
+      |        ^~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_pkg.sv:2:9: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | package drmicro_pkg;
+      |         ^~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+                       ... For warning description see https://verilator.org/warn/TIMESCALEMOD?v=5.051
+                       ... Use "/* verilator lint_off TIMESCALEMOD */" and lint_on around source to disable this message.
+%Warning-TIMESCALEMOD: rtl\drmicro_clock_en.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_ce #(parameter integer RATE=3072000, CLOCK=50000000)(
+      |        ^~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_rom_loader.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_rom_loader #(parameter integer SIZE=drmicro_pkg::ROM_SIZE)(
+      |        ^~~~~~~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_bus.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_bus(
+      |        ^~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_memory.sv:4:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    4 | module drmicro_memory(
+      |        ^~~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_inputs.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_inputs(
+      |        ^~~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\sn76496_jt89.sv:6:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    6 | module sn76496_jt89(
+      |        ^~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_adpcm_ctrl.sv:3:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    3 | module drmicro_adpcm_ctrl(
+      |        ^~~~~~~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_sound.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_sound(
+      |        ^~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_video.sv:4:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    4 | module drmicro_video #(parameter integer NMI_LINE=240)(
+      |        ^~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_core.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_core #(
+      |        ^~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/derived\tv80_core.v:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   25 | module tv80_core ( 
+      |        ^~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/tv80\tv80_alu.v:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   25 | module tv80_alu ( 
+      |        ^~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/derived\tv80_mcode.v:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   25 | module tv80_mcode
+      |        ^~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/tv80\tv80_reg.v:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   25 | module tv80_reg ( 
+      |        ^~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/tv80\tv80s.v:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   25 | module tv80s ( 
+      |        ^~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/jt5205/hdl\jt5205.v:19:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   19 | module jt5205(
+      |        ^~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/jt5205/hdl\jt5205_timing.v:19:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   19 | module jt5205_timing(
+      |        ^~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/derived\jt5205_adpcm.v:19:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   19 | module jt5205_adpcm(
+      |        ^~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/jt5205/hdl\jt5205_interpol2x.v:23:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   23 | module jt5205_interpol2x(
+      |        ^~~~~~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: Arcade-DrMicro.sv:3:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    3 | module emu (
+      |        ^~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\hps_io.sv:35:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   35 | module hps_io #(parameter CONF_STR, CONF_STR_BRAM=0, PS2DIV=0, WIDE=0, VDNUM=1, BLKSZ=2, PS2WE=0, STRLEN=$size(CONF_STR)>>3, F12KEYMOD=0)
+      |        ^~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\hps_io.sv:715:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+  715 | module ps2_device #(parameter PS2_FIFO_BITS=5)
+      |        ^~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\hps_io.sv:858:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+  858 | module video_calc
+      |        ^~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\hps_io.sv:1037:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+ 1037 | module confstr_rom #(parameter CONF_STR, STRLEN)
+      |        ^~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\arcade_video.v:29:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   29 | module arcade_video #(parameter WIDTH=320, DW=8, GAMMA=1)
+      |        ^~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\arcade_video.v:170:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+  170 | module screen_rotate
+      |        ^~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-GENUNNAMED: sys\hps_io.sv:227:22: Unnamed generate block 'genblk1' (IEEE 1800-2023 27.6)
+                                         : ... Suggest assign a label with 'begin : gen_<label_name>'
+  227 | generate if(!PS2DIV) begin
+      |                      ^~~~~
+                     ... For warning description see https://verilator.org/warn/GENUNNAMED?v=5.051
+                     ... Use "/* verilator lint_off GENUNNAMED */" and lint_on around source to disable this message.
+%Warning-GENUNNAMED: sys\hps_io.sv:256:20: Unnamed generate block 'genblk2' (IEEE 1800-2023 27.6)
+                                         : ... Suggest assign a label with 'begin : gen_<label_name>'
+  256 |  if(CONF_STR_BRAM) begin
+      |                    ^~~~~
+%Warning-GENUNNAMED: sys\hps_io.sv:259:7: Unnamed generate block 'genblk2' (IEEE 1800-2023 27.6)
+                                        : ... Suggest assign a label with 'begin : gen_<label_name>'
+  259 |  else begin
+      |       ^~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:283:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  283 |  reg        ps2skip = 0;
+      |             ^~~~~~~
+                         ... For warning description see https://verilator.org/warn/IMPLICITSTATIC?v=5.051
+                         ... Use "/* verilator lint_off IMPLICITSTATIC */" and lint_on around source to disable this message.
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:284:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  284 |  reg  [3:0] stflg = 0;
+      |             ^~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:286:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  286 |  reg        old_status_set = 0;
+      |             ^~~~~~~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:287:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  287 |  reg        old_upload_req = 0;
+      |             ^~~~~~~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:288:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  288 |  reg        upload_req = 0;
+      |             ^~~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:289:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  289 |  reg        old_info = 0;
+      |             ^~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:290:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  290 |  reg  [7:0] info_n = 0;
+      |             ^~~~~~
+%Warning-GENUNNAMED: sys\hps_io.sv:563:13: Unnamed generate block 'genblk3' (IEEE 1800-2023 27.6)
+                                         : ... Suggest assign a label with 'begin : gen_<label_name>'
+  563 |  if(PS2DIV) begin
+      |             ^~~~~
+%Warning-GENUNNAMED: sys\hps_io.sv:612:7: Unnamed generate block 'genblk3' (IEEE 1800-2023 27.6)
+                                        : ... Suggest assign a label with 'begin : gen_<label_name>'
+  612 |  else begin
+      |       ^~~~~
+%Warning-GENUNNAMED: sys\arcade_video.v:82:14: Unnamed generate block 'genblk1' (IEEE 1800-2023 27.6)
+                                             : ... Suggest assign a label with 'begin : gen_<label_name>'
+   82 |  if(DW == 6) begin
+      |              ^~~~~
+%Warning-GENUNNAMED: sys\arcade_video.v:87:19: Unnamed generate block 'genblk1' (IEEE 1800-2023 27.6)
+                                             : ... Suggest assign a label with 'begin : gen_<label_name>'
+   87 |  else if(DW == 8) begin
+      |                   ^~~~~
+%Warning-GENUNNAMED: sys\arcade_video.v:92:19: Unnamed generate block 'genblk1' (IEEE 1800-2023 27.6)
+                                             : ... Suggest assign a label with 'begin : gen_<label_name>'
+   92 |  else if(DW == 9) begin
+      |                   ^~~~~
+%Warning-GENUNNAMED: sys\arcade_video.v:97:20: Unnamed generate block 'genblk1' (IEEE 1800-2023 27.6)
+                                             : ... Suggest assign a label with 'begin : gen_<label_name>'
+   97 |  else if(DW == 12) begin
+      |                    ^~~~~
+%Warning-GENUNNAMED: sys\arcade_video.v:102:20: Unnamed generate block 'genblk1' (IEEE 1800-2023 27.6)
+                                              : ... Suggest assign a label with 'begin : gen_<label_name>'
+  102 |  else if(DW == 18) begin
+      |                    ^~~~~
+%Warning-GENUNNAMED: sys\arcade_video.v:107:7: Unnamed generate block 'genblk1' (IEEE 1800-2023 27.6)
+                                             : ... Suggest assign a label with 'begin : gen_<label_name>'
+  107 |  else begin  
+      |       ^~~~~
+%Warning-IMPLICITSTATIC: sys\arcade_video.v:270:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                                  : ... The initializer value will only be set once
+                                                  : ... Suggest use 'static' before variable declaration'
+  270 |  reg [11:0] hcnt = 0, vcnt = 0;
+      |             ^~~~
+%Warning-IMPLICITSTATIC: sys\arcade_video.v:270:23: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                                  : ... The initializer value will only be set once
+                                                  : ... Suggest use 'static' before variable declaration'
+  270 |  reg [11:0] hcnt = 0, vcnt = 0;
+      |                       ^~~~
+%Warning-IMPLICITSTATIC: sys\arcade_video.v:302:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                                  : ... The initializer value will only be set once
+                                                  : ... Suggest use 'static' before variable declaration'
+  302 |  reg [13:0] hcnt = 0;
+      |             ^~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:197:6: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                            : ... The initializer value will only be set once
+                                            : ... Suggest use 'static' before variable declaration'
+  197 |  reg btn_up = 0;
+      |      ^~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:198:6: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                            : ... The initializer value will only be set once
+                                            : ... Suggest use 'static' before variable declaration'
+  198 |  reg btn_en = 0;
+      |      ^~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:357:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  357 |  reg  [7:0] cnt = 0;
+      |             ^~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1099:7: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+ 1099 |   reg gotd = 0, gotd2 = 0;
+      |       ^~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1099:17: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                              : ... The initializer value will only be set once
+                                              : ... Suggest use 'static' before variable declaration'
+ 1099 |   reg gotd = 0, gotd2 = 0;
+      |                 ^~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1100:7: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+ 1100 |   reg custd = 0, custd2 = 0;
+      |       ^~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1100:18: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                              : ... The initializer value will only be set once
+                                              : ... Suggest use 'static' before variable declaration'
+ 1100 |   reg custd = 0, custd2 = 0;
+      |                  ^~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1101:7: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+ 1101 |   reg old_wait = 0;
+      |       ^~~~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1534:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                              : ... The initializer value will only be set once
+                                              : ... Suggest use 'static' before variable declaration'
+ 1534 |  reg [11:0] line_cnt  = 0;
+      |             ^~~~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1535:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                              : ... The initializer value will only be set once
+                                              : ... Suggest use 'static' before variable declaration'
+ 1535 |  reg [11:0] sync_line = 0;
+      |             ^~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1536:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                              : ... The initializer value will only be set once
+                                              : ... Suggest use 'static' before variable declaration'
+ 1536 |  reg  [1:0] hs_cnt = 0;
+      |             ^~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:6: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                            : ... The initializer value will only be set once
+                                            : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |      ^~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:18: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                  ^~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:30: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                              ^~~~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:47: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                                               ^~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:59: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                                                           ^~~~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:76: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                                                                            ^~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:89: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                                                                                         ^~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:924:12: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  924 |  reg [3:0] resto = 0;
+      |            ^~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:925:6: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                            : ... The initializer value will only be set once
+                                            : ... Suggest use 'static' before variable declaration'
+  925 |  reg calch = 0;
+      |      ^~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:987:6: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                            : ... The initializer value will only be set once
+                                            : ... Suggest use 'static' before variable declaration'
+  987 |  reg calch = 0;
+      |      ^~~~~
+%Warning-GENUNNAMED: sys\video_mixer.sv:93:26: Unnamed generate block 'genblk1' (IEEE 1800-2023 27.6)
+                                             : ... Suggest assign a label with 'begin : gen_<label_name>'
+   93 |  if(GAMMA && HALF_DEPTH) begin
+      |                          ^~~~~
+%Warning-GENUNNAMED: sys\video_mixer.sv:97:11: Unnamed generate block 'genblk1' (IEEE 1800-2023 27.6)
+                                             : ... Suggest assign a label with 'begin : gen_<label_name>'
+   97 |  end else begin
+      |           ^~~~~
+%Warning-GENUNNAMED: sys\video_mixer.sv:109:12: Unnamed generate block 'genblk2' (IEEE 1800-2023 27.6)
+                                              : ... Suggest assign a label with 'begin : gen_<label_name>'
+  109 |  if(GAMMA) begin
+      |            ^~~~~
+%Warning-GENUNNAMED: sys\video_mixer.sv:133:11: Unnamed generate block 'genblk2' (IEEE 1800-2023 27.6)
+                                              : ... Suggest assign a label with 'begin : gen_<label_name>'
+  133 |  end else begin
+      |           ^~~~~
+%Warning-GENUNNAMED: rtl/vendor/jt5205/hdl\jt5205.v:78:25: Unnamed generate block 'genblk1' (IEEE 1800-2023 27.6)
+                                                         : ... Suggest assign a label with 'begin : gen_<label_name>'
+   78 |     if( INTERPOL == 1 ) begin
+      |                         ^~~~~
+%Warning-GENUNNAMED: rtl/vendor/jt5205/hdl\jt5205.v:87:14: Unnamed generate block 'genblk1' (IEEE 1800-2023 27.6)
+                                                         : ... Suggest assign a label with 'begin : gen_<label_name>'
+   87 |     end else begin
+      |              ^~~~~
+%Warning-IMPLICITSTATIC: sys\gamma_corr.sv:34:12: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                                : ... The initializer value will only be set once
+                                                : ... Suggest use 'static' before variable declaration'
+   34 |  reg [1:0] ctr = 0;
+      |            ^~~
+%Warning-SIMILARNAME: Arcade-DrMicro.sv:15:33: Declaration overlaps another with different case: 'buttons'
+   15 |  wire [127:0] status;wire [1:0] buttons;wire [10:0] ps2_key;
+      |                                 ^~~~~~~
+                      sys\emu_ports.vh:80:15: ... Location of original declaration
+   80 | output  [1:0] BUTTONS,
+      |               ^~~~~~~
+                      ... For warning description see https://verilator.org/warn/SIMILARNAME?v=5.051
+                      ... Use "/* verilator lint_off SIMILARNAME */" and lint_on around source to disable this message.
+%Warning-SIMILARNAME: sys\arcade_video.v:40:16: Declaration overlaps another with different case: 'CLK_VIDEO'
+   40 |  output        CLK_VIDEO,
+      |                ^~~~~~~~~
+                      sys\arcade_video.v:31:16: ... Location of original declaration
+   31 |  input         clk_video,
+      |                ^~~~~~~~~
+%Warning-VARHIDDEN: sys\gamma_corr.sv:28:11: Declaration of signal hides declaration in upper scope: 'gamma'
+   28 | reg [7:0] gamma;
+      |           ^~~~~
+                    sys\video_mixer.sv:111:14: ... Location of original declaration
+  111 |   gamma_corr gamma(
+      |              ^~~~~
+                    ... For warning description see https://verilator.org/warn/VARHIDDEN?v=5.051
+                    ... Use "/* verilator lint_off VARHIDDEN */" and lint_on around source to disable this message.
+%Warning-SIMILARNAME: sys\scandoubler.v:103:50: Declaration overlaps another with different case: 'Hq2x'
+  103 | Hq2x #(.LENGTH(LENGTH), .HALF_DEPTH(HALF_DEPTH)) Hq2x
+      |                                                  ^~~~
+                      sys\scandoubler.v:26:20: ... Location of original declaration
+   26 |  input             hq2x,
+      |                    ^~~~
+%Warning-SIMILARNAME: sys\hq2x.sv:319:13: Declaration overlaps another with different case: 'a'
+  319 |  reg [23:0] a,b,d,e,h,f;
+      |             ^
+                      sys\hq2x.sv:304:16: ... Location of original declaration
+  304 |  input  [23:0] A,
+      |                ^
+%Warning-SIMILARNAME: sys\hq2x.sv:319:15: Declaration overlaps another with different case: 'b'
+  319 |  reg [23:0] a,b,d,e,h,f;
+      |               ^
+                      sys\hq2x.sv:305:16: ... Location of original declaration
+  305 |  input  [23:0] B,
+      |                ^
+%Warning-SIMILARNAME: sys\hq2x.sv:319:17: Declaration overlaps another with different case: 'd'
+  319 |  reg [23:0] a,b,d,e,h,f;
+      |                 ^
+                      sys\hq2x.sv:306:16: ... Location of original declaration
+  306 |  input  [23:0] D,
+      |                ^
+%Warning-SIMILARNAME: sys\hq2x.sv:319:19: Declaration overlaps another with different case: 'e'
+  319 |  reg [23:0] a,b,d,e,h,f;
+      |                   ^
+                      sys\hq2x.sv:303:16: ... Location of original declaration
+  303 |  input  [23:0] E,
+      |                ^
+%Warning-SIMILARNAME: sys\hq2x.sv:319:21: Declaration overlaps another with different case: 'h'
+  319 |  reg [23:0] a,b,d,e,h,f;
+      |                     ^
+                      sys\hq2x.sv:308:16: ... Location of original declaration
+  308 |  input  [23:0] H,
+      |                ^
+%Warning-SIMILARNAME: sys\hq2x.sv:319:23: Declaration overlaps another with different case: 'f'
+  319 |  reg [23:0] a,b,d,e,h,f;
+      |                       ^
+                      sys\hq2x.sv:307:16: ... Location of original declaration
+  307 |  input  [23:0] F,
+      |                ^
+%Warning-SIMILARNAME: sys\arcade_video.v:265:12: Declaration overlaps another with different case: 'fb_en'
+  265 | reg  [2:0] fb_en = 0;
+      |            ^~~~~
+                      sys\arcade_video.v:187:20: ... Location of original declaration
+  187 |  output            FB_EN,
+      |                    ^~~~~
+%Warning-WIDTHTRUNC: sys\hq2x.sv:290:19: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 5 bits.
+                                       : ... note: In instance 'emu.av.video_mixer.sd.Hq2x.blender.diff_checker'
+  290 |  wire u_inside = (!u[8:4] || &u[8:4]);  
+      |                   ^
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.051
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: sys\hq2x.sv:361:32: Operator ADD expects 35 bits on the RHS, but RHS's REPLICATE generates 32 bits.
+                                        : ... note: In instance 'emu.av.video_mixer.sd.Hq2x.blender'
+  361 |   if(op2[0]) mul24x3 = mul24x3 + {op1[23:16], 4'b0000, op1[15:8], 4'b0000, op1[7:0]};
+      |                                ^
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.051
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: sys\hq2x.sv:362:32: Operator ADD expects 35 bits on the RHS, but RHS's REPLICATE generates 33 bits.
+                                        : ... note: In instance 'emu.av.video_mixer.sd.Hq2x.blender'
+  362 |   if(op2[1]) mul24x3 = mul24x3 + {op1[23:16], 4'b0000, op1[15:8], 4'b0000, op1[7:0], 1'b0};
+      |                                ^
+%Warning-WIDTHTRUNC: sys\hq2x.sv:367:73: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 2 bits.
+                                       : ... note: In instance 'emu.av.video_mixer.sd.Hq2x.blender'
+  367 |  wire [35:0] res = {mul24x3(i1, op[6:4]), 1'b0} + mul24x3(i2, {op[3:2], !op[3:2]}) + mul24x3(i3, {op[1:0], !op[3:2]});
+      |                                                                         ^
+%Warning-WIDTHTRUNC: sys\hq2x.sv:367:108: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 2 bits.
+                                        : ... note: In instance 'emu.av.video_mixer.sd.Hq2x.blender'
+  367 |  wire [35:0] res = {mul24x3(i1, op[6:4]), 1'b0} + mul24x3(i2, {op[3:2], !op[3:2]}) + mul24x3(i3, {op[1:0], !op[3:2]});
+      |                                                                                                            ^
+%Warning-WIDTHTRUNC: sys\hq2x.sv:79:39: Operator FUNCREF 'h2rgb' expects 12 bits on the Function Argument, but Function Argument's VARREF 'Curr20tmp' generates 24 bits.
+                                      : ... note: In instance 'emu.av.video_mixer.sd.Hq2x'
+   79 | wire     [23:0] Curr20 = HALF_DEPTH ? h2rgb(Curr20tmp) : Curr20tmp;
+      |                                       ^~~~~
+%Warning-WIDTHTRUNC: sys\hq2x.sv:81:39: Operator FUNCREF 'h2rgb' expects 12 bits on the Function Argument, but Function Argument's VARREF 'Curr21tmp' generates 24 bits.
+                                      : ... note: In instance 'emu.av.video_mixer.sd.Hq2x'
+   81 | wire     [23:0] Curr21 = HALF_DEPTH ? h2rgb(Curr21tmp) : Curr21tmp;
+      |                                       ^~~~~
+%Warning-WIDTHEXPAND: sys\hq2x.sv:146:43: Operator COND expects 24 bits on the Conditional True, but Conditional True's FUNCREF 'rgb2h' generates 12 bits.
+                                        : ... note: In instance 'emu.av.video_mixer.sd.Hq2x'
+  146 | wire [DWIDTH:0] blend_result = HALF_DEPTH ? rgb2h(blend_result_pre) : blend_result_pre[DWIDTH:0];
+      |                                           ^
+%Warning-WIDTHTRUNC: sys\hq2x.sv:178:27: Operator FUNCREF 'h2rgb' expects 12 bits on the Function Argument, but Function Argument's VARREF 'inputpixel' generates 24 bits.
+                                       : ... note: In instance 'emu.av.video_mixer.sd.Hq2x'
+  178 |     Next2 <= HALF_DEPTH ? h2rgb(inputpixel) : inputpixel;
+      |                           ^~~~~
+%Warning-WIDTHEXPAND: sys\video_freezer.sv:128:53: Operator ADD expects 21 bits on the RHS, but RHS's CONST '2'h2' generates 2 bits.
+                                                 : ... note: In instance 'emu.av.video_mixer.freezer.hs_lock'
+  128 |  if(old_sync & ~sync_in & sync_valid) cnto <= s_len + 2'd2;
+      |                                                     ^
+%Warning-WIDTHEXPAND: sys\video_freezer.sv:128:53: Operator ADD expects 33 bits on the RHS, but RHS's CONST '2'h2' generates 2 bits.
+                                                 : ... note: In instance 'emu.av.video_mixer.freezer.vs_lock'
+  128 |  if(old_sync & ~sync_in & sync_valid) cnto <= s_len + 2'd2;
+      |                                                     ^
+%Warning-WIDTHEXPAND: sys\video_mixer.sv:98:21: Operator COND expects 8 bits on the Conditional True, but Conditional True's CONST '1'h0' generates 1 bits.
+                                              : ... note: In instance 'emu.av.video_mixer'
+   98 |   assign R_in = frz ? 1'd0 : R;
+      |                     ^
+%Warning-WIDTHEXPAND: sys\video_mixer.sv:99:21: Operator COND expects 8 bits on the Conditional True, but Conditional True's CONST '1'h0' generates 1 bits.
+                                              : ... note: In instance 'emu.av.video_mixer'
+   99 |   assign G_in = frz ? 1'd0 : G;
+      |                     ^
+%Warning-WIDTHEXPAND: sys\video_mixer.sv:100:21: Operator COND expects 8 bits on the Conditional True, but Conditional True's CONST '1'h0' generates 1 bits.
+                                               : ... note: In instance 'emu.av.video_mixer'
+  100 |   assign B_in = frz ? 1'd0 : B;
+      |                     ^
+%Warning-WIDTHTRUNC: sys\video_mixer.sv:192:5: Operator ASSIGNDLY expects 8 bits on the Assign RHS, but Assign RHS's REPLICATE generates 16 bits.
+                                             : ... note: In instance 'emu.av.video_mixer'
+  192 |   r <= {rt,rt};
+      |     ^~
+%Warning-WIDTHTRUNC: sys\video_mixer.sv:193:5: Operator ASSIGNDLY expects 8 bits on the Assign RHS, but Assign RHS's REPLICATE generates 16 bits.
+                                             : ... note: In instance 'emu.av.video_mixer'
+  193 |   g <= {gt,gt};
+      |     ^~
+%Warning-WIDTHTRUNC: sys\video_mixer.sv:194:5: Operator ASSIGNDLY expects 8 bits on the Assign RHS, but Assign RHS's REPLICATE generates 16 bits.
+                                             : ... note: In instance 'emu.av.video_mixer'
+  194 |   b <= {bt,bt};
+      |     ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:879:11: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's REPLICATE generates 10 bits.
+                                          : ... note: In instance 'emu.hps.video_calc'
+  879 |   1: dout <= {video_rotated, |vid_int, vid_nres};
+      |           ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:894:13: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's VARREF 'vid_pixrep' generates 8 bits.
+                                          : ... note: In instance 'emu.hps.video_calc'
+  894 |    16: dout <= vid_pixrep;
+      |             ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:896:13: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's VARREF 'vid_de_v' generates 8 bits.
+                                          : ... note: In instance 'emu.hps.video_calc'
+  896 |    18: dout <= vid_de_v;
+      |             ^~
+%Warning-WIDTHTRUNC: sys\hps_io.sv:960:6: Logical operator IF expects 1 bit on the If, but If's VARREF 'resto' generates 4 bits.
+                                        : ... note: In instance 'emu.hps.video_calc'
+  960 |      if(resto) resto <= resto + 1'd1;
+      |      ^~
+%Warning-WIDTHTRUNC: sys\hps_io.sv:956:13: Logical operator LOGAND expects 1 bit on the LHS, but LHS's VARREF 'hcnt' generates 32 bits.
+                                         : ... note: In instance 'emu.hps.video_calc'
+  956 |     if(hcnt && vcnt) begin
+      |             ^~
+%Warning-WIDTHTRUNC: sys\hps_io.sv:956:13: Logical operator LOGAND expects 1 bit on the RHS, but RHS's VARREF 'vcnt' generates 32 bits.
+                                         : ... note: In instance 'emu.hps.video_calc'
+  956 |     if(hcnt && vcnt) begin
+      |             ^~
+%Warning-WIDTHTRUNC: sys\arcade_video.v:115:20: Logical operator COND expects 1 bit on the Conditional Test, but Conditional Test's VARREF 'fx' generates 3 bits.
+                                              : ... note: In instance 'emu.av'
+  115 | wire [2:0] sl = fx ? fx - 1'd1 : 3'd0;
+      |                    ^
+%Warning-WIDTHTRUNC: sys\arcade_video.v:116:23: Logical operator LOGOR expects 1 bit on the LHS, but LHS's VARREF 'fx' generates 3 bits.
+                                              : ... note: In instance 'emu.av'
+  116 | wire scandoubler = fx || forced_scandoubler;
+      |                       ^~
+%Warning-WIDTHEXPAND: sys\arcade_video.v:130:14: Operator COND expects 8 bits on the Conditional True, but Conditional True's SEL generates 4 bits.
+                                               : ... note: In instance 'emu.av'
+  130 |  .R((DW!=24) ? R[7:4] : R),
+      |              ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:131:14: Operator COND expects 8 bits on the Conditional True, but Conditional True's SEL generates 4 bits.
+                                               : ... note: In instance 'emu.av'
+  131 |  .G((DW!=24) ? G[7:4] : G),
+      |              ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:132:14: Operator COND expects 8 bits on the Conditional True, but Conditional True's SEL generates 4 bits.
+                                               : ... note: In instance 'emu.av'
+  132 |  .B((DW!=24) ? B[7:4] : B),
+      |              ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:211:9: Operator ADD expects 32 bits on the RHS, but RHS's VARREF 'sd_rrb' generates 4 bits.
+                                         : ... note: In instance 'emu.hps'
+  211 |   n = i + sd_rrb;
+      |         ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:260:40: Operator SUB expects 32 bits on the RHS, but RHS's VARREF 'byte_cnt' generates 9 bits.
+                                          : ... note: In instance 'emu.hps'
+  260 |   assign conf_byte = CONF_STR[{(STRLEN - byte_cnt),3'b000} +:8];
+      |                                        ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:260:30: Bit extraction of var[2215:0] requires 12 bit index, not 35 bits.
+                                         : ... note: In instance 'emu.hps'
+  260 |   assign conf_byte = CONF_STR[{(STRLEN - byte_cnt),3'b000} +:8];
+      |                              ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:341:47: Bit extraction of array[0:0] requires 1 bit index, not 4 bits.
+                                         : ... note: In instance 'emu.hps'
+  341 |       'h16: begin io_dout <= {1'b1, sd_blk_cnt[sdn], BLKSZ[2:0], sdn, sd_wr[sdn], sd_rd[sdn]}; sdn_r <= sdn; end
+      |                                               ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:341:76: Bit extraction of var[0:0] requires 1 bit index, not 4 bits.
+                                         : ... note: In instance 'emu.hps'
+  341 |       'h16: begin io_dout <= {1'b1, sd_blk_cnt[sdn], BLKSZ[2:0], sdn, sd_wr[sdn], sd_rd[sdn]}; sdn_r <= sdn; end
+      |                                                                            ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:341:88: Bit extraction of var[0:0] requires 1 bit index, not 4 bits.
+                                         : ... note: In instance 'emu.hps'
+  341 |       'h16: begin io_dout <= {1'b1, sd_blk_cnt[sdn], BLKSZ[2:0], sdn, sd_wr[sdn], sd_rd[sdn]}; sdn_r <= sdn; end
+      |                                                                                        ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:344:21: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's REPLICATE generates 8 bits.
+                                          : ... note: In instance 'emu.hps'
+  344 |       'h29: io_dout <= {4'hA, stflg};
+      |                     ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:345:21: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's SEL generates 1 bits.
+                                          : ... note: In instance 'emu.hps'
+  345 |       'h32: io_dout <= gamma_bus[21];
+      |                     ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:346:27: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's VARREF 'info_n' generates 8 bits.
+                                          : ... note: In instance 'emu.hps'
+  346 |       'h36: begin io_dout <= info_n; info_n <= 0; end
+      |                           ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:348:21: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's REDOR generates 1 bits.
+                                          : ... note: In instance 'emu.hps'
+  348 |       'h43: io_dout <= |F12KEYMOD;
+      |                     ^~
+%Warning-WIDTHTRUNC: sys\hps_io.sv:378:41: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 7 bits.
+                                         : ... note: In instance 'emu.hps'
+  378 |        if(~&io_din[15:8] && ~ps2skip && !byte_cnt[MAX_W:2]) begin
+      |                                         ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:403:23: Operator LTE expects 32 bits on the LHS, but LHS's VARREF 'byte_cnt' generates 9 bits.
+                                          : ... note: In instance 'emu.hps'
+  403 |     'h14: if(byte_cnt <= STRLEN) io_dout[7:0] <= conf_byte;
+      |                       ^~
+%Warning-WIDTHTRUNC: sys\hps_io.sv:409:29: Bit extraction of array[0:0] requires 1 bit index, not 4 bits.
+                                         : ... note: In instance 'emu.hps'
+  409 |         2: io_dout <= sd_lba[sdn_r][15:0];
+      |                             ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:410:29: Bit extraction of array[0:0] requires 1 bit index, not 4 bits.
+                                         : ... note: In instance 'emu.hps'
+  410 |         3: io_dout <= sd_lba[sdn_r][31:16];
+      |                             ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:406:14: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 7 bits.
+                                         : ... note: In instance 'emu.hps'
+  406 |     'h16: if(!byte_cnt[MAX_W:2]) begin
+      |              ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:424:30: Bit extraction of array[0:0] requires 1 bit index, not 4 bits.
+                                         : ... note: In instance 'emu.hps'
+  424 |        io_dout <= sd_buff_din[sdn_ack];
+      |                              ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:424:16: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's ARRAYSEL generates 8 bits.
+                                          : ... note: In instance 'emu.hps'
+  424 |        io_dout <= sd_buff_din[sdn_ack];
+      |                ^~
+%Warning-WIDTHTRUNC: sys\hps_io.sv:428:14: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 7 bits.
+                                         : ... note: In instance 'emu.hps'
+  428 |     'h1a: if(!byte_cnt[MAX_W:2]) begin
+      |              ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:457:14: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 7 bits.
+                                         : ... note: In instance 'emu.hps'
+  457 |     'h3d: if(!byte_cnt[MAX_W:2]) begin
+      |              ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:478:34: Bit extraction of var[63:0] requires 6 bit index, not 13 bits.
+                                         : ... note: In instance 'emu.hps'
+  478 |     'h1d: if(byte_cnt<5) img_size[{byte_cnt-1'b1, 4'b0000} +:16] <= io_din;
+      |                                  ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:481:14: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 5 bits.
+                                         : ... note: In instance 'emu.hps'
+  481 |     'h1e: if(!byte_cnt[MAX_W:4]) begin
+      |              ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:495:19: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's REPLICATE generates 9 bits.
+                                          : ... note: In instance 'emu.hps'
+  495 |     'h1f: io_dout <= {|PS2WE, 2'b01, ps2_kbd_led_status[2], ps2_kbd_led_use[2], ps2_kbd_led_status[1], ps2_kbd_led_use[1], ps2_kbd_led_status[0], ps2_kbd_led_use[0]};
+      |                   ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:500:17: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's VARREF 'kbd_data_host' generates 9 bits.
+                                          : ... note: In instance 'emu.hps'
+  500 |         io_dout <= kbd_data_host;
+      |                 ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:505:17: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's VARREF 'mouse_data_host' generates 9 bits.
+                                          : ... note: In instance 'emu.hps'
+  505 |         io_dout <= mouse_data_host;
+      |                 ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:511:24: Operator SUB expects 9 bits on the RHS, but RHS's CONST '6'h1' generates 6 bits.
+                                          : ... note: In instance 'emu.hps'
+  511 |     'h22: RTC[(byte_cnt-6'd1)<<4 +:16] <= io_din;
+      |                        ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:511:14: Bit extraction of var[64:0] requires 7 bit index, not 9 bits.
+                                         : ... note: In instance 'emu.hps'
+  511 |     'h22: RTC[(byte_cnt-6'd1)<<4 +:16] <= io_din;
+      |              ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:514:14: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 4 bits.
+                                         : ... note: In instance 'emu.hps'
+  514 |     'h23: if(!byte_cnt[MAX_W:5]) io_dout <= vc_dout;
+      |              ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:517:30: Operator SUB expects 9 bits on the RHS, but RHS's CONST '6'h1' generates 6 bits.
+                                          : ... note: In instance 'emu.hps'
+  517 |     'h24: TIMESTAMP[(byte_cnt-6'd1)<<4 +:16] <= io_din;
+      |                              ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:517:20: Bit extraction of var[32:0] requires 6 bit index, not 9 bits.
+                                         : ... note: In instance 'emu.hps'
+  517 |     'h24: TIMESTAMP[(byte_cnt-6'd1)<<4 +:16] <= io_din;
+      |                    ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:520:14: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 5 bits.
+                                         : ... note: In instance 'emu.hps'
+  520 |     'h29: if(!byte_cnt[MAX_W:4]) begin
+      |              ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:548:14: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 7 bits.
+                                         : ... note: In instance 'emu.hps'
+  548 |     'h3b: if(!byte_cnt[MAX_W:2]) begin
+      |              ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:641:22: Operator EQ expects 16 bits on the RHS, but RHS's VARREF 'FIO_FILE_TX' generates 8 bits.
+                                          : ... note: In instance 'emu.hps'
+  641 |   if(has_cmd && (cmd == FIO_FILE_TX)) begin
+      |                      ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:681:63: Operator COND expects 27 bits on the Conditional True, but Conditional True's CONST '2'h2' generates 2 bits.
+                                          : ... note: In instance 'emu.hps'
+  681 |           if(ioctl_download) ioctl_addr <= ioctl_addr + (WIDE ? 2'd2 : 2'd1);
+      |                                                               ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:681:63: Operator COND expects 27 bits on the Conditional False, but Conditional False's CONST '2'h1' generates 2 bits.
+                                          : ... note: In instance 'emu.hps'
+  681 |           if(ioctl_download) ioctl_addr <= ioctl_addr + (WIDE ? 2'd2 : 2'd1);
+      |                                                               ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:676:12: Logical operator IF expects 1 bit on the If, but If's SEL generates 8 bits.
+                                         : ... note: In instance 'emu.hps'
+  676 |         0: if(io_din[7:0]) begin
+      |            ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:692:55: Operator COND expects 27 bits on the Conditional True, but Conditional True's CONST '2'h2' generates 2 bits.
+                                          : ... note: In instance 'emu.hps'
+  692 |        if(!skip_add) ioctl_addr <= ioctl_addr + (WIDE ? 2'd2 : 2'd1);
+      |                                                       ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:692:55: Operator COND expects 27 bits on the Conditional False, but Conditional False's CONST '2'h1' generates 2 bits.
+                                          : ... note: In instance 'emu.hps'
+  692 |        if(!skip_add) ioctl_addr <= ioctl_addr + (WIDE ? 2'd2 : 2'd1);
+      |                                                       ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:700:17: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's VARREF 'ioctl_din' generates 8 bits.
+                                          : ... note: In instance 'emu.hps'
+  700 |         fp_dout <= ioctl_din;
+      |                 ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:657:5: Operator CASE expects 16 bits on the Case Item, but Case Item's VARREF 'FIO_FILE_INFO' generates 8 bits.
+                                         : ... note: In instance 'emu.hps'
+  657 |     case(cmd)
+      |     ^~~~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:657:5: Operator CASE expects 16 bits on the Case Item, but Case Item's VARREF 'FIO_FILE_INDEX' generates 8 bits.
+                                         : ... note: In instance 'emu.hps'
+  657 |     case(cmd)
+      |     ^~~~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:657:5: Operator CASE expects 16 bits on the Case Item, but Case Item's VARREF 'FIO_FILE_TX' generates 8 bits.
+                                         : ... note: In instance 'emu.hps'
+  657 |     case(cmd)
+      |     ^~~~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:657:5: Operator CASE expects 16 bits on the Case Item, but Case Item's VARREF 'FIO_FILE_TX_DAT' generates 8 bits.
+                                         : ... note: In instance 'emu.hps'
+  657 |     case(cmd)
+      |     ^~~~
+%Warning-WIDTHEXPAND: sys\arcade_video.v:284:33: Operator ADD expects 12 bits on the RHS, but RHS's CONST '2'h3' generates 2 bits.
+                                               : ... note: In instance 'emu.rotation'
+  284 |    if( do_flip ) bwidth <= hcnt + 2'd3;
+      |                                 ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:288:34: Operator ADD expects 12 bits on the RHS, but RHS's CONST '2'h3' generates 2 bits.
+                                               : ... note: In instance 'emu.rotation'
+  288 |    if( !do_flip ) bwidth <= vcnt + 2'd3;
+      |                                  ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:292:44: Operator COND expects 23 bits on the Conditional True, but Conditional True's VARREF 'vsz' generates 12 bits.
+                                               : ... note: In instance 'emu.rotation'
+  292 |   if(old_vs & ~VGA_VS) bufsize <= (do_flip ? vsz : hsz ) * stride;
+      |                                            ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:292:44: Operator COND expects 23 bits on the Conditional False, but Conditional False's VARREF 'hsz' generates 12 bits.
+                                               : ... note: In instance 'emu.rotation'
+  292 |   if(old_vs & ~VGA_VS) bufsize <= (do_flip ? vsz : hsz ) * stride;
+      |                                            ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:312:25: Operator SUB expects 23 bits on the RHS, but RHS's CONST '3'h4' generates 3 bits.
+                                               : ... note: In instance 'emu.rotation'
+  312 |     do_flip    ? bufsize-3'd4 :
+      |                         ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:313:27: Operator SUB expects 23 bits on the RHS, but RHS's VARREF 'stride' generates 14 bits.
+                                               : ... note: In instance 'emu.rotation'
+  313 |     rotate_ccw ? (bufsize - stride) : {vsz-1'd1, 2'b00};
+      |                           ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:313:16: Operator COND expects 23 bits on the Conditional False, but Conditional False's REPLICATE generates 14 bits.
+                                               : ... note: In instance 'emu.rotation'
+  313 |     rotate_ccw ? (bufsize - stride) : {vsz-1'd1, 2'b00};
+      |                ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:314:36: Operator SUB expects 12 bits on the RHS, but RHS's CONST '2'h2' generates 2 bits.
+                                               : ... note: In instance 'emu.rotation'
+  314 |    hcnt <= rotate_ccw ? 3'd4 : {vsz-2'd2, 2'b00};
+      |                                    ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:314:23: Operator COND expects 14 bits on the Conditional True, but Conditional True's CONST '3'h4' generates 3 bits.
+                                               : ... note: In instance 'emu.rotation'
+  314 |    hcnt <= rotate_ccw ? 3'd4 : {vsz-2'd2, 2'b00};
+      |                       ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:321:27: Operator SUB expects 23 bits on the RHS, but RHS's CONST '3'h4' generates 3 bits.
+                                               : ... note: In instance 'emu.rotation'
+  321 |     do_flip    ? next_addr-3'd4 :
+      |                           ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:322:29: Operator SUB expects 23 bits on the RHS, but RHS's VARREF 'stride' generates 14 bits.
+                                               : ... note: In instance 'emu.rotation'
+  322 |     rotate_ccw ? (next_addr - stride) : (next_addr + stride);
+      |                             ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:322:52: Operator ADD expects 23 bits on the RHS, but RHS's VARREF 'stride' generates 14 bits.
+                                               : ... note: In instance 'emu.rotation'
+  322 |     rotate_ccw ? (next_addr - stride) : (next_addr + stride);
+      |                                                    ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:325:39: Operator SUB expects 23 bits on the RHS, but RHS's VARREF 'stride' generates 14 bits.
+                                               : ... note: In instance 'emu.rotation'
+  325 |    next_addr <= rotate_ccw ? (bufsize - stride + hcnt) : hcnt;
+      |                                       ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:325:48: Operator ADD expects 23 bits on the RHS, but RHS's VARREF 'hcnt' generates 14 bits.
+                                               : ... note: In instance 'emu.rotation'
+  325 |    next_addr <= rotate_ccw ? (bufsize - stride + hcnt) : hcnt;
+      |                                                ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:325:28: Operator COND expects 23 bits on the Conditional False, but Conditional False's VARREF 'hcnt' generates 14 bits.
+                                               : ... note: In instance 'emu.rotation'
+  325 |    next_addr <= rotate_ccw ? (bufsize - stride + hcnt) : hcnt;
+      |                            ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:326:31: Operator ADD expects 14 bits on the RHS, but RHS's CONST '3'h4' generates 3 bits.
+                                               : ... note: In instance 'emu.rotation'
+  326 |    hcnt <= rotate_ccw ? (hcnt + 3'd4) : (hcnt - 3'd4);
+      |                               ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:326:47: Operator SUB expects 14 bits on the RHS, but RHS's CONST '3'h4' generates 3 bits.
+                                               : ... note: In instance 'emu.rotation'
+  326 |    hcnt <= rotate_ccw ? (hcnt + 3'd4) : (hcnt - 3'd4);
+      |                                               ^
+%Warning-UNUSEDSIGNAL: sys\emu_ports.vh:34:15: Signal is not used: 'HDMI_WIDTH'
+                                             : ... note: In instance 'emu'
+   34 | input  [11:0] HDMI_WIDTH,
+      |               ^~~~~~~~~~
+                       Arcade-DrMicro.sv:5:1: ... note: In file included from 'Arcade-DrMicro.sv'
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.051
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: sys\emu_ports.vh:35:15: Signal is not used: 'HDMI_HEIGHT'
+                                             : ... note: In instance 'emu'
+   35 | input  [11:0] HDMI_HEIGHT,
+      |               ^~~~~~~~~~~
+                       Arcade-DrMicro.sv:5:1: ... note: In file included from 'Arcade-DrMicro.sv'
+%Warning-UNUSEDSIGNAL: sys\emu_ports.vh:82:15: Signal is not used: 'CLK_AUDIO'
+                                             : ... note: In instance 'emu'
+   82 | input         CLK_AUDIO,  
+      |               ^~~~~~~~~
+                       Arcade-DrMicro.sv:5:1: ... note: In file included from 'Arcade-DrMicro.sv'
+%Warning-UNUSEDSIGNAL: sys\emu_ports.vh:94:15: Signal is not used: 'SD_MISO'
+                                             : ... note: In instance 'emu'
+   94 | input         SD_MISO,
+      |               ^~~~~~~
+                       Arcade-DrMicro.sv:5:1: ... note: In file included from 'Arcade-DrMicro.sv'
+%Warning-UNUSEDSIGNAL: sys\emu_ports.vh:96:15: Signal is not used: 'SD_CD'
+                                             : ... note: In instance 'emu'
+   96 | input         SD_CD,
+      |               ^~~~~
+                       Arcade-DrMicro.sv:5:1: ... note: In file included from 'Arcade-DrMicro.sv'
+%Warning-UNUSEDSIGNAL: sys\emu_ports.vh:104:15: Signal is not used: 'DDRAM_DOUT'
+                                              : ... note: In instance 'emu'
+  104 | input  [63:0] DDRAM_DOUT,
+      |               ^~~~~~~~~~
+                       Arcade-DrMicro.sv:5:1: ... note: In file included from 'Arcade-DrMicro.sv'
+%Warning-UNUSEDSIGNAL: sys\emu_ports.vh:105:15: Signal is not used: 'DDRAM_DOUT_READY'
+                                              : ... note: In instance 'emu'
+  105 | input         DDRAM_DOUT_READY,
+      |               ^~~~~~~~~~~~~~~~
+                       Arcade-DrMicro.sv:5:1: ... note: In file included from 'Arcade-DrMicro.sv'
+%Warning-UNUSEDSIGNAL: sys\emu_ports.vh:138:15: Signal is not used: 'UART_CTS'
+                                              : ... note: In instance 'emu'
+  138 | input         UART_CTS,
+      |               ^~~~~~~~
+                       Arcade-DrMicro.sv:5:1: ... note: In file included from 'Arcade-DrMicro.sv'
+%Warning-UNUSEDSIGNAL: sys\emu_ports.vh:140:15: Signal is not used: 'UART_RXD'
+                                              : ... note: In instance 'emu'
+  140 | input         UART_RXD,
+      |               ^~~~~~~~
+                       Arcade-DrMicro.sv:5:1: ... note: In file included from 'Arcade-DrMicro.sv'
+%Warning-UNUSEDSIGNAL: sys\emu_ports.vh:143:15: Signal is not used: 'UART_DSR'
+                                              : ... note: In instance 'emu'
+  143 | input         UART_DSR,
+      |               ^~~~~~~~
+                       Arcade-DrMicro.sv:5:1: ... note: In file included from 'Arcade-DrMicro.sv'
+%Warning-UNUSEDSIGNAL: sys\emu_ports.vh:150:15: Signal is not used: 'USER_IN'
+                                              : ... note: In instance 'emu'
+  150 | input   [6:0] USER_IN,
+      |               ^~~~~~~
+                       Arcade-DrMicro.sv:5:1: ... note: In file included from 'Arcade-DrMicro.sv'
+%Warning-UNUSEDSIGNAL: sys\emu_ports.vh:153:15: Signal is not used: 'OSD_STATUS'
+                                              : ... note: In instance 'emu'
+  153 | input         OSD_STATUS
+      |               ^~~~~~~~~~
+                       Arcade-DrMicro.sv:5:1: ... note: In file included from 'Arcade-DrMicro.sv'
+%Warning-UNUSEDSIGNAL: Arcade-DrMicro.sv:15:15: Bits of signal are not used: 'status'[127:8,1]
+                                              : ... note: In instance 'emu'
+   15 |  wire [127:0] status;wire [1:0] buttons;wire [10:0] ps2_key;
+      |               ^~~~~~
+%Warning-UNUSEDSIGNAL: Arcade-DrMicro.sv:15:33: Bits of signal are not used: 'buttons'[0]
+                                              : ... note: In instance 'emu'
+   15 |  wire [127:0] status;wire [1:0] buttons;wire [10:0] ps2_key;
+      |                                 ^~~~~~~
+%Warning-PROCASSINIT: Arcade-DrMicro.sv:84:19: Procedural assignment to declaration with initial value: 'dip1'
+                                             : ... note: In instance 'emu'
+                                             : ... Location of variable initialization
+   84 |  logic [7:0] dip1=DIP1_DEFAULT,dip2=DIP2_DEFAULT;
+      |                   ^~~~~~~~~~~~
+                      Arcade-DrMicro.sv:86:17: ... Location of variable process write
+                                             : ... Perhaps should initialize instead using a reset in this process
+   86 |   if(address==0)dip1<=data;
+      |                 ^~~~
+                      ... For warning description see https://verilator.org/warn/PROCASSINIT?v=5.051
+                      ... Use "/* verilator lint_off PROCASSINIT */" and lint_on around source to disable this message.
+%Warning-PROCASSINIT: Arcade-DrMicro.sv:84:37: Procedural assignment to declaration with initial value: 'dip2'
+                                             : ... note: In instance 'emu'
+                                             : ... Location of variable initialization
+   84 |  logic [7:0] dip1=DIP1_DEFAULT,dip2=DIP2_DEFAULT;
+      |                                     ^~~~~~~~~~~~
+                      Arcade-DrMicro.sv:87:17: ... Location of variable process write
+                                             : ... Perhaps should initialize instead using a reset in this process
+   87 |   if(address==1)dip2<=data;
+      |                 ^~~~
+%Warning-UNUSEDSIGNAL: Arcade-DrMicro.sv:89:39: Signal is not used: 'loaded'
+                                              : ... note: In instance 'emu'
+   89 |  wire [7:0] r,g,b;wire hs,vs,hb,vb,ce,loaded,load_error,running;
+      |                                       ^~~~~~
+%Warning-UNUSEDSIGNAL: Arcade-DrMicro.sv:89:57: Signal is not used: 'running'
+                                              : ... note: In instance 'emu'
+   89 |  wire [7:0] r,g,b;wire hs,vs,hb,vb,ce,loaded,load_error,running;
+      |                                                         ^~~~~~~
+%Warning-UNUSEDSIGNAL: sys\arcade_video.v:178:16: Signal is not used: 'VGA_HS'
+                                                : ... note: In instance 'emu.rotation'
+  178 |  input         VGA_HS,
+      |                ^~~~~~
+%Warning-UNUSEDSIGNAL: sys\arcade_video.v:197:16: Signal is not used: 'DDRAM_BUSY'
+                                                : ... note: In instance 'emu.rotation'
+  197 |  input         DDRAM_BUSY,
+      |                ^~~~~~~~~~
+%Warning-UNUSEDSIGNAL: sys\arcade_video.v:298:12: Bits of signal are not used: 'ram_addr'[1:0]
+                                                : ... note: In instance 'emu.rotation'
+  298 | reg [22:0] ram_addr, next_addr;
+      |            ^~~~~~~~
+%Warning-PROCASSINIT: sys\arcade_video.v:265:20: Procedural assignment to declaration with initial value: 'fb_en'
+                                               : ... note: In instance 'emu.rotation'
+                                               : ... Location of variable initialization
+  265 | reg  [2:0] fb_en = 0;
+      |                    ^
+                      sys\arcade_video.v:290:4: ... Location of variable process write
+                                              : ... Perhaps should initialize instead using a reset in this process
+  290 |    fb_en <= {fb_en[1:0], ~no_rotate | flip};
+      |    ^~~~~
+%Warning-PROCASSINIT: sys\arcade_video.v:266:18: Procedural assignment to declaration with initial value: 'hsz'
+                                               : ... note: In instance 'emu.rotation'
+                                               : ... Location of variable initialization
+  266 | reg [11:0] hsz = 320, vsz = 240;
+      |                  ^~~
+                      sys\arcade_video.v:283:4: ... Location of variable process write
+                                              : ... Perhaps should initialize instead using a reset in this process
+  283 |    hsz <= hcnt;
+      |    ^~~
+%Warning-PROCASSINIT: sys\arcade_video.v:266:29: Procedural assignment to declaration with initial value: 'vsz'
+                                               : ... note: In instance 'emu.rotation'
+                                               : ... Location of variable initialization
+  266 | reg [11:0] hsz = 320, vsz = 240;
+      |                             ^~~
+                      sys\arcade_video.v:287:4: ... Location of variable process write
+                                              : ... Perhaps should initialize instead using a reset in this process
+  287 |    vsz <= vcnt;
+      |    ^~~
+%Warning-UNUSEDSIGNAL: sys\arcade_video.v:267:12: Bits of signal are not used: 'bwidth'[1:0]
+                                                : ... note: In instance 'emu.rotation'
+  267 | reg [11:0] bwidth;
+      |            ^~~~~~
+%Warning-UNUSEDSIGNAL: sys\hps_io.sv:89:20: Signal is not used: 'ps2_kbd_clk_in'
+                                          : ... note: In instance 'emu.hps'
+   89 |  input             ps2_kbd_clk_in,
+      |                    ^~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: sys\hps_io.sv:90:20: Signal is not used: 'ps2_kbd_data_in'
+                                          : ... note: In instance 'emu.hps'
+   90 |  input             ps2_kbd_data_in,
+      |                    ^~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: sys\hps_io.sv:97:20: Signal is not used: 'ps2_mouse_clk_in'
+                                          : ... note: In instance 'emu.hps'
+   97 |  input             ps2_mouse_clk_in,
+      |                    ^~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: sys\hps_io.sv:98:20: Signal is not used: 'ps2_mouse_data_in'
+                                          : ... note: In instance 'emu.hps'
+   98 |  input             ps2_mouse_data_in,
+      |                    ^~~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: sys\hps_io.sv:103:30: Procedural assignment to declaration with initial value: 'ps2_key'
+                                          : ... note: In instance 'emu.hps'
+                                          : ... Location of variable initialization
+  103 |  output reg [10:0] ps2_key = 0,
+      |                              ^
+                      sys\hps_io.sv:318:4: ... Location of variable process write
+                                         : ... Perhaps should initialize instead using a reset in this process
+  318 |    ps2_key <= {~ps2_key[10], pressed, extended, ps2_key_raw[7:0]};
+      |    ^~~~~~~
+%Warning-PROCASSINIT: sys\hps_io.sv:146:37: Procedural assignment to declaration with initial value: 'ioctl_download'
+                                          : ... note: In instance 'emu.hps'
+                                          : ... Location of variable initialization
+  146 |  output reg        ioctl_download = 0,  
+      |                                     ^
+                      sys\hps_io.sv:642:19: ... Location of variable process write
+                                          : ... Perhaps should initialize instead using a reset in this process
+  642 |    {ioctl_upload, ioctl_download} <= req_io;
+      |                   ^~~~~~~~~~~~~~
+%Warning-PROCASSINIT: sys\hps_io.sv:151:35: Procedural assignment to declaration with initial value: 'ioctl_upload'
+                                          : ... note: In instance 'emu.hps'
+                                          : ... Location of variable initialization
+  151 |  output reg        ioctl_upload = 0,    
+      |                                   ^
+                      sys\hps_io.sv:642:5: ... Location of variable process write
+                                         : ... Perhaps should initialize instead using a reset in this process
+  642 |    {ioctl_upload, ioctl_download} <= req_io;
+      |     ^~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: sys\hps_io.sv:196:12: Bits of signal are not used: 'cfg'[15:11,9:5,3:2]
+                                           : ... note: In instance 'emu.hps'
+  196 | reg [15:0] cfg;
+      |            ^~~
+%Warning-PROCASSINIT: sys\hps_io.sv:205:20: Procedural assignment to declaration with initial value: 'sd_rrb'
+                                          : ... note: In instance 'emu.hps'
+                                          : ... Location of variable initialization
+  205 | reg [3:0] sd_rrb = 0;
+      |                    ^
+                      sys\hps_io.sv:408:12: ... Location of variable process write
+                                          : ... Perhaps should initialize instead using a reset in this process
+  408 |         1: sd_rrb  <= (sd_rrb == VD) ? 4'd0 : (sd_rrb + 1'd1);
+      |            ^~~~~~
+%Warning-UNUSEDSIGNAL: sys\hps_io.sv:219:12: Signal is not used: 'kbd_data'
+                                           : ... note: In instance 'emu.hps'
+  219 | reg  [7:0] kbd_data;
+      |            ^~~~~~~~
+%Warning-UNUSEDSIGNAL: sys\hps_io.sv:220:12: Signal is not used: 'kbd_we'
+                                           : ... note: In instance 'emu.hps'
+  220 | reg        kbd_we;
+      |            ^~~~~~
+%Warning-UNUSEDSIGNAL: sys\hps_io.sv:222:12: Signal is not used: 'kbd_rd'
+                                           : ... note: In instance 'emu.hps'
+  222 | reg        kbd_rd;
+      |            ^~~~~~
+%Warning-UNUSEDSIGNAL: sys\hps_io.sv:223:12: Signal is not used: 'mouse_data'
+                                           : ... note: In instance 'emu.hps'
+  223 | reg  [7:0] mouse_data;
+      |            ^~~~~~~~~~
+%Warning-UNUSEDSIGNAL: sys\hps_io.sv:224:12: Signal is not used: 'mouse_we'
+                                           : ... note: In instance 'emu.hps'
+  224 | reg        mouse_we;
+      |            ^~~~~~~~
+%Warning-UNUSEDSIGNAL: sys\hps_io.sv:226:12: Signal is not used: 'mouse_rd'
+                                           : ... note: In instance 'emu.hps'
+  226 | reg        mouse_rd;
+      |            ^~~~~~~~
+%Warning-PROCASSINIT: sys\hps_io.sv:270:26: Procedural assignment to declaration with initial value: 'ps2_key_raw'
+                                          : ... note: In instance 'emu.hps'
+                                          : ... Location of variable initialization
+  270 | reg [31:0] ps2_key_raw = 0;
+      |                          ^
+                      sys\hps_io.sv:358:20: ... Location of variable process write
+                                          : ... Perhaps should initialize instead using a reset in this process
+  358 |    if(io_din == 5) ps2_key_raw <= 0;
+      |                    ^~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: sys\hps_io.sv:275:13: Bits of signal are not used: 'sdn_ack'[3:1]
+                                           : ... note: In instance 'emu.hps'
+  275 | reg   [3:0] sdn_ack;
+      |             ^~~~~~~
+%Warning-UNUSEDSIGNAL: sys\hps_io.sv:276:13: Bits of signal are not used: 'disk'[15:1]
+                                           : ... note: In instance 'emu.hps'
+  276 | wire [15:0] disk = 16'd1 << io_din[11:8];
+      |             ^~~~
+%Warning-UNUSEDSIGNAL: sys\hps_io.sv:293:13: Bits of signal are not used: 'sdn_r'[3:1]
+                                           : ... note: In instance 'emu.hps'
+  293 |  reg  [3:0] sdn_r;
+      |             ^~~~~
+%Warning-UNUSEDSIGNAL: sys\arcade_video.v:115:12: Bits of signal are not used: 'sl'[2]
+                                                : ... note: In instance 'emu.av'
+  115 | wire [2:0] sl = fx ? fx - 1'd1 : 3'd0;
+      |            ^~
+%Warning-UNUSEDSIGNAL: rtl\drmicro_inputs.sv:4:21: Bits of signal are not used: 'joy0'[31:9]
+                                                 : ... note: In instance 'emu.board.inputs'
+    4 |  input logic [31:0] joy0,joy1,
+      |                     ^~~~
+%Warning-UNUSEDSIGNAL: rtl\drmicro_inputs.sv:4:26: Bits of signal are not used: 'joy1'[31:7]
+                                                 : ... note: In instance 'emu.board.inputs'
+    4 |  input logic [31:0] joy0,joy1,
+      |                          ^~~~
+%Warning-UNUSEDSIGNAL: rtl\drmicro_inputs.sv:9:15: Bits of signal are not used: 'keys'[15:14]
+                                                 : ... note: In instance 'emu.board.inputs'
+    9 |  logic [15:0] keys;
+      |               ^~~~
+%Warning-UNUSEDSIGNAL: rtl\drmicro_video.sv:28:42: Bits of signal are not used: 'sattr'[5:4]
+                                                 : ... note: In instance 'emu.board.video'
+   28 |  logic [7:0] target,code,attr,sy,sx,schr,sattr;
+      |                                          ^~~~~
+%Warning-UNUSEDSIGNAL: rtl\drmicro_video.sv:39:14: Bits of signal are not used: 'sample_x'[3]
+                                                 : ... note: In instance 'emu.board.video'
+   39 |  logic [3:0] sample_x;
+      |              ^~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/vendor/tv80\tv80s.v:67:17: Bits of signal are not used: 'mcycle'[6:1]
+                                                    : ... note: In instance 'emu.board.cpu'
+   67 |   wire [6:0]    mcycle;
+      |                 ^~~~~~
+%Warning-UNUSEDSIGNAL: rtl/vendor/tv80\tv80s.v:68:17: Bits of signal are not used: 'tstate'[6:4,0]
+                                                    : ... note: In instance 'emu.board.cpu'
+   68 |   wire [6:0]    tstate;
+      |                 ^~~~~~
+%Warning-PROCASSINIT: sys\hps_io.sv:907:23: Procedural assignment to declaration with initial value: 'vid_int'
+                                          : ... note: In instance 'emu.hps.video_calc'
+                                          : ... Location of variable initialization
+  907 | reg  [1:0] vid_int  = 0;
+      |                       ^
+                      sys\hps_io.sv:953:4: ... Location of variable process write
+                                         : ... Perhaps should initialize instead using a reset in this process
+  953 |    vid_int <= {vid_int[0],f1};
+      |    ^~~~~~~
+%Warning-PROCASSINIT: sys\hps_io.sv:906:23: Procedural assignment to declaration with initial value: 'vid_nres'
+                                          : ... note: In instance 'emu.hps.video_calc'
+                                          : ... Location of variable initialization
+  906 | reg  [7:0] vid_nres = 0;
+      |                       ^
+                      sys\hps_io.sv:965:17: ... Location of variable process write
+                                          : ... Perhaps should initialize instead using a reset in this process
+  965 |      if(&resto) vid_nres <= vid_nres + 1'd1;
+      |                 ^~~~~~~~
+%Warning-PROCASSINIT: sys\hps_io.sv:903:23: Procedural assignment to declaration with initial value: 'vid_hcnt'
+                                          : ... note: In instance 'emu.hps.video_calc'
+                                          : ... Location of variable initialization
+  903 | reg [31:0] vid_hcnt = 0;
+      |                       ^
+                      sys\hps_io.sv:966:6: ... Location of variable process write
+                                         : ... Perhaps should initialize instead using a reset in this process
+  966 |      vid_hcnt <= hcnt;
+      |      ^~~~~~~~
+%Warning-PROCASSINIT: sys\hps_io.sv:904:23: Procedural assignment to declaration with initial value: 'vid_vcnt'
+                                          : ... note: In instance 'emu.hps.video_calc'
+                                          : ... Location of variable initialization
+  904 | reg [31:0] vid_vcnt = 0;
+      |                       ^
+                      sys\hps_io.sv:967:6: ... Location of variable process write
+                                         : ... Perhaps should initialize instead using a reset in this process
+  967 |      vid_vcnt <= vcnt;
+      |      ^~~~~~~~
+%Warning-PROCASSINIT: sys\hps_io.sv:980:24: Procedural assignment to declaration with initial value: 'vid_htime'
+                                          : ... note: In instance 'emu.hps.video_calc'
+                                          : ... Location of variable initialization
+  980 | reg [31:0] vid_htime = 0;
+      |                        ^
+                      sys\hps_io.sv:1008:3: ... Location of variable process write
+                                          : ... Perhaps should initialize instead using a reset in this process
+ 1008 |   vid_htime <= htime;
+      |   ^~~~~~~~~
+%Warning-PROCASSINIT: sys\hps_io.sv:981:24: Procedural assignment to declaration with initial value: 'vid_vtime'
+                                          : ... note: In instance 'emu.hps.video_calc'
+                                          : ... Location of variable initialization
+  981 | reg [31:0] vid_vtime = 0;
+      |                        ^
+                      sys\hps_io.sv:1000:3: ... Location of variable process write
+                                          : ... Perhaps should initialize instead using a reset in this process
+ 1000 |   vid_vtime <= vtime;
+      |   ^~~~~~~~~
+%Warning-PROCASSINIT: sys\hps_io.sv:982:22: Procedural assignment to declaration with initial value: 'vid_pix'
+                                          : ... note: In instance 'emu.hps.video_calc'
+                                          : ... Location of variable initialization
+  982 | reg [31:0] vid_pix = 0;
+      |                      ^
+                      sys\hps_io.sv:999:3: ... Location of variable process write
+                                         : ... Perhaps should initialize instead using a reset in this process
+  999 |   vid_pix <= hcnt;
+      |   ^~~~~~~
+%Warning-PROCASSINIT: sys\hps_io.sv:905:23: Procedural assignment to declaration with initial value: 'vid_ccnt'
+                                          : ... note: In instance 'emu.hps.video_calc'
+                                          : ... Location of variable initialization
+  905 | reg [31:0] vid_ccnt = 0;
+      |                       ^
+                      sys\hps_io.sv:968:6: ... Location of variable process write
+                                         : ... Perhaps should initialize instead using a reset in this process
+  968 |      vid_ccnt <= ccnt;
+      |      ^~~~~~~~
+%Warning-PROCASSINIT: sys\hps_io.sv:914:24: Procedural assignment to declaration with initial value: 'vid_fclks'
+                                          : ... note: In instance 'emu.hps.video_calc'
+                                          : ... Location of variable initialization
+  914 | reg [23:0] vid_fclks = 0;
+      |                        ^
+                      sys\hps_io.sv:927:17: ... Location of variable process write
+                                          : ... Perhaps should initialize instead using a reset in this process
+  927 |  if(resto == 1) vid_fclks <= vid_fclks + 1'd1;
+      |                 ^~~~~~~~~
+%Warning-UNUSEDPARAM: rtl\drmicro_pkg.sv:3:20: Parameter is not used: 'ROM_MAINCPU_BASE'
+                                             : ... note: In instance 'emu.av.video_mixer'
+    3 | localparam integer ROM_MAINCPU_BASE=0, ROM_MAINCPU_SIZE=49152;
+      |                    ^~~~~~~~~~~~~~~~
+                      ... For warning description see https://verilator.org/warn/UNUSEDPARAM?v=5.051
+                      ... Use "/* verilator lint_off UNUSEDPARAM */" and lint_on around source to disable this message.
+%Warning-UNUSEDPARAM: rtl\drmicro_pkg.sv:3:40: Parameter is not used: 'ROM_MAINCPU_SIZE'
+                                             : ... note: In instance 'emu.av.video_mixer'
+    3 | localparam integer ROM_MAINCPU_BASE=0, ROM_MAINCPU_SIZE=49152;
+      |                                        ^~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl\drmicro_pkg.sv:4:41: Parameter is not used: 'ROM_GFX1_SIZE'
+                                             : ... note: In instance 'emu.av.video_mixer'
+    4 | localparam integer ROM_GFX1_BASE=49152, ROM_GFX1_SIZE=16384;
+      |                                         ^~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl\drmicro_pkg.sv:5:41: Parameter is not used: 'ROM_GFX2_SIZE'
+                                             : ... note: In instance 'emu.av.video_mixer'
+    5 | localparam integer ROM_GFX2_BASE=65536, ROM_GFX2_SIZE=24576;
+      |                                         ^~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl\drmicro_pkg.sv:6:42: Parameter is not used: 'ROM_ADPCM_SIZE'
+                                             : ... note: In instance 'emu.av.video_mixer'
+    6 | localparam integer ROM_ADPCM_BASE=90112, ROM_ADPCM_SIZE=16384;
+      |                                          ^~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl\drmicro_pkg.sv:7:43: Parameter is not used: 'ROM_PROMS_SIZE'
+                                             : ... note: In instance 'emu.av.video_mixer'
+    7 | localparam integer ROM_PROMS_BASE=106496, ROM_PROMS_SIZE=544;
+      |                                           ^~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl\drmicro_adpcm_ctrl.sv:5:20: Bits of signal are not used: 'command'[7:6]
+                                                     : ... note: In instance 'emu.board.sound.ctrl'
+    5 |  input logic [7:0] command,
+      |                    ^~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/vendor/jt5205/hdl\jt5205.v:46:28: Signal is not used: 'cen_mid'
+                                                           : ... note: In instance 'emu.board.sound.decoder'
+   46 | wire               cen_lo, cen_mid;
+      |                            ^~~~~~~
+%Warning-UNUSEDSIGNAL: sys\video_freezer.sv:63:6: Signal is not driven, nor used: 'old_hs'
+                                                : ... note: In instance 'emu.av.video_mixer.freezer'
+   63 |  reg old_hs, old_vs;
+      |      ^~~~~~
+%Warning-UNUSEDPARAM: rtl/derived\tv80_core.v:87:17: Parameter is not used: 'aNone'
+                                                   : ... note: In instance 'emu.board.cpu.i_tv80_core'
+   87 |   parameter     aNone    = 3'b111;
+      |                 ^~~~~
+%Warning-PROCASSINIT: sys\scandoubler.v:51:22: Procedural assignment to declaration with initial value: 'pix_len'
+                                             : ... note: In instance 'emu.av.video_mixer.sd'
+                                             : ... Location of variable initialization
+   51 | reg  [7:0] pix_len = 0;
+      |                      ^
+                      sys\scandoubler.v:62:16: ... Location of variable process write
+                                             : ... Perhaps should initialize instead using a reset in this process
+   62 |  if(~&pix_len) pix_len <= pl;
+      |                ^~~~~~~
+%Warning-PROCASSINIT: sys\scandoubler.v:54:25: Procedural assignment to declaration with initial value: 'pix_in_cnt'
+                                             : ... note: In instance 'emu.av.video_mixer.sd'
+                                             : ... Location of variable initialization
+   54 | reg  [7:0] pix_in_cnt = 0;
+      |                         ^
+                      sys\scandoubler.v:63:19: ... Location of variable process write
+                                             : ... Perhaps should initialize instead using a reset in this process
+   63 |  if(~&pix_in_cnt) pix_in_cnt <= pc_in;
+      |                   ^~~~~~~~~~
+%Warning-PROCASSINIT: sys\scandoubler.v:56:36: Procedural assignment to declaration with initial value: 'pixsz4'
+                                             : ... note: In instance 'emu.av.video_mixer.sd'
+                                             : ... Location of variable initialization
+   56 | reg  [7:0] pixsz, pixsz2, pixsz4 = 0;
+      |                                    ^
+                      sys\scandoubler.v:76:4: ... Location of variable process write
+                                            : ... Perhaps should initialize instead using a reset in this process
+   76 |    pixsz4 <= {2'b00, pl[7:2]};
+      |    ^~~~~~
+%Warning-PROCASSINIT: sys\scandoubler.v:120:26: Procedural assignment to declaration with initial value: 'pix_out_cnt'
+                                              : ... note: In instance 'emu.av.video_mixer.sd'
+                                              : ... Location of variable initialization
+  120 | reg  [7:0] pix_out_cnt = 0;
+      |                          ^
+                      sys\scandoubler.v:127:20: ... Location of variable process write
+                                              : ... Perhaps should initialize instead using a reset in this process
+  127 |  if(~&pix_out_cnt) pix_out_cnt <= pc_out;
+      |                    ^~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/derived\tv80_mcode.v:40:25: Parameter is not used: 'Flag_N'
+                                                    : ... note: In instance 'emu.board.cpu.i_tv80_core.i_mcode'
+   40 |   parameter             Flag_N = 1;
+      |                         ^~~~~~
+%Warning-UNUSEDPARAM: rtl/derived\tv80_mcode.v:41:25: Parameter is not used: 'Flag_P'
+                                                    : ... note: In instance 'emu.board.cpu.i_tv80_core.i_mcode'
+   41 |   parameter             Flag_P = 2;
+      |                         ^~~~~~
+%Warning-UNUSEDPARAM: rtl/derived\tv80_mcode.v:42:25: Parameter is not used: 'Flag_X'
+                                                    : ... note: In instance 'emu.board.cpu.i_tv80_core.i_mcode'
+   42 |   parameter             Flag_X = 3;
+      |                         ^~~~~~
+%Warning-UNUSEDPARAM: rtl/derived\tv80_mcode.v:43:25: Parameter is not used: 'Flag_H'
+                                                    : ... note: In instance 'emu.board.cpu.i_tv80_core.i_mcode'
+   43 |   parameter             Flag_H = 4;
+      |                         ^~~~~~
+%Warning-UNUSEDPARAM: rtl/derived\tv80_mcode.v:44:25: Parameter is not used: 'Flag_Y'
+                                                    : ... note: In instance 'emu.board.cpu.i_tv80_core.i_mcode'
+   44 |   parameter             Flag_Y = 5;
+      |                         ^~~~~~
+%Warning-UNUSEDPARAM: rtl/derived\tv80_mcode.v:46:25: Parameter is not used: 'Flag_S'
+                                                    : ... note: In instance 'emu.board.cpu.i_tv80_core.i_mcode'
+   46 |   parameter             Flag_S = 7;
+      |                         ^~~~~~
+%Warning-UNUSEDSIGNAL: rtl/derived\tv80_mcode.v:165:17: Bits of function variable are not used: 'FF'[5,3,1]
+                                                      : ... note: In instance 'emu.board.cpu.i_tv80_core.i_mcode'
+  165 |     input [7:0] FF;
+      |                 ^~
+%Warning-UNUSEDSIGNAL: rtl/vendor/tv80\tv80_reg.v:65:14: Signal is not used: 'B'
+                                                       : ... note: In instance 'emu.board.cpu.i_tv80_core.i_reg'
+   65 |   wire [7:0] B = RegsH[0];
+      |              ^
+%Warning-UNUSEDSIGNAL: rtl/vendor/tv80\tv80_reg.v:66:14: Signal is not used: 'C'
+                                                       : ... note: In instance 'emu.board.cpu.i_tv80_core.i_reg'
+   66 |   wire [7:0] C = RegsL[0];
+      |              ^
+%Warning-UNUSEDSIGNAL: rtl/vendor/tv80\tv80_reg.v:67:14: Signal is not used: 'D'
+                                                       : ... note: In instance 'emu.board.cpu.i_tv80_core.i_reg'
+   67 |   wire [7:0] D = RegsH[1];
+      |              ^
+%Warning-UNUSEDSIGNAL: rtl/vendor/tv80\tv80_reg.v:68:14: Signal is not used: 'E'
+                                                       : ... note: In instance 'emu.board.cpu.i_tv80_core.i_reg'
+   68 |   wire [7:0] E = RegsL[1];
+      |              ^
+%Warning-UNUSEDSIGNAL: rtl/vendor/tv80\tv80_reg.v:69:14: Signal is not used: 'H'
+                                                       : ... note: In instance 'emu.board.cpu.i_tv80_core.i_reg'
+   69 |   wire [7:0] H = RegsH[2];
+      |              ^
+%Warning-UNUSEDSIGNAL: rtl/vendor/tv80\tv80_reg.v:70:14: Signal is not used: 'L'
+                                                       : ... note: In instance 'emu.board.cpu.i_tv80_core.i_reg'
+   70 |   wire [7:0] L = RegsL[2];
+      |              ^
+%Warning-UNUSEDSIGNAL: rtl/vendor/tv80\tv80_reg.v:72:15: Signal is not used: 'IX'
+                                                       : ... note: In instance 'emu.board.cpu.i_tv80_core.i_reg'
+   72 |   wire [15:0] IX = { RegsH[3], RegsL[3] };
+      |               ^~
+%Warning-UNUSEDSIGNAL: rtl/vendor/tv80\tv80_reg.v:73:15: Signal is not used: 'IY'
+                                                       : ... note: In instance 'emu.board.cpu.i_tv80_core.i_reg'
+   73 |   wire [15:0] IY = { RegsH[7], RegsL[7] };
+      |               ^~
+%Warning-PROCASSINIT: rtl/vendor/jt5205/hdl\jt5205_timing.v:31:15: Procedural assignment to declaration with initial value: 'cnt'
+                                                                 : ... note: In instance 'emu.board.sound.decoder.u_timing'
+                                                                 : ... Location of variable initialization
+   31 | reg [6:0] cnt=0;
+      |               ^
+                      rtl/vendor/jt5205/hdl\jt5205_timing.v:46:7: ... Location of variable process write
+                                                                : ... Perhaps should initialize instead using a reset in this process
+   46 |       cnt    <= 0;
+      |       ^~~
+%Warning-PROCASSINIT: rtl/vendor/jt5205/hdl\jt5205_timing.v:32:15: Procedural assignment to declaration with initial value: 'pre'
+                                                                 : ... note: In instance 'emu.board.sound.decoder.u_timing'
+                                                                 : ... Location of variable initialization
+   32 | reg       pre=0, preb=0;
+      |               ^
+                      rtl/vendor/jt5205/hdl\jt5205_timing.v:52:9: ... Location of variable process write
+                                                                : ... Perhaps should initialize instead using a reset in this process
+   52 |         pre    <= 0;
+      |         ^~~
+%Warning-PROCASSINIT: rtl/vendor/jt5205/hdl\jt5205_timing.v:32:23: Procedural assignment to declaration with initial value: 'preb'
+                                                                 : ... note: In instance 'emu.board.sound.decoder.u_timing'
+                                                                 : ... Location of variable initialization
+   32 | reg       pre=0, preb=0;
+      |                       ^
+                      rtl/vendor/jt5205/hdl\jt5205_timing.v:53:9: ... Location of variable process write
+                                                                : ... Perhaps should initialize instead using a reset in this process
+   53 |         preb   <= 0;
+      |         ^~~~
+%Warning-UNUSEDSIGNAL: sys\hq2x.sv:61:12: Bits of signal are not used: 'pattern'[1:0]
+                                        : ... note: In instance 'emu.av.video_mixer.sd.Hq2x'
+   61 | reg  [7:0] pattern, nextpatt;
+      |            ^~~~~~~
+%Warning-PROCASSINIT: sys\hq2x.sv:65:16: Procedural assignment to declaration with initial value: 'prevbuf'
+                                       : ... note: In instance 'emu.av.video_mixer.sd.Hq2x'
+                                       : ... Location of variable initialization
+   65 | reg  prevbuf = 0;
+      |                ^
+                      sys\hq2x.sv:210:4: ... Location of variable process write
+                                       : ... Perhaps should initialize instead using a reset in this process
+  210 |    prevbuf <= curbuf;
+      |    ^~~~~~~
+%Warning-UNUSEDSIGNAL: sys\hq2x.sv:95:15: Bits of function variable are not used: 'v'[11:8,3:0]
+                                        : ... note: In instance 'emu.av.video_mixer.sd.Hq2x'
+   95 |  input [23:0] v;
+      |               ^
+%Warning-UNUSEDSIGNAL: sys\hq2x.sv:120:30: Signal is not driven, nor used: 'wrdata_pre'
+                                         : ... note: In instance 'emu.av.video_mixer.sd.Hq2x'
+  120 | reg  [DWIDTH1*4-1:0] wrdata, wrdata_pre;
+      |                              ^~~~~~~~~~
+%Warning-UNUSEDSIGNAL: sys\hq2x.sv:367:14: Bits of signal are not used: 'res'[27:24,15:12,3:0]
+                                         : ... note: In instance 'emu.av.video_mixer.sd.Hq2x.blender'
+  367 |  wire [35:0] res = {mul24x3(i1, op[6:4]), 1'b0} + mul24x3(i2, {op[3:2], !op[3:2]}) + mul24x3(i3, {op[1:0], !op[3:2]});
+      |              ^~~
+%Warning-UNUSEDSIGNAL: sys\hq2x.sv:273:15: Bits of signal are not used: 'rgb1'[16,8,0]
+                                         : ... note: In instance 'emu.av.video_mixer.sd.Hq2x.blender.diff_checker'
+  273 |  input [23:0] rgb1,
+      |               ^~~~
+%Warning-UNUSEDSIGNAL: sys\hq2x.sv:274:15: Bits of signal are not used: 'rgb2'[16,8,0]
+                                         : ... note: In instance 'emu.av.video_mixer.sd.Hq2x.blender.diff_checker'
+  274 |  input [23:0] rgb2,
+      |               ^~~~
+%Warning-UNUSEDSIGNAL: sys\hq2x.sv:283:13: Bits of signal are not used: 'u'[3:0]
+                                         : ... note: In instance 'emu.av.video_mixer.sd.Hq2x.blender.diff_checker'
+  283 |  wire [8:0] u = $signed(r) - $signed(b);
+      |             ^
+%Warning-VARHIDDEN: rtl/vendor/tv80\tv80_alu.v:56:17: Declaration of signal hides declaration in upper scope: 'A'
+                                                    : ... note: In instance 'emu.board.cpu.i_tv80_core'
+   56 |     input [3:0] A;
+      |                 ^
+                    rtl/derived\tv80_core.v:62:17: ... Location of original declaration
+   62 |   output [15:0] A;
+      |                 ^
+%Warning-VARHIDDEN: rtl/vendor/tv80\tv80_alu.v:66:17: Declaration of signal hides declaration in upper scope: 'A'
+                                                    : ... note: In instance 'emu.board.cpu.i_tv80_core'
+   66 |     input [2:0] A;
+      |                 ^
+                    rtl/derived\tv80_core.v:62:17: ... Location of original declaration
+   62 |   output [15:0] A;
+      |                 ^
+%Warning-VARHIDDEN: rtl/vendor/tv80\tv80_alu.v:76:11: Declaration of signal hides declaration in upper scope: 'A'
+                                                    : ... note: In instance 'emu.board.cpu.i_tv80_core'
+   76 |     input A;
+      |           ^
+                    rtl/derived\tv80_core.v:62:17: ... Location of original declaration
+   62 |   output [15:0] A;
+      |                 ^
+%Warning-VARHIDDEN: sys\arcade_video.v:224:16: Declaration of signal hides declaration in upper scope: 'b'
+                                             : ... note: In instance 'emu'
+  224 |  input [1:0] a,b;
+      |                ^
+                    Arcade-DrMicro.sv:89:17: ... Location of original declaration
+   89 |  wire [7:0] r,g,b;wire hs,vs,hb,vb,ce,loaded,load_error,running;
+      |                 ^
+%Warning-CASEX: sys\hps_io.sv:340:4: Suggest casez (with ?'s) in place of casex (with X's)
+                                   : ... note: In instance 'emu'
+  340 |    casex(io_din)
+      |    ^~~~~
+                ... For warning description see https://verilator.org/warn/CASEX?v=5.051
+                ... Use "/* verilator lint_off CASEX */" and lint_on around source to disable this message.
+%Warning-CASEX: sys\hps_io.sv:361:4: Suggest casez (with ?'s) in place of casex (with X's)
+                                   : ... note: In instance 'emu'
+  361 |    casex(cmd)
+      |    ^~~~~
+%Warning-CASEINCOMPLETE: sys\hps_io.sv:657:5: Case values incompletely covered (example pattern 0x0)
+                                            : ... note: In instance 'emu'
+  657 |     case(cmd)
+      |     ^~~~
+                         ... For warning description see https://verilator.org/warn/CASEINCOMPLETE?v=5.051
+                         ... Use "/* verilator lint_off CASEINCOMPLETE */" and lint_on around source to disable this message.
+%Warning-SYNCASYNCNET: sys\emu_ports.vh:9:15: Signal flopped as both synchronous and async: 'HPS_BUS'
+                       sys\emu_ports.vh:9:15: ... Location of async usage
+    9 | inout  [45:0] HPS_BUS,
+      |               ^~~~~~~
+                       Arcade-DrMicro.sv:5:1: ... note: In file included from 'Arcade-DrMicro.sv'
+                       sys\emu_ports.vh:9:15: ... Location of sync usage
+    9 | inout  [45:0] HPS_BUS,
+      |               ^~~~~~~
+                       ... For warning description see https://verilator.org/warn/SYNCASYNCNET?v=5.051
+                       ... Use "/* verilator lint_off SYNCASYNCNET */" and lint_on around source to disable this message.
+%Warning-SYNCASYNCNET: Arcade-DrMicro.sv:17:14: Signal flopped as both synchronous and async: 'emu.gamma_bus'
+                                              : ... note: In instance 'emu'
+                       Arcade-DrMicro.sv:17:14: ... Location of async usage
+   17 |  wire [21:0] gamma_bus;
+      |              ^~~~~~~~~
+                       sys\hps_io.sv:345:24: ... Location of sync usage
+  345 |       'h32: io_dout <= gamma_bus[21];
+      |                        ^~~~~~~~~
+%Warning-SYNCASYNCNET: rtl\drmicro_core.sv:16:33: Signal flopped as both synchronous and async: 'emu.board.running'
+                                                : ... note: In instance 'emu.board'
+                       rtl/vendor/tv80\tv80s.v:101:12: ... Location of async usage
+  101 |       if (!reset_n)
+      |            ^~~~~~~
+                       rtl\drmicro_core.sv:49:7: ... Location of sync usage
+   49 |   if(!running)begin nmi_enable<=0;flip<=0;nmi_hold<=0;end
+      |       ^~~~~~~
+%Warning-SYNCASYNCNET: rtl/vendor/jt5205/hdl\jt5205.v:20:28: Signal flopped as both synchronous and async: 'emu.board.sound.__Vcellinp__decoder__rst'
+                                                           : ... note: In instance 'emu.board'
+                       rtl/derived\jt5205_adpcm.v:46:9: ... Location of async usage
+   46 |     if( rst ) begin
+      |         ^~~
+                       rtl/derived\jt5205_adpcm.v:72:9: ... Location of sync usage
+   72 |     if( rst ) begin
+      |         ^~~
+%Warning-UNOPTFLAT: sys\emu_ports.vh:9:15: Signal unoptimizable: Circular combinational logic: 'HPS_BUS'
+    9 | inout  [45:0] HPS_BUS,
+      |               ^~~~~~~
+                    Arcade-DrMicro.sv:5:1: ... note: In file included from 'Arcade-DrMicro.sv'
+                    ... For warning description see https://verilator.org/warn/UNOPTFLAT?v=5.051
+                    ... Use "/* verilator lint_off UNOPTFLAT */" and lint_on around source to disable this message.
+                    sys\emu_ports.vh:9:15:      Example path: HPS_BUS
+                    sys\hps_io.sv:177:23:      Example path: ASSIGNW
+                    sys\hps_io.sv:177:8:      Example path: emu.hps.EXT_BUS__out__strong__out5
+                    Arcade-DrMicro.sv:18:14:      Example path: ASSIGNW
+                    Arcade-DrMicro.sv:18:14:      Example path: emu.ext_bus
+                    sys\hps_io.sv:194:22:      Example path: ASSIGNW
+                    sys\hps_io.sv:191:8:      Example path: emu.hps.HPS_BUS__out__strong__out3
+                    sys\emu_ports.vh:9:15:      Example path: ASSIGNW
+                    sys\emu_ports.vh:9:15:      Example path: HPS_BUS
+- V e r i l a t i o n   R e p o r t: Verilator 5.051 devel rev v5.050-312-gb1c06fdb0 (mod)
+- Verilator: Built from 4.036 MB sources in 65 modules, into 1.571 MB in 15 C++ files needing 0.000 MB
+- Verilator: Walltime 0.449 s (elab=0.039, cvt=0.338, bld=0.000); cpu 0.000 s on 1 threads; allocated 88.680 MB

@@ -1,0 +1,453 @@
+%Warning-PINMISSING: sys\hps_io.sv:575:14: Instance has missing pin: 'tx_empty'
+  575 |   ps2_device keyboard
+      |              ^~~~~~~~
+                     sys\hps_io.sv:725:15: ... Location of port declaration
+  725 |  output reg   tx_empty,
+      |               ^~~~~~~~
+                     ... For warning description see https://verilator.org/warn/PINMISSING?v=5.051
+                     ... Use "/* verilator lint_off PINMISSING */" and lint_on around source to disable this message.
+%Warning-PINMISSING: sys\hps_io.sv:594:14: Instance has missing pin: 'tx_empty'
+  594 |   ps2_device mouse
+      |              ^~~~~
+                     sys\hps_io.sv:725:15: ... Location of port declaration
+  725 |  output reg   tx_empty,
+      |               ^~~~~~~~
+%Warning-PINMISSING: sys\video_freezer.sv:39:17: Instance has missing pin: 'sync_pt'
+   39 | sync_lock #(33) vs_lock
+      |                 ^~~~~~~
+                     sys\video_freezer.sv:91:10: ... Location of port declaration
+   91 |  output  sync_pt,
+      |          ^~~~~~~
+%Warning-PINMISSING: sys\video_freezer.sv:39:17: Instance has missing pin: 'valid'
+   39 | sync_lock #(33) vs_lock
+      |                 ^~~~~~~
+                     sys\video_freezer.sv:92:10: ... Location of port declaration
+   92 |  output  valid
+      |          ^~~~~
+%Warning-PINMISSING: sys\video_freezer.sv:50:17: Instance has missing pin: 'valid'
+   50 | sync_lock #(21) hs_lock
+      |                 ^~~~~~~
+                     sys\video_freezer.sv:92:10: ... Location of port declaration
+   92 |  output  valid
+      |          ^~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_pkg.sv:2:9: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | package drmicro_pkg;
+      |         ^~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+                       ... For warning description see https://verilator.org/warn/TIMESCALEMOD?v=5.051
+                       ... Use "/* verilator lint_off TIMESCALEMOD */" and lint_on around source to disable this message.
+%Warning-TIMESCALEMOD: rtl\drmicro_clock_en.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_ce #(parameter integer RATE=3072000, CLOCK=50000000)(
+      |        ^~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_rom_loader.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_rom_loader #(parameter integer SIZE=drmicro_pkg::ROM_SIZE)(
+      |        ^~~~~~~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_bus.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_bus(
+      |        ^~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_memory.sv:4:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    4 | module drmicro_memory(
+      |        ^~~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_inputs.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_inputs(
+      |        ^~~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\sn76496_jt89.sv:6:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    6 | module sn76496_jt89(
+      |        ^~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_adpcm_ctrl.sv:3:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    3 | module drmicro_adpcm_ctrl(
+      |        ^~~~~~~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_sound.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_sound(
+      |        ^~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_video.sv:4:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    4 | module drmicro_video #(parameter integer NMI_LINE=240)(
+      |        ^~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_core.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_core #(
+      |        ^~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/derived\tv80_core.v:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   25 | module tv80_core ( 
+      |        ^~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/tv80\tv80_alu.v:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   25 | module tv80_alu ( 
+      |        ^~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/derived\tv80_mcode.v:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   25 | module tv80_mcode
+      |        ^~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/tv80\tv80_reg.v:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   25 | module tv80_reg ( 
+      |        ^~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/tv80\tv80s.v:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   25 | module tv80s ( 
+      |        ^~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/jt5205/hdl\jt5205.v:19:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   19 | module jt5205(
+      |        ^~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/jt5205/hdl\jt5205_timing.v:19:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   19 | module jt5205_timing(
+      |        ^~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/derived\jt5205_adpcm.v:19:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   19 | module jt5205_adpcm(
+      |        ^~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/jt5205/hdl\jt5205_interpol2x.v:23:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   23 | module jt5205_interpol2x(
+      |        ^~~~~~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: Arcade-DrMicro.sv:3:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    3 | module emu (
+      |        ^~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\hps_io.sv:35:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   35 | module hps_io #(parameter CONF_STR, CONF_STR_BRAM=0, PS2DIV=0, WIDE=0, VDNUM=1, BLKSZ=2, PS2WE=0, STRLEN=$size(CONF_STR)>>3, F12KEYMOD=0)
+      |        ^~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\hps_io.sv:715:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+  715 | module ps2_device #(parameter PS2_FIFO_BITS=5)
+      |        ^~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\hps_io.sv:858:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+  858 | module video_calc
+      |        ^~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\hps_io.sv:1037:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+ 1037 | module confstr_rom #(parameter CONF_STR, STRLEN)
+      |        ^~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\arcade_video.v:29:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   29 | module arcade_video #(parameter WIDTH=320, DW=8, GAMMA=1)
+      |        ^~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\arcade_video.v:170:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+  170 | module screen_rotate
+      |        ^~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\arcade_video.v:270:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                                  : ... The initializer value will only be set once
+                                                  : ... Suggest use 'static' before variable declaration'
+  270 |  reg [11:0] hcnt = 0, vcnt = 0;
+      |             ^~~~
+                         ... For warning description see https://verilator.org/warn/IMPLICITSTATIC?v=5.051
+                         ... Use "/* verilator lint_off IMPLICITSTATIC */" and lint_on around source to disable this message.
+%Warning-IMPLICITSTATIC: sys\arcade_video.v:270:23: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                                  : ... The initializer value will only be set once
+                                                  : ... Suggest use 'static' before variable declaration'
+  270 |  reg [11:0] hcnt = 0, vcnt = 0;
+      |                       ^~~~
+%Warning-IMPLICITSTATIC: sys\arcade_video.v:302:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                                  : ... The initializer value will only be set once
+                                                  : ... Suggest use 'static' before variable declaration'
+  302 |  reg [13:0] hcnt = 0;
+      |             ^~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:197:6: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                            : ... The initializer value will only be set once
+                                            : ... Suggest use 'static' before variable declaration'
+  197 |  reg btn_up = 0;
+      |      ^~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:198:6: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                            : ... The initializer value will only be set once
+                                            : ... Suggest use 'static' before variable declaration'
+  198 |  reg btn_en = 0;
+      |      ^~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:357:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  357 |  reg  [7:0] cnt = 0;
+      |             ^~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1099:7: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+ 1099 |   reg gotd = 0, gotd2 = 0;
+      |       ^~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1099:17: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                              : ... The initializer value will only be set once
+                                              : ... Suggest use 'static' before variable declaration'
+ 1099 |   reg gotd = 0, gotd2 = 0;
+      |                 ^~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1100:7: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+ 1100 |   reg custd = 0, custd2 = 0;
+      |       ^~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1100:18: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                              : ... The initializer value will only be set once
+                                              : ... Suggest use 'static' before variable declaration'
+ 1100 |   reg custd = 0, custd2 = 0;
+      |                  ^~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1101:7: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+ 1101 |   reg old_wait = 0;
+      |       ^~~~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1534:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                              : ... The initializer value will only be set once
+                                              : ... Suggest use 'static' before variable declaration'
+ 1534 |  reg [11:0] line_cnt  = 0;
+      |             ^~~~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1535:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                              : ... The initializer value will only be set once
+                                              : ... Suggest use 'static' before variable declaration'
+ 1535 |  reg [11:0] sync_line = 0;
+      |             ^~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1536:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                              : ... The initializer value will only be set once
+                                              : ... Suggest use 'static' before variable declaration'
+ 1536 |  reg  [1:0] hs_cnt = 0;
+      |             ^~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:283:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  283 |  reg        ps2skip = 0;
+      |             ^~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:284:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  284 |  reg  [3:0] stflg = 0;
+      |             ^~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:286:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  286 |  reg        old_status_set = 0;
+      |             ^~~~~~~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:287:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  287 |  reg        old_upload_req = 0;
+      |             ^~~~~~~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:288:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  288 |  reg        upload_req = 0;
+      |             ^~~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:289:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  289 |  reg        old_info = 0;
+      |             ^~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:290:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  290 |  reg  [7:0] info_n = 0;
+      |             ^~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:6: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                            : ... The initializer value will only be set once
+                                            : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |      ^~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:18: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                  ^~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:30: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                              ^~~~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:47: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                                               ^~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:59: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                                                           ^~~~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:76: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                                                                            ^~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:89: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                                                                                         ^~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:924:12: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  924 |  reg [3:0] resto = 0;
+      |            ^~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:925:6: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                            : ... The initializer value will only be set once
+                                            : ... Suggest use 'static' before variable declaration'
+  925 |  reg calch = 0;
+      |      ^~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:987:6: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                            : ... The initializer value will only be set once
+                                            : ... Suggest use 'static' before variable declaration'
+  987 |  reg calch = 0;
+      |      ^~~~~
+%Warning-IMPLICITSTATIC: sys\gamma_corr.sv:34:12: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                                : ... The initializer value will only be set once
+                                                : ... Suggest use 'static' before variable declaration'
+   34 |  reg [1:0] ctr = 0;
+      |            ^~~
+%Warning-WIDTHTRUNC: sys\hq2x.sv:290:19: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 5 bits.
+                                       : ... note: In instance 'platform_video_top.dut.video_mixer.sd.Hq2x.blender.diff_checker'
+  290 |  wire u_inside = (!u[8:4] || &u[8:4]);  
+      |                   ^
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.051
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: sys\hq2x.sv:361:32: Operator ADD expects 35 bits on the RHS, but RHS's REPLICATE generates 32 bits.
+                                        : ... note: In instance 'platform_video_top.dut.video_mixer.sd.Hq2x.blender'
+  361 |   if(op2[0]) mul24x3 = mul24x3 + {op1[23:16], 4'b0000, op1[15:8], 4'b0000, op1[7:0]};
+      |                                ^
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.051
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: sys\hq2x.sv:362:32: Operator ADD expects 35 bits on the RHS, but RHS's REPLICATE generates 33 bits.
+                                        : ... note: In instance 'platform_video_top.dut.video_mixer.sd.Hq2x.blender'
+  362 |   if(op2[1]) mul24x3 = mul24x3 + {op1[23:16], 4'b0000, op1[15:8], 4'b0000, op1[7:0], 1'b0};
+      |                                ^
+%Warning-WIDTHTRUNC: sys\hq2x.sv:367:73: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 2 bits.
+                                       : ... note: In instance 'platform_video_top.dut.video_mixer.sd.Hq2x.blender'
+  367 |  wire [35:0] res = {mul24x3(i1, op[6:4]), 1'b0} + mul24x3(i2, {op[3:2], !op[3:2]}) + mul24x3(i3, {op[1:0], !op[3:2]});
+      |                                                                         ^
+%Warning-WIDTHTRUNC: sys\hq2x.sv:367:108: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 2 bits.
+                                        : ... note: In instance 'platform_video_top.dut.video_mixer.sd.Hq2x.blender'
+  367 |  wire [35:0] res = {mul24x3(i1, op[6:4]), 1'b0} + mul24x3(i2, {op[3:2], !op[3:2]}) + mul24x3(i3, {op[1:0], !op[3:2]});
+      |                                                                                                            ^
+%Warning-WIDTHTRUNC: sys\hq2x.sv:79:39: Operator FUNCREF 'h2rgb' expects 12 bits on the Function Argument, but Function Argument's VARREF 'Curr20tmp' generates 24 bits.
+                                      : ... note: In instance 'platform_video_top.dut.video_mixer.sd.Hq2x'
+   79 | wire     [23:0] Curr20 = HALF_DEPTH ? h2rgb(Curr20tmp) : Curr20tmp;
+      |                                       ^~~~~
+%Warning-WIDTHTRUNC: sys\hq2x.sv:81:39: Operator FUNCREF 'h2rgb' expects 12 bits on the Function Argument, but Function Argument's VARREF 'Curr21tmp' generates 24 bits.
+                                      : ... note: In instance 'platform_video_top.dut.video_mixer.sd.Hq2x'
+   81 | wire     [23:0] Curr21 = HALF_DEPTH ? h2rgb(Curr21tmp) : Curr21tmp;
+      |                                       ^~~~~
+%Warning-WIDTHEXPAND: sys\hq2x.sv:146:43: Operator COND expects 24 bits on the Conditional True, but Conditional True's FUNCREF 'rgb2h' generates 12 bits.
+                                        : ... note: In instance 'platform_video_top.dut.video_mixer.sd.Hq2x'
+  146 | wire [DWIDTH:0] blend_result = HALF_DEPTH ? rgb2h(blend_result_pre) : blend_result_pre[DWIDTH:0];
+      |                                           ^
+%Warning-WIDTHTRUNC: sys\hq2x.sv:178:27: Operator FUNCREF 'h2rgb' expects 12 bits on the Function Argument, but Function Argument's VARREF 'inputpixel' generates 24 bits.
+                                       : ... note: In instance 'platform_video_top.dut.video_mixer.sd.Hq2x'
+  178 |     Next2 <= HALF_DEPTH ? h2rgb(inputpixel) : inputpixel;
+      |                           ^~~~~
+%Warning-WIDTHEXPAND: sys\video_freezer.sv:128:53: Operator ADD expects 21 bits on the RHS, but RHS's CONST '2'h2' generates 2 bits.
+                                                 : ... note: In instance 'platform_video_top.dut.video_mixer.freezer.hs_lock'
+  128 |  if(old_sync & ~sync_in & sync_valid) cnto <= s_len + 2'd2;
+      |                                                     ^
+%Warning-WIDTHEXPAND: sys\video_freezer.sv:128:53: Operator ADD expects 33 bits on the RHS, but RHS's CONST '2'h2' generates 2 bits.
+                                                 : ... note: In instance 'platform_video_top.dut.video_mixer.freezer.vs_lock'
+  128 |  if(old_sync & ~sync_in & sync_valid) cnto <= s_len + 2'd2;
+      |                                                     ^
+%Warning-WIDTHEXPAND: sys\video_mixer.sv:98:21: Operator COND expects 8 bits on the Conditional True, but Conditional True's CONST '1'h0' generates 1 bits.
+                                              : ... note: In instance 'platform_video_top.dut.video_mixer'
+   98 |   assign R_in = frz ? 1'd0 : R;
+      |                     ^
+%Warning-WIDTHEXPAND: sys\video_mixer.sv:99:21: Operator COND expects 8 bits on the Conditional True, but Conditional True's CONST '1'h0' generates 1 bits.
+                                              : ... note: In instance 'platform_video_top.dut.video_mixer'
+   99 |   assign G_in = frz ? 1'd0 : G;
+      |                     ^
+%Warning-WIDTHEXPAND: sys\video_mixer.sv:100:21: Operator COND expects 8 bits on the Conditional True, but Conditional True's CONST '1'h0' generates 1 bits.
+                                               : ... note: In instance 'platform_video_top.dut.video_mixer'
+  100 |   assign B_in = frz ? 1'd0 : B;
+      |                     ^
+%Warning-WIDTHTRUNC: sys\video_mixer.sv:192:5: Operator ASSIGNDLY expects 8 bits on the Assign RHS, but Assign RHS's REPLICATE generates 16 bits.
+                                             : ... note: In instance 'platform_video_top.dut.video_mixer'
+  192 |   r <= {rt,rt};
+      |     ^~
+%Warning-WIDTHTRUNC: sys\video_mixer.sv:193:5: Operator ASSIGNDLY expects 8 bits on the Assign RHS, but Assign RHS's REPLICATE generates 16 bits.
+                                             : ... note: In instance 'platform_video_top.dut.video_mixer'
+  193 |   g <= {gt,gt};
+      |     ^~
+%Warning-WIDTHTRUNC: sys\video_mixer.sv:194:5: Operator ASSIGNDLY expects 8 bits on the Assign RHS, but Assign RHS's REPLICATE generates 16 bits.
+                                             : ... note: In instance 'platform_video_top.dut.video_mixer'
+  194 |   b <= {bt,bt};
+      |     ^~
+%Warning-WIDTHTRUNC: sys\arcade_video.v:115:20: Logical operator COND expects 1 bit on the Conditional Test, but Conditional Test's VARREF 'fx' generates 3 bits.
+                                              : ... note: In instance 'platform_video_top.dut'
+  115 | wire [2:0] sl = fx ? fx - 1'd1 : 3'd0;
+      |                    ^
+%Warning-WIDTHTRUNC: sys\arcade_video.v:116:23: Logical operator LOGOR expects 1 bit on the LHS, but LHS's VARREF 'fx' generates 3 bits.
+                                              : ... note: In instance 'platform_video_top.dut'
+  116 | wire scandoubler = fx || forced_scandoubler;
+      |                       ^~
+%Warning-WIDTHEXPAND: sys\arcade_video.v:130:14: Operator COND expects 8 bits on the Conditional True, but Conditional True's SEL generates 4 bits.
+                                               : ... note: In instance 'platform_video_top.dut'
+  130 |  .R((DW!=24) ? R[7:4] : R),
+      |              ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:131:14: Operator COND expects 8 bits on the Conditional True, but Conditional True's SEL generates 4 bits.
+                                               : ... note: In instance 'platform_video_top.dut'
+  131 |  .G((DW!=24) ? G[7:4] : G),
+      |              ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:132:14: Operator COND expects 8 bits on the Conditional True, but Conditional True's SEL generates 4 bits.
+                                               : ... note: In instance 'platform_video_top.dut'
+  132 |  .B((DW!=24) ? B[7:4] : B),
+      |              ^
+- V e r i l a t i o n   R e p o r t: Verilator 5.051 devel rev v5.050-312-gb1c06fdb0 (mod)
+- Verilator: Built from 4.308 MB sources in 66 modules, into 0.289 MB in 6 C++ files needing 0.000 MB
+- Verilator: Walltime 0.095 s (elab=0.018, cvt=0.024, bld=0.000); cpu 0.078 s on 1 threads; allocated 28.898 MB

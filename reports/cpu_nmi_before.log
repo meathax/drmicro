@@ -1,0 +1,3 @@
+NMI entry latency=15 T states
+FATAL: tests/tb_cpu_nmi.sv:16: Zilog NMI must be 5+3+3 T states
+       Time: 13060000  Scope: tb_cpu_nmi

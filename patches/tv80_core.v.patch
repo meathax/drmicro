@@ -1,0 +1,26 @@
+--- a/rtl/vendor/tv80/tv80_core.v
++++ b/rtl/derived/tv80_core.v
+@@ -754,9 +754,11 @@
+                             ACC <= 0;
+                             `endif
+                             F[Flag_P] <= IntE_FF2;
+-			    F[Flag_Z] <= (I == 0);
+-			    F[Flag_S] <= I[7];
+-			    F[Flag_H] <= 0;
++			    F[Flag_Z] <= (R == 0);
++			    F[Flag_S] <= R[7];
++			    F[Flag_X] <= R[3];
++                            F[Flag_Y] <= R[5];
++                            F[Flag_H] <= 0;
+ 			    F[Flag_N] <= 0;
+                           end
+ 
+@@ -1378,7 +1380,7 @@
+   always @(/*AUTOSENSE*/IntCycle or NMICycle or mcycle)
+     begin
+       Auto_Wait = 1'b0;
+-      if (IntCycle == 1'b1 || NMICycle == 1'b1 )
++      if (IntCycle == 1'b1 || (NMICycle == 1'b1 && Mode != 0) )
+         begin
+           if (mcycle[0] )
+             begin
