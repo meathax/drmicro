@@ -3,6 +3,8 @@
 #include "Vdrmicro_core.h"
 #include "Vdrmicro_core___024root.h"
 #include "Vdrmicro_core_drmicro_core.h"
+#include "Vdrmicro_core_tv80s.h"
+#include "Vdrmicro_core_tv80_core__M0.h"
 #include "verilated.h"
 #include <fstream>
 #include <iostream>
@@ -89,7 +91,12 @@ int main(int argc,char**argv){try{
   if(d.deadline_error)throw std::runtime_error("Renderer missed scanline deadline");
   if(d.debug_io_write){++io;trace<<cycles<<','<<frame<<','<<unsigned(d.debug_addr&255)<<','<<unsigned(d.debug_data)<<'\n';
    if((d.debug_addr&255)==4){
-    if(checkpoints){std::ofstream ram(out+"/control_"+std::to_string(control_index)+".ram",std::ios::binary);for(int k=0;k<16384;++k)ram.put(d.rootp->drmicro_core->memory__DOT__ram[k]);}
+    if(checkpoints){
+     std::ofstream ram(out+"/control_"+std::to_string(control_index)+".ram",std::ios::binary);for(int k=0;k<16384;++k)ram.put(d.rootp->drmicro_core->memory__DOT__ram[k]);
+     const auto* z80=d.drmicro_core->cpu->i_tv80_core;
+     std::ofstream state(out+"/control_"+std::to_string(control_index)+".json");
+     state<<"{\"cycle\":"<<cycles<<",\"frame\":"<<frame<<",\"pc\":"<<z80->__PVT__PC<<",\"r\":"<<unsigned(z80->__PVT__R)<<"}";
+    }
     ++control_index;
    }
   }

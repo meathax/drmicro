@@ -31,6 +31,8 @@ drmicro_tap=ios:install_write_tap(0,255,'drmicro_io',function(address,data,mask)
   flip=(data>>1)&1
   if checkpoints then
    local f=assert(io.open(out..'/control_'..control_index..'.ram','wb'));f:write(memory:read_range(0xc000,0xffff,8));f:close()
+   f=assert(io.open(out..'/control_'..control_index..'.json','w'))
+   f:write(string.format('{"frame":%d,"pc":%d,"r":%d,"time":%.12f}',frame,cpu.state['PC'].value,cpu.state['R'].value,machine.time:as_double()));f:close()
   end
   control_index=control_index+1
  end
