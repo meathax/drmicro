@@ -81,3 +81,5 @@
 {"command": "check_project", "started_utc": "2026-09-05T21:46:29Z", "status": "PASS", "seconds": 0.034, "source_sha256": "74175c5e4b31bae5925fef0b825ffce7058bbd631c5c62161e7152092af7e68f", "arguments": ["check_project"]}
 {"command": "build_sim", "started_utc": "2026-09-05T21:47:01Z", "status": "PASS", "seconds": 0.288, "source_sha256": "74175c5e4b31bae5925fef0b825ffce7058bbd631c5c62161e7152092af7e68f", "arguments": ["build_sim", "--jobs", "2"]}
 {"command": "audit_source", "started_utc": "2026-09-05T21:47:01Z", "status": "PASS", "seconds": 0.154, "source_sha256": "74175c5e4b31bae5925fef0b825ffce7058bbd631c5c62161e7152092af7e68f", "arguments": ["audit_source"]}
+{"command": "build_sim", "started_utc": "2026-09-05T21:51:23Z", "status": "PASS", "seconds": 1.897, "source_sha256": "74175c5e4b31bae5925fef0b825ffce7058bbd631c5c62161e7152092af7e68f", "arguments": ["build_sim"]}
+{"command": "run_reference", "started_utc": "2026-09-05T21:51:36Z", "status": "PASS", "seconds": 1.322, "source_sha256": "74175c5e4b31bae5925fef0b825ffce7058bbd631c5c62161e7152092af7e68f", "arguments": ["run_reference", "--frames", "30", "--script", "play"]}

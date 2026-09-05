@@ -1,9 +1,9 @@
 {
   "run_reference": {
     "command": "run_reference",
-    "started_utc": "2026-09-05T21:43:39Z",
+    "started_utc": "2026-09-05T21:51:36Z",
     "status": "PASS",
-    "seconds": 1.789,
+    "seconds": 1.322,
     "source_sha256": "74175c5e4b31bae5925fef0b825ffce7058bbd631c5c62161e7152092af7e68f"
   },
   "compare": {
@@ -30,9 +30,9 @@
   },
   "build_sim": {
     "command": "build_sim",
-    "started_utc": "2026-09-05T21:47:01Z",
+    "started_utc": "2026-09-05T21:51:23Z",
     "status": "PASS",
-    "seconds": 0.288,
+    "seconds": 1.897,
     "source_sha256": "74175c5e4b31bae5925fef0b825ffce7058bbd631c5c62161e7152092af7e68f"
   },
   "test_unit": {

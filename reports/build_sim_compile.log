@@ -1,4 +1,11 @@
-cached main.cpp
+In file included from build/fastobj/Vdrmicro_core.h:12,
+                 from C:\Users\meath\OneDrive\Documents\dr\sim\main.cpp:3:
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:147:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  147 | XXTERN typedef void* svScope;
+      |                      ^~~~~~~
+C:\Users\meath\OneDrive\Documents\dr\.tools\oss-cad-suite\share\verilator\include\vltstd/svdpi.h:150:22: warning: 'dllimport' attribute ignored [-Wattributes]
+  150 | XXTERN typedef void* svOpenArrayHandle;
+      |                      ^~~~~~~~~~~~~~~~~
 cached Vdrmicro_core.cpp
 cached Vdrmicro_core___024root__0.cpp
 cached Vdrmicro_core___024root__0__Slow.cpp

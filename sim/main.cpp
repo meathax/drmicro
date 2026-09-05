@@ -25,6 +25,7 @@ int main(int argc,char**argv){try{
  int frames=argc>2?std::stoi(argv[2]):120;
  std::string script=argc>4?argv[4]:"attract";
  bool checkpoints=std::getenv("DRMICRO_CHECKPOINTS")!=nullptr;
+ bool frame_state=std::getenv("DRMICRO_FRAME_STATE")!=nullptr;
  int trace_start=std::getenv("DRMICRO_TRACE_START")?std::atoi(std::getenv("DRMICRO_TRACE_START")):0;
  int trace_end=std::getenv("DRMICRO_TRACE_END")?std::atoi(std::getenv("DRMICRO_TRACE_END")):3;
  auto rom=read(payload);std::filesystem::create_directories(out);
@@ -58,6 +59,8 @@ int main(int argc,char**argv){try{
  std::ofstream bus(out+"/fetch.csv");bus<<"cycle,frame,address\n";
  unsigned control_index=0;
  std::ofstream reads(out+"/reads.csv");reads<<"cycle,frame,port,data\n";bool last_io_read=false;unsigned read_port=0;
+ std::ofstream boundaries;
+ if(frame_state){boundaries.open(out+"/frame_state.csv");boundaries<<"frame,cycle,pc,r,nmi_enable,nmi_hold\n";}
  std::ofstream samples(out+"/audio.raw",std::ios::binary);
  std::vector<unsigned char> rgb(256*224*3);
  std::vector<uint16_t> pens(256*224);
@@ -84,6 +87,13 @@ int main(int argc,char**argv){try{
    if(frame>=210&&frame<213)d.joy0|=1<<6;
   }
   tick();
+  // frame_event is visible for one master clock after the raster reaches the
+  // configured vblank origin.  Capture CPU state before the following clock
+  // turns it into the active-low NMI request, matching MAME's frame callback.
+  if(frame_state&&frame_seen&&d.drmicro_core->__PVT__frame_event){
+   const auto* z80=d.drmicro_core->cpu->i_tv80_core;
+   boundaries<<(frame+1)<<','<<cycles<<','<<z80->__PVT__PC<<','<<unsigned(z80->__PVT__R)<<','<<unsigned(d.drmicro_core->__PVT__nmi_enable)<<','<<unsigned(d.drmicro_core->__PVT__nmi_hold)<<'\n';
+  }
   bool io_read=!d.rootp->drmicro_core->iorq_n&&!d.rootp->drmicro_core->rd_n&&d.rootp->drmicro_core->m1_n;
   if(io_read)read_port=d.debug_addr&255;
   if(last_io_read&&!io_read)reads<<cycles<<','<<frame<<','<<read_port<<','<<unsigned(d.rootp->drmicro_core->di)<<'\n';

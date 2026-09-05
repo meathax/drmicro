@@ -19,6 +19,13 @@ local input_offset=tonumber(os.getenv('DRMICRO_REFERENCE_INPUT_OFFSET') or '0')
 local flip=0
 local control_index=0
 local checkpoints=os.getenv('DRMICRO_CHECKPOINTS')~=nil
+-- Optional boundary trace: capture the reference CPU at MAME's completed-frame
+-- callback, which is the point where the driver schedules its vblank NMI.
+local frame_state=nil
+if os.getenv('DRMICRO_FRAME_STATE') then
+ frame_state=assert(io.open(out..'/frame_state.csv','w'))
+ frame_state:write('frame,time,pc,r\n')
+end
 local log=assert(io.open(out..'/io.csv','w'))
 log:write('time,frame,port,data\n')
 local reads=assert(io.open(out..'/reads.csv','w'));reads:write('time,frame,port,data\n')
@@ -50,6 +57,9 @@ elseif script=='service' then machine.ioport.ports[':DSW1']:field(32).user_value
 elseif script=='cocktail' then machine.ioport.ports[':DSW1']:field(64).user_value=0 end
 emu.register_frame_done(function()
  frame=frame+1
+ if frame_state then
+  frame_state:write(string.format('%d,%.12f,%d,%d\n',frame,machine.time:as_double(),cpu.state['PC'].value,cpu.state['R'].value))
+ end
  local input_frame=frame-input_offset
  if os.getenv('DRMICRO_DEBUG_TRACE') then
   if frame==13 then machine.debugger:command('trace '..out..'/instructions.txt,maincpu,noloop,{tracelog "T=%d ",totalcycles}') end
@@ -75,7 +85,7 @@ emu.register_frame_done(function()
   screen:snapshot('frame_'..frame..'.png')
  end
  if frame>=frames then
-  log:flush();reads:flush()
+  log:flush();reads:flush();if frame_state then frame_state:flush() end
   local f=assert(io.open(out..'/completion.json','w'));f:write(string.format('{"frames":%d,"script":"%s"}',frame,script));f:close()
   machine:exit()
  end
