@@ -24,7 +24,7 @@ def sources():return [x for x in (R/'sim/core.f').read_text().splitlines() if x 
 
 def build_identity():
  files=[*sources(),'sim/core.f','sim/observe.vlt','sim/main.cpp']
- return dict(source_sha256=hashlib.sha256(b''.join((R/p).read_bytes() for p in sources())).hexdigest(),files={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in files},binary_sha256=hashlib.sha256((R/'build/drmicro_sim.exe').read_bytes()).hexdigest(),defines=['TV80_REFRESH'],nmi_line=240,frame_origin=240)
+ return dict(source_sha256=hashlib.sha256(b''.join((R/p).read_bytes() for p in sources())).hexdigest(),files={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in files},binary_sha256=hashlib.sha256((R/'build/drmicro_sim.exe').read_bytes()).hexdigest(),defines=['TV80_REFRESH'],nmi_line=239,nmi_x=316,frame_origin=240)
 def fetch_dependencies():
  __import__('fetch_deps').main()
  __import__('setup_project').main()
@@ -68,7 +68,7 @@ def run_smoke(frames=120,script='attract'):
  if identity_path.exists() and json.loads(identity_path.read_text())!=identity:raise ValueError('Simulation binary/source manifest differs; run build_sim first')
  run([R/'build/drmicro_sim.exe','build/drmicro.rom',str(frames),'reports/captures/'+script,script],'run_smoke_'+script+'.log')
  path=R/'reports/captures'/script/'result.json';result=json.loads(path.read_text())
- result.update(source_sha256=hashlib.sha256(b''.join((R/p).read_bytes() for p in sources())).hexdigest(),runner_sha256=hashlib.sha256((R/'sim/main.cpp').read_bytes()).hexdigest(),binary_sha256=hashlib.sha256((R/'build/drmicro_sim.exe').read_bytes()).hexdigest(),payload_sha256=hashlib.sha256((R/'build/drmicro.rom').read_bytes()).hexdigest(),nmi_line=240,frame_origin=240,defines=['TV80_REFRESH'])
+ result.update(source_sha256=hashlib.sha256(b''.join((R/p).read_bytes() for p in sources())).hexdigest(),runner_sha256=hashlib.sha256((R/'sim/main.cpp').read_bytes()).hexdigest(),binary_sha256=hashlib.sha256((R/'build/drmicro_sim.exe').read_bytes()).hexdigest(),payload_sha256=hashlib.sha256((R/'build/drmicro.rom').read_bytes()).hexdigest(),nmi_line=239,nmi_x=316,frame_origin=240,defines=['TV80_REFRESH'])
  result['build_identity']=identity
  path.write_text(json.dumps(result,indent=2))
 def test_unit():

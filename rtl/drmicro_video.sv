@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // Scanline composition: live VRAM fetch, BG0, BG1, eight sprites/bank.
 // One graphics row port and one VRAM port; no frame snapshot or sprite ROM copies.
-module drmicro_video #(parameter integer NMI_LINE=240)(
+module drmicro_video #(parameter integer NMI_LINE=239, NMI_X=316, FRAME_ORIGIN=240)(
  input logic clk,reset,ce,flip,
  output logic [11:0] va,
  input logic [7:0] vd,
@@ -81,14 +81,14 @@ module drmicro_video #(parameter integer NMI_LINE=240)(
  assign hblank=hb_pipe[3];assign vblank=vb_pipe[3];
  always_ff @(posedge clk) begin
   if(reset)begin
-   x<=0;y<=8'(NMI_LINE);state<=IDLE;valid<=0;deadline_error<=0;frame_event<=0;
+   x<=0;y<=8'(FRAME_ORIGIN);state<=IDLE;valid<=0;deadline_error<=0;frame_event<=0;
    ce_pipe<=0;hs_pipe<=0;vs_pipe<=0;hb_pipe<=15;vb_pipe<=15;
    red<=0;green<=0;blue<=0;line_q<=0;
    target<=0;render_flip<=0;bank<=0;tile<=0;pix<=0;sp<=0;half<=0;row<=0;
    code<=0;attr<=0;sy<=0;sx<=0;schr<=0;sattr<=0;rowbits<=0;
    for(integer i=0;i<4;i=i+1)begin xp[i]<=0;yp[i]<=0;end
   end else begin
-   frame_event<=ce&&x==0&&y==8'(NMI_LINE);
+   frame_event<=ce&&x==9'(NMI_X)&&y==8'(NMI_LINE);
    if(ce)begin
     if(x==319)begin x<=0;y<=y+8'd1;end else x<=x+9'd1;
    end

@@ -1,5 +1,5 @@
 {
-  "script": "play",
+  "script": "nmi_sub8",
   "frames": [
     {
       "frame": "frame_1",
@@ -46,7 +46,9 @@
         53052,
         53053,
         53162,
-        53163
+        53163,
+        53164,
+        53166
       ],
       "dut_rgb_sha256": "408c86529ab9b9d50c88365387784cda57500423b5906d8acc9934ea96710405",
       "reference_rgb_sha256": "408c86529ab9b9d50c88365387784cda57500423b5906d8acc9934ea96710405",
@@ -65,7 +67,9 @@
         53052,
         53053,
         53162,
-        53163
+        53163,
+        53164,
+        53166
       ],
       "dut_rgb_sha256": "2593c8452c33776d01bc422af0d1294bda3beb5a184ba88ec79dd3c0866660bc",
       "reference_rgb_sha256": "2593c8452c33776d01bc422af0d1294bda3beb5a184ba88ec79dd3c0866660bc",
@@ -84,7 +88,9 @@
         53052,
         53053,
         53162,
-        53163
+        53163,
+        53165,
+        53166
       ],
       "dut_rgb_sha256": "9908b232125822157b560d78e3fd246c12d747e1385aff4e4a7e0d7c5b9939fb",
       "reference_rgb_sha256": "9908b232125822157b560d78e3fd246c12d747e1385aff4e4a7e0d7c5b9939fb",
@@ -121,35 +127,12 @@
       "reference_rgb_sha256": "1dbc5fef09cad138691d5297d3283179ab296e9e75c9b6e7ff8586037d0e347d",
       "offline_dut_snapshot_differing_pixels": 0,
       "offline_dut_snapshot_differing_pens": 0
-    },
-    {
-      "frame": "frame_300",
-      "rgb_differing_pixels": 0,
-      "offline_mame_snapshot_differing_pixels": 0,
-      "backbuffer_vs_displayed_pixels": 499,
-      "sprite_records_equal": true,
-      "video_ram_differing_addresses": [],
-      "pixel_difference_bounds": null,
-      "ram_differing_addresses": [
-        49212,
-        52338,
-        52972,
-        52973,
-        52974,
-        52975,
-        53162,
-        53163
-      ],
-      "dut_rgb_sha256": "c38bdbea0635d2cf0632be0fea8f5cab85953e8b9c93110e069dbf211db156c5",
-      "reference_rgb_sha256": "c38bdbea0635d2cf0632be0fea8f5cab85953e8b9c93110e069dbf211db156c5",
-      "offline_dut_snapshot_differing_pixels": 0,
-      "offline_dut_snapshot_differing_pens": 0
     }
   ],
   "functional_io": {
-    "dut_count": 868,
-    "reference_count": 868,
-    "matched_common_prefix": 868,
+    "dut_count": 605,
+    "reference_count": 605,
+    "matched_common_prefix": 605,
     "first_divergence": null
   },
   "notes": [
@@ -159,8 +142,8 @@
   ],
   "all_io_writes": {
     "status": "PASS",
-    "dut_count": 1154,
-    "reference_count": 1154
+    "dut_count": 831,
+    "reference_count": 831
   },
   "known_board_effects": {
     "status": "PASS",
@@ -168,26 +151,26 @@
   },
   "io_reads": {
     "status": "PASS",
-    "dut_count": 883,
-    "reference_count": 883
+    "dut_count": 700,
+    "reference_count": 700
   },
   "sound_commands": {
     "0": {
       "status": "PASS",
-      "dut_count": 71,
-      "reference_count": 71,
+      "dut_count": 14,
+      "reference_count": 14,
       "first_divergence": null
     },
     "1": {
       "status": "PASS",
-      "dut_count": 51,
-      "reference_count": 51,
+      "dut_count": 14,
+      "reference_count": 14,
       "first_divergence": null
     },
     "2": {
       "status": "PASS",
-      "dut_count": 168,
-      "reference_count": 168,
+      "dut_count": 119,
+      "reference_count": 119,
       "first_divergence": null
     },
     "3": {

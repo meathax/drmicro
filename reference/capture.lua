@@ -16,6 +16,8 @@ local frame=0
 -- Both schedules now use the frame-boundary NMI profile. Offset remains
 -- configurable for reproducing the earlier NMI_LINE=240 experiment.
 local input_offset=tonumber(os.getenv('DRMICRO_REFERENCE_INPUT_OFFSET') or '0')
+local trace_start=tonumber(os.getenv('DRMICRO_TRACE_START') or '13')
+local trace_end=tonumber(os.getenv('DRMICRO_TRACE_END') or '16')
 local flip=0
 local control_index=0
 local checkpoints=os.getenv('DRMICRO_CHECKPOINTS')~=nil
@@ -62,8 +64,8 @@ emu.register_frame_done(function()
  end
  local input_frame=frame-input_offset
  if os.getenv('DRMICRO_DEBUG_TRACE') then
-  if frame==13 then machine.debugger:command('trace '..out..'/instructions.txt,maincpu,noloop,{tracelog "T=%d ",totalcycles}') end
-  if frame==16 then machine.debugger:command('trace off,maincpu') end
+  if frame==trace_start then machine.debugger:command('trace '..out..'/instructions.txt,maincpu,noloop,{tracelog "T=%d ",totalcycles}') end
+  if frame==trace_end then machine.debugger:command('trace off,maincpu') end
  end
  if script=='reset' and frame==240 then machine:soft_reset() end
  if script=='play' or script=='dips' then

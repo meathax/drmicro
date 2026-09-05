@@ -4,7 +4,7 @@ module drmicro_core #(
  parameter integer CPU_CE_PHASE=0, VIDEO_CE_PHASE=0,
  // Begin each frame at the active-to-blank edge. Reset uses this same origin,
  // so changing raster coordinates does not move NMI relative to CPU startup.
- parameter integer NMI_LINE=240
+ parameter integer NMI_LINE=239, NMI_X=316, FRAME_ORIGIN=240
 )(
  input logic clk,cold_reset,game_reset,
  input logic download,ioctl_wr,
@@ -61,7 +61,7 @@ module drmicro_core #(
  logic [13:0] sa;logic [7:0] sd;
  logic [8:0] pen;logic [3:0] indirect;logic [7:0] color;
  drmicro_memory memory(.clk(clk),.reset(reset),.load_wr(load_wr),.load_addr(load_addr),.load_data(load_data),.cpu_addr(addr),.cpu_wr(mem_write&&running),.cpu_dout(dout),.cpu_din(mem_data),.clearing(clearing),.video_addr(va),.video_data(vd),.gfx_addr(ga),.gfx0(g0),.gfx1(g1),.sample_addr(sa),.sample_data(sd),.pen_addr(pen),.indirect(indirect),.color_addr({1'b0,indirect}),.color_data(color));
- drmicro_video #(.NMI_LINE(NMI_LINE)) video(.clk(clk),.reset(!running),.ce(video_ce),.flip(flip),.va(va),.vd(vd),.ga(ga),.g0(g0),.g1(g1),.pen(pen),.color(color),.red(red),.green(green),.blue(blue),.hs(hs),.vs(vs),.hblank(hblank),.vblank(vblank),.pixel_ce(pixel_ce),.frame_event(frame_event),.debug_x(debug_x),.debug_y(debug_y),.deadline_error(deadline_error));
+ drmicro_video #(.NMI_LINE(NMI_LINE),.NMI_X(NMI_X),.FRAME_ORIGIN(FRAME_ORIGIN)) video(.clk(clk),.reset(!running),.ce(video_ce),.flip(flip),.va(va),.vd(vd),.ga(ga),.g0(g0),.g1(g1),.pen(pen),.color(color),.red(red),.green(green),.blue(blue),.hs(hs),.vs(vs),.hblank(hblank),.vblank(vblank),.pixel_ce(pixel_ce),.frame_event(frame_event),.debug_x(debug_x),.debug_y(debug_y),.deadline_error(deadline_error));
  drmicro_sound sound(.clk(clk),.reset(!running),.psg_ce(cpu_ce),.adpcm_ce(adpcm_ce),.io_write(io_write&&running),.port_addr(addr[7:0]),.data(dout),.sample_addr(sa),.sample_data(sd),.audio(audio),.psg0(psg0),.psg1(psg1),.psg2(psg2),.adpcm(adpcm),.sample_strobe(),.sample_position());
  assign debug_addr=addr;assign debug_data=dout;assign debug_io_write=io_write&&running;
  assign debug_mem_write=mem_write&&running;assign debug_fetch=!m1_n&&!rd_n&&!mreq_n;

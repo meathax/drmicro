@@ -53,7 +53,7 @@
     },
     "source_audit": {
       "status": "PASS",
-      "files_checked": 525,
+      "files_checked": 530,
       "problems": [],
       "scope": "Git eligible source paths; original ROM member and packed-payload SHA256 matches plus generated-asset path/extension checks. Pinned donor test data and schematic remain attributed upstream assets."
     }
@@ -140,8 +140,8 @@
         "reference_count": 883
       },
       "captures": 7,
-      "exact_rgb_captures": 5,
-      "max_rgb_differing_pixels": 75
+      "exact_rgb_captures": 6,
+      "max_rgb_differing_pixels": 24
     },
     "dips": {
       "status": "FAIL",
@@ -355,10 +355,10 @@
     }
   },
   "current_build": {
-    "source_sha256": "74175c5e4b31bae5925fef0b825ffce7058bbd631c5c62161e7152092af7e68f",
+    "source_sha256": "c1ac2dbb096161f256dfd26d1f51329e3cb630d8515a74b87aea7f470a9b9360",
     "files": {
       "rtl/drmicro_pkg.sv": "5be3b81e0dc09074436d4a2092e37b06a4b4edcee3d110961b44862654da6826",
-      "rtl/drmicro_clock_en.sv": "7ad391f9c1c1659562df04470d5d09e73410a2e571411135012e24d4da0db684",
+      "rtl/drmicro_clock_en.sv": "95411f82c9a0770548f778fbdd94f1da51db07b11b6f6dce1acc5ac6386064d0",
       "rtl/drmicro_rom_loader.sv": "abf823c848cebc9892443108e4f05af5c48e877ab053829b95e60f1bc3c24faa",
       "rtl/drmicro_bus.sv": "30e6346641a4a2cce55e339b69d5a051a122ed8a546c0f5bea5d57e3d5c7f16c",
       "rtl/drmicro_memory.sv": "c3d816654f582a4bbda81131fdb96ba9440230550552584ee6a1183ff5b88031",
@@ -366,8 +366,8 @@
       "rtl/sn76496_jt89.sv": "e19429a0560ab9cf68a1859b3b81c0a31554639cafc0245507a90f12221b0b9f",
       "rtl/drmicro_adpcm_ctrl.sv": "c217d9f82d94e7e9bf1bb6d635adc9d3fed942e13d1798f10172deb6b30839de",
       "rtl/drmicro_sound.sv": "5ee6172a604a92bf8e6495bbbb7cc8f0e98bcbc3304163878aab42e8a0024621",
-      "rtl/drmicro_video.sv": "9976041d7a748a9c6977f9c95ece90097160cfadeebf2434ee8cba8643f745d8",
-      "rtl/drmicro_core.sv": "436a9b7b22a3c9df4729ee4b58925b2b66a9df945c3441eb977a20a3cf6766ac",
+      "rtl/drmicro_video.sv": "a3c8377fac2002bf8695d6d9bbca1c5bf254a18d6dcc25bd93f8a3734dd454e1",
+      "rtl/drmicro_core.sv": "cbcd7841a4ca687613981228b55252e71bc501239fcd6fdd29843b6703f0f968",
       "rtl/derived/tv80_core.v": "90d5531da72002c8d54fb6d3efb8814adffc33fe7428e9f9b7800663d46a09a5",
       "rtl/vendor/tv80/tv80_alu.v": "d20d6132bbf88a69b1b2677030a592e1a89006e1cee1015a2b9bdcf8fe856509",
       "rtl/derived/tv80_mcode.v": "c438c47187b18ccf565a1444251d41c14750f0cec92adeae36ade0cc4712c124",
@@ -379,13 +379,14 @@
       "rtl/vendor/jt5205/hdl/jt5205_interpol2x.v": "a33cb5259e91fad8b856371476faa7c0c1d2f4c6df36e6773c7e6e5120ab1731",
       "sim/core.f": "4d7e39a102d7dd0f09d3fb3383cbbdfe50dd00cdd477a6275d375ba147ae6e04",
       "sim/observe.vlt": "ce546b494e699d59d85fd7399224c9bb0ceacdc3a8e04a3b80dcf96355072f05",
-      "sim/main.cpp": "e080a9cb791ca36822c62e426500f30fb81c8c205345bff39bc6ebaa8ff50f65"
+      "sim/main.cpp": "5dd25466b5cb387ec9f983678ed00a489f8a7007b224c7de2d9caf201e3b5b17"
     },
-    "binary_sha256": "06fac86dccce718647fd27d270e9fe4440d6cb657c8afc05a9a1d20d255399d0",
+    "binary_sha256": "51df77fe83d67f743ae5c512f689181e633d73e12a23a5eea1afe04fefe8ee69",
     "defines": [
       "TV80_REFRESH"
     ],
-    "nmi_line": 240,
+    "nmi_line": 239,
+    "nmi_x": 316,
     "frame_origin": 240
   },
   "hardware": {

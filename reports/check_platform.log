@@ -13,7 +13,7 @@
   120 | endmodule
       |          ^
 %Warning-DECLFILENAME: rtl\drmicro_clock_en.sv:2:8: Filename 'drmicro_clock_en' does not match MODULE name: 'drmicro_ce'
-    2 | module drmicro_ce #(parameter integer RATE=3072000, CLOCK=50000000)(
+    2 | module drmicro_ce #(parameter integer RATE=3072000, CLOCK=50000000, INITIAL_PHASE=0)(
       |        ^~~~~~~~~~
                        ... For warning description see https://verilator.org/warn/DECLFILENAME?v=5.051
                        ... Use "/* verilator lint_off DECLFILENAME */" and lint_on around source to disable this message.
@@ -40,14 +40,14 @@
 %Warning-PINCONNECTEMPTY: rtl\drmicro_sound.sv:19:155: Instance pin connected by name with empty reference: 'irq'
    19 |  jt5205 #(.INTERPOL(0),.VCLK_CEN(1)) decoder(.rst(reset|pcm_reset),.clk(clk),.cen(adpcm_ce),.sel(2'd1),.din(nibble),.sound(adpcm),.sample(sample_strobe),.irq(),.vclk_o(vclk));
       |                                                                                                                                                           ^~~
-%Warning-PINCONNECTEMPTY: rtl\drmicro_core.sv:46:274: Instance pin connected by name with empty reference: 'busak_n'
-   46 |  tv80s #(.Mode(0),.T2Write(0),.IOWait(1)) cpu(.clk(clk),.cen(cpu_ce),.reset_n(running),.wait_n(1'b1),.int_n(1'b1),.nmi_n(nmi_n),.busrq_n(1'b1),.di(di),.dout(dout),.A(addr),.mreq_n(mreq_n),.iorq_n(iorq_n),.rd_n(rd_n),.wr_n(wr_n),.rfsh_n(rfsh_n),.m1_n(m1_n),.halt_n(halt_n),.busak_n());
+%Warning-PINCONNECTEMPTY: rtl\drmicro_core.sv:47:274: Instance pin connected by name with empty reference: 'busak_n'
+   47 |  tv80s #(.Mode(0),.T2Write(0),.IOWait(1)) cpu(.clk(clk),.cen(cpu_ce),.reset_n(running),.wait_n(1'b1),.int_n(1'b1),.nmi_n(nmi_n),.busrq_n(1'b1),.di(di),.dout(dout),.A(addr),.mreq_n(mreq_n),.iorq_n(iorq_n),.rd_n(rd_n),.wr_n(wr_n),.rfsh_n(rfsh_n),.m1_n(m1_n),.halt_n(halt_n),.busak_n());
       |                                                                                                                                                                                                                                                                                  ^~~~~~~
-%Warning-PINCONNECTEMPTY: rtl\drmicro_core.sv:64:247: Instance pin connected by name with empty reference: 'sample_strobe'
-   64 |  drmicro_sound sound(.clk(clk),.reset(!running),.psg_ce(cpu_ce),.adpcm_ce(adpcm_ce),.io_write(io_write&&running),.port_addr(addr[7:0]),.data(dout),.sample_addr(sa),.sample_data(sd),.audio(audio),.psg0(psg0),.psg1(psg1),.psg2(psg2),.adpcm(adpcm),.sample_strobe(),.sample_position());
+%Warning-PINCONNECTEMPTY: rtl\drmicro_core.sv:65:247: Instance pin connected by name with empty reference: 'sample_strobe'
+   65 |  drmicro_sound sound(.clk(clk),.reset(!running),.psg_ce(cpu_ce),.adpcm_ce(adpcm_ce),.io_write(io_write&&running),.port_addr(addr[7:0]),.data(dout),.sample_addr(sa),.sample_data(sd),.audio(audio),.psg0(psg0),.psg1(psg1),.psg2(psg2),.adpcm(adpcm),.sample_strobe(),.sample_position());
       |                                                                                                                                                                                                                                                       ^~~~~~~~~~~~~
-%Warning-PINCONNECTEMPTY: rtl\drmicro_core.sv:64:264: Instance pin connected by name with empty reference: 'sample_position'
-   64 |  drmicro_sound sound(.clk(clk),.reset(!running),.psg_ce(cpu_ce),.adpcm_ce(adpcm_ce),.io_write(io_write&&running),.port_addr(addr[7:0]),.data(dout),.sample_addr(sa),.sample_data(sd),.audio(audio),.psg0(psg0),.psg1(psg1),.psg2(psg2),.adpcm(adpcm),.sample_strobe(),.sample_position());
+%Warning-PINCONNECTEMPTY: rtl\drmicro_core.sv:65:264: Instance pin connected by name with empty reference: 'sample_position'
+   65 |  drmicro_sound sound(.clk(clk),.reset(!running),.psg_ce(cpu_ce),.adpcm_ce(adpcm_ce),.io_write(io_write&&running),.port_addr(addr[7:0]),.data(dout),.sample_addr(sa),.sample_data(sd),.audio(audio),.psg0(psg0),.psg1(psg1),.psg2(psg2),.adpcm(adpcm),.sample_strobe(),.sample_position());
       |                                                                                                                                                                                                                                                                        ^~~~~~~~~~~~~~~
 %Warning-PINCONNECTEMPTY: rtl/vendor/tv80\tv80s.v:88:7: Instance pin connected by name with empty reference: 'IntE'
    88 |      .IntE (),
@@ -315,7 +315,7 @@
                        ... For warning description see https://verilator.org/warn/TIMESCALEMOD?v=5.051
                        ... Use "/* verilator lint_off TIMESCALEMOD */" and lint_on around source to disable this message.
 %Warning-TIMESCALEMOD: rtl\drmicro_clock_en.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
-    2 | module drmicro_ce #(parameter integer RATE=3072000, CLOCK=50000000)(
+    2 | module drmicro_ce #(parameter integer RATE=3072000, CLOCK=50000000, INITIAL_PHASE=0)(
       |        ^~~~~~~~~~
                        sys\video_mixer.sv:19:8: ... Location of module with timescale
    19 | module video_mixer
@@ -363,7 +363,7 @@
    19 | module video_mixer
       |        ^~~~~~~~~~~
 %Warning-TIMESCALEMOD: rtl\drmicro_video.sv:4:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
-    4 | module drmicro_video #(parameter integer NMI_LINE=240)(
+    4 | module drmicro_video #(parameter integer NMI_LINE=239, NMI_X=312, FRAME_ORIGIN=240)(
       |        ^~~~~~~~~~~~~
                        sys\video_mixer.sv:19:8: ... Location of module with timescale
    19 | module video_mixer
@@ -1743,13 +1743,13 @@
                        sys\hps_io.sv:345:24: ... Location of sync usage
   345 |       'h32: io_dout <= gamma_bus[21];
       |                        ^~~~~~~~~
-%Warning-SYNCASYNCNET: rtl\drmicro_core.sv:16:33: Signal flopped as both synchronous and async: 'emu.board.running'
+%Warning-SYNCASYNCNET: rtl\drmicro_core.sv:17:33: Signal flopped as both synchronous and async: 'emu.board.running'
                                                 : ... note: In instance 'emu.board'
                        rtl/vendor/tv80\tv80s.v:101:12: ... Location of async usage
   101 |       if (!reset_n)
       |            ^~~~~~~
-                       rtl\drmicro_core.sv:51:7: ... Location of sync usage
-   51 |   if(!running)begin nmi_enable<=0;flip<=0;nmi_hold<=0;end
+                       rtl\drmicro_core.sv:52:7: ... Location of sync usage
+   52 |   if(!running)begin nmi_enable<=0;flip<=0;nmi_hold<=0;end
       |       ^~~~~~~
 %Warning-SYNCASYNCNET: rtl/vendor/jt5205/hdl\jt5205.v:20:28: Signal flopped as both synchronous and async: 'emu.board.sound.__Vcellinp__decoder__rst'
                                                            : ... note: In instance 'emu.board'
@@ -1775,5 +1775,5 @@
                     sys\emu_ports.vh:9:15:      Example path: ASSIGNW
                     sys\emu_ports.vh:9:15:      Example path: HPS_BUS
 - V e r i l a t i o n   R e p o r t: Verilator 5.051 devel rev v5.050-312-gb1c06fdb0 (mod)
-- Verilator: Built from 4.036 MB sources in 65 modules, into 1.572 MB in 15 C++ files needing 0.000 MB
-- Verilator: Walltime 0.453 s (elab=0.043, cvt=0.337, bld=0.000); cpu 0.000 s on 1 threads; allocated 88.633 MB
+- Verilator: Built from 4.041 MB sources in 65 modules, into 1.572 MB in 15 C++ files needing 0.000 MB
+- Verilator: Walltime 0.529 s (elab=0.075, cvt=0.345, bld=0.000); cpu 0.000 s on 1 threads; allocated 88.719 MB

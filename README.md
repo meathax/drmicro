@@ -2,7 +2,7 @@
 
 This is a native synthesizable HDL implementation executing the original Z80 ROMs with TV80. It includes both tile layers, both sprite banks, PROM palette, three SN76496 adaptations, JT5205 ADPCM, controls, a validated byte loader and a real MiSTer emu wrapper. MAME is used only as an external reference. No software CPU, renderer or prerecorded game runs inside the core.
 
-**This is not an RBF release or a hardware-verified core. Quartus 17.0.2 is available for explicit Analysis & Synthesis, fitting and timing checks.** Read [implementation status](docs/implementation_status.md) and the machine-readable [test report](reports/test_report.json) for actual completion gates and remaining differences.
+**This is not an RBF release or a hardware-verified core. Quartus 17.0.2 is available for explicit Analysis & Synthesis, fitting and timing checks.** Read the [completion plan](docs/plan.md), [implementation status](docs/implementation_status.md) and machine-readable [test report](reports/test_report.json) for actual completion gates and remaining differences.
 
 From Windows PowerShell, run `./tools/dev.ps1 <command>`. On Linux/MSYS with Python 3, use `python3 tools/dev.py <command>` or `sh tools/dev.sh <command>`. The scripts locate project-local tools or use PATH; they never change global PATH. Optional Windows tool downloads are isolated in `.tools/`: `tools/bootstrap_tools.py` (Verilator/Icarus), `tools/bootstrap_cpp.py` (portable GCC), and `tools/bootstrap_mame.py` (official reference emulator). They download tools, never game ROMs. Tool versions and binary hashes are recorded in `reports/tool_provenance.json`.
 
