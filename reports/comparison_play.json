@@ -24,7 +24,6 @@
       "video_ram_differing_addresses": [],
       "pixel_difference_bounds": null,
       "ram_differing_addresses": [
-        53038,
         53052,
         53053,
         53162,
@@ -44,7 +43,6 @@
       "video_ram_differing_addresses": [],
       "pixel_difference_bounds": null,
       "ram_differing_addresses": [
-        53038,
         53052,
         53053,
         53162,
@@ -64,7 +62,6 @@
       "video_ram_differing_addresses": [],
       "pixel_difference_bounds": null,
       "ram_differing_addresses": [
-        53038,
         53052,
         53053,
         53162,
@@ -84,7 +81,6 @@
       "video_ram_differing_addresses": [],
       "pixel_difference_bounds": null,
       "ram_differing_addresses": [
-        53038,
         53052,
         53053,
         53162,
@@ -97,46 +93,37 @@
     },
     {
       "frame": "frame_240",
-      "rgb_differing_pixels": 115,
+      "rgb_differing_pixels": 75,
       "offline_mame_snapshot_differing_pixels": 0,
       "backbuffer_vs_displayed_pixels": 30,
       "sprite_records_equal": true,
       "video_ram_differing_addresses": [
-        57441,
         57505,
         57601,
-        57665,
         57825,
-        57889,
         57921,
         57953,
-        57985,
         58017,
         58049
       ],
       "pixel_difference_bounds": [
         8,
-        24,
+        64,
         13,
         183
       ],
       "ram_differing_addresses": [
         53162,
         53163,
-        53166,
-        57441,
         57505,
         57601,
-        57665,
         57825,
-        57889,
         57921,
         57953,
-        57985,
         58017,
         58049
       ],
-      "dut_rgb_sha256": "24c4242882a9f5b882d92334114db0fc37dbeb5140a98ee9977ae66652da62e2",
+      "dut_rgb_sha256": "57d864a16454a20e504d3638a2f365f00682e81bbaf566448adc7a0ed1776919",
       "reference_rgb_sha256": "1dbc5fef09cad138691d5297d3283179ab296e9e75c9b6e7ff8586037d0e347d",
       "offline_dut_snapshot_differing_pixels": 0,
       "offline_dut_snapshot_differing_pens": 0

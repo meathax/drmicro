@@ -15,13 +15,12 @@ Info: Running Quartus Prime Shell
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Sun Sep 06 00:02:26 2026
+    Info: Processing started: Sun Sep 06 07:29:32 2026
 Info: Command: quartus_sh -t sys/build_id.tcl quartus_sh Arcade-DrMicro Arcade-DrMicro
 Info: Quartus(args): quartus_sh Arcade-DrMicro Arcade-DrMicro
-Info: Generated: C:/Users/meath/OneDrive/Documents/dr/build_id.v: `define BUILD_DATE "260906"
 Info (23030): Evaluation of Tcl script sys/build_id.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4730 megabytes
-    Info: Processing ended: Sun Sep 06 00:02:27 2026
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4739 megabytes
+    Info: Processing ended: Sun Sep 06 07:29:32 2026
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00

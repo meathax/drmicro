@@ -33,9 +33,11 @@ module drmicro_core #(
  drmicro_rom_loader loader(.clk(clk),.cold_reset(cold_reset),.download(download),.wr(ioctl_wr),.index(ioctl_index),.addr(ioctl_addr),.data(ioctl_data),.valid(loaded),.error(load_error),.loading(loading),.mem_wr(load_wr),.mem_addr(load_addr),.mem_data(load_data));
  wire reset=cold_reset||game_reset||!loaded||loading;
  assign running=!reset&&!clearing;
- drmicro_ce #(.RATE(CPU_HZ)) cpu_clock(.clk(clk),.reset(cold_reset),.ce(cpu_ce));
- drmicro_ce #(.RATE(ADPCM_HZ)) adpcm_clock(.clk(clk),.reset(cold_reset),.ce(adpcm_ce));
- drmicro_ce #(.RATE(PIXEL_HZ)) pixel_clock(.clk(clk),.reset(cold_reset),.ce(video_ce));
+ // Start all fractional enables when the ROM/RAM reset sequence releases the
+ // board.  This gives CPU and raster a defined shared phase after download.
+ drmicro_ce #(.RATE(CPU_HZ)) cpu_clock(.clk(clk),.reset(!running),.ce(cpu_ce));
+ drmicro_ce #(.RATE(ADPCM_HZ)) adpcm_clock(.clk(clk),.reset(!running),.ce(adpcm_ce));
+ drmicro_ce #(.RATE(PIXEL_HZ)) pixel_clock(.clk(clk),.reset(!running),.ce(video_ce));
  logic [15:0] addr;
  logic [7:0] dout,di,mem_data,p1,p2;
  logic mreq_n,iorq_n,rd_n,wr_n,rfsh_n,m1_n,nmi_n,halt_n;

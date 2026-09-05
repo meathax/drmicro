@@ -15,7 +15,7 @@ Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Sun Sep 06 00:16:20 2026
+    Info: Processing started: Sun Sep 06 07:40:07 2026
 Info: Command: quartus_sta -t tools/quartus_corners.tcl
 Warning (20013): Ignored 13 assignments for entity "pll" -- entity does not exist in design
 Warning (20013): Ignored 317 assignments for entity "pll_0002" -- entity does not exist in design
@@ -85,22 +85,22 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
     Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_2  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_1
     Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_3  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_0
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332115): Report Timing: Found 5 setup paths (0 violated).  Worst case slack is 0.138
+Info (332115): Report Timing: Found 5 setup paths (0 violated).  Worst case slack is 0.580
     Info (332115): -setup
     Info (332115): -npaths 5
     Info (332115): -detail full_path
     Info (332115): -file {reports/quartus_corner_0_setup.rpt}
-Info (332115): Report Timing: Found 5 hold paths (0 violated).  Worst case slack is 0.250
+Info (332115): Report Timing: Found 5 hold paths (0 violated).  Worst case slack is 0.251
     Info (332115): -hold
     Info (332115): -npaths 5
     Info (332115): -detail full_path
     Info (332115): -file {reports/quartus_corner_0_hold.rpt}
-Info (332115): Report Timing: Found 5 recovery paths (0 violated).  Worst case slack is 4.048
+Info (332115): Report Timing: Found 5 recovery paths (0 violated).  Worst case slack is 3.943
     Info (332115): -recovery
     Info (332115): -npaths 5
     Info (332115): -detail full_path
     Info (332115): -file {reports/quartus_corner_0_recovery.rpt}
-Info (332115): Report Timing: Found 5 removal paths (0 violated).  Worst case slack is 0.889
+Info (332115): Report Timing: Found 5 removal paths (0 violated).  Worst case slack is 1.083
     Info (332115): -removal
     Info (332115): -npaths 5
     Info (332115): -detail full_path
@@ -130,22 +130,22 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
     Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_2  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_1
     Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_3  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_0
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332115): Report Timing: Found 5 setup paths (0 violated).  Worst case slack is 0.085
+Info (332115): Report Timing: Found 5 setup paths (0 violated).  Worst case slack is 0.217
     Info (332115): -setup
     Info (332115): -npaths 5
     Info (332115): -detail full_path
     Info (332115): -file {reports/quartus_corner_1_setup.rpt}
-Info (332115): Report Timing: Found 5 hold paths (0 violated).  Worst case slack is 0.118
+Info (332115): Report Timing: Found 5 hold paths (0 violated).  Worst case slack is 0.117
     Info (332115): -hold
     Info (332115): -npaths 5
     Info (332115): -detail full_path
     Info (332115): -file {reports/quartus_corner_1_hold.rpt}
-Info (332115): Report Timing: Found 5 recovery paths (0 violated).  Worst case slack is 4.149
+Info (332115): Report Timing: Found 5 recovery paths (0 violated).  Worst case slack is 4.122
     Info (332115): -recovery
     Info (332115): -npaths 5
     Info (332115): -detail full_path
     Info (332115): -file {reports/quartus_corner_1_recovery.rpt}
-Info (332115): Report Timing: Found 5 removal paths (0 violated).  Worst case slack is 0.869
+Info (332115): Report Timing: Found 5 removal paths (0 violated).  Worst case slack is 0.996
     Info (332115): -removal
     Info (332115): -npaths 5
     Info (332115): -detail full_path
@@ -175,22 +175,22 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
     Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_2  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_1
     Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_3  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_0
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332115): Report Timing: Found 5 setup paths (0 violated).  Worst case slack is 3.285
+Info (332115): Report Timing: Found 5 setup paths (0 violated).  Worst case slack is 3.130
     Info (332115): -setup
     Info (332115): -npaths 5
     Info (332115): -detail full_path
     Info (332115): -file {reports/quartus_corner_2_setup.rpt}
-Info (332115): Report Timing: Found 5 hold paths (0 violated).  Worst case slack is 0.134
+Info (332115): Report Timing: Found 5 hold paths (0 violated).  Worst case slack is 0.101
     Info (332115): -hold
     Info (332115): -npaths 5
     Info (332115): -detail full_path
     Info (332115): -file {reports/quartus_corner_2_hold.rpt}
-Info (332115): Report Timing: Found 5 recovery paths (0 violated).  Worst case slack is 5.237
+Info (332115): Report Timing: Found 5 recovery paths (0 violated).  Worst case slack is 5.039
     Info (332115): -recovery
     Info (332115): -npaths 5
     Info (332115): -detail full_path
     Info (332115): -file {reports/quartus_corner_2_recovery.rpt}
-Info (332115): Report Timing: Found 5 removal paths (0 violated).  Worst case slack is 0.429
+Info (332115): Report Timing: Found 5 removal paths (0 violated).  Worst case slack is 0.554
     Info (332115): -removal
     Info (332115): -npaths 5
     Info (332115): -detail full_path
@@ -218,22 +218,22 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
     Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_2  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_1
     Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_3  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_0
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332115): Report Timing: Found 5 setup paths (0 violated).  Worst case slack is 3.656
+Info (332115): Report Timing: Found 5 setup paths (0 violated).  Worst case slack is 3.778
     Info (332115): -setup
     Info (332115): -npaths 5
     Info (332115): -detail full_path
     Info (332115): -file {reports/quartus_corner_3_setup.rpt}
-Info (332115): Report Timing: Found 5 hold paths (0 violated).  Worst case slack is 0.086
+Info (332115): Report Timing: Found 5 hold paths (0 violated).  Worst case slack is 0.080
     Info (332115): -hold
     Info (332115): -npaths 5
     Info (332115): -detail full_path
     Info (332115): -file {reports/quartus_corner_3_hold.rpt}
-Info (332115): Report Timing: Found 5 recovery paths (0 violated).  Worst case slack is 5.461
+Info (332115): Report Timing: Found 5 recovery paths (0 violated).  Worst case slack is 5.329
     Info (332115): -recovery
     Info (332115): -npaths 5
     Info (332115): -detail full_path
     Info (332115): -file {reports/quartus_corner_3_recovery.rpt}
-Info (332115): Report Timing: Found 5 removal paths (0 violated).  Worst case slack is 0.370
+Info (332115): Report Timing: Found 5 removal paths (0 violated).  Worst case slack is 0.469
     Info (332115): -removal
     Info (332115): -npaths 5
     Info (332115): -detail full_path
@@ -245,7 +245,7 @@ Info (332113): Report Minimum Pulse Width: Found 5 results (0 violated).  Worst 
 Completed 4 operating-condition audits
 Info (23030): Evaluation of Tcl script tools/quartus_corners.tcl was successful
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 5902 megabytes
-    Info: Processing ended: Sun Sep 06 00:17:12 2026
-    Info: Elapsed time: 00:00:52
-    Info: Total CPU time (on all processors): 00:01:22
+    Info: Peak virtual memory: 5913 megabytes
+    Info: Processing ended: Sun Sep 06 07:41:09 2026
+    Info: Elapsed time: 00:01:02
+    Info: Total CPU time (on all processors): 00:01:31

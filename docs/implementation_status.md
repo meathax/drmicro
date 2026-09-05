@@ -22,19 +22,19 @@ This is a native HDL core executing the audited original ROMs in Verilator, with
 | Actual HPS wrapper | PASS | ROM download/rejection, DIP updates without reset, both joysticks, PS/2 make/break, aspect and OSD reset followed by CPU execution. Real emu and hps_io; physical HPS bridge excluded. |
 | Actual video pipeline / rotation | PASS | Native coordinate colours, gamma, scandoubler and HQ2x output counts; CCW DDR address/byte-lane mapping and bypass. Behavioural always-ready DDR boundary. |
 | Platform warning gate | PASS | 93 exact-message, source-hash-bound donor waivers with explanations. New structural/implicit/undriven warnings fail. Logs retain all warnings. |
-| Quartus Analysis & Synthesis | PASS | Quartus 17.0.2, full sys_top, zero errors; 1,507,777 memory bits and 15,105 registers before final fit. Clock-switch legality fixed with a retained patch. |
-| Quartus fitting | PASS | 10,095/41,910 ALMs (24%), 202/553 RAM blocks (37%), 1,507,777 memory bits (27%), 34/112 DSPs (30%); zero fitter errors. |
-| TimeQuest constrained timing | PASS | Four corners: minimum setup +0.085 ns, hold +0.086 ns, recovery +4.048 ns, removal +0.370 ns, pulse width +1.122 ns. Zero unconstrained clocks. |
+| Quartus Analysis & Synthesis | PASS | Quartus 17.0.2, full sys_top, zero errors and 76 reviewed warnings. Clock-switch legality is retained in a source patch. |
+| Quartus fitting | PASS | 10,085/41,910 ALMs (24%), 14,917 registers, 202/553 RAM blocks (37%), 1,507,777 memory bits (27%), 34/112 DSPs (30%); zero fitter errors. |
+| TimeQuest constrained timing | PASS | Four corners: minimum setup +0.217 ns, hold +0.080 ns, recovery +3.943 ns, removal +0.469 ns, pulse width +1.122 ns. Zero unconstrained clocks. |
 | External I/O timing closure | NOT_RUN | Inherited constraints leave 5 inputs and 50 outputs partly/unconstrained, including HDMI. No fabricated pin budgets or blanket false paths were added. |
 | Future project / MRA | PASS | Explicit source closure, simulation/FPGA TV80_REFRESH agreement, recursive QIP paths and independent byte-for-byte reconstruction of the 107,040-byte MRA payload. Not Quartus validation. |
-| Strict moving-game comparison | FAIL | Short play differs by 115 and 28 pixels at frames 240/300. Long two-player run has six exact captures out of 62, up to 993 differing pixels; first full-I/O ordering divergence occurs around death, frame 2233/2234. Per-chip sound commands still match. |
+| Strict moving-game comparison | FAIL | After reset-aligning the fractional CPU/raster enables, short play differs by 75 and 28 pixels at frames 240/300 while all 1,154 writes and 883 reads remain exact. Long two-player evidence predates that timing refinement: six exact captures out of 62, up to 993 differing pixels; first full-I/O ordering divergence occurs around death, frame 2233/2234. Per-chip sound commands still match. |
 | Physical platform / hardware | NOT_RUN | DE10-Nano validation remains future work. No RBF exists. |
 
 `reports/verification_summary.json` is the overall strict gate and stays FAIL while moving-game equivalence is unresolved. `reports/test_report.json` contains the latest command results; `reports/test_history.jsonl` preserves later invocations. Script-specific comparisons retain strict failures. Ignored capture result files include ROM/source/runner/binary hashes and build configuration. `reports/milestones.json` records reference-correlated outcomes separately from strict trajectory equivalence.
 
 ## Remaining issues
 
-**Implementation/comparison:** Strict moving-game equivalence remains unresolved. Water-animation RAM differences and a later death-transition timing difference remain visible. Independent rendering of each side's RAM distinguishes game-state differences from live raster/snapshot timing. All 62 reference snapshots match the independent renderer; the DUT agrees with its own captured RAM on 34 frames, with up to 99 pixels/pens differing due to the live/snapshot boundary. Those observations do not waive the cross-reference failures. The game uses Z80 R for randomness; that observation alone does not prove every difference harmless. Do not call the core perfect or cycle-exact.
+**Implementation/comparison:** Strict moving-game equivalence remains unresolved. Resetting the fractional CPU, audio and raster enables while the board is held in ROM/RAM reset improved the 240-frame water difference from 115 to 75 pixels, but water-animation RAM differences and a later death-transition timing difference remain visible. Independent rendering of each side's RAM distinguishes game-state differences from live raster/snapshot timing. All 62 reference snapshots match the independent renderer; the DUT agrees with its own captured RAM on 34 frames, with up to 99 pixels/pens differing due to the live/snapshot boundary. Those observations do not waive the cross-reference failures. The game uses Z80 R for randomness; that observation alone does not prove every difference harmless. Do not call the core perfect or cycle-exact.
 
 **Missing assets/tools:** None block current simulation/reference checks. The user ROMs and local Verilator, Icarus, GCC and MAME are available. The optional GUI capture viewer is not part of the verified path.
 
@@ -42,4 +42,4 @@ This is a native HDL core executing the audited original ROMs in Verilator, with
 
 **Quartus/on-device:** Analysis & Synthesis, fitting and four-corner constrained timing pass. External I/O timing coverage is incomplete. Physical HPS/DDR, HDMI/direct-video, orientation, controls and audio still require DE10-Nano testing. No RBF generation or programming has been performed.
 
-The private GitHub repository is `meathax/drmicro`; origin is configured. No source has been pushed.
+The private GitHub repository is `meathax/drmicro`; origin is configured and the committed source checkpoints are pushed.

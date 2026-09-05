@@ -15,9 +15,12 @@ Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Sun Sep 06 00:16:14 2026
+    Info: Processing started: Sun Sep 06 07:39:58 2026
 Info: Command: quartus_sta Arcade-DrMicro -c Arcade-DrMicro
 Info: qsta_default_script.tcl version: #1
+Info (293031): Detected changes in Quartus Prime Settings File (.qsf).
+    Info (293028): Assignment ROUTER_TIMING_OPTIMIZATION_LEVEL changed value from MAXIMUM to NORMAL.
+    Info (293028): Assignment PLACEMENT_EFFORT_MULTIPLIER changed value from 4.0 to 1.0.
 Warning (20013): Ignored 13 assignments for entity "pll" -- entity does not exist in design
 Warning (20013): Ignored 317 assignments for entity "pll_0002" -- entity does not exist in design
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
@@ -66,48 +69,48 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
     Info (332098): From: sysmem|fpga_interfaces|f2sdram|wr_clk_3  to: sysmem_lite:sysmem|sysmem_HPS_fpga_interfaces:fpga_interfaces|f2sdram~FF_0
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Info (332146): Worst-case setup slack is 0.138
+Info (332146): Worst-case setup slack is 0.580
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.138               0.000 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
-    Info (332119):     3.152               0.000 sysmem|fpga_interfaces|clocks_resets|h2f_user0_clk 
-    Info (332119):     4.870               0.000 FPGA_CLK2_50 
-    Info (332119):     5.671               0.000 spi_sck 
-    Info (332119):     8.629               0.000 FPGA_CLK1_50 
-    Info (332119):    15.800               0.000 pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.250
+    Info (332119):     0.580               0.000 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     3.421               0.000 sysmem|fpga_interfaces|clocks_resets|h2f_user0_clk 
+    Info (332119):     4.018               0.000 FPGA_CLK2_50 
+    Info (332119):     5.992               0.000 spi_sck 
+    Info (332119):     7.921               0.000 FPGA_CLK1_50 
+    Info (332119):    15.629               0.000 pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.251
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.250               0.000 FPGA_CLK2_50 
-    Info (332119):     0.256               0.000 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
-    Info (332119):     0.260               0.000 pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.357               0.000 sysmem|fpga_interfaces|clocks_resets|h2f_user0_clk 
-    Info (332119):     0.366               0.000 spi_sck 
-    Info (332119):     0.415               0.000 FPGA_CLK1_50 
-Info (332146): Worst-case recovery slack is 4.048
+    Info (332119):     0.251               0.000 FPGA_CLK2_50 
+    Info (332119):     0.257               0.000 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     0.272               0.000 pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.322               0.000 sysmem|fpga_interfaces|clocks_resets|h2f_user0_clk 
+    Info (332119):     0.409               0.000 FPGA_CLK1_50 
+    Info (332119):     0.465               0.000 spi_sck 
+Info (332146): Worst-case recovery slack is 3.943
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     4.048               0.000 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
-    Info (332119):     6.723               0.000 sysmem|fpga_interfaces|clocks_resets|h2f_user0_clk 
-    Info (332119):    11.103               0.000 FPGA_CLK2_50 
-    Info (332119):    15.728               0.000 FPGA_CLK1_50 
-Info (332146): Worst-case removal slack is 0.889
+    Info (332119):     3.943               0.000 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     7.723               0.000 sysmem|fpga_interfaces|clocks_resets|h2f_user0_clk 
+    Info (332119):     9.234               0.000 FPGA_CLK2_50 
+    Info (332119):    17.229               0.000 FPGA_CLK1_50 
+Info (332146): Worst-case removal slack is 1.083
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.889               0.000 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
-    Info (332119):     1.228               0.000 FPGA_CLK1_50 
-    Info (332119):     1.964               0.000 sysmem|fpga_interfaces|clocks_resets|h2f_user0_clk 
-    Info (332119):     2.002               0.000 FPGA_CLK2_50 
+    Info (332119):     1.083               0.000 FPGA_CLK1_50 
+    Info (332119):     1.258               0.000 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     1.374               0.000 FPGA_CLK2_50 
+    Info (332119):     1.404               0.000 sysmem|fpga_interfaces|clocks_resets|h2f_user0_clk 
 Info (332146): Worst-case minimum pulse width slack is 1.122
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     1.122               0.000 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0] 
     Info (332119):     1.196               0.000 pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     1.939               0.000 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
-    Info (332119):     3.582               0.000 sysmem|fpga_interfaces|clocks_resets|h2f_user0_clk 
-    Info (332119):     4.260               0.000 spi_sck 
-    Info (332119):     8.813               0.000 FPGA_CLK2_50 
-    Info (332119):     9.213               0.000 FPGA_CLK1_50 
+    Info (332119):     1.929               0.000 pll_hdmi|pll_hdmi_inst|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk 
+    Info (332119):     3.592               0.000 sysmem|fpga_interfaces|clocks_resets|h2f_user0_clk 
+    Info (332119):     4.268               0.000 spi_sck 
+    Info (332119):     8.804               0.000 FPGA_CLK2_50 
+    Info (332119):     9.207               0.000 FPGA_CLK1_50 
     Info (332119):     9.730               0.000 FPGA_CLK3_50 
     Info (332119):    18.904               0.000 pll_audio|pll_audio_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332114): Report Metastability: Found 426 synchronizer chains.
@@ -117,7 +120,7 @@ Info (332114): Report Metastability: Found 426 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 426
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.991
-    Info (332114): Worst Case Available Settling Time: 3.536 ns
+    Info (332114): Worst Case Available Settling Time: 2.349 ns
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 8.0
     Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
@@ -126,6 +129,6 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 5225 megabytes
-    Info: Processing ended: Sun Sep 06 00:16:19 2026
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Processing ended: Sun Sep 06 07:40:07 2026
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:10

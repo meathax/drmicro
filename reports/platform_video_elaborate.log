@@ -449,5 +449,5 @@
   132 |  .B((DW!=24) ? B[7:4] : B),
       |              ^
 - V e r i l a t i o n   R e p o r t: Verilator 5.051 devel rev v5.050-312-gb1c06fdb0 (mod)
-- Verilator: Built from 4.308 MB sources in 66 modules, into 0.289 MB in 6 C++ files needing 0.000 MB
-- Verilator: Walltime 0.095 s (elab=0.018, cvt=0.024, bld=0.000); cpu 0.078 s on 1 threads; allocated 28.898 MB
+- Verilator: Built from 4.309 MB sources in 66 modules, into 0.289 MB in 6 C++ files needing 0.000 MB
+- Verilator: Walltime 0.116 s (elab=0.020, cvt=0.037, bld=0.000); cpu 0.000 s on 1 threads; allocated 29.086 MB

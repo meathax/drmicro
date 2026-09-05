@@ -15,7 +15,7 @@ Info: Running Quartus Prime Analysis & Synthesis
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Sun Sep 06 00:02:27 2026
+    Info: Processing started: Sun Sep 06 07:29:33 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Arcade-DrMicro -c Arcade-DrMicro
 Info (16303): High Performance Effort optimization mode selected -- timing performance will be prioritized at the potential cost of increased compilation time
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
@@ -624,10 +624,10 @@ Info (10264): Verilog HDL Case Statement information at hps_io.sv(458): all case
 Info (12128): Elaborating entity "video_calc" for hierarchy "emu:emu|hps_io:hps|video_calc:video_calc" File: C:/Users/meath/OneDrive/Documents/dr/sys/hps_io.sv Line: 248
 Info (12128): Elaborating entity "drmicro_core" for hierarchy "emu:emu|drmicro_core:board" File: C:/Users/meath/OneDrive/Documents/dr/Arcade-DrMicro.sv Line: 94
 Info (12128): Elaborating entity "drmicro_rom_loader" for hierarchy "emu:emu|drmicro_core:board|drmicro_rom_loader:loader" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 33
-Info (12128): Elaborating entity "drmicro_ce" for hierarchy "emu:emu|drmicro_core:board|drmicro_ce:cpu_clock" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 36
-Info (12128): Elaborating entity "drmicro_ce" for hierarchy "emu:emu|drmicro_core:board|drmicro_ce:adpcm_clock" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 37
-Info (12128): Elaborating entity "drmicro_ce" for hierarchy "emu:emu|drmicro_core:board|drmicro_ce:pixel_clock" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 38
-Info (12128): Elaborating entity "tv80s" for hierarchy "emu:emu|drmicro_core:board|tv80s:cpu" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 44
+Info (12128): Elaborating entity "drmicro_ce" for hierarchy "emu:emu|drmicro_core:board|drmicro_ce:cpu_clock" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 38
+Info (12128): Elaborating entity "drmicro_ce" for hierarchy "emu:emu|drmicro_core:board|drmicro_ce:adpcm_clock" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 39
+Info (12128): Elaborating entity "drmicro_ce" for hierarchy "emu:emu|drmicro_core:board|drmicro_ce:pixel_clock" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 40
+Info (12128): Elaborating entity "tv80s" for hierarchy "emu:emu|drmicro_core:board|tv80s:cpu" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 46
 Info (12128): Elaborating entity "tv80_core" for hierarchy "emu:emu|drmicro_core:board|tv80s:cpu|tv80_core:i_tv80_core" File: C:/Users/meath/OneDrive/Documents/dr/rtl/vendor/tv80/tv80s.v Line: 97
 Warning (10230): Verilog HDL assignment warning at tv80_core.v(447): truncated value with size 32 to match size of target (7) File: C:/Users/meath/OneDrive/Documents/dr/rtl/derived/tv80_core.v Line: 447
 Warning (10230): Verilog HDL assignment warning at tv80_core.v(616): truncated value with size 32 to match size of target (16) File: C:/Users/meath/OneDrive/Documents/dr/rtl/derived/tv80_core.v Line: 616
@@ -641,14 +641,14 @@ Warning (10230): Verilog HDL assignment warning at tv80_alu.v(240): truncated va
 Warning (10230): Verilog HDL assignment warning at tv80_alu.v(252): truncated value with size 32 to match size of target (8) File: C:/Users/meath/OneDrive/Documents/dr/rtl/vendor/tv80/tv80_alu.v Line: 252
 Warning (10230): Verilog HDL assignment warning at tv80_alu.v(256): truncated value with size 32 to match size of target (9) File: C:/Users/meath/OneDrive/Documents/dr/rtl/vendor/tv80/tv80_alu.v Line: 256
 Info (12128): Elaborating entity "tv80_reg" for hierarchy "emu:emu|drmicro_core:board|tv80s:cpu|tv80_core:i_tv80_core|tv80_reg:i_reg" File: C:/Users/meath/OneDrive/Documents/dr/rtl/derived/tv80_core.v Line: 1037
-Info (12128): Elaborating entity "drmicro_bus" for hierarchy "emu:emu|drmicro_core:board|drmicro_bus:bus" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 45
-Info (12128): Elaborating entity "drmicro_inputs" for hierarchy "emu:emu|drmicro_core:board|drmicro_inputs:inputs" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 46
-Info (12128): Elaborating entity "drmicro_memory" for hierarchy "emu:emu|drmicro_core:board|drmicro_memory:memory" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 60
-Info (12128): Elaborating entity "drmicro_video" for hierarchy "emu:emu|drmicro_core:board|drmicro_video:video" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 61
+Info (12128): Elaborating entity "drmicro_bus" for hierarchy "emu:emu|drmicro_core:board|drmicro_bus:bus" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 47
+Info (12128): Elaborating entity "drmicro_inputs" for hierarchy "emu:emu|drmicro_core:board|drmicro_inputs:inputs" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 48
+Info (12128): Elaborating entity "drmicro_memory" for hierarchy "emu:emu|drmicro_core:board|drmicro_memory:memory" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 62
+Info (12128): Elaborating entity "drmicro_video" for hierarchy "emu:emu|drmicro_core:board|drmicro_video:video" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 63
 Info (10264): Verilog HDL Case Statement information at drmicro_video.sv(56): all case item expressions in this case statement are onehot File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_video.sv Line: 56
 Warning (10027): Verilog HDL or VHDL warning at the drmicro_video.sv(68): index expression is not wide enough to address all of the elements in the array File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_video.sv Line: 68
 Warning (10027): Verilog HDL or VHDL warning at the drmicro_video.sv(69): index expression is not wide enough to address all of the elements in the array File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_video.sv Line: 69
-Info (12128): Elaborating entity "drmicro_sound" for hierarchy "emu:emu|drmicro_core:board|drmicro_sound:sound" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 62
+Info (12128): Elaborating entity "drmicro_sound" for hierarchy "emu:emu|drmicro_core:board|drmicro_sound:sound" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_core.sv Line: 64
 Info (12128): Elaborating entity "sn76496_jt89" for hierarchy "emu:emu|drmicro_core:board|drmicro_sound:sound|sn76496_jt89:sn0" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_sound.sv Line: 13
 Info (12128): Elaborating entity "drmicro_adpcm_ctrl" for hierarchy "emu:emu|drmicro_core:board|drmicro_sound:sound|drmicro_adpcm_ctrl:ctrl" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_sound.sv Line: 18
 Info (12128): Elaborating entity "jt5205" for hierarchy "emu:emu|drmicro_core:board|drmicro_sound:sound|jt5205:decoder" File: C:/Users/meath/OneDrive/Documents/dr/rtl/drmicro_sound.sv Line: 19
@@ -1528,16 +1528,16 @@ Warning: RST port on the PLL is not properly connected on instance pll_audio:pll
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SD_SPI_MISO" File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 100
     Warning (15610): No output dependent on input pin "ADC_SDO" File: C:/Users/meath/OneDrive/Documents/dr/sys/sys_top.v Line: 110
-Info (21057): Implemented 26701 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 26673 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 97 output pins
     Info (21060): Implemented 32 bidirectional pins
-    Info (21061): Implemented 25398 logic cells
+    Info (21061): Implemented 25370 logic cells
     Info (21064): Implemented 1103 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 34 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 76 warnings
-    Info: Peak virtual memory: 5521 megabytes
-    Info: Processing ended: Sun Sep 06 00:03:37 2026
-    Info: Elapsed time: 00:01:10
+    Info: Peak virtual memory: 5586 megabytes
+    Info: Processing ended: Sun Sep 06 07:30:40 2026
+    Info: Elapsed time: 00:01:07
     Info: Total CPU time (on all processors): 00:00:51

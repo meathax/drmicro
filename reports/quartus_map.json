@@ -16,7 +16,7 @@
       "rtl/drmicro_adpcm_ctrl.sv": "c217d9f82d94e7e9bf1bb6d635adc9d3fed942e13d1798f10172deb6b30839de",
       "rtl/drmicro_bus.sv": "30e6346641a4a2cce55e339b69d5a051a122ed8a546c0f5bea5d57e3d5c7f16c",
       "rtl/drmicro_clock_en.sv": "7ad391f9c1c1659562df04470d5d09e73410a2e571411135012e24d4da0db684",
-      "rtl/drmicro_core.sv": "e3f382012957b8b1b4c17fa0a5fb354b7d0a92f7d302841c5e251f143d420b7b",
+      "rtl/drmicro_core.sv": "436a9b7b22a3c9df4729ee4b58925b2b66a9df945c3441eb977a20a3cf6766ac",
       "rtl/drmicro_inputs.sv": "99e24e9f176eadd86945771b8b453980bf4fe18ec0c4c4569d220e8aa7d40505",
       "rtl/drmicro_memory.sv": "c3d816654f582a4bbda81131fdb96ba9440230550552584ee6a1183ff5b88031",
       "rtl/drmicro_pkg.sv": "5be3b81e0dc09074436d4a2092e37b06a4b4edcee3d110961b44862654da6826",
@@ -117,9 +117,9 @@
       "sys/video_mixer.sv": "f6216a5bf42ef0b9dbb82fe5cf1338fd05e7895fbc9fc3823c865aeb012c9cdb",
       "sys/yc_out.sv": "b31f179f06c89ba1505cc044fdd9aa5609fac0986418f26c840991c34023fc19"
     },
-    "sha256": "8fd04353033aac9a8859789c9d5de72ad2fc65c68d10f47b8ed61c0c951b910c"
+    "sha256": "03d7a7b1debf79a23f017e9deb49061a279b10575cbb6feae47e3a84be3d156f"
   },
   "device": "5CSEBA6U23I7",
-  "started_utc": "2026-09-05T14:02:27Z",
-  "seconds": 70.515
+  "started_utc": "2026-09-05T21:29:32Z",
+  "seconds": 68.064
 }

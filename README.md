@@ -47,7 +47,7 @@ Place only your own `drmicro.zip` in this directory or under `roms/`, `game/`, `
 
 Source lists are explicit: `sim/core.f` for the DUT, `sim/platform.f` for wrapper elaboration, `files.qip` plus pinned platform QIPs for a future hardware build. `screen_rotate` is defined once inside `sys/arcade_video.v`. The QPF/QSF/SDC files have structural checks plus explicit Quartus stage reports. On-chip logical memory is estimated at 992,000 bits; this is not a fitter result.
 
-Third-party source is pinned in `third_party.lock.json`, with complete upstream notices and maintained patches. New contributions use GPL-3.0-or-later; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for file-specific donor licensing. The private GitHub repository was created and connected as origin; source has not been pushed under the current no-push instruction.
+Third-party source is pinned in `third_party.lock.json`, with complete upstream notices and maintained patches. New contributions use GPL-3.0-or-later; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for file-specific donor licensing. The private GitHub repository is connected as origin and committed source checkpoints are pushed.
 
 Additional outcome coverage (run each reference/compare with the same script and frame count):
 

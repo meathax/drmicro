@@ -53,7 +53,7 @@
     },
     "source_audit": {
       "status": "PASS",
-      "files_checked": 524,
+      "files_checked": 525,
       "problems": [],
       "scope": "Git eligible source paths; original ROM member and packed-payload SHA256 matches plus generated-asset path/extension checks. Pinned donor test data and schematic remain attributed upstream assets."
     }
@@ -141,7 +141,7 @@
       },
       "captures": 7,
       "exact_rgb_captures": 5,
-      "max_rgb_differing_pixels": 115
+      "max_rgb_differing_pixels": 75
     },
     "dips": {
       "status": "FAIL",
@@ -355,7 +355,7 @@
     }
   },
   "current_build": {
-    "source_sha256": "16fe09c2958e983bf731737e94f9381dda64642891b039ce45ee21badeefcab2",
+    "source_sha256": "74175c5e4b31bae5925fef0b825ffce7058bbd631c5c62161e7152092af7e68f",
     "files": {
       "rtl/drmicro_pkg.sv": "5be3b81e0dc09074436d4a2092e37b06a4b4edcee3d110961b44862654da6826",
       "rtl/drmicro_clock_en.sv": "7ad391f9c1c1659562df04470d5d09e73410a2e571411135012e24d4da0db684",
@@ -367,7 +367,7 @@
       "rtl/drmicro_adpcm_ctrl.sv": "c217d9f82d94e7e9bf1bb6d635adc9d3fed942e13d1798f10172deb6b30839de",
       "rtl/drmicro_sound.sv": "5ee6172a604a92bf8e6495bbbb7cc8f0e98bcbc3304163878aab42e8a0024621",
       "rtl/drmicro_video.sv": "9976041d7a748a9c6977f9c95ece90097160cfadeebf2434ee8cba8643f745d8",
-      "rtl/drmicro_core.sv": "e3f382012957b8b1b4c17fa0a5fb354b7d0a92f7d302841c5e251f143d420b7b",
+      "rtl/drmicro_core.sv": "436a9b7b22a3c9df4729ee4b58925b2b66a9df945c3441eb977a20a3cf6766ac",
       "rtl/derived/tv80_core.v": "90d5531da72002c8d54fb6d3efb8814adffc33fe7428e9f9b7800663d46a09a5",
       "rtl/vendor/tv80/tv80_alu.v": "d20d6132bbf88a69b1b2677030a592e1a89006e1cee1015a2b9bdcf8fe856509",
       "rtl/derived/tv80_mcode.v": "c438c47187b18ccf565a1444251d41c14750f0cec92adeae36ade0cc4712c124",
@@ -379,9 +379,9 @@
       "rtl/vendor/jt5205/hdl/jt5205_interpol2x.v": "a33cb5259e91fad8b856371476faa7c0c1d2f4c6df36e6773c7e6e5120ab1731",
       "sim/core.f": "4d7e39a102d7dd0f09d3fb3383cbbdfe50dd00cdd477a6275d375ba147ae6e04",
       "sim/observe.vlt": "ce546b494e699d59d85fd7399224c9bb0ceacdc3a8e04a3b80dcf96355072f05",
-      "sim/main.cpp": "c30a0ccb61bcbb57315c8802f18f143d5df56b3063887831612d8b42f2293146"
+      "sim/main.cpp": "e080a9cb791ca36822c62e426500f30fb81c8c205345bff39bc6ebaa8ff50f65"
     },
-    "binary_sha256": "3c67b16a1e3e779be53b3bc522a2391a026765932da1752502cf7f908c3cc11a",
+    "binary_sha256": "06fac86dccce718647fd27d270e9fe4440d6cb657c8afc05a9a1d20d255399d0",
     "defines": [
       "TV80_REFRESH"
     ],

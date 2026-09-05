@@ -1,3 +1,1080 @@
+%Warning-PINMISSING: sys\hps_io.sv:575:14: Instance has missing pin: 'tx_empty'
+  575 |   ps2_device keyboard
+      |              ^~~~~~~~
+                     sys\hps_io.sv:725:15: ... Location of port declaration
+  725 |  output reg   tx_empty,
+      |               ^~~~~~~~
+                     ... For warning description see https://verilator.org/warn/PINMISSING?v=5.051
+                     ... Use "/* verilator lint_off PINMISSING */" and lint_on around source to disable this message.
+%Warning-PINMISSING: sys\hps_io.sv:594:14: Instance has missing pin: 'tx_empty'
+  594 |   ps2_device mouse
+      |              ^~~~~
+                     sys\hps_io.sv:725:15: ... Location of port declaration
+  725 |  output reg   tx_empty,
+      |               ^~~~~~~~
+%Warning-PINMISSING: sys\video_freezer.sv:39:17: Instance has missing pin: 'sync_pt'
+   39 | sync_lock #(33) vs_lock
+      |                 ^~~~~~~
+                     sys\video_freezer.sv:91:10: ... Location of port declaration
+   91 |  output  sync_pt,
+      |          ^~~~~~~
+%Warning-PINMISSING: sys\video_freezer.sv:39:17: Instance has missing pin: 'valid'
+   39 | sync_lock #(33) vs_lock
+      |                 ^~~~~~~
+                     sys\video_freezer.sv:92:10: ... Location of port declaration
+   92 |  output  valid
+      |          ^~~~~
+%Warning-PINMISSING: sys\video_freezer.sv:50:17: Instance has missing pin: 'valid'
+   50 | sync_lock #(21) hs_lock
+      |                 ^~~~~~~
+                     sys\video_freezer.sv:92:10: ... Location of port declaration
+   92 |  output  valid
+      |          ^~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'CLK_VIDEO'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:12:15: ... Location of port declaration
+   12 | output        CLK_VIDEO,
+      |               ^~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'CE_PIXEL'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:16:15: ... Location of port declaration
+   16 | output        CE_PIXEL,
+      |               ^~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'VGA_R'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:23:15: ... Location of port declaration
+   23 | output  [7:0] VGA_R,
+      |               ^~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'VGA_G'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:24:15: ... Location of port declaration
+   24 | output  [7:0] VGA_G,
+      |               ^~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'VGA_B'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:25:15: ... Location of port declaration
+   25 | output  [7:0] VGA_B,
+      |               ^~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'VGA_HS'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:26:15: ... Location of port declaration
+   26 | output        VGA_HS,
+      |               ^~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'VGA_VS'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:27:15: ... Location of port declaration
+   27 | output        VGA_VS,
+      |               ^~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'VGA_DE'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:28:15: ... Location of port declaration
+   28 | output        VGA_DE,     
+      |               ^~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'VGA_F1'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:29:15: ... Location of port declaration
+   29 | output        VGA_F1,
+      |               ^~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'VGA_SL'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:30:15: ... Location of port declaration
+   30 | output [1:0]  VGA_SL,
+      |               ^~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'VGA_SCALER'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:31:15: ... Location of port declaration
+   31 | output        VGA_SCALER,  
+      |               ^~~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'VGA_DISABLE'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:32:15: ... Location of port declaration
+   32 | output        VGA_DISABLE,  
+      |               ^~~~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'HDMI_FREEZE'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:36:15: ... Location of port declaration
+   36 | output        HDMI_FREEZE,
+      |               ^~~~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'HDMI_BLACKOUT'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:37:15: ... Location of port declaration
+   37 | output        HDMI_BLACKOUT,
+      |               ^~~~~~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'HDMI_BOB_DEINT'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:38:15: ... Location of port declaration
+   38 | output        HDMI_BOB_DEINT,
+      |               ^~~~~~~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'FB_EN'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:48:15: ... Location of port declaration
+   48 | output        FB_EN,
+      |               ^~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'FB_FORMAT'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:49:15: ... Location of port declaration
+   49 | output  [4:0] FB_FORMAT,
+      |               ^~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'FB_WIDTH'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:50:15: ... Location of port declaration
+   50 | output [11:0] FB_WIDTH,
+      |               ^~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'FB_HEIGHT'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:51:15: ... Location of port declaration
+   51 | output [11:0] FB_HEIGHT,
+      |               ^~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'FB_BASE'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:52:15: ... Location of port declaration
+   52 | output [31:0] FB_BASE,
+      |               ^~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'FB_STRIDE'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:53:15: ... Location of port declaration
+   53 | output [13:0] FB_STRIDE,
+      |               ^~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'FB_FORCE_BLANK'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:56:15: ... Location of port declaration
+   56 | output        FB_FORCE_BLANK,
+      |               ^~~~~~~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'LED_USER'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:69:15: ... Location of port declaration
+   69 | output        LED_USER,   
+      |               ^~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'LED_POWER'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:74:15: ... Location of port declaration
+   74 | output  [1:0] LED_POWER,
+      |               ^~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'LED_DISK'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:75:15: ... Location of port declaration
+   75 | output  [1:0] LED_DISK,
+      |               ^~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'BUTTONS'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:80:15: ... Location of port declaration
+   80 | output  [1:0] BUTTONS,
+      |               ^~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'AUDIO_L'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:83:15: ... Location of port declaration
+   83 | output [15:0] AUDIO_L,
+      |               ^~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'AUDIO_R'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:84:15: ... Location of port declaration
+   84 | output [15:0] AUDIO_R,
+      |               ^~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'AUDIO_S'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:85:15: ... Location of port declaration
+   85 | output        AUDIO_S,    
+      |               ^~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'AUDIO_MIX'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:86:15: ... Location of port declaration
+   86 | output  [1:0] AUDIO_MIX,  
+      |               ^~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'ADC_BUS'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:89:15: ... Location of port declaration
+   89 | inout   [3:0] ADC_BUS,
+      |               ^~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'SD_SCK'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:92:15: ... Location of port declaration
+   92 | output        SD_SCK,
+      |               ^~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'SD_MOSI'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:93:15: ... Location of port declaration
+   93 | output        SD_MOSI,
+      |               ^~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'SD_CS'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:95:15: ... Location of port declaration
+   95 | output        SD_CS,
+      |               ^~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'DDRAM_CLK'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:100:15: ... Location of port declaration
+  100 | output        DDRAM_CLK,
+      |               ^~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'DDRAM_BURSTCNT'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:102:15: ... Location of port declaration
+  102 | output  [7:0] DDRAM_BURSTCNT,
+      |               ^~~~~~~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'DDRAM_ADDR'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:103:15: ... Location of port declaration
+  103 | output [28:0] DDRAM_ADDR,
+      |               ^~~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'DDRAM_RD'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:106:15: ... Location of port declaration
+  106 | output        DDRAM_RD,
+      |               ^~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'DDRAM_DIN'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:107:15: ... Location of port declaration
+  107 | output [63:0] DDRAM_DIN,
+      |               ^~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'DDRAM_BE'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:108:15: ... Location of port declaration
+  108 | output  [7:0] DDRAM_BE,
+      |               ^~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'DDRAM_WE'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:109:15: ... Location of port declaration
+  109 | output        DDRAM_WE,
+      |               ^~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'SDRAM_CLK'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:112:15: ... Location of port declaration
+  112 | output        SDRAM_CLK,
+      |               ^~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'SDRAM_CKE'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:113:15: ... Location of port declaration
+  113 | output        SDRAM_CKE,
+      |               ^~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'SDRAM_A'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:114:15: ... Location of port declaration
+  114 | output [12:0] SDRAM_A,
+      |               ^~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'SDRAM_BA'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:115:15: ... Location of port declaration
+  115 | output  [1:0] SDRAM_BA,
+      |               ^~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'SDRAM_DQ'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:116:15: ... Location of port declaration
+  116 | inout  [15:0] SDRAM_DQ,
+      |               ^~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'SDRAM_DQML'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:117:15: ... Location of port declaration
+  117 | output        SDRAM_DQML,
+      |               ^~~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'SDRAM_DQMH'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:118:15: ... Location of port declaration
+  118 | output        SDRAM_DQMH,
+      |               ^~~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'SDRAM_nCS'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:119:15: ... Location of port declaration
+  119 | output        SDRAM_nCS,
+      |               ^~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'SDRAM_nCAS'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:120:15: ... Location of port declaration
+  120 | output        SDRAM_nCAS,
+      |               ^~~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'SDRAM_nRAS'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:121:15: ... Location of port declaration
+  121 | output        SDRAM_nRAS,
+      |               ^~~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'SDRAM_nWE'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:122:15: ... Location of port declaration
+  122 | output        SDRAM_nWE,
+      |               ^~~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'UART_RTS'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:139:15: ... Location of port declaration
+  139 | output        UART_RTS,
+      |               ^~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'UART_TXD'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:141:15: ... Location of port declaration
+  141 | output        UART_TXD,
+      |               ^~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'UART_DTR'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:142:15: ... Location of port declaration
+  142 | output        UART_DTR,
+      |               ^~~~~~~~
+%Warning-PINMISSING: sim\platform_hps_top.sv:18:6: Instance has missing pin: 'USER_OUT'
+   18 |  emu dut(.CLK_50M(clk),.RESET(reset),.HPS_BUS(bus),.CLK_AUDIO(clk),
+      |      ^~~
+                     sys\emu_ports.vh:151:15: ... Location of port declaration
+  151 | output  [6:0] USER_OUT,
+      |               ^~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_pkg.sv:2:9: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | package drmicro_pkg;
+      |         ^~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+                       ... For warning description see https://verilator.org/warn/TIMESCALEMOD?v=5.051
+                       ... Use "/* verilator lint_off TIMESCALEMOD */" and lint_on around source to disable this message.
+%Warning-TIMESCALEMOD: rtl\drmicro_clock_en.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_ce #(parameter integer RATE=3072000, CLOCK=50000000)(
+      |        ^~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_rom_loader.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_rom_loader #(parameter integer SIZE=drmicro_pkg::ROM_SIZE)(
+      |        ^~~~~~~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_bus.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_bus(
+      |        ^~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_memory.sv:4:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    4 | module drmicro_memory(
+      |        ^~~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_inputs.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_inputs(
+      |        ^~~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\sn76496_jt89.sv:6:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    6 | module sn76496_jt89(
+      |        ^~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_adpcm_ctrl.sv:3:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    3 | module drmicro_adpcm_ctrl(
+      |        ^~~~~~~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_sound.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_sound(
+      |        ^~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_video.sv:4:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    4 | module drmicro_video #(parameter integer NMI_LINE=240)(
+      |        ^~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\drmicro_core.sv:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    2 | module drmicro_core #(
+      |        ^~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/derived\tv80_core.v:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   25 | module tv80_core ( 
+      |        ^~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/tv80\tv80_alu.v:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   25 | module tv80_alu ( 
+      |        ^~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/derived\tv80_mcode.v:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   25 | module tv80_mcode
+      |        ^~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/tv80\tv80_reg.v:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   25 | module tv80_reg ( 
+      |        ^~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/tv80\tv80s.v:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   25 | module tv80s ( 
+      |        ^~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/jt5205/hdl\jt5205.v:19:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   19 | module jt5205(
+      |        ^~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/jt5205/hdl\jt5205_timing.v:19:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   19 | module jt5205_timing(
+      |        ^~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/derived\jt5205_adpcm.v:19:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   19 | module jt5205_adpcm(
+      |        ^~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/vendor/jt5205/hdl\jt5205_interpol2x.v:23:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   23 | module jt5205_interpol2x(
+      |        ^~~~~~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: Arcade-DrMicro.sv:3:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    3 | module emu (
+      |        ^~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\hps_io.sv:35:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   35 | module hps_io #(parameter CONF_STR, CONF_STR_BRAM=0, PS2DIV=0, WIDE=0, VDNUM=1, BLKSZ=2, PS2WE=0, STRLEN=$size(CONF_STR)>>3, F12KEYMOD=0)
+      |        ^~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\hps_io.sv:715:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+  715 | module ps2_device #(parameter PS2_FIFO_BITS=5)
+      |        ^~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\hps_io.sv:858:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+  858 | module video_calc
+      |        ^~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\hps_io.sv:1037:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+ 1037 | module confstr_rom #(parameter CONF_STR, STRLEN)
+      |        ^~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\arcade_video.v:29:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+   29 | module arcade_video #(parameter WIDTH=320, DW=8, GAMMA=1)
+      |        ^~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: sys\arcade_video.v:170:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+  170 | module screen_rotate
+      |        ^~~~~~~~~~~~~
+                       sys\video_mixer.sv:19:8: ... Location of module with timescale
+   19 | module video_mixer
+      |        ^~~~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:197:6: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                            : ... The initializer value will only be set once
+                                            : ... Suggest use 'static' before variable declaration'
+  197 |  reg btn_up = 0;
+      |      ^~~~~~
+                         ... For warning description see https://verilator.org/warn/IMPLICITSTATIC?v=5.051
+                         ... Use "/* verilator lint_off IMPLICITSTATIC */" and lint_on around source to disable this message.
+%Warning-IMPLICITSTATIC: sys\sys_top.v:198:6: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                            : ... The initializer value will only be set once
+                                            : ... Suggest use 'static' before variable declaration'
+  198 |  reg btn_en = 0;
+      |      ^~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:357:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  357 |  reg  [7:0] cnt = 0;
+      |             ^~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1099:7: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+ 1099 |   reg gotd = 0, gotd2 = 0;
+      |       ^~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1099:17: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                              : ... The initializer value will only be set once
+                                              : ... Suggest use 'static' before variable declaration'
+ 1099 |   reg gotd = 0, gotd2 = 0;
+      |                 ^~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1100:7: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+ 1100 |   reg custd = 0, custd2 = 0;
+      |       ^~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1100:18: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                              : ... The initializer value will only be set once
+                                              : ... Suggest use 'static' before variable declaration'
+ 1100 |   reg custd = 0, custd2 = 0;
+      |                  ^~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1101:7: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+ 1101 |   reg old_wait = 0;
+      |       ^~~~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1534:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                              : ... The initializer value will only be set once
+                                              : ... Suggest use 'static' before variable declaration'
+ 1534 |  reg [11:0] line_cnt  = 0;
+      |             ^~~~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1535:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                              : ... The initializer value will only be set once
+                                              : ... Suggest use 'static' before variable declaration'
+ 1535 |  reg [11:0] sync_line = 0;
+      |             ^~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\sys_top.v:1536:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                              : ... The initializer value will only be set once
+                                              : ... Suggest use 'static' before variable declaration'
+ 1536 |  reg  [1:0] hs_cnt = 0;
+      |             ^~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:283:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  283 |  reg        ps2skip = 0;
+      |             ^~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:284:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  284 |  reg  [3:0] stflg = 0;
+      |             ^~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:286:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  286 |  reg        old_status_set = 0;
+      |             ^~~~~~~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:287:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  287 |  reg        old_upload_req = 0;
+      |             ^~~~~~~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:288:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  288 |  reg        upload_req = 0;
+      |             ^~~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:289:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  289 |  reg        old_info = 0;
+      |             ^~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:290:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  290 |  reg  [7:0] info_n = 0;
+      |             ^~~~~~
+%Warning-IMPLICITSTATIC: sys\arcade_video.v:270:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                                  : ... The initializer value will only be set once
+                                                  : ... Suggest use 'static' before variable declaration'
+  270 |  reg [11:0] hcnt = 0, vcnt = 0;
+      |             ^~~~
+%Warning-IMPLICITSTATIC: sys\arcade_video.v:270:23: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                                  : ... The initializer value will only be set once
+                                                  : ... Suggest use 'static' before variable declaration'
+  270 |  reg [11:0] hcnt = 0, vcnt = 0;
+      |                       ^~~~
+%Warning-IMPLICITSTATIC: sys\arcade_video.v:302:13: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                                  : ... The initializer value will only be set once
+                                                  : ... Suggest use 'static' before variable declaration'
+  302 |  reg [13:0] hcnt = 0;
+      |             ^~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:6: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                            : ... The initializer value will only be set once
+                                            : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |      ^~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:18: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                  ^~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:30: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                              ^~~~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:47: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                                               ^~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:59: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                                                           ^~~~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:76: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                                                                            ^~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:923:89: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  923 |  reg old_vs = 0, old_hs = 0, old_hs_vclk = 0, old_de = 0, old_de_vclk = 0, old_de1 = 0, old_vmode = 0;
+      |                                                                                         ^~~~~~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:924:12: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                             : ... The initializer value will only be set once
+                                             : ... Suggest use 'static' before variable declaration'
+  924 |  reg [3:0] resto = 0;
+      |            ^~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:925:6: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                            : ... The initializer value will only be set once
+                                            : ... Suggest use 'static' before variable declaration'
+  925 |  reg calch = 0;
+      |      ^~~~~
+%Warning-IMPLICITSTATIC: sys\hps_io.sv:987:6: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                            : ... The initializer value will only be set once
+                                            : ... Suggest use 'static' before variable declaration'
+  987 |  reg calch = 0;
+      |      ^~~~~
+%Warning-IMPLICITSTATIC: sys\gamma_corr.sv:34:12: Variable's lifetime implicitly set to static (IEEE 1800-2023 6.21)
+                                                : ... The initializer value will only be set once
+                                                : ... Suggest use 'static' before variable declaration'
+   34 |  reg [1:0] ctr = 0;
+      |            ^~~
+%Warning-WIDTHTRUNC: sys\hq2x.sv:290:19: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 5 bits.
+                                       : ... note: In instance 'platform_hps_top.dut.av.video_mixer.sd.Hq2x.blender.diff_checker'
+  290 |  wire u_inside = (!u[8:4] || &u[8:4]);  
+      |                   ^
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.051
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: sys\hq2x.sv:361:32: Operator ADD expects 35 bits on the RHS, but RHS's REPLICATE generates 32 bits.
+                                        : ... note: In instance 'platform_hps_top.dut.av.video_mixer.sd.Hq2x.blender'
+  361 |   if(op2[0]) mul24x3 = mul24x3 + {op1[23:16], 4'b0000, op1[15:8], 4'b0000, op1[7:0]};
+      |                                ^
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.051
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: sys\hq2x.sv:362:32: Operator ADD expects 35 bits on the RHS, but RHS's REPLICATE generates 33 bits.
+                                        : ... note: In instance 'platform_hps_top.dut.av.video_mixer.sd.Hq2x.blender'
+  362 |   if(op2[1]) mul24x3 = mul24x3 + {op1[23:16], 4'b0000, op1[15:8], 4'b0000, op1[7:0], 1'b0};
+      |                                ^
+%Warning-WIDTHTRUNC: sys\hq2x.sv:367:73: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 2 bits.
+                                       : ... note: In instance 'platform_hps_top.dut.av.video_mixer.sd.Hq2x.blender'
+  367 |  wire [35:0] res = {mul24x3(i1, op[6:4]), 1'b0} + mul24x3(i2, {op[3:2], !op[3:2]}) + mul24x3(i3, {op[1:0], !op[3:2]});
+      |                                                                         ^
+%Warning-WIDTHTRUNC: sys\hq2x.sv:367:108: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 2 bits.
+                                        : ... note: In instance 'platform_hps_top.dut.av.video_mixer.sd.Hq2x.blender'
+  367 |  wire [35:0] res = {mul24x3(i1, op[6:4]), 1'b0} + mul24x3(i2, {op[3:2], !op[3:2]}) + mul24x3(i3, {op[1:0], !op[3:2]});
+      |                                                                                                            ^
+%Warning-WIDTHTRUNC: sys\hq2x.sv:79:39: Operator FUNCREF 'h2rgb' expects 12 bits on the Function Argument, but Function Argument's VARREF 'Curr20tmp' generates 24 bits.
+                                      : ... note: In instance 'platform_hps_top.dut.av.video_mixer.sd.Hq2x'
+   79 | wire     [23:0] Curr20 = HALF_DEPTH ? h2rgb(Curr20tmp) : Curr20tmp;
+      |                                       ^~~~~
+%Warning-WIDTHTRUNC: sys\hq2x.sv:81:39: Operator FUNCREF 'h2rgb' expects 12 bits on the Function Argument, but Function Argument's VARREF 'Curr21tmp' generates 24 bits.
+                                      : ... note: In instance 'platform_hps_top.dut.av.video_mixer.sd.Hq2x'
+   81 | wire     [23:0] Curr21 = HALF_DEPTH ? h2rgb(Curr21tmp) : Curr21tmp;
+      |                                       ^~~~~
+%Warning-WIDTHEXPAND: sys\hq2x.sv:146:43: Operator COND expects 24 bits on the Conditional True, but Conditional True's FUNCREF 'rgb2h' generates 12 bits.
+                                        : ... note: In instance 'platform_hps_top.dut.av.video_mixer.sd.Hq2x'
+  146 | wire [DWIDTH:0] blend_result = HALF_DEPTH ? rgb2h(blend_result_pre) : blend_result_pre[DWIDTH:0];
+      |                                           ^
+%Warning-WIDTHTRUNC: sys\hq2x.sv:178:27: Operator FUNCREF 'h2rgb' expects 12 bits on the Function Argument, but Function Argument's VARREF 'inputpixel' generates 24 bits.
+                                       : ... note: In instance 'platform_hps_top.dut.av.video_mixer.sd.Hq2x'
+  178 |     Next2 <= HALF_DEPTH ? h2rgb(inputpixel) : inputpixel;
+      |                           ^~~~~
+%Warning-WIDTHEXPAND: sys\video_freezer.sv:128:53: Operator ADD expects 21 bits on the RHS, but RHS's CONST '2'h2' generates 2 bits.
+                                                 : ... note: In instance 'platform_hps_top.dut.av.video_mixer.freezer.hs_lock'
+  128 |  if(old_sync & ~sync_in & sync_valid) cnto <= s_len + 2'd2;
+      |                                                     ^
+%Warning-WIDTHEXPAND: sys\video_freezer.sv:128:53: Operator ADD expects 33 bits on the RHS, but RHS's CONST '2'h2' generates 2 bits.
+                                                 : ... note: In instance 'platform_hps_top.dut.av.video_mixer.freezer.vs_lock'
+  128 |  if(old_sync & ~sync_in & sync_valid) cnto <= s_len + 2'd2;
+      |                                                     ^
+%Warning-WIDTHEXPAND: sys\video_mixer.sv:98:21: Operator COND expects 8 bits on the Conditional True, but Conditional True's CONST '1'h0' generates 1 bits.
+                                              : ... note: In instance 'platform_hps_top.dut.av.video_mixer'
+   98 |   assign R_in = frz ? 1'd0 : R;
+      |                     ^
+%Warning-WIDTHEXPAND: sys\video_mixer.sv:99:21: Operator COND expects 8 bits on the Conditional True, but Conditional True's CONST '1'h0' generates 1 bits.
+                                              : ... note: In instance 'platform_hps_top.dut.av.video_mixer'
+   99 |   assign G_in = frz ? 1'd0 : G;
+      |                     ^
+%Warning-WIDTHEXPAND: sys\video_mixer.sv:100:21: Operator COND expects 8 bits on the Conditional True, but Conditional True's CONST '1'h0' generates 1 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.av.video_mixer'
+  100 |   assign B_in = frz ? 1'd0 : B;
+      |                     ^
+%Warning-WIDTHTRUNC: sys\video_mixer.sv:192:5: Operator ASSIGNDLY expects 8 bits on the Assign RHS, but Assign RHS's REPLICATE generates 16 bits.
+                                             : ... note: In instance 'platform_hps_top.dut.av.video_mixer'
+  192 |   r <= {rt,rt};
+      |     ^~
+%Warning-WIDTHTRUNC: sys\video_mixer.sv:193:5: Operator ASSIGNDLY expects 8 bits on the Assign RHS, but Assign RHS's REPLICATE generates 16 bits.
+                                             : ... note: In instance 'platform_hps_top.dut.av.video_mixer'
+  193 |   g <= {gt,gt};
+      |     ^~
+%Warning-WIDTHTRUNC: sys\video_mixer.sv:194:5: Operator ASSIGNDLY expects 8 bits on the Assign RHS, but Assign RHS's REPLICATE generates 16 bits.
+                                             : ... note: In instance 'platform_hps_top.dut.av.video_mixer'
+  194 |   b <= {bt,bt};
+      |     ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:879:11: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's REPLICATE generates 10 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps.video_calc'
+  879 |   1: dout <= {video_rotated, |vid_int, vid_nres};
+      |           ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:894:13: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's VARREF 'vid_pixrep' generates 8 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps.video_calc'
+  894 |    16: dout <= vid_pixrep;
+      |             ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:896:13: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's VARREF 'vid_de_v' generates 8 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps.video_calc'
+  896 |    18: dout <= vid_de_v;
+      |             ^~
+%Warning-WIDTHTRUNC: sys\hps_io.sv:960:6: Logical operator IF expects 1 bit on the If, but If's VARREF 'resto' generates 4 bits.
+                                        : ... note: In instance 'platform_hps_top.dut.hps.video_calc'
+  960 |      if(resto) resto <= resto + 1'd1;
+      |      ^~
+%Warning-WIDTHTRUNC: sys\hps_io.sv:956:13: Logical operator LOGAND expects 1 bit on the LHS, but LHS's VARREF 'hcnt' generates 32 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps.video_calc'
+  956 |     if(hcnt && vcnt) begin
+      |             ^~
+%Warning-WIDTHTRUNC: sys\hps_io.sv:956:13: Logical operator LOGAND expects 1 bit on the RHS, but RHS's VARREF 'vcnt' generates 32 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps.video_calc'
+  956 |     if(hcnt && vcnt) begin
+      |             ^~
+%Warning-WIDTHTRUNC: sys\arcade_video.v:115:20: Logical operator COND expects 1 bit on the Conditional Test, but Conditional Test's VARREF 'fx' generates 3 bits.
+                                              : ... note: In instance 'platform_hps_top.dut.av'
+  115 | wire [2:0] sl = fx ? fx - 1'd1 : 3'd0;
+      |                    ^
+%Warning-WIDTHTRUNC: sys\arcade_video.v:116:23: Logical operator LOGOR expects 1 bit on the LHS, but LHS's VARREF 'fx' generates 3 bits.
+                                              : ... note: In instance 'platform_hps_top.dut.av'
+  116 | wire scandoubler = fx || forced_scandoubler;
+      |                       ^~
+%Warning-WIDTHEXPAND: sys\arcade_video.v:130:14: Operator COND expects 8 bits on the Conditional True, but Conditional True's SEL generates 4 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.av'
+  130 |  .R((DW!=24) ? R[7:4] : R),
+      |              ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:131:14: Operator COND expects 8 bits on the Conditional True, but Conditional True's SEL generates 4 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.av'
+  131 |  .G((DW!=24) ? G[7:4] : G),
+      |              ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:132:14: Operator COND expects 8 bits on the Conditional True, but Conditional True's SEL generates 4 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.av'
+  132 |  .B((DW!=24) ? B[7:4] : B),
+      |              ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:211:9: Operator ADD expects 32 bits on the RHS, but RHS's VARREF 'sd_rrb' generates 4 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  211 |   n = i + sd_rrb;
+      |         ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:260:40: Operator SUB expects 32 bits on the RHS, but RHS's VARREF 'byte_cnt' generates 9 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  260 |   assign conf_byte = CONF_STR[{(STRLEN - byte_cnt),3'b000} +:8];
+      |                                        ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:260:30: Bit extraction of var[2215:0] requires 12 bit index, not 35 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  260 |   assign conf_byte = CONF_STR[{(STRLEN - byte_cnt),3'b000} +:8];
+      |                              ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:341:47: Bit extraction of array[0:0] requires 1 bit index, not 4 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  341 |       'h16: begin io_dout <= {1'b1, sd_blk_cnt[sdn], BLKSZ[2:0], sdn, sd_wr[sdn], sd_rd[sdn]}; sdn_r <= sdn; end
+      |                                               ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:341:76: Bit extraction of var[0:0] requires 1 bit index, not 4 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  341 |       'h16: begin io_dout <= {1'b1, sd_blk_cnt[sdn], BLKSZ[2:0], sdn, sd_wr[sdn], sd_rd[sdn]}; sdn_r <= sdn; end
+      |                                                                            ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:341:88: Bit extraction of var[0:0] requires 1 bit index, not 4 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  341 |       'h16: begin io_dout <= {1'b1, sd_blk_cnt[sdn], BLKSZ[2:0], sdn, sd_wr[sdn], sd_rd[sdn]}; sdn_r <= sdn; end
+      |                                                                                        ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:344:21: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's REPLICATE generates 8 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  344 |       'h29: io_dout <= {4'hA, stflg};
+      |                     ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:345:21: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's SEL generates 1 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  345 |       'h32: io_dout <= gamma_bus[21];
+      |                     ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:346:27: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's VARREF 'info_n' generates 8 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  346 |       'h36: begin io_dout <= info_n; info_n <= 0; end
+      |                           ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:348:21: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's REDOR generates 1 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  348 |       'h43: io_dout <= |F12KEYMOD;
+      |                     ^~
+%Warning-WIDTHTRUNC: sys\hps_io.sv:378:41: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 7 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  378 |        if(~&io_din[15:8] && ~ps2skip && !byte_cnt[MAX_W:2]) begin
+      |                                         ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:403:23: Operator LTE expects 32 bits on the LHS, but LHS's VARREF 'byte_cnt' generates 9 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  403 |     'h14: if(byte_cnt <= STRLEN) io_dout[7:0] <= conf_byte;
+      |                       ^~
+%Warning-WIDTHTRUNC: sys\hps_io.sv:409:29: Bit extraction of array[0:0] requires 1 bit index, not 4 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  409 |         2: io_dout <= sd_lba[sdn_r][15:0];
+      |                             ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:410:29: Bit extraction of array[0:0] requires 1 bit index, not 4 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  410 |         3: io_dout <= sd_lba[sdn_r][31:16];
+      |                             ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:406:14: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 7 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  406 |     'h16: if(!byte_cnt[MAX_W:2]) begin
+      |              ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:424:30: Bit extraction of array[0:0] requires 1 bit index, not 4 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  424 |        io_dout <= sd_buff_din[sdn_ack];
+      |                              ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:424:16: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's ARRAYSEL generates 8 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  424 |        io_dout <= sd_buff_din[sdn_ack];
+      |                ^~
+%Warning-WIDTHTRUNC: sys\hps_io.sv:428:14: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 7 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  428 |     'h1a: if(!byte_cnt[MAX_W:2]) begin
+      |              ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:457:14: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 7 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  457 |     'h3d: if(!byte_cnt[MAX_W:2]) begin
+      |              ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:478:34: Bit extraction of var[63:0] requires 6 bit index, not 13 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  478 |     'h1d: if(byte_cnt<5) img_size[{byte_cnt-1'b1, 4'b0000} +:16] <= io_din;
+      |                                  ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:481:14: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 5 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  481 |     'h1e: if(!byte_cnt[MAX_W:4]) begin
+      |              ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:495:19: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's REPLICATE generates 9 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  495 |     'h1f: io_dout <= {|PS2WE, 2'b01, ps2_kbd_led_status[2], ps2_kbd_led_use[2], ps2_kbd_led_status[1], ps2_kbd_led_use[1], ps2_kbd_led_status[0], ps2_kbd_led_use[0]};
+      |                   ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:500:17: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's VARREF 'kbd_data_host' generates 9 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  500 |         io_dout <= kbd_data_host;
+      |                 ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:505:17: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's VARREF 'mouse_data_host' generates 9 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  505 |         io_dout <= mouse_data_host;
+      |                 ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:511:24: Operator SUB expects 9 bits on the RHS, but RHS's CONST '6'h1' generates 6 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  511 |     'h22: RTC[(byte_cnt-6'd1)<<4 +:16] <= io_din;
+      |                        ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:511:14: Bit extraction of var[64:0] requires 7 bit index, not 9 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  511 |     'h22: RTC[(byte_cnt-6'd1)<<4 +:16] <= io_din;
+      |              ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:514:14: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 4 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  514 |     'h23: if(!byte_cnt[MAX_W:5]) io_dout <= vc_dout;
+      |              ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:517:30: Operator SUB expects 9 bits on the RHS, but RHS's CONST '6'h1' generates 6 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  517 |     'h24: TIMESTAMP[(byte_cnt-6'd1)<<4 +:16] <= io_din;
+      |                              ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:517:20: Bit extraction of var[32:0] requires 6 bit index, not 9 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  517 |     'h24: TIMESTAMP[(byte_cnt-6'd1)<<4 +:16] <= io_din;
+      |                    ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:520:14: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 5 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  520 |     'h29: if(!byte_cnt[MAX_W:4]) begin
+      |              ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:548:14: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 7 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  548 |     'h3b: if(!byte_cnt[MAX_W:2]) begin
+      |              ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:641:22: Operator EQ expects 16 bits on the RHS, but RHS's VARREF 'FIO_FILE_TX' generates 8 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  641 |   if(has_cmd && (cmd == FIO_FILE_TX)) begin
+      |                      ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:681:63: Operator COND expects 27 bits on the Conditional True, but Conditional True's CONST '2'h2' generates 2 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  681 |           if(ioctl_download) ioctl_addr <= ioctl_addr + (WIDE ? 2'd2 : 2'd1);
+      |                                                               ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:681:63: Operator COND expects 27 bits on the Conditional False, but Conditional False's CONST '2'h1' generates 2 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  681 |           if(ioctl_download) ioctl_addr <= ioctl_addr + (WIDE ? 2'd2 : 2'd1);
+      |                                                               ^
+%Warning-WIDTHTRUNC: sys\hps_io.sv:676:12: Logical operator IF expects 1 bit on the If, but If's SEL generates 8 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  676 |         0: if(io_din[7:0]) begin
+      |            ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:692:55: Operator COND expects 27 bits on the Conditional True, but Conditional True's CONST '2'h2' generates 2 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  692 |        if(!skip_add) ioctl_addr <= ioctl_addr + (WIDE ? 2'd2 : 2'd1);
+      |                                                       ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:692:55: Operator COND expects 27 bits on the Conditional False, but Conditional False's CONST '2'h1' generates 2 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  692 |        if(!skip_add) ioctl_addr <= ioctl_addr + (WIDE ? 2'd2 : 2'd1);
+      |                                                       ^
+%Warning-WIDTHEXPAND: sys\hps_io.sv:700:17: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's VARREF 'ioctl_din' generates 8 bits.
+                                          : ... note: In instance 'platform_hps_top.dut.hps'
+  700 |         fp_dout <= ioctl_din;
+      |                 ^~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:657:5: Operator CASE expects 16 bits on the Case Item, but Case Item's VARREF 'FIO_FILE_INFO' generates 8 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  657 |     case(cmd)
+      |     ^~~~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:657:5: Operator CASE expects 16 bits on the Case Item, but Case Item's VARREF 'FIO_FILE_INDEX' generates 8 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  657 |     case(cmd)
+      |     ^~~~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:657:5: Operator CASE expects 16 bits on the Case Item, but Case Item's VARREF 'FIO_FILE_TX' generates 8 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  657 |     case(cmd)
+      |     ^~~~
+%Warning-WIDTHEXPAND: sys\hps_io.sv:657:5: Operator CASE expects 16 bits on the Case Item, but Case Item's VARREF 'FIO_FILE_TX_DAT' generates 8 bits.
+                                         : ... note: In instance 'platform_hps_top.dut.hps'
+  657 |     case(cmd)
+      |     ^~~~
+%Warning-WIDTHEXPAND: sys\arcade_video.v:284:33: Operator ADD expects 12 bits on the RHS, but RHS's CONST '2'h3' generates 2 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.rotation'
+  284 |    if( do_flip ) bwidth <= hcnt + 2'd3;
+      |                                 ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:288:34: Operator ADD expects 12 bits on the RHS, but RHS's CONST '2'h3' generates 2 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.rotation'
+  288 |    if( !do_flip ) bwidth <= vcnt + 2'd3;
+      |                                  ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:292:44: Operator COND expects 23 bits on the Conditional True, but Conditional True's VARREF 'vsz' generates 12 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.rotation'
+  292 |   if(old_vs & ~VGA_VS) bufsize <= (do_flip ? vsz : hsz ) * stride;
+      |                                            ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:292:44: Operator COND expects 23 bits on the Conditional False, but Conditional False's VARREF 'hsz' generates 12 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.rotation'
+  292 |   if(old_vs & ~VGA_VS) bufsize <= (do_flip ? vsz : hsz ) * stride;
+      |                                            ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:312:25: Operator SUB expects 23 bits on the RHS, but RHS's CONST '3'h4' generates 3 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.rotation'
+  312 |     do_flip    ? bufsize-3'd4 :
+      |                         ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:313:27: Operator SUB expects 23 bits on the RHS, but RHS's VARREF 'stride' generates 14 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.rotation'
+  313 |     rotate_ccw ? (bufsize - stride) : {vsz-1'd1, 2'b00};
+      |                           ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:313:16: Operator COND expects 23 bits on the Conditional False, but Conditional False's REPLICATE generates 14 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.rotation'
+  313 |     rotate_ccw ? (bufsize - stride) : {vsz-1'd1, 2'b00};
+      |                ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:314:36: Operator SUB expects 12 bits on the RHS, but RHS's CONST '2'h2' generates 2 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.rotation'
+  314 |    hcnt <= rotate_ccw ? 3'd4 : {vsz-2'd2, 2'b00};
+      |                                    ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:314:23: Operator COND expects 14 bits on the Conditional True, but Conditional True's CONST '3'h4' generates 3 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.rotation'
+  314 |    hcnt <= rotate_ccw ? 3'd4 : {vsz-2'd2, 2'b00};
+      |                       ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:321:27: Operator SUB expects 23 bits on the RHS, but RHS's CONST '3'h4' generates 3 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.rotation'
+  321 |     do_flip    ? next_addr-3'd4 :
+      |                           ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:322:29: Operator SUB expects 23 bits on the RHS, but RHS's VARREF 'stride' generates 14 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.rotation'
+  322 |     rotate_ccw ? (next_addr - stride) : (next_addr + stride);
+      |                             ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:322:52: Operator ADD expects 23 bits on the RHS, but RHS's VARREF 'stride' generates 14 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.rotation'
+  322 |     rotate_ccw ? (next_addr - stride) : (next_addr + stride);
+      |                                                    ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:325:39: Operator SUB expects 23 bits on the RHS, but RHS's VARREF 'stride' generates 14 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.rotation'
+  325 |    next_addr <= rotate_ccw ? (bufsize - stride + hcnt) : hcnt;
+      |                                       ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:325:48: Operator ADD expects 23 bits on the RHS, but RHS's VARREF 'hcnt' generates 14 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.rotation'
+  325 |    next_addr <= rotate_ccw ? (bufsize - stride + hcnt) : hcnt;
+      |                                                ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:325:28: Operator COND expects 23 bits on the Conditional False, but Conditional False's VARREF 'hcnt' generates 14 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.rotation'
+  325 |    next_addr <= rotate_ccw ? (bufsize - stride + hcnt) : hcnt;
+      |                            ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:326:31: Operator ADD expects 14 bits on the RHS, but RHS's CONST '3'h4' generates 3 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.rotation'
+  326 |    hcnt <= rotate_ccw ? (hcnt + 3'd4) : (hcnt - 3'd4);
+      |                               ^
+%Warning-WIDTHEXPAND: sys\arcade_video.v:326:47: Operator SUB expects 14 bits on the RHS, but RHS's CONST '3'h4' generates 3 bits.
+                                               : ... note: In instance 'platform_hps_top.dut.rotation'
+  326 |    hcnt <= rotate_ccw ? (hcnt + 3'd4) : (hcnt - 3'd4);
+      |                                               ^
+%Warning-CASEX: sys\hps_io.sv:340:4: Suggest casez (with ?'s) in place of casex (with X's)
+                                   : ... note: In instance 'platform_hps_top.dut'
+  340 |    casex(io_din)
+      |    ^~~~~
+                ... For warning description see https://verilator.org/warn/CASEX?v=5.051
+                ... Use "/* verilator lint_off CASEX */" and lint_on around source to disable this message.
+%Warning-CASEX: sys\hps_io.sv:361:4: Suggest casez (with ?'s) in place of casex (with X's)
+                                   : ... note: In instance 'platform_hps_top.dut'
+  361 |    casex(cmd)
+      |    ^~~~~
+%Warning-CASEINCOMPLETE: sys\hps_io.sv:657:5: Case values incompletely covered (example pattern 0x0)
+                                            : ... note: In instance 'platform_hps_top.dut'
+  657 |     case(cmd)
+      |     ^~~~
+                         ... For warning description see https://verilator.org/warn/CASEINCOMPLETE?v=5.051
+                         ... Use "/* verilator lint_off CASEINCOMPLETE */" and lint_on around source to disable this message.
+%Warning-UNOPTFLAT: sim\platform_hps_top.sv:13:14: Signal unoptimizable: Circular combinational logic: 'platform_hps_top.bus'
+                                                 : ... note: In instance 'platform_hps_top'
+   13 |  wire [45:0] bus;
+      |              ^~~
+                    ... For warning description see https://verilator.org/warn/UNOPTFLAT?v=5.051
+                    ... Use "/* verilator lint_off UNOPTFLAT */" and lint_on around source to disable this message.
+                    sim\platform_hps_top.sv:13:14:      Example path: platform_hps_top.bus
+                    sys\hps_io.sv:177:23:      Example path: ASSIGNW
+                    sys\hps_io.sv:177:8:      Example path: platform_hps_top.dut.hps.EXT_BUS__out__strong__out5
+                    Arcade-DrMicro.sv:18:14:      Example path: ASSIGNW
+                    Arcade-DrMicro.sv:18:14:      Example path: platform_hps_top.dut.ext_bus
+                    sys\hps_io.sv:194:22:      Example path: ASSIGNW
+                    sys\hps_io.sv:191:8:      Example path: platform_hps_top.dut.hps.HPS_BUS__out__strong__out3
+                    sim\platform_hps_top.sv:13:14:      Example path: ASSIGNW
+                    sim\platform_hps_top.sv:13:14:      Example path: platform_hps_top.bus
 - V e r i l a t i o n   R e p o r t: Verilator 5.051 devel rev v5.050-312-gb1c06fdb0 (mod)
-- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
-- Verilator: Walltime 0.008 s (elab=0.000, cvt=0.000, bld=0.000); cpu 0.000 s on 1 threads; allocated 5.309 MB
+- Verilator: Built from 4.316 MB sources in 66 modules, into 1.114 MB in 22 C++ files needing 0.002 MB
+- Verilator: Walltime 0.436 s (elab=0.034, cvt=0.321, bld=0.000); cpu 0.000 s on 1 threads; allocated 88.605 MB
