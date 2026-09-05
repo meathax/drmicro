@@ -52,7 +52,7 @@ int main(int argc,char**argv){try{
    d.cold_reset=1;for(int i=0;i<20;++i)tick();d.cold_reset=0;tick();if(d.loaded)throw std::runtime_error("cold reset did not invalidate");reload();
   }
   std::ofstream result(out+"/result.json");result<<"{\"status\":\"PASS\",\"cold_starts\":4,\"redownloads\":6,\"game_resets\":3,\"short_loads_rejected\":3,\"dip_sessions\":3}";
-  std::cout<<"PASS full-core load/reset stress: 4 cold starts, 6 re-downloads, 3 game resets, 3 rejected short sessions, 3 DIP sessions\n";d.final();return 0;
+ std::cout<<"PASS full-core load/reset stress: 4 cold starts, 6 re-downloads, 3 game resets, 3 rejected short sessions, 3 DIP sessions\n";return 0;
  }
  std::ofstream trace(out+"/io.csv");trace<<"cycle,frame,port,data\n";
  std::ofstream bus(out+"/fetch.csv");bus<<"cycle,frame,address\n";
@@ -133,5 +133,5 @@ int main(int argc,char**argv){try{
  bool pass=frame==frames && (frames<30 || (io>0 && nmis>0));
  std::ofstream result(out+"/result.json");result<<"{\"status\":\""<<(pass?"PASS":"FAIL")<<"\",\"level\":\"smoke_observation\",\"frames\":"<<frame<<",\"cycles\":"<<cycles<<",\"fetches\":"<<fetch<<",\"ram_writes\":"<<mw<<",\"io_writes\":"<<io<<",\"nmi_events\":"<<nmis<<",\"script\":\""<<script<<"\"}\n";
  std::cout<<"Frames "<<frame<<" fetches "<<fetch<<" RAM writes "<<mw<<" IO writes "<<io<<" NMI "<<nmis<<"\n";
- d.final();return pass?0:1;
+ return pass?0:1;
  }catch(const std::exception&e){std::cerr<<e.what()<<'\n';return 1;}}
