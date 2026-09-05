@@ -1,0 +1,246 @@
+{
+  "script": "nmi218",
+  "frames": [
+    {
+      "frame": "frame_1",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "backbuffer_vs_displayed_pixels": 0,
+      "sprite_records_equal": true,
+      "video_ram_differing_addresses": [],
+      "pixel_difference_bounds": null,
+      "ram_differing_addresses": [],
+      "dut_rgb_sha256": "2cbbeef1249170a43854962fa5b19fba628470c70beb9ce23e15a0f05cb891f2",
+      "reference_rgb_sha256": "2cbbeef1249170a43854962fa5b19fba628470c70beb9ce23e15a0f05cb891f2",
+      "offline_dut_snapshot_differing_pixels": 0,
+      "offline_dut_snapshot_differing_pens": 0
+    },
+    {
+      "frame": "frame_30",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "backbuffer_vs_displayed_pixels": 0,
+      "sprite_records_equal": false,
+      "video_ram_differing_addresses": [
+        59408
+      ],
+      "pixel_difference_bounds": null,
+      "ram_differing_addresses": [
+        49155,
+        53052,
+        53053,
+        53162,
+        53163,
+        53166,
+        53178,
+        59408
+      ],
+      "dut_rgb_sha256": "ce1e5c07e3aa9b149be9fb82b93ebcc79e6419b0491655a204ee77a0b98e19e2",
+      "reference_rgb_sha256": "ce1e5c07e3aa9b149be9fb82b93ebcc79e6419b0491655a204ee77a0b98e19e2",
+      "offline_dut_snapshot_differing_pixels": 3,
+      "offline_dut_snapshot_differing_pens": 3
+    },
+    {
+      "frame": "frame_60",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "backbuffer_vs_displayed_pixels": 0,
+      "sprite_records_equal": false,
+      "video_ram_differing_addresses": [
+        59408
+      ],
+      "pixel_difference_bounds": null,
+      "ram_differing_addresses": [
+        49155,
+        53052,
+        53053,
+        53162,
+        53163,
+        53166,
+        53178,
+        59408
+      ],
+      "dut_rgb_sha256": "408c86529ab9b9d50c88365387784cda57500423b5906d8acc9934ea96710405",
+      "reference_rgb_sha256": "408c86529ab9b9d50c88365387784cda57500423b5906d8acc9934ea96710405",
+      "offline_dut_snapshot_differing_pixels": 44,
+      "offline_dut_snapshot_differing_pens": 44
+    },
+    {
+      "frame": "frame_120",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "backbuffer_vs_displayed_pixels": 0,
+      "sprite_records_equal": false,
+      "video_ram_differing_addresses": [
+        59408
+      ],
+      "pixel_difference_bounds": null,
+      "ram_differing_addresses": [
+        49155,
+        53052,
+        53053,
+        53162,
+        53163,
+        53166,
+        53178,
+        59408
+      ],
+      "dut_rgb_sha256": "2593c8452c33776d01bc422af0d1294bda3beb5a184ba88ec79dd3c0866660bc",
+      "reference_rgb_sha256": "2593c8452c33776d01bc422af0d1294bda3beb5a184ba88ec79dd3c0866660bc",
+      "offline_dut_snapshot_differing_pixels": 44,
+      "offline_dut_snapshot_differing_pens": 44
+    },
+    {
+      "frame": "frame_180",
+      "rgb_differing_pixels": 0,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "backbuffer_vs_displayed_pixels": 0,
+      "sprite_records_equal": false,
+      "video_ram_differing_addresses": [
+        59408
+      ],
+      "pixel_difference_bounds": null,
+      "ram_differing_addresses": [
+        49155,
+        53052,
+        53053,
+        53162,
+        53163,
+        53166,
+        53178,
+        59408
+      ],
+      "dut_rgb_sha256": "9908b232125822157b560d78e3fd246c12d747e1385aff4e4a7e0d7c5b9939fb",
+      "reference_rgb_sha256": "9908b232125822157b560d78e3fd246c12d747e1385aff4e4a7e0d7c5b9939fb",
+      "offline_dut_snapshot_differing_pixels": 44,
+      "offline_dut_snapshot_differing_pens": 44
+    },
+    {
+      "frame": "frame_240",
+      "rgb_differing_pixels": 137,
+      "offline_mame_snapshot_differing_pixels": 0,
+      "backbuffer_vs_displayed_pixels": 30,
+      "sprite_records_equal": true,
+      "video_ram_differing_addresses": [
+        57409,
+        57473,
+        57505,
+        57537,
+        57633,
+        57761,
+        57793,
+        57953,
+        58049,
+        58081
+      ],
+      "pixel_difference_bounds": [
+        8,
+        16,
+        13,
+        191
+      ],
+      "ram_differing_addresses": [
+        49155,
+        52972,
+        52973,
+        52974,
+        52975,
+        53104,
+        53106,
+        53107,
+        53109,
+        53111,
+        53162,
+        53163,
+        53164,
+        53166,
+        53170,
+        53178,
+        53242,
+        57409,
+        57473,
+        57505,
+        57537,
+        57633,
+        57761,
+        57793,
+        57953,
+        58049,
+        58081
+      ],
+      "dut_rgb_sha256": "a342f8a5086047de185ba8a0567ec5c777fa5d87d517156ac24fdb5879e1a454",
+      "reference_rgb_sha256": "1dbc5fef09cad138691d5297d3283179ab296e9e75c9b6e7ff8586037d0e347d",
+      "offline_dut_snapshot_differing_pixels": 43,
+      "offline_dut_snapshot_differing_pens": 43
+    }
+  ],
+  "functional_io": {
+    "dut_count": 606,
+    "reference_count": 605,
+    "matched_common_prefix": 389,
+    "first_divergence": {
+      "index": 389,
+      "dut": {
+        "cycle": "154480615",
+        "frame": "185",
+        "port": "4",
+        "data": "5"
+      },
+      "reference": {
+        "time": "3.086669270830",
+        "frame": "185",
+        "port": "2",
+        "data": "134"
+      }
+    }
+  },
+  "notes": [
+    "Displayed native PNG is the reference: MAME screen:pixels() reads m_curbitmap, while snapshot uses m_curtexture; those differ after the frame buffer swap.",
+    "No-op port 05 is included in all_io_writes; historical functional_io retains its narrower scope.",
+    "Live scanline rendering and MAME instantaneous frame rendering are distinct timing models. All pixel differences remain visible."
+  ],
+  "all_io_writes": {
+    "status": "FAIL",
+    "dut_count": 833,
+    "reference_count": 831
+  },
+  "known_board_effects": {
+    "status": "FAIL",
+    "scope": "Ordered writes to implemented ports; control bits 0/1 only, no-op port 05 excluded. Raw full-byte comparison remains strict."
+  },
+  "io_reads": {
+    "status": "FAIL",
+    "dut_count": 702,
+    "reference_count": 700
+  },
+  "sound_commands": {
+    "0": {
+      "status": "PASS",
+      "dut_count": 14,
+      "reference_count": 14,
+      "first_divergence": null
+    },
+    "1": {
+      "status": "PASS",
+      "dut_count": 14,
+      "reference_count": 14,
+      "first_divergence": null
+    },
+    "2": {
+      "status": "PASS",
+      "dut_count": 119,
+      "reference_count": 119,
+      "first_divergence": null
+    },
+    "3": {
+      "status": "PASS",
+      "dut_count": 0,
+      "reference_count": 0,
+      "first_divergence": null
+    }
+  },
+  "reference_snapshot_self_check": {
+    "status": "PASS"
+  },
+  "status": "FAIL"
+}

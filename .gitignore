@@ -15,3 +15,4 @@ output_files/
 build_id.v
 jtag.cdf
 *.qws
+cr_ie_info.json

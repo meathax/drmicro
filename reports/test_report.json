@@ -1,9 +1,9 @@
 {
   "run_reference": {
     "command": "run_reference",
-    "started_utc": "2026-09-05T21:51:36Z",
+    "started_utc": "2026-09-05T21:52:45Z",
     "status": "PASS",
-    "seconds": 1.322,
+    "seconds": 1.639,
     "source_sha256": "74175c5e4b31bae5925fef0b825ffce7058bbd631c5c62161e7152092af7e68f"
   },
   "compare": {
@@ -30,24 +30,24 @@
   },
   "build_sim": {
     "command": "build_sim",
-    "started_utc": "2026-09-05T21:51:23Z",
+    "started_utc": "2026-09-05T21:56:56Z",
     "status": "PASS",
-    "seconds": 1.897,
-    "source_sha256": "74175c5e4b31bae5925fef0b825ffce7058bbd631c5c62161e7152092af7e68f"
+    "seconds": 0.432,
+    "source_sha256": "8a04990a5a9ade9b8f5f2e9e920986f2c5321699874efe8d15527008077c9b94"
   },
   "test_unit": {
     "command": "test_unit",
-    "started_utc": "2026-09-05T21:26:36Z",
+    "started_utc": "2026-09-05T21:56:20Z",
     "status": "PASS",
-    "seconds": 1.515,
-    "source_sha256": "74175c5e4b31bae5925fef0b825ffce7058bbd631c5c62161e7152092af7e68f"
+    "seconds": 2.335,
+    "source_sha256": "8a04990a5a9ade9b8f5f2e9e920986f2c5321699874efe8d15527008077c9b94"
   },
   "run_smoke": {
     "command": "run_smoke",
-    "started_utc": "2026-09-05T21:41:45Z",
+    "started_utc": "2026-09-05T22:12:03Z",
     "status": "PASS",
-    "seconds": 93.292,
-    "source_sha256": "74175c5e4b31bae5925fef0b825ffce7058bbd631c5c62161e7152092af7e68f"
+    "seconds": 15.69,
+    "source_sha256": "8a04990a5a9ade9b8f5f2e9e920986f2c5321699874efe8d15527008077c9b94"
   },
   "check_deps": {
     "command": "check_deps",
@@ -72,10 +72,10 @@
   },
   "lint_core": {
     "command": "lint_core",
-    "started_utc": "2026-09-05T21:26:36Z",
+    "started_utc": "2026-09-05T21:56:20Z",
     "status": "PASS",
-    "seconds": 0.355,
-    "source_sha256": "74175c5e4b31bae5925fef0b825ffce7058bbd631c5c62161e7152092af7e68f"
+    "seconds": 0.535,
+    "source_sha256": "8a04990a5a9ade9b8f5f2e9e920986f2c5321699874efe8d15527008077c9b94"
   },
   "test_fixtures": {
     "command": "test_fixtures",
@@ -142,10 +142,10 @@
   },
   "audit_source": {
     "command": "audit_source",
-    "started_utc": "2026-09-05T21:47:01Z",
+    "started_utc": "2026-09-05T22:12:18Z",
     "status": "PASS",
-    "seconds": 0.154,
-    "source_sha256": "74175c5e4b31bae5925fef0b825ffce7058bbd631c5c62161e7152092af7e68f"
+    "seconds": 0.196,
+    "source_sha256": "8a04990a5a9ade9b8f5f2e9e920986f2c5321699874efe8d15527008077c9b94"
   },
   "scenario_cocktail": {
     "command": "scenario_cocktail",
@@ -184,10 +184,10 @@
   },
   "quartus_map": {
     "command": "quartus_map",
-    "started_utc": "2026-09-05T21:29:32Z",
+    "started_utc": "2026-09-05T21:57:18Z",
     "status": "PASS",
-    "seconds": 68.941,
-    "source_sha256": "74175c5e4b31bae5925fef0b825ffce7058bbd631c5c62161e7152092af7e68f"
+    "seconds": 150.35,
+    "source_sha256": "8a04990a5a9ade9b8f5f2e9e920986f2c5321699874efe8d15527008077c9b94"
   },
   "quartus_fit": {
     "command": "quartus_fit",

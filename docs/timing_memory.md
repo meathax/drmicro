@@ -1,6 +1,6 @@
 # Timing, scheduling and memory
 
-The game uses only CLK_50M. Rational accumulator enables produce CPU/PSG 3,072,000 Hz, MSM 384,000 Hz, pixels 4,915,200 Hz. Adjacent enable gaps are respectively 16/17, 130/131 and 10/11 system clocks; accumulated phase error remains below one 20 ns system clock. These rates are long-term exact for an exact 50 MHz source.
+The game uses only CLK_50M. Rational accumulator enables produce CPU/PSG 3,072,000 Hz, MSM 384,000 Hz, pixels 4,915,200 Hz. Adjacent enable gaps are respectively 16/17, 130/131 and 10/11 system clocks; accumulated phase error remains below one 20 ns system clock. These rates are long-term exact for an exact 50 MHz source. `CPU_CE_PHASE` and `VIDEO_CE_PHASE` are elaboration parameters for controlled phase experiments; both production defaults are zero.
 
 The provisional raster is 320×256 at 60 Hz, horizontal rate 15,360 Hz. Active x=0..255, y=16..239. Positive HS spans x=272..303, VS y=244..247. NMI is generated at x=0,y=240, the active-to-blank edge. Reset and the capture frame origin also use y=240, preserving the measured interrupt/CPU startup relationship. The earlier NMI_LINE=240 experiment reset at y=0 and is a different timing profile; its reports are historical. It is emitted if enabled, held low through two CPU enables; TV80 sees one falling edge. The RGB, sync, blanking, pixel enable and debug coordinates are delayed together by four register stages including memory reads. Reset currently restarts the native raster. No fabricated PCB measurements or PLL validation are implied.
 

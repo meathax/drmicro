@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "files_checked": 525,
+  "files_checked": 527,
   "problems": [],
   "scope": "Git eligible source paths; original ROM member and packed-payload SHA256 matches plus generated-asset path/extension checks. Pinned donor test data and schematic remain attributed upstream assets."
 }

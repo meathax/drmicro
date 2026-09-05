@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 module drmicro_core #(
  parameter integer CPU_HZ=3072000, ADPCM_HZ=384000, PIXEL_HZ=4915200,
+ parameter integer CPU_CE_PHASE=0, VIDEO_CE_PHASE=0,
  // Begin each frame at the active-to-blank edge. Reset uses this same origin,
  // so changing raster coordinates does not move NMI relative to CPU startup.
  parameter integer NMI_LINE=240
@@ -35,9 +36,9 @@ module drmicro_core #(
  assign running=!reset&&!clearing;
  // Start all fractional enables when the ROM/RAM reset sequence releases the
  // board.  This gives CPU and raster a defined shared phase after download.
- drmicro_ce #(.RATE(CPU_HZ)) cpu_clock(.clk(clk),.reset(!running),.ce(cpu_ce));
+ drmicro_ce #(.RATE(CPU_HZ),.INITIAL_PHASE(CPU_CE_PHASE)) cpu_clock(.clk(clk),.reset(!running),.ce(cpu_ce));
  drmicro_ce #(.RATE(ADPCM_HZ)) adpcm_clock(.clk(clk),.reset(!running),.ce(adpcm_ce));
- drmicro_ce #(.RATE(PIXEL_HZ)) pixel_clock(.clk(clk),.reset(!running),.ce(video_ce));
+ drmicro_ce #(.RATE(PIXEL_HZ),.INITIAL_PHASE(VIDEO_CE_PHASE)) pixel_clock(.clk(clk),.reset(!running),.ce(video_ce));
  logic [15:0] addr;
  logic [7:0] dout,di,mem_data,p1,p2;
  logic mreq_n,iorq_n,rd_n,wr_n,rfsh_n,m1_n,nmi_n,halt_n;
