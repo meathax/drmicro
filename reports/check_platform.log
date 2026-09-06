@@ -363,7 +363,7 @@
    19 | module video_mixer
       |        ^~~~~~~~~~~
 %Warning-TIMESCALEMOD: rtl\drmicro_video.sv:4:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
-    4 | module drmicro_video #(parameter integer NMI_LINE=239, NMI_X=312, FRAME_ORIGIN=240)(
+    4 | module drmicro_video #(parameter integer NMI_LINE=239, NMI_X=316, FRAME_ORIGIN=240)(
       |        ^~~~~~~~~~~~~
                        sys\video_mixer.sv:19:8: ... Location of module with timescale
    19 | module video_mixer
@@ -1776,4 +1776,4 @@
                     sys\emu_ports.vh:9:15:      Example path: HPS_BUS
 - V e r i l a t i o n   R e p o r t: Verilator 5.051 devel rev v5.050-312-gb1c06fdb0 (mod)
 - Verilator: Built from 4.041 MB sources in 65 modules, into 1.572 MB in 15 C++ files needing 0.000 MB
-- Verilator: Walltime 0.529 s (elab=0.075, cvt=0.345, bld=0.000); cpu 0.000 s on 1 threads; allocated 88.719 MB
+- Verilator: Walltime 0.414 s (elab=0.040, cvt=0.299, bld=0.000); cpu 0.000 s on 1 threads; allocated 88.980 MB

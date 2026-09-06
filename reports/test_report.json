@@ -86,17 +86,17 @@
   },
   "check_platform": {
     "command": "check_platform",
-    "started_utc": "2026-09-05T22:32:14Z",
+    "started_utc": "2026-09-06T11:52:32Z",
     "status": "PASS",
-    "seconds": 0.565,
-    "source_sha256": "37ebbe51fe8161a10da6c27d8d9ef79b673af905f54c1684a27fcd8c13d1316a"
+    "seconds": 1.187,
+    "source_sha256": "c1ac2dbb096161f256dfd26d1f51329e3cb630d8515a74b87aea7f470a9b9360"
   },
   "check_project": {
     "command": "check_project",
-    "started_utc": "2026-09-05T21:46:29Z",
+    "started_utc": "2026-09-06T11:52:32Z",
     "status": "PASS",
-    "seconds": 0.034,
-    "source_sha256": "74175c5e4b31bae5925fef0b825ffce7058bbd631c5c62161e7152092af7e68f"
+    "seconds": 0.151,
+    "source_sha256": "c1ac2dbb096161f256dfd26d1f51329e3cb630d8515a74b87aea7f470a9b9360"
   },
   "test_platform_video": {
     "command": "test_platform_video",
@@ -107,10 +107,10 @@
   },
   "test_platform_hps": {
     "command": "test_platform_hps",
-    "started_utc": "2026-09-05T22:32:18Z",
+    "started_utc": "2026-09-06T11:52:42Z",
     "status": "PASS",
-    "seconds": 55.094,
-    "source_sha256": "37ebbe51fe8161a10da6c27d8d9ef79b673af905f54c1684a27fcd8c13d1316a"
+    "seconds": 54.339,
+    "source_sha256": "c1ac2dbb096161f256dfd26d1f51329e3cb630d8515a74b87aea7f470a9b9360"
   },
   "scenario_dips": {
     "command": "scenario_dips",
@@ -184,10 +184,10 @@
   },
   "quartus_map": {
     "command": "quartus_map",
-    "started_utc": "2026-09-05T21:57:18Z",
+    "started_utc": "2026-09-06T11:54:06Z",
     "status": "PASS",
-    "seconds": 150.35,
-    "source_sha256": "8a04990a5a9ade9b8f5f2e9e920986f2c5321699874efe8d15527008077c9b94"
+    "seconds": 65.123,
+    "source_sha256": "c1ac2dbb096161f256dfd26d1f51329e3cb630d8515a74b87aea7f470a9b9360"
   },
   "quartus_fit": {
     "command": "quartus_fit",
@@ -205,10 +205,10 @@
   },
   "summarize_status": {
     "command": "summarize_status",
-    "started_utc": "2026-09-05T22:42:54Z",
+    "started_utc": "2026-09-06T11:56:19Z",
     "status": "FAIL",
     "reason": "Comparison mismatch; see comparison report",
-    "seconds": 0.014,
+    "seconds": 0.01,
     "source_sha256": "c1ac2dbb096161f256dfd26d1f51329e3cb630d8515a74b87aea7f470a9b9360"
   }
 }

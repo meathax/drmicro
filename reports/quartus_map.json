@@ -16,13 +16,13 @@
       "rtl/drmicro_adpcm_ctrl.sv": "c217d9f82d94e7e9bf1bb6d635adc9d3fed942e13d1798f10172deb6b30839de",
       "rtl/drmicro_bus.sv": "30e6346641a4a2cce55e339b69d5a051a122ed8a546c0f5bea5d57e3d5c7f16c",
       "rtl/drmicro_clock_en.sv": "95411f82c9a0770548f778fbdd94f1da51db07b11b6f6dce1acc5ac6386064d0",
-      "rtl/drmicro_core.sv": "31629443a1b5b7780acb7f42cfea3c8f84261719d5ab674e75aeef3b21c1812a",
+      "rtl/drmicro_core.sv": "cbcd7841a4ca687613981228b55252e71bc501239fcd6fdd29843b6703f0f968",
       "rtl/drmicro_inputs.sv": "99e24e9f176eadd86945771b8b453980bf4fe18ec0c4c4569d220e8aa7d40505",
       "rtl/drmicro_memory.sv": "c3d816654f582a4bbda81131fdb96ba9440230550552584ee6a1183ff5b88031",
       "rtl/drmicro_pkg.sv": "5be3b81e0dc09074436d4a2092e37b06a4b4edcee3d110961b44862654da6826",
       "rtl/drmicro_rom_loader.sv": "abf823c848cebc9892443108e4f05af5c48e877ab053829b95e60f1bc3c24faa",
       "rtl/drmicro_sound.sv": "5ee6172a604a92bf8e6495bbbb7cc8f0e98bcbc3304163878aab42e8a0024621",
-      "rtl/drmicro_video.sv": "9976041d7a748a9c6977f9c95ece90097160cfadeebf2434ee8cba8643f745d8",
+      "rtl/drmicro_video.sv": "a3c8377fac2002bf8695d6d9bbca1c5bf254a18d6dcc25bd93f8a3734dd454e1",
       "rtl/pll/pll_0002.qip": "98c91540a36e672f25f071bfaae965b8c9f60c679db4fbe226578c8c78c5052a",
       "rtl/pll/pll_0002.v": "8ac785958023eadf517605bc669189d5583af48de2d63dabbddbeca1acda9ffa",
       "rtl/pll/pll_0002_q13.qip": "58d1281c86501f8926b2b156edeada9bc7c27c4156f456eb3568a5ba40baea0f",
@@ -117,9 +117,9 @@
       "sys/video_mixer.sv": "f6216a5bf42ef0b9dbb82fe5cf1338fd05e7895fbc9fc3823c865aeb012c9cdb",
       "sys/yc_out.sv": "b31f179f06c89ba1505cc044fdd9aa5609fac0986418f26c840991c34023fc19"
     },
-    "sha256": "99cbcbcb13caf40d25e80846a7c65b3b68554b09e8cf925ee82ba987d9175b7b"
+    "sha256": "add1098d56997b4158ad3543bcd188ca23c6832a4eed3ff5df50110b146baa85"
   },
   "device": "5CSEBA6U23I7",
-  "started_utc": "2026-09-05T21:57:19Z",
-  "seconds": 148.789
+  "started_utc": "2026-09-06T11:54:08Z",
+  "seconds": 63.313
 }
