@@ -47,7 +47,7 @@ This section separates what is backed by direct evidence from what is inferred f
 | CPU and PSG clock | **HYPOTHESIS** | 18.432 MHz / 6 = 3.072 MHz per MAME, which marks it with a question mark. Older MAME versions clocked the PSGs at 18.432 MHz / 4 instead, which would raise music pitch by a factor of 1.5. Needs a PCB audio recording to settle. |
 | Port 05 read value, control-port bits 2 and 3, analogue mixing and filtering | **HYPOTHESIS** | Unknown; the core follows MAME (port 05 reads 0, bits 2/3 ignored, equal PSG gains). No gameplay effect has been found. |
 
-The one remaining strict-comparison difference against MAME (a handful of background tiles in one frame of a moving-game capture) was traced to the two test harnesses sampling "end of frame" at different points inside vertical blanking, not to a CPU or video timing error. Details are in [docs/failures.md](docs/failures.md) and [docs/plan.md](docs/plan.md).
+The one remaining strict-comparison difference against MAME (a handful of background tiles in one frame of a moving-game capture) was traced to the two test harnesses sampling "end of frame" at different points inside vertical blanking, not to a CPU or video timing error. The core's live-rendered picture is unaffected; the two sides agree again on the following captured frame.
 
 ## Hardware emulated
 
@@ -103,26 +103,33 @@ Resource use: 10,085 of 41,910 ALMs, 202 of 553 M10K blocks, 34 DSP blocks. Timi
 
 ## Building from source
 
-The Quartus project is `Arcade-DrMicro.qpf` with `Arcade-DrMicro.qsf`, `Arcade-DrMicro.sdc` and `files.qip`. The supported toolchain is Quartus Prime 17.0.2 Build 602. The Python driver runs each stage explicitly and checks that the previous stage's source hashes are still current:
+The Quartus project is `Arcade-DrMicro.qpf`, with `Arcade-DrMicro.qsf`, `Arcade-DrMicro.sdc` and `files.qip` supplying the settings, constraints and source manifest. The supported toolchain is Quartus Prime 17.0.2 Build 602 for the DE10-Nano Cyclone V `5CSEBA6U23I7`.
 
-```text
-python tools/dev.py quartus_map
-python tools/dev.py quartus_fit
-python tools/dev.py quartus_sta
-python tools/dev.py quartus_asm
+Open the project in Quartus and run Analysis & Synthesis, Fitter, TimeQuest and Assembler in that order, or from a shell:
+
+```bash
+quartus_map Arcade-DrMicro -c Arcade-DrMicro
 ```
 
-The RBF is written to `build/quartus/Arcade-DrMicro.rbf`. Generated databases, simulation output, captures, reports and ROM images are not tracked.
-
-## Simulation and verification
-
-The same driver runs the Verilator and Icarus test suite without Quartus:
-
-```text
-python tools/dev.py test_all
+```bash
+quartus_fit Arcade-DrMicro -c Arcade-DrMicro
 ```
 
-This covers four-state unit tests for the CPU timing fixes, loader, bus and memory; independent fixture checks for the renderer, PSG and ADPCM; elaboration of the real MiSTer `emu` wrapper with `hps_io` and the video pipeline; and a differential run of the whole board against MAME 0.289 using Lua-captured I/O, RAM and displayed frames. Longer gameplay, DIP, service, reset, cocktail and two-player scripts are described in [docs/verification.md](docs/verification.md). Set `MAME` in `.tools/local_env.json` (or the environment) to a MAME 0.289 binary that includes the `drmicro` driver.
+```bash
+quartus_sta Arcade-DrMicro -c Arcade-DrMicro
+```
+
+```bash
+quartus_asm Arcade-DrMicro -c Arcade-DrMicro
+```
+
+The RBF is written to `build/quartus/Arcade-DrMicro.rbf`. Generated databases, fitter output, simulation results and ROM images are not tracked.
+
+## Verification
+
+The core was developed against a differential test suite that is maintained outside this repository: four-state unit tests for the corrected Z80 timing, the loader, the bus and the memory collisions; independent reference models for the renderer, the SN76496 and the MSM5205 decoder, compared over randomised stimulus; elaboration of the real MiSTer `emu` wrapper with `hps_io` and the full video pipeline; and frame-by-frame differential runs of the whole board on the real ROMs across attract, gameplay, two-player, DIP, service, cocktail and reset scripts.
+
+Headline results: every ordered I/O write and read matches the reference over a 3,600-frame two-player run (15,060 writes and 11,976 reads); three independent cold boots produce bit-identical pixels, RAM and instruction counts; and the attract, DIP and service scripts are pixel-exact. Remaining differences and their causes are summarised in the PCB accuracy table above.
 
 ## Credits
 

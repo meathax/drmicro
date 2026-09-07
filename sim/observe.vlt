@@ -1,9 +1,0 @@
-`verilator_config
-// Read-only observations. Keeping every donor net public prevents useful
-// simulator optimization and is unnecessary for a pin-driven integration run.
-public_flat_rd -module "drmicro_memory" -var "ram"
-public_flat_rd -module "drmicro_core" -var "flip"
-public_flat_rd -module "drmicro_core" -var "iorq_n"
-public_flat_rd -module "drmicro_core" -var "rd_n"
-public_flat_rd -module "drmicro_core" -var "m1_n"
-public_flat_rd -module "drmicro_core" -var "di"

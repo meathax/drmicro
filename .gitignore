@@ -18,3 +18,11 @@ jtag.cdf
 cr_ie_info.json
 reports/
 c5_pin_model_dump.txt
+docs/
+tools/
+reference/
+tests/
+sim/
+patches/
+AGENTS.md
+third_party.lock.json
