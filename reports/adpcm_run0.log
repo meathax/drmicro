@@ -1,3 +1,0 @@
-PASS ADPCM sequencer high-first, immediate start, restart, both marker phases and wrap
-PASS JT5205 independent 256-nibble decoder vector, signed saturation and one-sample pipeline
-tests/tb_adpcm.sv:55: $finish called at 165770000 (1ps)

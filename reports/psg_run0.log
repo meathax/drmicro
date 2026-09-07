@@ -1,2 +1,0 @@
-PASS SN76496 all noise modes, tone-zero, rewrites, volumes, short write spacing, startup
-tests/tb_psg.sv:15: $finish called at 327720000 (1ps)

@@ -1,7 +1,0 @@
-{
-  "status": "PASS",
-  "runs": 3,
-  "frames_per_run": 120,
-  "evidence": "All captured RGB, raw pens, full RAM and execution counters identical across three independent process/cold-download boots.",
-  "binary_sha256": "3c67b16a1e3e779be53b3bc522a2391a026765932da1752502cf7f908c3cc11a"
-}

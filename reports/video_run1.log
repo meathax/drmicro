@@ -1,2 +1,0 @@
-PASS independent renderer flip=1: 57344 raw indices/RGB, no X, no deadline failures
-tests/tb_video.sv:38: $finish called at 10102236000 (1ps)

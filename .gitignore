@@ -7,8 +7,8 @@ build/
 __pycache__/
 *.pyc
 *.rbf
+!releases/*.rbf
 *.sof
-reports/captures/
 db/
 incremental_db/
 output_files/
@@ -16,3 +16,5 @@ build_id.v
 jtag.cdf
 *.qws
 cr_ie_info.json
+reports/
+c5_pin_model_dump.txt

@@ -1,2 +1,0 @@
-PASS extended Z80 cycles: DJNZ/JR taken and untaken, LDIR repeat/final, indexed loads, CB, stack, LD A,R and conditional RET
-tests/tb_cpu_extended.sv:26: $finish called at 46560000 (1ps)

@@ -1,7 +1,7 @@
-import json,os,pathlib,subprocess,xml.etree.ElementTree as E
+import hashlib,json,os,pathlib,subprocess,xml.etree.ElementTree as E
 from dev import R,ENV,run
 def main(frames=120,script='attract'):
- exe=os.getenv('MAME') or str(R/'.tools/mame/mame.exe')
+ exe=ENV.get('MAME') or str(R/'.tools/mame/mame.exe')
  if not pathlib.Path(exe).is_file():raise FileNotFoundError('MAME unavailable; set MAME or run optional tools/bootstrap_mame.py')
  out=R/'reports/captures'/('mame_'+os.getenv('DRMICRO_CAPTURE_NAME',script));out.mkdir(parents=True,exist_ok=True)
  (out/'completion.json').unlink(missing_ok=True)
@@ -22,5 +22,6 @@ def main(frames=120,script='attract'):
  if 'error' in log.lower() or not (out/'completion.json').exists() or not (out/f'frame_{frames}.ram').exists():raise RuntimeError('MAME capture incomplete; inspect log')
  assert json.loads((out/'completion.json').read_text())==dict(frames=frames,script=script)
  result=dict(status='PASS',frames=frames,script=script,input_callback_offset=int(ENV.get('DRMICRO_REFERENCE_INPUT_OFFSET','0')),binary=version.strip(),source_spec_commit=manifest()['mame_commit'],binary_info=json.loads((R/'reports/mame_binary.json').read_text()),args=args)
+ result['executable']={'path':str(pathlib.Path(exe).resolve()),'sha256':hashlib.sha256(pathlib.Path(exe).read_bytes()).hexdigest()}
  (out/'result.json').write_text(json.dumps(result,indent=2))
 if __name__=='__main__':main()

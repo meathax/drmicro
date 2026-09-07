@@ -1,4 +1,4 @@
-"""Explicit Quartus A&S, fit and timing stages; no assembler or programming."""
+"""Explicit Quartus synthesis, fit, timing and assembly; no hardware programming."""
 import csv,hashlib,json,os,pathlib,re,shutil,subprocess,time
 from dev import R,ENV,run
 
@@ -12,7 +12,7 @@ def run_stage(args,filename):
  return text
 
 def executable(stage):
- base=pathlib.Path(os.environ.get('QUARTUS_ROOTDIR','C:/intelFPGA_lite/17.0/quartus'))
+ base=pathlib.Path(ENV.get('QUARTUS_ROOTDIR','C:/intelFPGA_lite/17.0/quartus'))
  for folder in ['bin64','bin']:
   p=base/folder/('quartus_'+stage+('.exe' if os.name=='nt' else ''))
   if p.is_file():return p
@@ -27,12 +27,13 @@ def identity():
  return dict(files=hashes,sha256=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest())
 
 def main(stage='map'):
- if stage not in ['map','fit','sta']:raise ValueError('Unsupported Quartus stage')
+ if stage not in ['map','fit','sta','asm']:raise ValueError('Unsupported Quartus stage')
  version=run([executable('sh'),'--version'],'quartus_version.log').strip()
  if stage=='map':run([executable('sh'),'-t','sys/build_id.tcl','quartus_sh','Arcade-DrMicro','Arcade-DrMicro'],'quartus_preflow.log')
  inputs=identity()
  if stage!='map':
-  prior=json.loads((R/'reports'/('quartus_'+('map' if stage=='fit' else 'fit')+'.json')).read_text())
+  prerequisite={'fit':'map','sta':'fit','asm':'sta'}[stage]
+  prior=json.loads((R/'reports'/('quartus_'+prerequisite+'.json')).read_text())
   if prior['status']!='PASS' or prior['inputs']['sha256']!=inputs['sha256']:raise ValueError('Prior Quartus stage missing, failed or stale; rerun map/fit for current sources')
  result=dict(stage=stage,status='FAIL',version=version,inputs=inputs,device='5CSEBA6U23I7',started_utc=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()))
  start=time.time()
@@ -54,6 +55,12 @@ def main(stage='map'):
    if any(float(x['slack_ns'])<0 for x in rows):raise ValueError('Negative timing slack; see quartus_corners.csv and detailed paths')
   if identity()['sha256']!=inputs['sha256']:raise ValueError('Quartus sources changed during the stage; result is stale')
   if stage=='sta' and 'timing requirements not met' in log.lower():raise ValueError('TimeQuest reports timing requirements not met; inspect timing report')
+  if stage=='asm':
+   artifact=R/'build/quartus/Arcade-DrMicro.rbf'
+   if not artifact.is_file() or artifact.stat().st_size==0:raise ValueError('Assembler did not produce a nonempty RBF')
+   if artifact.stat().st_mtime<start-2:raise ValueError('Assembler left a stale RBF')
+   result['artifact']={'path':artifact.relative_to(R).as_posix(),'bytes':artifact.stat().st_size,'sha256':hashlib.sha256(artifact.read_bytes()).hexdigest()}
+   result['scope']='Programming artifact only; external I/O timing and physical hardware validation remain open.'
   result['status']='PASS'
   summary=R/'build/quartus'/('Arcade-DrMicro.'+stage+'.summary')
   if summary.exists():shutil.copy2(summary,R/'reports'/('quartus_'+stage+'.summary'))

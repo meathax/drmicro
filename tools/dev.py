@@ -3,6 +3,12 @@ import argparse,concurrent.futures,hashlib,json,os,pathlib,shutil,subprocess,sys
 R=pathlib.Path(__file__).resolve().parents[1]
 os.chdir(R)
 ENV=os.environ.copy()
+local_env=R/'.tools/local_env.json'
+if local_env.exists():
+ for key,value in json.loads(local_env.read_text()).items():
+  if key not in ['MAME','QUARTUS_ROOTDIR','VERILATOR_ROOT'] or not isinstance(value,str):
+   raise ValueError('Unsupported local tool setting: '+key)
+  ENV.setdefault(key,value)
 SUITE=R/'.tools/oss-cad-suite'
 if SUITE.exists():
  ENV['PATH']=os.pathsep.join([str(SUITE/'bin'),str(SUITE/'lib'),str(R/'.tools/w64devkit/bin'),ENV.get('PATH','')])
@@ -59,7 +65,7 @@ def build_sim(jobs=2):
   return str(obj),'cached '+p.name+'\n'
  with concurrent.futures.ThreadPoolExecutor(max_workers=max(1,min(jobs,8))) as pool:results=list(pool.map(compile_one,cpp))
  (R/'reports/build_sim_compile.log').write_text(''.join(log for _,log in results))
- run([tool('g++'),'-pthread',*[obj for obj,_ in results],'-o','build/drmicro_sim.exe'],'build_sim_link.log')
+ run([tool('g++'),'-pthread','-static',*[obj for obj,_ in results],'-o','build/drmicro_sim.exe'],'build_sim_link.log')
  (R/'build/drmicro_sim.build.json').write_text(json.dumps(build_identity(),indent=2))
 def run_smoke(frames=120,script='attract'):
  __import__('roms').main(True)
@@ -87,20 +93,25 @@ def check_platform():
 def test_rotation():
  run([tool('verilator_bin' if os.name=='nt' else 'verilator'),'--cc','--top-module','screen_rotate','--Mdir','build/rotation','--Wno-fatal','sys/arcade_video.v'],'rotation_elaborate.log')
  include=pathlib.Path(ENV.get('VERILATOR_ROOT','/usr/share/verilator'))/'include'
- run([tool('g++'),'-std=c++20','-O2','-pthread','-I'+str(include),'-I'+str(include/'vltstd'),'-Ibuild/rotation','sim/rotation.cpp',*sorted((R/'build/rotation').glob('*.cpp')),include/'verilated.cpp',include/'verilated_threads.cpp','-o','build/rotation_test.exe'],'rotation_compile.log')
+ run([tool('g++'),'-std=c++20','-O2','-pthread','-I'+str(include),'-I'+str(include/'vltstd'),'-Ibuild/rotation','sim/rotation.cpp',*sorted((R/'build/rotation').glob('*.cpp')),include/'verilated.cpp',include/'verilated_threads.cpp','-static','-o','build/rotation_test.exe'],'rotation_compile.log')
  run([R/'build/rotation_test.exe'],'rotation_run.log')
 
 def test_platform_video():
  run([tool('verilator_bin' if os.name=='nt' else 'verilator'),'--cc','--top-module','platform_video_top','--Mdir','build/platform_video','--Wno-fatal','-f','sim/platform.f','sim/platform_video_top.sv'],'platform_video_elaborate.log')
  include=pathlib.Path(ENV.get('VERILATOR_ROOT','/usr/share/verilator'))/'include'
- run([tool('g++'),'-std=c++20','-O2','-pthread','-I'+str(include),'-I'+str(include/'vltstd'),'-Ibuild/platform_video','sim/platform_video.cpp',*sorted((R/'build/platform_video').glob('*.cpp')),include/'verilated.cpp',include/'verilated_threads.cpp','-o','build/platform_video_test.exe'],'platform_video_compile.log')
+ run([tool('g++'),'-std=c++20','-O2','-pthread','-I'+str(include),'-I'+str(include/'vltstd'),'-Ibuild/platform_video','sim/platform_video.cpp',*sorted((R/'build/platform_video').glob('*.cpp')),include/'verilated.cpp',include/'verilated_threads.cpp','-static','-o','build/platform_video_test.exe'],'platform_video_compile.log')
  run([R/'build/platform_video_test.exe'],'platform_video_run.log')
 
 def test_platform_hps():
  __import__('roms').main(True)
  run([tool('verilator_bin' if os.name=='nt' else 'verilator'),'--cc','--top-module','platform_hps_top','-DMISTER_FB','--Mdir','build/platform_hps','--Wno-fatal','-f','sim/platform.f','sim/platform_hps_top.sv'],'platform_hps_elaborate.log')
  include=pathlib.Path(ENV.get('VERILATOR_ROOT','/usr/share/verilator'))/'include'
- run([tool('g++'),'-std=c++20','-O2','-pthread','-I'+str(include),'-I'+str(include/'vltstd'),'-Ibuild/platform_hps','sim/platform_hps.cpp',*sorted((R/'build/platform_hps').glob('*.cpp')),include/'verilated.cpp',include/'verilated_threads.cpp','-o','build/platform_hps_test.exe'],'platform_hps_compile.log')
+ # -fno-inline: GCC 16.1 (MSYS2 UCRT64) miscompiles this harness at -O1/-O2
+ # default inlining, crashing with SIGSEGV before any assertion runs. Isolated
+ # by compiling the harness and the generated RTL model at independent
+ # optimization levels: the crash tracks only the harness TU's inlining, not
+ # the RTL model or its optimization level. See docs/failures.md entry 15.
+ run([tool('g++'),'-std=c++20','-O2','-fno-inline','-pthread','-I'+str(include),'-I'+str(include/'vltstd'),'-Ibuild/platform_hps','sim/platform_hps.cpp',*sorted((R/'build/platform_hps').glob('*.cpp')),include/'verilated.cpp',include/'verilated_threads.cpp','-static','-o','build/platform_hps_test.exe'],'platform_hps_compile.log')
  run([R/'build/platform_hps_test.exe'],'platform_hps_run.log')
 def record(name,fn):
  start=time.time();entry={'command':name,'started_utc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'status':'NOT_RUN'}
@@ -133,7 +144,7 @@ def main():
  commands['audit_source']=lambda:__import__('audit_source').main()
  commands['test_cold_boots']=lambda:__import__('test_cold_boots').main()
  commands['summarize_status']=lambda:__import__('summarize_status').main()
- for stage in ['map','fit','sta']:
+ for stage in ['map','fit','sta','asm']:
   commands['quartus_'+stage]=lambda stage=stage:__import__('quartus').main(stage)
  if a.command=='test_all':
   order=['check_deps','check_roms','pack_roms','lint_core','test_unit','test_fixtures','check_platform','test_rotation','test_platform_video','test_platform_hps','check_project','build_sim','run_smoke','run_reference','compare','capture_assets']

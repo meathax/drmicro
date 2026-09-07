@@ -1,2 +1,0 @@
-PASS all 65536 CPU addresses, sync latency, old-data collisions, VRAM bank order, clear priority/length, ROM preservation
-tests/tb_memory.sv:29: $finish called at 1474666000 (1ps)

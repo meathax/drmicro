@@ -1,2 +1,0 @@
-PASS integrated audio 5143 samples: 64 sample pages, restarts, stop markers, digital decode and mixer without X
-tests/tb_sound_integration.sv:52: $finish called at 42866850000 (1ps)

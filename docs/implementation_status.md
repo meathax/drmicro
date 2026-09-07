@@ -1,6 +1,6 @@
 # Implementation status
 
-This is a native HDL core executing the audited original ROMs in Verilator, with MAME 0.289 as the independent reference and Icarus for four-state tests. It is source/simulation development, not an RBF release. The user has now authorized Quartus Analysis & Synthesis and fitting. Explicit stage results are recorded in reports/quartus_*.json; hardware operation remains untested.
+This is a native HDL core executing the audited original ROMs in Verilator, with MAME 0.289 as the independent reference and Icarus for four-state tests. The user authorized the full Quartus flow and hardware testing on 2026-09-07. `releases/Arcade-DrMicro_20260907.rbf` (SHA-256 7cffb322…3b46) was assembled from the current source identity after map, fit and four-corner timing passed, loaded on a DE10-Nano with the released MRA and `drmicro.zip`, and boots to the title and plays. Stage results are recorded in the (untracked, regenerable) `reports/quartus_*.json`.
 
 ## Executed evidence
 
@@ -28,7 +28,7 @@ This is a native HDL core executing the audited original ROMs in Verilator, with
 | External I/O timing closure | NOT_RUN | Inherited constraints leave 5 inputs and 50 outputs partly/unconstrained, including HDMI. No fabricated pin budgets or blanket false paths were added. |
 | Future project / MRA | PASS | Explicit source closure, simulation/FPGA TV80_REFRESH agreement, recursive QIP paths and independent byte-for-byte reconstruction of the 107,040-byte MRA payload. Not Quartus validation. |
 | Strict moving-game comparison | FAIL | The selected four-pixel NMI advance leaves 24 differing pixels at frame 240 and reaches exact RGB/video RAM at frame 300; all 1,154 writes and 883 reads remain exact. Long two-player evidence predates this timing refinement: six exact captures out of 62, up to 993 differing pixels; first full-I/O ordering divergence occurs around death, frame 2233/2234. Per-chip sound commands still match. |
-| Physical platform / hardware | NOT_RUN | DE10-Nano validation remains future work. No RBF exists. |
+| Physical platform / hardware | PASS (manual) | RBF loaded on a DE10-Nano via the MRA: ROM download, title screen, rotation, coin/start and gameplay confirmed by the user playing the core. Not an automated capture; audio and DIP/service paths were exercised by play, not instrumented. |
 
 `reports/verification_summary.json` is the overall strict gate and stays FAIL while moving-game equivalence is unresolved. `reports/test_report.json` contains the latest command results; `reports/test_history.jsonl` preserves later invocations. Script-specific comparisons retain strict failures. Ignored capture result files include ROM/source/runner/binary hashes and build configuration. `reports/milestones.json` records reference-correlated outcomes separately from strict trajectory equivalence. The current audit and ordered remaining work are in [the completion plan](plan.md).
 
@@ -40,6 +40,6 @@ This is a native HDL core executing the audited original ROMs in Verilator, with
 
 **Uncertain hardware facts:** CPU rate is questioned in MAME, native raster/blanking totals are provisional, control bits 2/3 are unknown, and original analogue audio and read-during-write behaviour lack PCB measurements. The JT5205 donor retains a one-sample pipeline and -2 reset baseline; no sample-exact MAME or analogue claim is made.
 
-**Quartus/on-device:** Analysis & Synthesis, fitting and four-corner constrained timing pass. External I/O timing coverage is incomplete. Physical HPS/DDR, HDMI/direct-video, orientation, controls and audio still require DE10-Nano testing. No RBF generation or programming has been performed.
+**Quartus/on-device:** Analysis & Synthesis, fitting and four-corner constrained timing pass. External I/O timing coverage is incomplete. HPS ROM download, DDR rotation, HDMI output, controls and audio work on a DE10-Nano in play; direct video and analogue output were not separately checked.
 
 The private GitHub repository is `meathax/drmicro`; origin is configured and the committed source checkpoints are pushed.

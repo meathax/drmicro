@@ -1,3 +1,0 @@
-NMI entry latency=11 T states
-PASS NMI 11 T-state entry, HALT wake, return PC and RETN
-tests/tb_cpu_nmi.sv:27: $finish called at 30440000 (1ps)
